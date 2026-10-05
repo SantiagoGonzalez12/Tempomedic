@@ -194,11 +194,27 @@ Comparación
    #### 2.7.2. Propiedad intelectual y licencias
    #### 2.7.3. Accesibilidad y otros requisitos aplicables
 ### 2.8. Análisis de riesgos inicial
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 3. PLANIFICACIÓN Y GESTIÓN DEL PROYECTO
   ### 3.1. Metodología de desarrollo empleada
   Para el desarrollo del proyecto, se ha seleccionado el modelo en cascada tradicional. Esta metodología se caracteriza por un enfoque secuencial, donde cada fase del ciclo del desarrollo debe completarse y validarse por todos antes de pasar a la siguiente.
 
   ### 3.2. Organización del equipo y reparto de responsabilidades
+  1. **Alba Durán**
+
+	Coordinacion de las reuniones, planificación general de sprint, supervisión del cumplimiento de los plazos de entrega, redacción de la descripción, problemas y soluciones del proyecto
+
+2. **Santiago Gonzalez** 
+
+Creación de la maquetación, diseño de los componentes visuales,cuidado de colores y cumplimiento de las especificaciones visuales de la aplicación, además de diseñar una interfaz sencilla y fácil de usar para los  usuarios
+
+3. **Jorge Espejo**
+
+Al no haber parte de código como tal en este sprint, ha realizado colaboración con el frontend para definir como se van a comunicar los componentes gráficos, además de la redacción de puntos como las decisione técnicas tomadas, etc 
+
+4. **Maria Dolores Barba**  
+   Evaluación de que las interface scumplen todos los criterios, revisión de toda la documentación, además de participación en partes del proyecto 
+
   ### 3.3. Roles del proyecto
   ### 3.4. Plan de trabajo
   ### 3.5. Cronograma e hitos
