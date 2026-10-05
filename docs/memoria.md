@@ -25,6 +25,10 @@ La solución reúne en un único sitio el registro de medicamentos con su pauta 
 
 Este primer sprint (*Sprint 1: Ideación y Prototipado Base*) se centra en el diseño del prototipo de la interfaz gráfica. El prototipo cubre las cinco vistas principales de la aplicación (acceso, Hoy, Medicamentos, Citas y Ajustes). El trabajo se ha organizado con metodología Scrum, documentado en GitHub mediante issues, tablero y entregas por sprint.
 
+## PALABRAS CLAVE
+ 
+Java - Swing - NetBeans Matisse - MVC - salud digital - Health - recordatorios de medicación - gestión de citas médicas - accesibilidad - privacidad - Scrum - healthcare - medication-reminder
+
 ## ÍNDICE 
 
 - [1. INTRODUCCIÓN](#1-introducción)
