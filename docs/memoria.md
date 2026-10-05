@@ -196,6 +196,8 @@ Comparación
 ### 2.8. Análisis de riesgos inicial
 ## 3. PLANIFICACIÓN Y GESTIÓN DEL PROYECTO
   ### 3.1. Metodología de desarrollo empleada
+  Para el desarrollo del proyecto, se ha seleccionado el modelo en cascada tradicional. Esta metodología se caracteriza por un enfoque secuencial, donde cada fase del ciclo del desarrollo debe completarse y validarse por todos antes de pasar a la siguiente.
+
   ### 3.2. Organización del equipo y reparto de responsabilidades
   ### 3.3. Roles del proyecto
   ### 3.4. Plan de trabajo
