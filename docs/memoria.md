@@ -215,8 +215,11 @@ Al no haber parte de código como tal en este sprint, ha realizado colaboración
 
   ### 3.3. Roles del proyecto
   -Alba Duran → Scrum Máster 
+  
   -Jorge Espejo → Backend
+
   -Santiago Gonzalez → Frontend 
+  
   -Maria Dolores Barba → Tester (UQ)
 
   ### 3.4. Plan de trabajo
