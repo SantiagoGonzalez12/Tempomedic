@@ -11,37 +11,56 @@
 | **Tablero** | <https://github.com/users/SantiagoGonzalez12/projects/6> |
 
 
+## DECLARACIÓN DE AUTORÍA Y ORIGINALIDAD
+
+
+
 
 ## ÍNDICE 
 
-### 1. INTRODUCCIÓN
+- [1. INTRODUCCIÓN](#1-introducción)
+  - [1.1. Contexto del proyecto](#11-contexto-del-proyecto)
+  - [1.2. Problema o necesidad detectada](#12-problema-o-necesidad-detectada)
+  - [1.3. Propuesta de solución](#13-propuesta-de-solución)
+  - [1.4. Objetivos del proyecto](#14-objetivos-del-proyecto)
+    - [1.4.1. Objetivo general](#141-objetivo-general)
+    - [1.4.2. Objetivos específicos](#142-objetivos-específicos)
+  - [1.5. Alcance del proyecto](#15-alcance-del-proyecto)
+  - [1.6. Limitaciones y exclusiones](#16-limitaciones-y-exclusiones)
+  - [1.7. Estructura de la memoria](#17-estructura-de-la-memoria)
+- [2. ANÁLISIS DEL CONTEXTO Y VIABILIDAD](#2-análisis-del-contexto-y-viabilidad)
+  - [2.1. Sector profesional y perfil de usuarios](#21-sector-profesional-y-perfil-de-usuarios)
+  - [2.2. Análisis de la necesidad](#22-análisis-de-la-necesidad)
+  - [2.3. Estudio de soluciones existentes](#23-estudio-de-soluciones-existentes)
+  - [2.4. Partes interesadas](#24-partes-interesadas)
+  - [2.5. Estudio de viabilidad técnica](#25-estudio-de-viabilidad-técnica)
+  - [2.6. Estudio de viabilidad económica](#26-estudio-de-viabilidad-económica)
+  - [2.7. Estudio de viabilidad legal y normativa](#27-estudio-de-viabilidad-legal-y-normativa)
+    - [2.7.1. Protección de datos personales](#271-protección-de-datos-personales)
+    - [2.7.2. Propiedad intelectual y licencias](#272-propiedad-intelectual-y-licencias)
+    - [2.7.3. Accesibilidad y otros requisitos aplicables](#273-accesibilidad-y-otros-requisitos-aplicables)
+  - [2.8. Análisis de riesgos inicial](#28-análisis-de-riesgos-inicial)
+- [3. PLANIFICACIÓN Y GESTIÓN DEL PROYECTO](#3-planificación-y-gestión-del-proyecto)
+  - [3.1. Metodología de desarrollo empleada](#31-metodología-de-desarrollo-empleada)
+  - [3.2. Organización del equipo y reparto de responsabilidades](#32-organización-del-equipo-y-reparto-de-responsabilidades)
+  - [3.3. Roles del proyecto](#33-roles-del-proyecto)
+  - [3.4. Plan de trabajo](#34-plan-de-trabajo)
+  - [3.5. Cronograma e hitos](#35-cronograma-e-hitos)
+  - [3.6. Estimación de recursos](#36-estimación-de-recursos)
+  - [3.7. Presupuesto estimado](#37-presupuesto-estimado)
+  - [3.8. Gestión de riesgos](#38-gestión-de-riesgos)
+  - [3.9. Herramientas de comunicación, coordinación y seguimiento](#39-herramientas-de-comunicación-coordinación-y-seguimiento)
+  - [3.10. Gestión de versiones y repositorio de código](#310-gestión-de-versiones-y-repositorio-de-código)
+- [4. ANÁLISIS DE REQUISITOS](#4-análisis-de-requisitos)
+  - [4.1. Identificación de usuarios y perfiles](#41-identificación-de-usuarios-y-perfiles)
+  - [4.2. Requisitos funcionales](#42-requisitos-funcionales)
+  - [4.3. Requisitos no funcionales](#43-requisitos-no-funcionales)
+  - [4.4. Reglas de negocio](#44-reglas-de-negocio)
+  - [4.5. Casos de uso o historias de usuario](#45-casos-de-uso-o-historias-de-usuario)
+  - [4.6. Priorización de requisitos](#46-priorización-de-requisitos)
+  - [4.7. Matriz de trazabilidad de requisitos](#47-matriz-de-trazabilidad-de-requisitos)
 
-* **1.1.** Contexto del proyecto
-* **1.2.** Problema o necesidad detectada
-* **1.3.** Propuesta de solución
-* **1.4.** Objetivos del proyecto
-  * **1.4.1.** Objetivo general
-  * **1.4.2.** Objetivos específicos
-* **1.5.** Alcance del proyecto
-* **1.6.** Limitaciones y exclusiones
-* **1.7.** Estructura de la memoria
 
-### 2. ANÁLISIS DEL CONTEXTO Y VIABILIDAD
-
-* **2.1.** Sector profesional y perfil de usuarios
-* **2.2.** Análisis de la necesidad
-* **2.3.** Estudio de soluciones existentes
-* **2.4.** Partes interesadas
-* **2.5.** Estudio de viabilidad técnica
-* **2.6.** Estudio de viabilidad económica
-* **2.7.** Estudio de viabilidad legal y normativa
-  * **2.7.1.** Protección de datos personales
-  * **2.7.2.** Propiedad intelectual y licencias
-  * **2.7.3.** Accesibilidad y otros requisitos aplicables
-* **2.8.** Análisis de riesgos inicial
-
-
---------------------------------------------------------------------------------------------------------------------------------------------
 ## 1. INTRODUCCIÓN
 
 ### 1.1. Contexto del proyecto
@@ -161,3 +180,22 @@ Comparación
    #### 2.7.2. Propiedad intelectual y licencias
    #### 2.7.3. Accesibilidad y otros requisitos aplicables
 ### 2.8. Análisis de riesgos inicial
+## 3. PLANIFICACIÓN Y GESTIÓN DEL PROYECTO
+  ### 3.1. Metodología de desarrollo empleada
+  ### 3.2. Organización del equipo y reparto de responsabilidades
+  ### 3.3. Roles del proyecto
+  ### 3.4. Plan de trabajo
+  ### 3.5. Cronograma e hitos
+  ### 3.6. Estimación de recursos
+  ### 3.7. Presupuesto estimado
+  ### 3.8. Gestión de riesgos
+  ### 3.9. Herramientas de comunicación, coordinación y seguimiento
+  ### 3.10. Gestión de versiones y repositorio de código
+## 4. ANÁLISIS DE REQUISITOS
+  ### 4.1. Identificación de usuarios y perfiles
+  ### 4.2. Requisitos funcionales
+  ### 4.3. Requisitos no funcionales
+  ### 4.4. Reglas de negocio
+  ### 4.5. Casos de uso o historias de usuario
+  ### 4.6. Priorización de requisitos
+  ### 4.7. Matriz de trazabilidad de requisitos
