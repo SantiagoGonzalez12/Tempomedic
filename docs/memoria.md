@@ -12,9 +12,9 @@
 
 
 
-# ÍNDICE 
+## ÍNDICE 
 
-## 1. INTRODUCCIÓN
+### 1. INTRODUCCIÓN
 
 * **1.1.** Contexto del proyecto
 * **1.2.** Problema o necesidad detectada
@@ -26,7 +26,7 @@
 * **1.6.** Limitaciones y exclusiones
 * **1.7.** Estructura de la memoria
 
-## 2. ANÁLISIS DEL CONTEXTO Y VIABILIDAD
+### 2. ANÁLISIS DEL CONTEXTO Y VIABILIDAD
 
 * **2.1.** Sector profesional y perfil de usuarios
 * **2.2.** Análisis de la necesidad
@@ -42,9 +42,9 @@
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------
-# 1. INTRODUCCIÓN
+## 1. INTRODUCCIÓN
 
-## 1.1. Contexto del proyecto
+### 1.1. Contexto del proyecto
 
 En la actualidad, el uso de dispositivos móviles se ha vuelto indispensable para la gestión de tareas cotidianas, y el ámbito de la salud digital es una de las áreas con mayor crecimiento y demanda tecnológica.
 
@@ -55,14 +55,14 @@ El proyecto consiste en el desarrollo de una aplicación móvil orientada a la g
 
 En cuanto a la parte técnica de este proyecto el sistema se ha estructurado mediante una arquitectura cliente-servidor. Cuenta con una aplicación móvil como frontend, un backend y una base de datos relacional para la persistencia de la información, además, la aplicación hace uso de servicios en segundo plano y gestores de tareas del sistema operativo móvil para garantizar el lanzamiento preciso de las notificaciones de los medicamentos, incluso en el caso de que no haya conexión a Internet.
 
-## 1.2. Problema o necesidad detectada
+### 1.2. Problema o necesidad detectada
 
 En el día a día del cuidado de la salud, las personas se encuentran principalmente con dos problemas:
 
 * **Olvidos con la medicación:** Muchas personas se preguntan continuamente *"¿A qué hora me tocaba la pastilla?"* y terminan olvidando tomarla. Esto es peligroso para la salud, tanto para quienes toman un tratamiento puntual (como un antibiótico durante una semana) como para pacientes mayores o crónicos que tienen que tomar varias medicinas al día.
 * **Dificultades para pedir cita médica:** Conseguir una cita con el médico, ya sea por internet o en persona, suele ser un proceso lento y desesperante para la mayoría de los usuarios.
 
-## 1.3. Propuesta de solución
+### 1.3. Propuesta de solución
 
 Para resolver estos dos problemas nace TempoMedic, una aplicación móvil muy fácil de usar que ayuda a los usuarios a gestionar su salud desde un solo lugar:
 
@@ -70,17 +70,17 @@ Para resolver estos dos problemas nace TempoMedic, una aplicación móvil muy f�
 * **Agenda sencilla de citas médicas:** Permite guardar las próximas visitas al médico eligiendo el especialista o la fecha. La aplicación avisa automáticamente al usuario dos veces (24 horas y 2 horas antes de la cita) y permite guardar el recordatorio en el calendario del propio móvil (como Google Calendar).
 
   
-## 1.4. Objetivos del proyecto
-   ### 1.4.1. Objetivo general
+### 1.4. Objetivos del proyecto
+   #### 1.4.1. Objetivo general
 
-   ### 1.4.2. Objetivos específicos 
+   #### 1.4.2. Objetivos específicos 
 Aunque el proyecto tiene muy claro dónde quiere llegar, la verdadera captación son en los pequeños detalles que marcan la diferencia. Hoy en día existen muchas aplicaciones que se limitan a cumplir sus función, pero lo que realmente distinguirá a esta es su facilidad de uso y su capacidad para no dejar a nadie fuera.
 
 La aplicación, TempoMedic, nace para acompañar a personas de cualquier edad, aunque pone la mirada en un grupo fundamental, los mayores. Ellos son la población más expuesta a los cambios de los últimos tiempo; no crecieron rodeados de pantallas y han tenido que adaptarse, paso a paso, tanto a las transformaciones tecnológicas como a los avances médicos.
 
 Por eso, la app prescinde de complicaciones innecesarias. Apuesta por una navegación limpia y sencilla, donde la información siempre estará en primera mano junto a la ayuda que se soliciten. 
 
-## 1.5. Alcance del proyecto
+### 1.5. Alcance del proyecto
 Para definir el alcance de la app, lo ideal es estructurarla en tres fases que vayan progresivamente para tenerla muy clara desde el principio.
 * Primera fase: recopilar la información de los usuarios. Una vez completado, desarrollar un programa de recordatorios de medicación con notificaciones, alarmas o registros de tomas. Posibilidad de asociarlo a aplicaciones nativas del móvil como Apple Calendar o Google.
 * Segunda fase: fidelizar a los usuarios sin complicar en exceso la tecnología. Aquí se incluye el control de inventario de pastillas para avisar cuando toque ir a la farmacia, la opción de gestionar perfiles de familiares dependientes, el guardado de fotos de recetas o informes médicos y la generación de un PDF con el historial de tomas para enseñárselo al médico (opcional).
@@ -88,7 +88,7 @@ Para definir el alcance de la app, lo ideal es estructurarla en tres fases que v
 
 Los medicamentos tienen que estar protegidos legalmente por la normativa RGPD.
 
-## 1.6. Limitaciones y exclusiones
+### 1.6. Limitaciones y exclusiones
 El desarrollo de la aplicación no solo define las funciones que se van a construir, sino también aquellas que quedan fuera de la app para evitar costes innecesarios, problemas de tiempo o riesgos en la entrega.
 
 Las limitaciones son los problemas técnicos con los que nace la app. La principal dificultad es la dependencia de los avisos del propio teléfono, los sistemas operativos a veces bloquean o retrasan las notificaciones para ahorrar batería, por lo que la app debe pedir permisos especiales al usuario. Otra limitación clave es que toda la información se guarda únicamente en el móvil durante esta primera versión, si el usuario pierde o cambia de teléfono, perderá su historial a menos que haga una copia de seguridad manual. Además, la precisión de las citas dependerá al 100% de que el usuario escriba bien las fechas y lugares, ya que la app no se conecta en tiempo real con la agenda del médico.
@@ -107,7 +107,7 @@ El interior de la app en Java se compone de cuatro elementos principales:
 
 **El Gestor de Avisos:** Es la pieza que habla directamente con el móvil para poner las alarmas a sonar a la hora exacta, y tiene la función vital de volver a activar todos los recordatorios si el usuario apaga o reinicia el teléfono.
 
-## 1.7. Estructura de la memoria
+### 1.7. Estructura de la memoria
 En primer lugar hay que hablar del alcance del proyecto:
 * Objetivo general: desarrollar una aplicación móvil para la gestión personal de tratamientos médicos y recordatorios de citas.
 * Objetivos específicos: reducir el olvido de las tomas, centralizar la agenda de consultas y garantizar la privacidad del usuario mediante almacenamiento local.
@@ -128,11 +128,11 @@ En tercer lugar, exclusiones del proyecto que están fuera de su alcance:
 * Hardware y comercio: sin soporte para un pastillero inteligente ni gestión de compra/envío de medicamentos.
 * Urgencias: no incluye botones de pánico ni protocolos de emergencia médica.
 
-# 2. ANÁLISIS DEL CONTEXTO Y VIABILIDAD
+## 2. ANÁLISIS DEL CONTEXTO Y VIABILIDAD
 
-## 2.1. Sector profesional y perfil de usuarios
-## 2.2. Análisis de la necesidad
-## 2.3. Estudio de soluciones existentes
+### 2.1. Sector profesional y perfil de usuarios
+### 2.2. Análisis de la necesidad
+### 2.3. Estudio de soluciones existentes
 Aplicaciones similares en el mercado:
 
 * **MedControl**: funciona como un asistente de salud personal y pastillero virtual. Permite crear alarmas personalizadas para medicamentos, llevar un control de inventario y organizar recordatorios para citas médicas. Además, incluye un diario de tensión arterial y seguimiento de síntomas.  
@@ -153,11 +153,11 @@ Noticias y tendencias recientes:
 Comparación
 | | Otras apps | Tempomedic |
 
-## 2.4. Partes interesadas
-## 2.5. Estudio de viabilidad técnica
-## 2.6. Estudio de viabilidad económica
-## 2.7. Estudio de viabilidad legal y normativa
-   ### 2.7.1. Protección de datos personales
-   ### 2.7.2. Propiedad intelectual y licencias
-   ### 2.7.3. Accesibilidad y otros requisitos aplicables
-## 2.8. Análisis de riesgos inicial
+### 2.4. Partes interesadas
+### 2.5. Estudio de viabilidad técnica
+### 2.6. Estudio de viabilidad económica
+### 2.7. Estudio de viabilidad legal y normativa
+   #### 2.7.1. Protección de datos personales
+   #### 2.7.2. Propiedad intelectual y licencias
+   #### 2.7.3. Accesibilidad y otros requisitos aplicables
+### 2.8. Análisis de riesgos inicial
