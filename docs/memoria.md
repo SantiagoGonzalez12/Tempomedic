@@ -214,6 +214,11 @@ Al no haber parte de código como tal en este sprint, ha realizado colaboración
    Evaluación de que las interface scumplen todos los criterios, revisión de toda la documentación, además de participación en partes del proyecto 
 
   ### 3.3. Roles del proyecto
+  -Alba Duran → Scrum Máster 
+  -Jorge Espejo → Backend
+  -Santiago Gonzalez → Frontend 
+  -Maria Dolores Barba → Tester (UQ)
+
   ### 3.4. Plan de trabajo
   ### 3.5. Cronograma e hitos
   ### 3.6. Estimación de recursos
