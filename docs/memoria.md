@@ -211,7 +211,7 @@ Creación de la maquetación, diseño de los componentes visuales,cuidado de col
 Al no haber parte de código como tal en este sprint, ha realizado colaboración con el frontend para definir como se van a comunicar los componentes gráficos, además de la redacción de puntos como las decisione técnicas tomadas, etc 
 
 4. **Maria Dolores Barba:**  
-   Evaluación de que las interface scumplen todos los criterios, revisión de toda la documentación, además de participación en partes del proyecto 
+   Evaluación de que las interface cumplen todos los criterios, revisión de toda la documentación, además, de la participación en las diversas partes del proyecto.
 
   ### 3.3. Roles del proyecto
   -Alba Duran → Scrum Máster 
