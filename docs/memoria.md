@@ -33,7 +33,7 @@ Cada miembro tiene su tabla para decidir qué nota ponerse a sí mismo y a los d
 
 **Alba Durán:**
 
-| Miembro | Nota |
+| Miembro a evaluar | Nota |
 | --- | --- |
 | Alba Durán | - |
 | Jorge Espejo | 10 |
@@ -42,7 +42,7 @@ Cada miembro tiene su tabla para decidir qué nota ponerse a sí mismo y a los d
 
 **Jorge Espejo:**
 
-| Miembro | Nota |
+| Miembro a evaluar | Nota |
 | --- | --- |
 | Alba Durán | - |
 | Jorge Espejo | 7.5 |
@@ -51,7 +51,7 @@ Cada miembro tiene su tabla para decidir qué nota ponerse a sí mismo y a los d
 
 **María Dolores Barba:**
 
-| Miembro | Nota |
+| Miembro a evaluar | Nota |
 | --- | --- |
 | Alba Durán | - |
 | Jorge Espejo | 10 |
@@ -60,7 +60,7 @@ Cada miembro tiene su tabla para decidir qué nota ponerse a sí mismo y a los d
 
 **Santiago González:**
 
-| Miembro | Nota |
+| Miembro a evaluar | Nota |
 | --- | --- |
 | Alba Durán | - |
 | Jorge Espejo | 10 |
