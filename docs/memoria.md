@@ -36,7 +36,7 @@ Cada miembro tiene su tabla para decidir qué nota ponerse a sí mismo y a los d
 | Miembro | Nota |
 | --- | --- |
 | Alba Durán | - |
-| Jorge Espejo | - |
+| Jorge Espejo | 10 |
 | María Dolores Barba | - |
 | Santiago González | - |
 
@@ -45,7 +45,7 @@ Cada miembro tiene su tabla para decidir qué nota ponerse a sí mismo y a los d
 | Miembro | Nota |
 | --- | --- |
 | Alba Durán | - |
-| Jorge Espejo | - |
+| Jorge Espejo | 7.5 |
 | María Dolores Barba | - |
 | Santiago González | - |
 
@@ -54,7 +54,7 @@ Cada miembro tiene su tabla para decidir qué nota ponerse a sí mismo y a los d
 | Miembro | Nota |
 | --- | --- |
 | Alba Durán | - |
-| Jorge Espejo | - |
+| Jorge Espejo | 10 |
 | María Dolores Barba | - |
 | Santiago González | - |
 
@@ -63,7 +63,7 @@ Cada miembro tiene su tabla para decidir qué nota ponerse a sí mismo y a los d
 | Miembro | Nota |
 | --- | --- |
 | Alba Durán | - |
-| Jorge Espejo | - |
+| Jorge Espejo | 10 |
 | María Dolores Barba | - |
 | Santiago González | - |
 
