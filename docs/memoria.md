@@ -72,7 +72,9 @@ Java - Swing - NetBeans Matisse - MVC - salud digital - Health - recordatorios d
   - [4.5. Casos de uso o historias de usuario](#45-casos-de-uso-o-historias-de-usuario)
   - [4.6. Priorización de requisitos](#46-priorización-de-requisitos)
   - [4.7. Matriz de trazabilidad de requisitos](#47-matriz-de-trazabilidad-de-requisitos)
-
+- [6. DESARROLLO E IMPLEMENTACIÓN](#6-desarrollo-e-implementación)
+  - [6.1. Tecnologías, lenguajes y frameworks utilizados](#61-tecnologías-lenguajes-y-frameworks-utilizados)
+  - [6.6. Implementación de la interfaz de usuario](#66-implementación-de-la-interfaz-de-usuario)
 
 ## 1. INTRODUCCIÓN
 
@@ -237,3 +239,75 @@ Al no haber parte de código como tal en este sprint, ha realizado colaboración
   ### 4.5. Casos de uso o historias de usuario
   ### 4.6. Priorización de requisitos
   ### 4.7. Matriz de trazabilidad de requisitos
+  
+## 6. DESARROLLO E IMPLEMENTACIÓN
+
+### 6.1. Tecnologías, lenguajes y frameworks utilizados
+
+Además de Java, Swing, NetBeans Matisse y Maven, la interfaz utiliza **FlatLaf** como *Look and Feel*: una librería que sustituye el aspecto por defecto de Swing por uno plano y moderno, y que permite alternar entre tema claro y oscuro en tiempo real. Se eligió porque responde directamente al ajuste "Tema: Claro / Oscuro" que pedía el diseño de la interfaz y porque la encuesta mostró que la legibilidad es una prioridad para el 70% de los encuestados con 46 años o más.
+
+### 6.6. Implementación de la interfaz de usuario
+
+**Utilizar FlatLaf con Java Ant**
+
+1. [Descargar el archivo .jar](https://repo1.maven.org/maven2/com/formdev/flatlaf/3.7.2/flatlaf-3.7.2.jar) desde el [Repositorio Central de Maven](https://central.sonatype.com/artifact/com.formdev/flatlaf).
+2. En NetBeans, ir a la pestaña `Projects` (Proyectos).
+3. Clic derecho en `Libraries (Bibliotecas) > Add JAR/Folder`.
+4. Seleccionar el archivo .jar descargado.
+
+**Para inicializar FlatLaf al arrancar la app**
+
+``` java
+public static void main(String args[]) {
+    try {
+        // Activa el tema claro de FlatLaf
+        FlatLightLaf.setup();
+    } catch( Exception ex ) {
+        System.err.println( "Error al inicializar FlatLaf: " + ex.getMessage() );
+    }
+
+    // Arrancar la ventana (código por defecto de NetBeans)
+    java.awt.EventQueue.invokeLater(new Runnable() {
+        public void run() {
+            new TuVentanaPrincipal().setVisible(true);
+        }
+    });
+```
+
+**Cambio de Tema Claro / Oscuro con botones**
+
+Ejemplo botón activar Modo Oscuro
+
+``` java
+private void btnModoOscuroActionPerformed(java.awt.event.ActionEvent evt) {                                              
+    try {
+        // 1. Cambiar al tema oscuro
+        FlatDarkLaf.setup();
+        
+        // 2. Actualizar todas las ventanas abiertas para aplicar el cambio visual
+        SwingUtilities.updateComponentTreeUI(this); 
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+}
+```
+
+Ejemplo botón activar Modo Claro
+
+``` java
+private void btnModoClaroActionPerformed(java.awt.event.ActionEvent evt) {                                             
+    try {
+        // 1. Cambiar al tema claro
+        FlatLightLaf.setup();
+        
+        // 2. Actualizar todas las ventanas abiertas para aplicar el cambio visual
+        SwingUtilities.updateComponentTreeUI(this);
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+}
+```
+
+### Vista previa en el diseñador de NetBeans
+
+`Menú superior de NetBeans > Tools (Herramientas) > Options (Opciones) > Java > pestaña GUI Builder > Preview Look and Feel > FlatLaf` (si aparece) o configurar el Look and Feel del sistema para que se asemeje más
