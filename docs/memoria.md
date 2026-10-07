@@ -227,8 +227,31 @@ Noticias y tendencias recientes:
 * **Nuevos modelos de negocio y funcionalidades**: Startups como **Assort Health** han levantado capital significativo para plataformas que utilizan IA para conectar la programación de citas, la gestión de medicamentos y los pagos en un solo sistema. Por otro lado, **Amazon** ha lanzado un agente de IA para la salud que puede reservar citas y gestionar recetas médicas.  
 * **Investigación en universidades**: investigadores de la Universidad Miguel Hernández (UMH) de Elche han desarrollado una aplicación para que personas con inmunodeficiencias puedan autogestionar su enfermedad, incluyendo el control de citas y tratamientos con recordatorios personalizados.
 
-Comparación
-| | Otras apps | Tempomedic |
+### Comparación con Tempomedic
+
+| Característica | MedControl | Recordatorio Med. 2 | CareClinic | Biva | DayMedy | Medical Reminder | **Tempomedic** |
+|---|---|---|---|---|---|---|---|
+| Plataforma | Android | iOS | iOS/Android | Android | iOS/Android | Android/iOS | Android/Ordenador |
+| Recordatorios de medicación | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 |
+| Recordatorios de citas médicas | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 |
+| Configuración de pauta (cada X horas / días) | 🟩 | 🟩 | 🟩 | 🟩 | 🟨 | 🟩 | 🟩 |
+| Distinción notificación / alarma con sonido | 🟥 | 🟨 | 🟥 | 🟥 | 🟥 | 🟥 | 🟩 |
+| Registro de tomas (tomada / pospuesta / omitida) | 🟨 | 🟩 | 🟩 | 🟩 | 🟨 | 🟨 | 🟩 |
+| Control de inventario de pastillas | 🟩 | 🟩 | 🟥 | 🟨 | 🟥 | 🟥 | 🟥 |
+| Multiperfil (hijos, mayores) | 🟥 | 🟥 | 🟩 | 🟩 | 🟩 | 🟥 | 🟥 |
+| Sincronización con calendario nativo | 🟥 | 🟥 | 🟥 | 🟥 | 🟨 | 🟥 | 🟩 |
+| Funciona sin conexión | 🟨 | 🟨 | 🟥 | 🟥 | 🟥 | 🟩 | 🟩 |
+| Informes en PDF | 🟥 | 🟩 (email) | 🟨 | 🟥 | 🟥 | 🟩 | 🟥 |
+| Telemedicina / consulta en línea | 🟥 | 🟥 | 🟥 | 🟥 | 🟩 | 🟥 | 🟥 |
+| IA / asistente inteligente | 🟥 | 🟥 | 🟥 | 🟥 | 🟥 | 🟥 | 🟥 |
+| Enfoque en accesibilidad (texto grande) | 🟥 | 🟥 | 🟥 | 🟥 | 🟥 | 🟩 | 🟩 |
+| Privacidad (offline, sin nube, PIN) | 🟨 | 🟨 | 🟥 | 🟥 | 🟥 | 🟩 | 🟩 |
+| Gratuita / sin registro obligatorio | 🟨 | 🟨 | 🟨 | 🟨 | 🟨 | 🟩 | 🟩 |
+
+
+**Leyenda:** 🟩 incluido
+             🟨 parcial o limitado
+			 🟥 no incluido
 
 ### 2.4. Partes interesadas
 ### 2.5. Estudio de viabilidad técnica
