@@ -53,10 +53,10 @@ Cada miembro tiene su tabla para decidir qué nota ponerse a sí mismo y a los d
 
 | Miembro a evaluar | Nota |
 | --- | --- |
-| Alba Durán | - |
-| Jorge Espejo | - |
-| María Dolores Barba | - |
-| Santiago González | - |
+| Alba Durán | 10 |
+| Jorge Espejo | 10 |
+| María Dolores Barba | 8 |
+| Santiago González | 10 |
 
 **Santiago González:**
 
