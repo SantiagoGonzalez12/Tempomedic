@@ -79,15 +79,14 @@ Java - Swing - NetBeans Matisse - MVC - salud digital - Health - recordatorios d
 ## 1. INTRODUCCIÓN
 
 ### 1.1. Contexto del proyecto
+Hoy en día, la transformación digital ha cambiado radicalmente la forma en que gestionamos nuestra vida diaria a través de los dispositivos móviles. Dentro de este proceso, la salud digital se ha consolidado como una de las áreas de mayor expansión, respondiendo a una demanda creciente de herramientas que faciliten el cuidado personal.
 
-En la actualidad, el uso de dispositivos móviles se ha vuelto indispensable para la gestión de tareas cotidianas, y el ámbito de la salud digital es una de las áreas con mayor crecimiento y demanda tecnológica.
+Sin embargo, a pesar de este avance, las personas siguen encontrando serias dificultades para mantener una correcta adherencia a sus tratamientos y organizar sus consultas médicas, lo que evidencia la necesidad de soluciones tecnológicas más integrales y eficientes.
 
-El proyecto consiste en el desarrollo de una aplicación móvil orientada a la gestión individual de la salud, la plataforma tiene en un único sistema dos funcionalidades clave: 
+Como respuesta a este escenario, se presenta **Tempomedic**: una aplicación móvil orientada a la gestión personal de la salud que unifica en una sola plataforma dos funciones esenciales:
 
-* La reserva y gestión de citas médicas 
-* Módulo de control de medicación con alertas automáticas
-
-En cuanto a la parte técnica de este proyecto el sistema se ha estructurado mediante una arquitectura cliente-servidor. Cuenta con una aplicación móvil como frontend, un backend y una base de datos relacional para la persistencia de la información, además, la aplicación hace uso de servicios en segundo plano y gestores de tareas del sistema operativo móvil para garantizar el lanzamiento preciso de las notificaciones de los medicamentos, incluso en el caso de que no haya conexión a Internet.
+* **Reserva y gestión centralizada de citas médicas.**
+* **Módulo de control de medicación con alertas automáticas.**
 
 ### 1.2. Problema o necesidad detectada
 
@@ -98,10 +97,12 @@ En el día a día del cuidado de la salud, las personas se encuentran principalm
 
 ### 1.3. Propuesta de solución
 
-Para resolver estos dos problemas nace TempoMedic, una aplicación móvil muy fácil de usar que ayuda a los usuarios a gestionar su salud desde un solo lugar:
+En el día a día del cuidado de la salud, las personas se encuentran principalmente con dos problemas:
 
-* **Recordatorios inteligentes de medicamentos:** El usuario escribe qué medicina tiene que tomar, la dosis y cada cuánto tiempo. La app envía avisos al teléfono (que pueden ser con sonido o solo con vibración) para avisar del momento exacto de la toma, sin necesidad de tener conexión a internet. Además, cuenta con una pantalla principal para ir marcando las pastillas como "Tomada" u "Omitida".
-* **Agenda sencilla de citas médicas:** Permite guardar las próximas visitas al médico eligiendo el especialista o la fecha. La aplicación avisa automáticamente al usuario dos veces (24 horas y 2 horas antes de la cita) y permite guardar el recordatorio en el calendario del propio móvil (como Google Calendar).
+* **Olvidos con la medicación:** Muchas personas se preguntan continuamente *"¿A qué hora me tocaba la pastilla?"* y terminan olvidando tomarla. Esto es peligroso para la salud, tanto para quienes toman un tratamiento puntual (como un antibiótico durante una semana) como para pacientes mayores o crónicos que tienen que tomar varias medicinas al día
+* **Dificultades para pedir cita médica:** Conseguir una cita con el médico, ya sea por internet o en persona, suele ser un proceso lento y desesperante para la mayoría de los usuarios
+
+Estas problemáticas se confirmaron a través de una **recolección de datos primarios mediante una encuesta**. A partir de las preguntas realizadas a los usuarios, analizamos directamente sus necesidades reales y de uso diario. En base a estas evidencias y a las carencias detectadas, diseñamos y desarrollamos nuestra aplicación: **Tempomedic**
 
   
 ### 1.4. Objetivos del proyecto
