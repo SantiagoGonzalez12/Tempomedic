@@ -169,10 +169,10 @@ Notas que creemos que nos merecemos según el trabajo ejercido en este Sprint en
 
 | Miembro | Nota |
 | --- | --- |
-| Alba Durán | - |
-| Jorge Espejo | - |
-| María Dolores Barba | - |
-| Santiago González | - |
+| Alba Durán | 100 |
+| Jorge Espejo | 100 |
+| María Dolores Barba | 100 |
+| Santiago González | 100 |
 
 ## 2. ANÁLISIS DEL CONTEXTO Y VIABILIDAD
 
