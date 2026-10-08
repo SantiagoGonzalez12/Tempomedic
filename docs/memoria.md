@@ -210,49 +210,6 @@ En tercer lugar, exclusiones del proyecto que están fuera de su alcance:
 ### 2.1. Sector profesional y perfil de usuarios
 ### 2.2. Análisis de la necesidad
 ### 2.3. Estudio de soluciones existentes
-Aplicaciones similares en el mercado:
-
-* **MedControl**: funciona como un asistente de salud personal y pastillero virtual. Permite crear alarmas personalizadas para medicamentos, llevar un control de inventario y organizar recordatorios para citas médicas. Además, incluye un diario de tensión arterial y seguimiento de síntomas.  
-* **Recordatorio de Medicamentos 2**: se centra en la adherencia al tratamiento. Ofrece recordatorios altamente configurables (cada X horas, días específicos, etc.), alertas cuando quedan pocas pastillas y la posibilidad de enviar reportes por correo al médico. Además permite agendar recordatorios de citas médicas.  
-* **CareClinic**: va más allá de la medicación. Permite a los usuarios registrar síntomas, mediciones, estado de ánimo y nutrición. Sus recordatorios son personalizables para medicamentos y citas, también admite la gestión de múltiples perfiles, como hijos o personas mayores.  
-* **Biva**: está diseñada para pacientes y cuidadores. Permite registrar condiciones médicas y tratamientos, estableciendo recordatorios para cada uno. Integra servicios como la recarga de medicamentos y la reserva de citas médicas, con un enfoque en la relación paciente-cuidador.  
-* **DayMedy**: es una aplicación de telemedicina que integra consultas en línea, gestión de prescripciones digitales y programación de citas. Tras una consulta, el usuario recibe la receta en la app y puede configurar recordatorios para la medicación. También permite gestionar los registros de salud de la familia.  
-* **Medical Reminder**: se enfoca en la simplicidad y la privacidad, funcionando sin conexión a internet. Ofrece recordatorios fiables para medicamentos y citas médicas, con un diseño de texto grande ideal para adultos mayores y cuidadores. Permite generar informes de salud en PDF para compartir con los médicos.  
-* **Otras aplicaciones**: también existen ejemplos como **IMQ** (de una aseguradora de salud), **MyCarePlan**, **PineApp** y **MedGemak**, que ofrecen funcionalidades parciales o totales, como gestión de citas, historial clínico, videoconsulta y alarmas de medicación.
-
-Noticias y tendencias recientes:
-
-* **Éxito de las tarjetas sanitarias virtuales**: en la Comunidad de Madrid, la Tarjeta Sanitaria Virtual (TSV) ha registrado cerca de 57 millones de accesos en 2025, un 43,5% más que el año anterior. Los servicios más utilizados son la gestión de citas médicas, la consulta de medicación y el acceso a informes. La aplicación ha incorporado herramientas como recordatorios de citas de atención primaria, que han enviado más de 5 millones de notificaciones, y alertas sobre la dispensación de medicamentos en farmacias.  
-* **Integración de IA en portales de pacientes**: Oracle Health ha lanzado un portal de pacientes con inteligencia artificial que ofrece resúmenes de salud, recordatorios automáticos de visitas y la posibilidad de programar citas de seguimiento. Esta IA ayuda a los pacientes a entender sus planes de cuidado y medicamentos en un lenguaje sencillo, buscando mejorar la adherencia al tratamiento.  
-* **Nuevos modelos de negocio y funcionalidades**: Startups como **Assort Health** han levantado capital significativo para plataformas que utilizan IA para conectar la programación de citas, la gestión de medicamentos y los pagos en un solo sistema. Por otro lado, **Amazon** ha lanzado un agente de IA para la salud que puede reservar citas y gestionar recetas médicas.  
-* **Investigación en universidades**: investigadores de la Universidad Miguel Hernández (UMH) de Elche han desarrollado una aplicación para que personas con inmunodeficiencias puedan autogestionar su enfermedad, incluyendo el control de citas y tratamientos con recordatorios personalizados.
-
-### Comparación con Tempomedic
-
-| Característica | MedControl | Recordatorio Med. 2 | CareClinic | Biva | DayMedy | Medical Reminder | **Tempomedic** |
-|---|---|---|---|---|---|---|---|
-| Plataforma | Android | iOS | iOS/Android | Android | iOS/Android | Android/iOS | Android/Ordenador |
-| Recordatorios de medicación | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 |
-| Recordatorios de citas médicas | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 |
-| Configuración de pauta (cada X horas / días) | 🟩 | 🟩 | 🟩 | 🟩 | 🟨 | 🟩 | 🟩 |
-| Distinción notificación / alarma con sonido | 🟥 | 🟨 | 🟥 | 🟥 | 🟥 | 🟥 | 🟩 |
-| Registro de tomas (tomada / pospuesta / omitida) | 🟨 | 🟩 | 🟩 | 🟩 | 🟨 | 🟨 | 🟩 |
-| Control de inventario de pastillas | 🟩 | 🟩 | 🟥 | 🟨 | 🟥 | 🟥 | 🟥 |
-| Multiperfil (hijos, mayores) | 🟥 | 🟥 | 🟩 | 🟩 | 🟩 | 🟥 | 🟥 |
-| Sincronización con calendario nativo | 🟥 | 🟥 | 🟥 | 🟥 | 🟨 | 🟥 | 🟩 |
-| Funciona sin conexión | 🟨 | 🟨 | 🟥 | 🟥 | 🟥 | 🟩 | 🟩 |
-| Informes en PDF | 🟥 | 🟩 (email) | 🟨 | 🟥 | 🟥 | 🟩 | 🟥 |
-| Telemedicina / consulta en línea | 🟥 | 🟥 | 🟥 | 🟥 | 🟩 | 🟥 | 🟥 |
-| IA / asistente inteligente | 🟥 | 🟥 | 🟥 | 🟥 | 🟥 | 🟥 | 🟥 |
-| Enfoque en accesibilidad (texto grande) | 🟥 | 🟥 | 🟥 | 🟥 | 🟥 | 🟩 | 🟩 |
-| Privacidad (offline, sin nube, PIN) | 🟨 | 🟨 | 🟥 | 🟥 | 🟥 | 🟩 | 🟩 |
-| Gratuita / sin registro obligatorio | 🟨 | 🟨 | 🟨 | 🟨 | 🟨 | 🟩 | 🟩 |
-
-
-**Leyenda:** 🟩 incluido
-             🟨 parcial o limitado
-			 🟥 no incluido
-
 ### 2.4. Partes interesadas
 ### 2.5. Estudio de viabilidad técnica
 ### 2.6. Estudio de viabilidad económica
@@ -265,30 +222,8 @@ Noticias y tendencias recientes:
 
 ## 3. PLANIFICACIÓN Y GESTIÓN DEL PROYECTO
   ### 3.1. Metodología de desarrollo empleada
-  Para el desarrollo del proyecto, se ha seleccionado el modelo en cascada tradicional. Esta metodología se caracteriza por un enfoque secuencial, donde cada fase del ciclo del desarrollo debe completarse y validarse por todos antes de pasar a la siguiente.
-
   ### 3.2. Organización del equipo y reparto de responsabilidades
-  1. **Alba Durán:**
-	Coordinacion de las reuniones, planificación general de sprint, supervisión del cumplimiento de los plazos de entrega, redacción de la descripción, problemas y soluciones del proyecto
-
-2. **Santiago Gonzalez:** 
-Creación de la maquetación, diseño de los componentes visuales,cuidado de colores y cumplimiento de las especificaciones visuales de la aplicación, además de diseñar una interfaz sencilla y fácil de usar para los  usuarios
-
-3. **Jorge Espejo:**
-Al no haber parte de código como tal en este sprint, ha realizado colaboración con el frontend para definir como se van a comunicar los componentes gráficos, además de la redacción de puntos como las decisione técnicas tomadas, etc 
-
-4. **Maria Dolores Barba:**  
-   Evaluación de que las interface cumplen todos los criterios, revisión de toda la documentación, además, de la participación en las diversas partes del proyecto.
-
   ### 3.3. Roles del proyecto
-  -Alba Duran → Scrum Máster 
-  
-  -Jorge Espejo → Backend
-
-  -Santiago Gonzalez → Frontend 
-  
-  -Maria Dolores Barba → Tester (UQ)
-
   ### 3.4. Plan de trabajo
   ### 3.5. Cronograma e hitos
   ### 3.6. Estimación de recursos
@@ -304,75 +239,6 @@ Al no haber parte de código como tal en este sprint, ha realizado colaboración
   ### 4.5. Casos de uso o historias de usuario
   ### 4.6. Priorización de requisitos
   ### 4.7. Matriz de trazabilidad de requisitos
-  
 ## 6. DESARROLLO E IMPLEMENTACIÓN
-
 ### 6.1. Tecnologías, lenguajes y frameworks utilizados
-
-Además de Java, Swing, NetBeans Matisse y Maven, la interfaz utiliza **FlatLaf** como *Look and Feel*: una librería que sustituye el aspecto por defecto de Swing por uno plano y moderno, y que permite alternar entre tema claro y oscuro en tiempo real. Se eligió porque responde directamente al ajuste "Tema: Claro / Oscuro" que pedía el diseño de la interfaz y porque la encuesta mostró que la legibilidad es una prioridad para el 70% de los encuestados con 46 años o más.
-
 ### 6.6. Implementación de la interfaz de usuario
-
-**Utilizar FlatLaf con Java Ant**
-
-1. [Descargar el archivo .jar](https://repo1.maven.org/maven2/com/formdev/flatlaf/3.7.2/flatlaf-3.7.2.jar) desde el [Repositorio Central de Maven](https://central.sonatype.com/artifact/com.formdev/flatlaf).
-2. En NetBeans, ir a la pestaña `Projects` (Proyectos).
-3. Clic derecho en `Libraries (Bibliotecas) > Add JAR/Folder`.
-4. Seleccionar el archivo .jar descargado.
-
-**Para inicializar FlatLaf al arrancar la app**
-
-``` java
-public static void main(String args[]) {
-    try {
-        // Activa el tema claro de FlatLaf
-        FlatLightLaf.setup();
-    } catch( Exception ex ) {
-        System.err.println( "Error al inicializar FlatLaf: " + ex.getMessage() );
-    }
-
-    // Arrancar la ventana (código por defecto de NetBeans)
-    java.awt.EventQueue.invokeLater(new Runnable() {
-        public void run() {
-            new TuVentanaPrincipal().setVisible(true);
-        }
-    });
-```
-
-**Cambio de Tema Claro / Oscuro con botones**
-
-Ejemplo botón activar Modo Oscuro
-
-``` java
-private void btnModoOscuroActionPerformed(java.awt.event.ActionEvent evt) {                                              
-    try {
-        // 1. Cambiar al tema oscuro
-        FlatDarkLaf.setup();
-        
-        // 2. Actualizar todas las ventanas abiertas para aplicar el cambio visual
-        SwingUtilities.updateComponentTreeUI(this); 
-    } catch (Exception ex) {
-        ex.printStackTrace();
-    }
-}
-```
-
-Ejemplo botón activar Modo Claro
-
-``` java
-private void btnModoClaroActionPerformed(java.awt.event.ActionEvent evt) {                                             
-    try {
-        // 1. Cambiar al tema claro
-        FlatLightLaf.setup();
-        
-        // 2. Actualizar todas las ventanas abiertas para aplicar el cambio visual
-        SwingUtilities.updateComponentTreeUI(this);
-    } catch (Exception ex) {
-        ex.printStackTrace();
-    }
-}
-```
-
-### Vista previa en el diseñador de NetBeans
-
-`Menú superior de NetBeans > Tools (Herramientas) > Options (Opciones) > Java > pestaña GUI Builder > Preview Look and Feel > FlatLaf` (si aparece) o configurar el Look and Feel del sistema para que se asemeje más
