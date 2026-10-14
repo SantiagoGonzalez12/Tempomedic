@@ -172,17 +172,6 @@ En tercer lugar, exclusiones del proyecto que están fuera de su alcance:
 * Hardware y comercio: sin soporte para un pastillero inteligente ni gestión de compra/envío de medicamentos.
 * Urgencias: no incluye botones de pánico ni protocolos de emergencia médica.
 
-**Co-Evaluación Sprint 1**
-
-Notas que creemos que nos merecemos según el trabajo ejercido en este Sprint en relación a la nota final. 
-
-| Miembro | Nota |
-| --- | --- |
-| Alba Durán | 100 |
-| Jorge Espejo | 100 |
-| María Dolores Barba | 100 |
-| Santiago González | 100 |
-
 ## 2. ANÁLISIS DEL CONTEXTO Y VIABILIDAD
 
 ### 2.1. Sector profesional y perfil de usuarios
