@@ -251,14 +251,14 @@ Este modelo de gestión manual genera incidencias recurrentes que afectan al bie
 
 Tempomedic unifica la gestión personal de la salud en una única aplicación móvil accesible, intuitiva y capaz de funcionar de manera autónoma sin conexión a Internet:
 
-                              TEMPOMEDIC                                
+                          TEMPOMEDIC                                                      
    - Alertas de medicación y control del stock restante                 
    - Agenda de citas médicas y archivo de imágenes de recetas           
    - Interfaz accesible (texto extensible y etiquetas asociadas)        
    - Almacenamiento local protegido mediante PIN                        
 
-      │                                        │
-      ▼                                        ▼
+ │                                        │
+ ▼                                        ▼
 (Registro instantáneo de la toma:      (Generación de informe en PDF
 Tomada / Pospuesta / Omitida)          para la consulta médica)
 
