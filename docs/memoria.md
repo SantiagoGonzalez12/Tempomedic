@@ -223,6 +223,31 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
    * **Rol en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas en caso de omisión o incumplimiento en las tomas de medicamentos.
 
 ### 2.2. Análisis de la necesidad
+#### 2.2.1 ¿En qué consiste?
+
+Tras la consultas y análisis de las necesidades del proyecto, hay que verificar si esos problemas son en verdad problemas reales. Se debe de justificar el tiempo en el que se invierte para poder solucionar las necesidad y no carecer de ellas. 
+
+#### 2.2.2 ¿Qué deben hacer y aportar?
+##### Diagnóstico de la situación de partida (As-Is)
+En la actualidad la gestión cotidiana de los tratamientos farmacológicos y el control de las citas médicas se realiza, en su mayoría, mediante métodos tradicionales y poco estructurados:
+**Control de la medicación:** los usuarios suelen confiar en su propia memoria, anotaciones manuscritas en los envases o recordatorios impresos. Esta falta de automatización dificulta el cumplimiento puntual de las tomas.
+
+**Gestión de consultas y documentación:** los justificantes, recetas e informes médicos se conservan en papel o en distintos soportes físicos, lo que facilita su pérdida y complica llevar un seguimiento claro de cara a las siguientes revisiones
+
+**Control de existencias(stock):** el recuento del inventario de medicamentos se realiza de forma visual e intuitiva, lo que provoca que el usuario descubra la falta de dosis cuando ya se ha agotado el tratamiento.
+
+##### Problemas y consecuencias identificadas
+Este modelo de gestión manual genera incidencias recurrentes que afectan al bienestar del paciente y a la organización diaria:
+
+**Olvidos y confusiones en las dosis:** la incertidumbre sobre si una toma se ha realizado previamente ocasiona omitir dosis necesarias o repetirlas de forma errónea, lo que compromete la efectividad del tratamiento.
+
+**Barreras de uso en aplicaciones móviles:** las alternativas digitales actuales suelen presentar interfaces complejas, fuentes pequeñas, publicidad contextual o la necesidad constante de contar con conexión a Internet para operar.
+
+**Pérdida de citas e historial clínico fragmentado:** las distracciones u olvidos derivan en inasistencias a consultas de seguimiento. Además, resulta difícil para el paciente presentar un registro detallado de su cumplimiento cuando acude a la revisión médica.
+
+**Preocupación por la privacidad:** el manejo de información relativa a la salud genera reticencia si el usuario no cuenta con la certeza de que sus datos personales permanecen bajo su estricto control y protección.
+
+
 
 ### 2.3. Estudio de soluciones existentes
 
