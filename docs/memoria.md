@@ -222,7 +222,6 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
    
    * **Rol en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas en caso de omisión o incumplimiento en las tomas de medicamentos.
 
-
 ### 2.2. Análisis de la necesidad
 
 ### 2.3. Estudio de soluciones existentes
@@ -259,6 +258,15 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 (Leyenda: 🟩 Incluido | 🟨 Parcial o limitado | 🟥 No incluido)
 
 ##### 2.3.4.2. Justificación de la propuesta (Ventaja competitiva)
+
+Tempomedic fundamenta su ventaja competitiva en dar respuesta directa a las carencias críticas detectadas tanto en las soluciones comerciales del mercado como en los resultados de nuestra encuesta realizada a 66 usuarios reales.
+Mientras que las grandes plataformas (como CareClinic o DayMedy) imponen modelos de suscripción, registro obligatorio en la nube y pantallas saturadas de opciones complejas, Tempomedic prioriza la **simplicidad operativa, la accesibilidad universal y la privacidad absoluta de los datos de salud**.
+
+Su propuesta de valor diferencial reside en tres pilares:
+
+1. **Unificación en una sola vista ("Hoy"):** Integra en una única pantalla navegable las tomas de medicación y las citas médicas, cubriendo la necesidad expresada por el 59% de los encuestados.
+2. **Sistema dual y preciso de avisos:** Es la única solución gratuita que permite al usuario diferenciar entre una notificación discreta (41% preferencia) y una alarma sonora continuada (20% preferencia) o ambas (39%), garantizando que las personas mayores o con deficiencias auditivas no omitan tomas.
+3. **Privacidad y accesibilidad desde el diseño (*Privacy & Accessibility by Design*):** Funciona 100% offline sin necesidad de servidores externos ni registro obligatorio, protegiendo los datos con PIN local y ofreciendo una interfaz de alto contraste, tipografía escalable y botones táctiles adaptados al 70% de usuarios mayores de 46 años identificados en la investigación.
 
 ### 2.4. Partes interesadas
 ### 2.5. Estudio de viabilidad técnica
