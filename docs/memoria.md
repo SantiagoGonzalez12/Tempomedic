@@ -255,6 +255,42 @@ Se ha realizado una búsqueda de las aplicaciones más representativas en las ti
 
 #### 2.3.3. Análisis comparativo (Coste, usabilidad, plataforma y limitaciones)
 
+1. **MedControl (Android):**
+   - *Coste:* Gratuito con publicidad integrada (opción de pago para eliminar anuncios).
+   - *Curva de aprendizaje y usabilidad:* Curva media-baja. Interfaz recargada de banners publicitarios que distraen a usuarios senior.
+   - *Multiplataforma:* Exclusivo para Android.
+   - *Limitaciones:* No diferencia técnicamente entre una notificación estándar y una alarma sonora continuada; el sistema en segundo plano falla con frecuencia por ahorro de batería.
+
+2. **Recordatorio de Medicamentos 2 (iOS):**
+   - *Coste:* Freemium con compras dentro de la app.
+   - *Curva de aprendizaje y usabilidad:* Curva media. La configuración de pautas es completa pero compleja de navegar para personas con poca destreza digital.
+   - *Multiplataforma:* Exclusivo para iOS.
+   - *Limitaciones:* Exclusión del mercado de usuarios Android. Carece de opciones avanzadas de accesibilidad de texto.
+
+3. **CareClinic (iOS / Android / Web):**
+   - *Coste:* Modelo de suscripción mensual/anual de coste elevado.
+   - *Curva de aprendizaje y usabilidad:* Curva alta. Múltiples menús y formularios complejos orientados a usuarios avanzados.
+   - *Multiplataforma:* Excelente (iOS, Android y cliente Web).
+   - *Limitaciones:* Requiere conexión obligatoria a la nube y registro de cuenta, comprometiendo la privacidad local de datos de salud.
+
+4. **Biva (Android):**
+   - *Coste:* Gratuito con servicios de farmacia adheridos.
+   - *Curva de aprendizaje y usabilidad:* Curva media. Orientada a la relación paciente-cuidador.
+   - *Multiplataforma:* Limitado a Android.
+   - *Limitaciones:* Fuerte dependencia de conexión a servidores externos y falta de distinción en el tipo de aviso sonoro.
+
+5. **DayMedy (iOS / Android):**
+   - *Coste:* Modelo de negocio basado en cobro por teleconsulta.
+   - *Curva de aprendizaje y usabilidad:* Curva alta. Centrada en videollamadas médicas más que en la gestión diaria del paciente.
+   - *Multiplataforma:* iOS y Android.
+   - *Limitaciones:* Inoperativa sin conexión a internet y sin adaptabilidad para usuarios con discapacidad visual.
+
+6. **Medical Reminder (Android / iOS):**
+   - *Coste:* Gratuito y sin anuncios.
+   - *Curva de aprendizaje y usabilidad:* Curva muy baja. Diseño con fuentes grandes y pocos pasos.
+   - *Multiplataforma:* Android e iOS.
+   - *Limitaciones:* Herramienta excesivamente rígida; no unifica el calendario de citas médicas con la medicación en una única vista diaria.
+
 #### 2.3.4. Aportación documental
 
 ##### 2.3.4.1. Matriz comparativa
