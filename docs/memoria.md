@@ -228,7 +228,7 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 Tras la consultas y análisis de las necesidades del proyecto, hay que verificar si esos problemas son en verdad problemas reales. Se debe de justificar el tiempo en el que se invierte para poder solucionar las necesidad y no carecer de ellas. 
 
 #### 2.2.2 ¿Qué deben hacer y aportar?
-##### Diagnóstico de la situación de partida (As-Is)
+#### 2.2.2.1 Diagnóstico de la situación de partida (As-Is)
 En la actualidad la gestión cotidiana de los tratamientos farmacológicos y el control de las citas médicas se realiza, en su mayoría, mediante métodos tradicionales y poco estructurados:
 **Control de la medicación:** los usuarios suelen confiar en su propia memoria, anotaciones manuscritas en los envases o recordatorios impresos. Esta falta de automatización dificulta el cumplimiento puntual de las tomas.
 
@@ -236,7 +236,7 @@ En la actualidad la gestión cotidiana de los tratamientos farmacológicos y el 
 
 **Control de existencias(stock):** el recuento del inventario de medicamentos se realiza de forma visual e intuitiva, lo que provoca que el usuario descubra la falta de dosis cuando ya se ha agotado el tratamiento.
 
-##### Problemas y consecuencias identificadas
+#### 2.2.2.2 Problemas y consecuencias identificadas
 Este modelo de gestión manual genera incidencias recurrentes que afectan al bienestar del paciente y a la organización diaria:
 
 **Olvidos y confusiones en las dosis:** la incertidumbre sobre si una toma se ha realizado previamente ocasiona omitir dosis necesarias o repetirlas de forma errónea, lo que compromete la efectividad del tratamiento.
@@ -247,7 +247,20 @@ Este modelo de gestión manual genera incidencias recurrentes que afectan al bie
 
 **Preocupación por la privacidad:** el manejo de información relativa a la salud genera reticencia si el usuario no cuenta con la certeza de que sus datos personales permanecen bajo su estricto control y protección.
 
+#### 2.2.2.3 Propuesta de valor y situación deseada (To-Be)
 
+Tempomedic unifica la gestión personal de la salud en una única aplicación móvil accesible, intuitiva y capaz de funcionar de manera autónoma sin conexión a Internet:
+
+                              TEMPOMEDIC                                
+   - Alertas de medicación y control del stock restante                 
+   - Agenda de citas médicas y archivo de imágenes de recetas           
+   - Interfaz accesible (texto extensible y etiquetas asociadas)        
+   - Almacenamiento local protegido mediante PIN                        
+
+      │                                        │
+      ▼                                        ▼
+(Registro instantáneo de la toma:      (Generación de informe en PDF
+Tomada / Pospuesta / Omitida)          para la consulta médica)
 
 ### 2.3. Estudio de soluciones existentes
 
