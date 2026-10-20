@@ -256,10 +256,9 @@ Tempomedic unifica la gestión personal de la salud en una única aplicación m�
    - Interfaz accesible (texto extensible y etiquetas asociadas)        
    - Almacenamiento local protegido mediante PIN                        
 
-│                                        │
-▼                                        ▼
-(Registro instantáneo de la toma:      (Generación de informe en PDF
-Tomada / Pospuesta / Omitida)          para la consulta médica)
+Con estas 4 propuesta se quiere conseguir: 
+Registro instantáneo de la toma: Tomada / Pospuesta / Omitida
+Generación de informe en PDF para la consulta médica
 
 ### 2.3. Estudio de soluciones existentes
 
