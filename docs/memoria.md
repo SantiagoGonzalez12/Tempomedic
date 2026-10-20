@@ -193,13 +193,12 @@ En tercer lugar, exclusiones del proyecto que están fuera de su alcance:
 * Hardware y comercio: sin soporte para un pastillero inteligente ni gestión de compra/envío de medicamentos.
 * Urgencias: no incluye botones de pánico ni protocolos de emergencia médica.
 
-## 2. SECTOR PROFESIONAL Y PERFIL DE USUARIO
-
-
 ## 2. ANÁLISIS DEL CONTEXTO Y VIABILIDAD
 
 ### 2.1. Sector profesional y perfil de usuarios
+
 #### 2.1.1 ¿En qué consiste?
+
 La aplicación se encuadra en el sector de las tecnologías de la información aplicadas a la salud, un área estratégica del mercado del software orientada a la digitalización, gestión y optimización de los servicios sanitarios y el autocuidado del paciente.
 
 El entorno productivo en el que operará la solución es un ecosistema híbrido que abarca:
@@ -220,6 +219,27 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 #### 2.3.4. Aportación documental
 
 ##### 2.3.4.1. Matriz comparativa
+
+| Característica | MedControl | Recordat. Med. 2 | CareClinic | Biva | DayMedy | Medical Reminder | **Tempomedic** |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Plataforma** | Android | iOS | iOS/Android | Android | iOS/Android | Android/iOS | **Android/Ordenador** |
+| **Recordatorios de medicación** | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | **🟩** |
+| **Recordatorios de citas médicas** | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | 🟩 | **🟩** |
+| **Configuración de pauta (X horas / días)** | 🟩 | 🟩 | 🟩 | 🟩 | 🟨 | 🟩 | **🟩** |
+| **Distinción notificación / alarma sonora** | 🟥 | 🟨 | 🟥 | 🟥 | 🟥 | 🟥 | **🟩** |
+| **Registro de tomas (tomada/pospuesta/omitida)** | 🟨 | 🟩 | 🟩 | 🟩 | 🟨 | 🟨 | **🟩** |
+| **Control de inventario de pastillas** | 🟩 | 🟩 | 🟥 | 🟨 | 🟥 | 🟥 | **🟥 (¿Futuro?)** |
+| **Multiperfil (hijos, mayores)** | 🟥 | 🟥 | 🟩 | 🟩 | 🟩 | 🟥 | **🟥 (¿Futuro?)** |
+| **Sincronización con calendario nativo** | 🟥 | 🟥 | 🟥 | 🟥 | 🟨 | 🟥 | **🟩** |
+| **Funciona sin conexión (Offline)** | 🟨 | 🟨 | 🟥 | 🟥 | 🟥 | 🟩 | **🟩** |
+| **Informes en PDF** | 🟥 | 🟩 (email) | 🟨 | 🟥 | 🟥 | 🟩 | **🟥** |
+| **Telemedicina / consulta en línea** | 🟥 | 🟥 | 🟥 | 🟥 | 🟩 | 🟥 | **🟥** |
+| **IA / asistente inteligente** | 🟥 | 🟥 | 🟥 | 🟥 | 🟥 | 🟥 | **🟥** |
+| **Enfoque en accesibilidad (Texto grande)** | 🟥 | 🟥 | 🟥 | 🟥 | 🟥 | 🟩 | **🟩** |
+| **Privacidad (Offline, sin nube, PIN)** | 🟨 | 🟨 | 🟥 | 🟥 | 🟥 | 🟩 | **🟩** |
+| **Gratuita / sin registro obligatorio** | 🟨 | 🟨 | 🟨 | 🟨 | 🟨 | 🟩 | **🟩** |
+
+(Leyenda: 🟩 Incluido | 🟨 Parcial o limitado | 🟥 No incluido)
 
 ##### 2.3.4.2. Justificación de la propuesta (Ventaja competitiva)
 
