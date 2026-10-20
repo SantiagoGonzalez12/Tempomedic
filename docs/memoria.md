@@ -230,6 +230,29 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 
 #### 2.3.2. Identificación de software competidor y contexto de mercado
 
+Se ha realizado una búsqueda de las aplicaciones más representativas en las tiendas oficiales de software y plataformas de salud:
+
+- **MedControl:** Funciona como un asistente de salud personal y pastillero virtual. Permite crear alarmas personalizadas para medicamentos, llevar un control de inventario y organizar recordatorios para citas médicas, diario de tensión arterial y seguimiento de síntomas.
+- **Recordatorio de Medicamentos 2:** Centrada en la adherencia al tratamiento. Ofrece recordatorios altamente configurables (cada X horas, días específicos), alertas de stock escaso de pastillas, envío de reportes por correo al médico y agenda de recordatorios para citas.
+- **CareClinic:** Plataforma integral de salud. Registra síntomas, mediciones, estado de ánimo y nutrición. Incluye recordatorios personalizables de medicación/citas y admite la gestión de múltiples perfiles (hijos, adultos mayores).
+- **Biva:** Diseñada para pacientes y cuidadores. Registra condiciones médicas y tratamientos con recordatorios. Integra servicios de recarga de medicamentos y reserva de citas médicas.
+- **DayMedy:** Aplicación de telemedicina con consultas en línea, gestión de prescripciones digitales y programación de citas. Tras la consulta, el usuario recibe la receta en la app y configura recordatorios de medicación.
+- **Medical Reminder:** Enfocada en la simplicidad y la privacidad local sin conexión a internet. Ofrece recordatorios para medicamentos y citas con un diseño de texto grande para adultos mayores y generación de informes de salud en PDF.
+- **Otras aplicaciones del sector:** Soluciones institucionales y corporativas como **IMQ** (aseguradora), **MyCarePlan**, **PineApp** y **MedGemak**, que ofrecen funcionalidades parciales o totales de gestión de citas, historial clínico y alarmas.
+
+##### Noticias y tendencias recientes del sector
+
+- **Éxito de las tarjetas sanitarias virtuales:** En la Comunidad de Madrid, la Tarjeta Sanitaria Virtual (TSV) ha registrado cerca de 57 millones de accesos en 2025 (+43,5%), consolidando servicios como recordatorios de citas de atención primaria (más de 5 millones de notificaciones) y alertas de dispensación en farmacias.
+- **Integración de IA en portales de pacientes:** Oracle Health ha lanzado un portal con IA que ofrece resúmenes de salud y recordatorios automáticos en lenguaje sencillo para mejorar la adherencia.
+- **Nuevos modelos de negocio:** Startups como **Assort Health** han captado inversión para unificar programación de citas, medicación y pagos con IA. **Amazon** ha desplegado un agente de IA para salud enfocado en citas y recetas.
+- **Investigación universitaria:** Investigadores de la Universidad Miguel Hernández (UMH) de Elche han desarrollado software especializado para que pacientes con inmunodeficiencias autogestionen citas y tratamientos mediante recordatorios personalizados.
+
+##### Aportaciones de la literatura científica
+
+- **Diabetes Mellitus Tipo 2:** Metaanálisis de 2025 demuestran un efecto altamente positivo de las apps móviles en la adherencia a la medicación y el control glucémico.
+- **Intervenciones mHealth en enfermedades crónicas:** Revisiones sistemáticas en el *Journal of Medical Systems* (2025) confirman que los recordatorios digitales incrementan significativamente el cumplimiento del tratamiento.
+- **Enfermedad Renal Crónica y Oncología:** Estudios de 2025 ratifican que los sistemas de recordatorio reducen las omisiones involuntarias de dosis en tratamientos de alta complejidad.
+
 #### 2.3.3. Análisis comparativo (Coste, usabilidad, plataforma y limitaciones)
 
 #### 2.3.4. Aportación documental
