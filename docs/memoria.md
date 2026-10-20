@@ -194,14 +194,65 @@ En tercer lugar, exclusiones del proyecto que están fuera de su alcance:
 * Urgencias: no incluye botones de pánico ni protocolos de emergencia médica.
 
 ## 2. SECTOR PROFESIONAL Y PERFIL DE USUARIO
-## 2.1. ¿En qué consiste?
 
-### Caracterización del entorno productivo
+
+## 2. ANÁLISIS DEL CONTEXTO Y VIABILIDAD
+
+### 2.1. Sector profesional y perfil de usuarios
+#### 2.1.1 ¿En qué consiste?
 La aplicación se encuadra en el sector de las tecnologías de la información aplicadas a la salud, un área estratégica del mercado del software orientada a la digitalización, gestión y optimización de los servicios sanitarios y el autocuidado del paciente.
 
 El entorno productivo en el que operará la solución es un ecosistema híbrido que abarca:
-* **El ámbito del autocuidado y la salud personal:** Soluciones dirigidas a capacitar al paciente en el control diario de su plan terapéutico
-* **El ámbito del seguimiento y asistencia sanitaria:** Sistemas de programación, control de agenda y seguimiento de citas con profesionales médicos o centros de salud.
+
+- **El ámbito del autocuidado y la salud personal:** Soluciones dirigidas a capacitar al paciente en el control diario de su plan terapéutico
+- **El ámbito del seguimiento y asistencia sanitaria:** Sistemas de programación, control de agenda y seguimiento de citas con profesionales médicos o centros de salud.
+
+### 2.2. Análisis de la necesidad
+
+### 2.3. Estudio de soluciones existentes
+
+#### 2.3.1. ¿En qué consiste?
+
+#### 2.3.2. Identificación de software competidor y contexto de mercado
+
+#### 2.3.3. Análisis comparativo (Coste, usabilidad, plataforma y limitaciones)
+
+#### 2.3.4. Aportación documental
+
+##### 2.3.4.1. Matriz comparativa
+
+##### 2.3.4.2. Justificación de la propuesta (Ventaja competitiva)
+
+### 2.4. Partes interesadas
+### 2.5. Estudio de viabilidad técnica
+### 2.6. Estudio de viabilidad económica
+### 2.7. Estudio de viabilidad legal y normativa
+   #### 2.7.1. Protección de datos personales
+   #### 2.7.2. Propiedad intelectual y licencias
+   #### 2.7.3. Accesibilidad y otros requisitos aplicables
+### 2.8. Análisis de riesgos inicial
 
 
+## 3. PLANIFICACIÓN Y GESTIÓN DEL PROYECTO
+  ### 3.1. Metodología de desarrollo empleada
+  ### 3.2. Organización del equipo y reparto de responsabilidades
+  ### 3.3. Roles del proyecto
+  ### 3.4. Plan de trabajo
+  ### 3.5. Cronograma e hitos
+  ### 3.6. Estimación de recursos
+  ### 3.7. Presupuesto estimado
+  ### 3.8. Gestión de riesgos
+  ### 3.9. Herramientas de comunicación, coordinación y seguimiento
+  ### 3.10. Gestión de versiones y repositorio de código
+## 4. ANÁLISIS DE REQUISITOS
+  ### 4.1. Identificación de usuarios y perfiles
+  ### 4.2. Requisitos funcionales
+  ### 4.3. Requisitos no funcionales
+  ### 4.4. Reglas de negocio
+  ### 4.5. Casos de uso o historias de usuario
+  ### 4.6. Priorización de requisitos
+  ### 4.7. Matriz de trazabilidad de requisitos
+## 6. DESARROLLO E IMPLEMENTACIÓN
+### 6.1. Tecnologías, lenguajes y frameworks utilizados
+### 6.6. Implementación de la interfaz de usuario
 
