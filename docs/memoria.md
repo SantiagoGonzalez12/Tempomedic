@@ -206,6 +206,17 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 
 - **El ámbito del autocuidado y la salud personal:** Soluciones dirigidas a capacitar al paciente en el control diario de su plan terapéutico
 - **El ámbito del seguimiento y asistencia sanitaria:** Sistemas de programación, control de agenda y seguimiento de citas con profesionales médicos o centros de salud.
+- 
+ ### Clasificación y definición de perfiles de usuario
+
+1. **Perfil Paciente, Usuario Final (Perfil Principal):**
+   * **Descripción:** Personas que requieren llevar un control riguroso de su calendario de citas médicas y el horario de toma de sus medicamentos (por ejemplo, pacientes crónicos, personas en tratamientos temporales o adultos mayores).
+   * **Rol en el sistema:** Crear y gestionar recordatorios de medicación, visualizar la agenda de citas, marcar tomas como realizadas y consultar historiales/estadísticas de adherencia al tratamiento.
+
+2. **Perfil Cuidador, Familiar (Perfil Secundario):**
+   * **Descripción:** Familiares o tutores legales a cargo de la supervisión de la salud de un tercero (por ejemplo, hijos al cuidado de padres mayores o tutores de personas dependientes).
+   * **Rol en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas en caso de omisión o incumplimiento en las tomas de medicamentos.
+
 
 ### 2.2. Análisis de la necesidad
 
