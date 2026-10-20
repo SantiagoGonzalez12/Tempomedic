@@ -228,6 +228,8 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 
 #### 2.3.1. ¿En qué consiste?
 
+El estudio de soluciones existentes consiste en un análisis comparativo de mercado (*benchmarking*) exhaustivo sobre las alternativas digitales disponibles para la gestión de tratamientos farmacológicos y citas de salud. Su propósito fundamental es identificar los vacíos funcionales, los problemas de usabilidad, las barreras de coste y las vulnerabilidades de privacidad presentes en las soluciones actuales, justificando de manera fundamentada la ventaja competitiva y el valor diferencial que aporta Tempomedic dentro del sector.
+
 #### 2.3.2. Identificación de software competidor y contexto de mercado
 
 Se ha realizado una búsqueda de las aplicaciones más representativas en las tiendas oficiales de software y plataformas de salud:
