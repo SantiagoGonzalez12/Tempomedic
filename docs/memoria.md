@@ -366,7 +366,21 @@ Su propuesta de valor diferencial reside en tres pilares:
 3. **Privacidad y accesibilidad desde el diseño (*Privacy & Accessibility by Design*):** Funciona 100% offline sin necesidad de servidores externos ni registro obligatorio, protegiendo los datos con PIN local y ofreciendo una interfaz de alto contraste, tipografía escalable y botones táctiles adaptados al 70% de usuarios mayores de 46 años identificados en la investigación.
 
 ### 2.4. Partes interesadas
+   #### 2.4.1 ¿En qué consiste?
+   #### 2.4.2 ¿Qué deben de hacer y aportar?
+      ##### 2.4.2.1 Identificación exhaustiva
+      ##### 2.4.2.2 Análisis de poder e interés
+      ##### 2.4.2.3 Aportación documental
+      ##### 2.4.2.3.1 Matriz de Interesados (Poder vs. Interés)
 ### 2.5. Estudio de viabilidad técnica
+   #### 2.5.1 ¿En qué consiste?
+   #### 2.5.2 ¿Qué deben hacer y aportar?
+      ##### 2.5.2.1 Pila tecnológica (Tech Stack)
+      ##### 2.5.2.2 Requisitos de hardware y despliegue
+      ##### 2.5.2.3 Curva de aprendizaje y madurez técnica
+      ##### 2.5.2.4 Aportación documental
+         ###### 2.5.2.4.1 Ficha técnica del stack de desarrollo y entorno de ejecución
+         ###### 2.5.2.4.2 Conclusión explícita sobre la viabilidad técnica del desarrollo
 ### 2.6. Estudio de viabilidad económica
 ### 2.7. Estudio de viabilidad legal y normativa
    #### 2.7.1. Protección de datos personales
