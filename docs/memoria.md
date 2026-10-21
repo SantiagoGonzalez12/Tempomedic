@@ -273,6 +273,12 @@ Con estas 4 propuesta se quiere conseguir:
 - Registro instantáneo de la toma: Tomada / Pospuesta / Omitida
 - Generación de informe en PDF para la consulta médica
 
+#### 2.2.2.4 Aportación documetal
+
+**Literatura de lo investigado**
+- Organización Mundial de la Salud: la OMS dicta que más del 50% de los pacientes con problemas de salud crónica no se toman la medicación como es debido y, del 75% los psiquiátricos, provocando así que los síntomas se agraven y tengan un coste más elevado para el paciente. La preocupación de los sanitarios no es solo esa, sino que a algunos pacientes, las medicinas le provocan daño evitando que se las tomen. Por esto último, la OMS ha determinado que la Medicación sin daño es el tema del tercer reto mundial por la seguridad del paciente. 
+
+
 ### 2.3. Estudio de soluciones existentes
 
 #### 2.3.1. ¿En qué consiste?
@@ -467,3 +473,25 @@ Su propuesta de valor diferencial reside en tres pilares:
 ### 6.6. Implementación de la interfaz de usuario
 
 ## REFERENCIAS
+# Introducción
+## [[proposito|Propósito]]
+## [[alcance|Alcance]]
+## [[definiciones| Definiciones, siglas, y abreviaturas]]
+## [[referencias|Referencias]]
+## [[vision| Visión global]]
+# Descripción General
+## [[perspectiva|Perspectiva del Producto]]
+## [[funciones_producto|Funciones del Producto]]
+## [[usuarios|Características de los Usuarios]]
+## [[restricciones|Restricciones]]
+## [[dependencias|Supuestos y Dependencias]]
+## [[pospuestos|Requisitos Pospuestos]]
+# Requisitos Específicos
+putas todas
+## [[interfaces| Requisitos de la interfaz externa]]
+## [[funcionales| Requisitos funcionales]]
+## [[rendimiento|Requisitos de Rendimiento]]
+## [[restricciones_diseño|Restricciones de Diseño]]
+## [[atributos| Atributos del Sistema de Software]]
+## [[otros_requisitos|Otros Requisitos]]
+# Apéndices
