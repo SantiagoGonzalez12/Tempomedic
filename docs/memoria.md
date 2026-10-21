@@ -229,9 +229,9 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 - **Descripción:** Familiares o tutores legales a cargo de la supervisión de la salud de un tercero (por ejemplo, hijos al cuidado de padres mayores o tutores de personas dependientes).
 - **Rol en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas en caso de omisión o incumplimiento en las tomas de medicamentos.
 
-  ## 2.2.1. ¿Qué deben hacer y aportar?
+  ### 2.2.1. ¿Qué deben hacer y aportar?
 
-### 2.2.1.1. Caracterización del sector
+#### 2.2.1.1. Caracterización del sector
 
 #### A. Ámbito de actividad
 El sector sanitario se encuentra en un proceso de transformación donde la atención no se limita a la visita presencial en el centro médico, sino que se extiende al hogar del paciente a través del seguimiento contínuo desde casa.
