@@ -492,7 +492,9 @@ Su propuesta de valor diferencial reside en tres pilares:
 ### 6.6. Implementación de la interfaz de usuario
 
 ## REFERENCIAS
-[1]: Organización Mundial de la Salud (OMS). Información sobre la Medicación Sin Daño.2022
+[1]: Organización Mundial de la Salud (OMS). Información sobre la Medicación Sin Daño. 2022
 
 [2]: Encuesta propia de validación TempoMedic. 2026
+
+[3]: Servicio de Información sobre Discapacidad. Porcentaje de pacientes que incumplen el tratamiento. 2019
 
