@@ -493,5 +493,6 @@ Su propuesta de valor diferencial reside en tres pilares:
 
 ## REFERENCIAS
 [1]: Organización Mundial de la Salud (OMS). Información sobre la Medicación Sin Daño.2022
+
 [2]: Encuesta propia de validación TempoMedic. 2026
 
