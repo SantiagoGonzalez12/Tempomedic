@@ -413,12 +413,12 @@ El análisis de partes interesadas consiste en mapear a todas las personas, cole
 Se diferencian dos grandes bloques de actores:
 *   **Partes interesadas internas:**
     *   **Equipo de desarrollo (Grupo 2):** Encargados del diseño, prototipado y desarrollo de la aplicación. Formado por perfiles Frontend, Backend, QA Tester y Scrum Master.
-    *   **Tutor del módulo (Willman Acosta Lugo):** Actúa como *Product Owner* académico, evaluando el cumplimiento de los criterios de evaluación del Real Decreto 405/2023 [1] y guiando el alcance del proyecto.
+    *   **Tutor del módulo (Willman Acosta Lugo):** Actúa como *Product Owner* académico, evaluando el cumplimiento de los criterios de evaluación del Real Decreto 405/2023 [4] y guiando el alcance del proyecto.
 *   **Partes interesadas externas:**
     *   **Pacientes/Usuarios finales (Perfil principal):** Personas con tratamientos crónicos o puntuales que necesitan gestionar su medicación y citas. Incluye un alto porcentaje de adultos mayores (según nuestra encuesta, el 70% supera los 46 años), lo que exige interfaces de alta accesibilidad.
     *   **Cuidadores/Familiares (Perfil secundario):** Personas que supervisan la medicación de dependientes.
     *   **Profesionales sanitarios (Indirecto):** Médicos y farmacéuticos que se benefician de una mayor adherencia al tratamiento por parte del paciente, aunque no interactúan directamente con la app en esta fase.
-    *   **Organismos reguladores (Indirecto):** La Agencia Española de Protección de Datos (AEPD), que vela por el cumplimiento del RGPD y la LOPDGDD [2].
+    *   **Organismos reguladores (Indirecto):** La Agencia Española de Protección de Datos (AEPD), que vela por el cumplimiento del RGPD y la LOPDGDD [7].
 
 ##### 2.4.2.2 Análisis de poder e interés
 Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs. interés (Mendelow):
