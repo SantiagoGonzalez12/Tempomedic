@@ -96,6 +96,7 @@ Java - Swing - NetBeans Matisse - MVC - salud digital - Health - recordatorios d
 - [6. DESARROLLO E IMPLEMENTACIÓN](#6-desarrollo-e-implementación)
   - [6.1. Tecnologías, lenguajes y frameworks utilizados](#61-tecnologías-lenguajes-y-frameworks-utilizados)
   - [6.6. Implementación de la interfaz de usuario](#66-implementación-de-la-interfaz-de-usuario)
+- [REFERENCIAS](#referencias)
 
 ## 1. INTRODUCCIÓN
 
@@ -413,3 +414,4 @@ Su propuesta de valor diferencial reside en tres pilares:
 ### 6.1. Tecnologías, lenguajes y frameworks utilizados
 ### 6.6. Implementación de la interfaz de usuario
 
+## REFERENCIAS
