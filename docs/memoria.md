@@ -4,12 +4,11 @@
 | --- | --- |
 | **Curso** | DAM 2 |
 | **Grupo** | Grupo 2 |
-| **Integrantes** | María Dolores Barba<br> Alba Durán <br> Santiago González <br> Jorge Espejo |
+| **Integrantes** | María Dolores Barba <br> Alba Durán <br> Santiago González <br> Jorge Espejo |
 | **Módulo / profesor** | PI/DII - Willman Acosta Lugo |
-| **Sprint** | Sprint 1 <br> 24/09/2026 – 02/10/2026 |
+| **Sprint** | Sprint 1 (24/09/2026 – 02/10/2026) <br> Sprint 2 (03/10/2026 - 30/10/2026)|
 | **Repositorios** | <https://github.com/SantiagoGonzalez12/Tempomedic> <br> <https://github.com/SantiagoGonzalez12/Tempomedic-Interfaz> |
 | **Tablero** | <https://github.com/users/SantiagoGonzalez12/projects/6> |
-
 
 ## DECLARACIÓN DE AUTORÍA Y ORIGINALIDAD
 
@@ -26,10 +25,10 @@ La solución reúne en un único sitio el registro de medicamentos con su pauta 
 Este primer sprint (*Sprint 1: Ideación y Prototipado Base*) se centra en el diseño del prototipo de la interfaz gráfica. El prototipo cubre las cinco vistas principales de la aplicación (acceso, Hoy, Medicamentos, Citas y Ajustes). El trabajo se ha organizado con metodología Scrum, documentado en GitHub mediante issues, tablero y entregas por sprint.
 
 ## PALABRAS CLAVE
- 
+
 Java - Swing - NetBeans Matisse - MVC - salud digital - Health - recordatorios de medicación - gestión de citas médicas - accesibilidad - privacidad - Scrum - healthcare - medication-reminder
 
-## ÍNDICE 
+## ÍNDICE
 
 - [1. INTRODUCCIÓN](#1-introducción)
   - [1.1. Contexto del proyecto](#11-contexto-del-proyecto)
@@ -101,60 +100,66 @@ Java - Swing - NetBeans Matisse - MVC - salud digital - Health - recordatorios d
 ## 1. INTRODUCCIÓN
 
 ### 1.1. Contexto del proyecto
+
 Hoy en día, la transformación digital ha cambiado radicalmente la forma en que gestionamos nuestra vida diaria a través de los dispositivos móviles. Dentro de este proceso, la salud digital se ha consolidado como una de las áreas de mayor expansión, respondiendo a una demanda creciente de herramientas que faciliten el cuidado personal.
 
 Sin embargo, a pesar de este avance, las personas siguen encontrando serias dificultades para mantener una correcta adherencia a sus tratamientos y organizar sus consultas médicas, lo que evidencia la necesidad de soluciones tecnológicas más integrales y eficientes.
 
 Como respuesta a este escenario, se presenta **Tempomedic**: una aplicación móvil orientada a la gestión personal de la salud que unifica en una sola plataforma dos funciones esenciales:
 
-* **Reserva y gestión centralizada de citas médicas.**
-* **Módulo de control de medicación con alertas automáticas.**
+- **Reserva y gestión centralizada de citas médicas.**
+- **Módulo de control de medicación con alertas automáticas.**
 
 ### 1.2. Problema o necesidad detectada
 
 En el día a día del cuidado de la salud, las personas se encuentran principalmente con dos problemas:
 
-* **Olvidos con la medicación:** Muchas personas se preguntan continuamente *"¿A qué hora me tocaba la pastilla?"* y terminan olvidando tomarla. Esto es peligroso para la salud, tanto para quienes toman un tratamiento puntual (como un antibiótico durante una semana) como para pacientes mayores o crónicos que tienen que tomar varias medicinas al día
-* **Dificultades para pedir cita médica:** Conseguir una cita con el médico, ya sea por internet o en persona, suele ser un proceso lento y desesperante para la mayoría de los usuarios
+- **Olvidos con la medicación:** Muchas personas se preguntan continuamente *"¿A qué hora me tocaba la pastilla?"* y terminan olvidando tomarla. Esto es peligroso para la salud, tanto para quienes toman un tratamiento puntual (como un antibiótico durante una semana) como para pacientes mayores o crónicos que tienen que tomar varias medicinas al día
+- **Dificultades para pedir cita médica:** Conseguir una cita con el médico, ya sea por internet o en persona, suele ser un proceso lento y desesperante para la mayoría de los usuarios
 
 Estas problemáticas se confirmaron a través de una **recolección de datos primarios mediante una encuesta**. A partir de las preguntas realizadas a los usuarios, analizamos directamente sus necesidades reales y de uso diario. En base a estas evidencias y a las carencias detectadas, diseñamos y desarrollamos nuestra aplicación: **Tempomedic**
 
 ### 1.3. Propuesta de solución
+
 Para dar respuesta a los problemas identificados en el estudio de mercado, nace **Tempomedic**: una solución tecnológica integral diseñada para centralizar la gestión de la salud personal en una única plataforma móvil intuitiva y accesible.
 
 La propuesta aborda las necesidades del usuario estructurándose en dos módulos principales:
 
-* **Módulo de Gestión y Recordatorios de Medicamentos:**
-  * **Configuración personalizada:** El usuario puede registrar el nombre del fármaco, la dosis exacta y la frecuencia de toma de forma sencilla.
-  * **Sistema de alertas offline:** La aplicación programa notificaciones automáticas en el dispositivo que se ejecutan de manera precisa, sin necesidad de contar con conexión a Internet activa
-  * **Control de seguimiento diario:** Incluye una pantalla principal interactiva donde el paciente puede marcar el estado de cada toma en tiempo real (como *"Tomada"*, *"Posponer"* u *"Omitida"*)
+- **Módulo de Gestión y Recordatorios de Medicamentos:**
+  - **Configuración personalizada:** El usuario puede registrar el nombre del fármaco, la dosis exacta y la frecuencia de toma de forma sencilla.
+  - **Sistema de alertas offline:** La aplicación programa notificaciones automáticas en el dispositivo que se ejecutan de manera precisa, sin necesidad de contar con conexión a Internet activa
+  - **Control de seguimiento diario:** Incluye una pantalla principal interactiva donde el paciente puede marcar el estado de cada toma en tiempo real (como *"Tomada"*, *"Posponer"* u *"Omitida"*)
 
-* **Módulo de Agenda y Citas Médicas:**
-  * **Centralización de consultas:** Ofrece una agenda organizada para registrar, consultar y gestionar las próximas citas médicas, evitando la pérdida de fechas o la dispersión de información en papeles
-  * **Control de especialidades y centros:** Permite asociar cada cita a su correspondiente especialidad médica y centro hospitalario para un control exhaustivo del historial de consultas
+- **Módulo de Agenda y Citas Médicas:**
+  - **Centralización de consultas:** Ofrece una agenda organizada para registrar, consultar y gestionar las próximas citas médicas, evitando la pérdida de fechas o la dispersión de información en papeles
+  - **Control de especialidades y centros:** Permite asociar cada cita a su correspondiente especialidad médica y centro hospitalario para un control exhaustivo del historial de consultas
 
-
-  
 ### 1.4. Objetivos del proyecto
-  #### 1.4.1. Objetivo general
+
+#### 1.4.1. Objetivo general
+
   Desarrollar Tempomedic, una aplicación de gestión de salud personal que ayude a los usuarios a no olvidar sus tomas de medicación ni sus citas médicas, mediante recordatorios personalizables y una interfaz sencilla, accesible y respetuosa con la privacidad de los datos de salud.
 
-  #### 1.4.2. Objetivos específicos 
+#### 1.4.2. Objetivos específicos
+
   Aunque el proyecto tiene muy claro dónde quiere llegar, la realidad se marca aunque sea en los pequeños detalles. Hoy en día existen muchas aplicaciones que se limitan a cumplir sus función, pero lo que realmente distinguirá a esta es su facilidad de uso y su capacidad para no dejar a nadie fuera.
 
 Tempomedic nace para recordar y acompañar a personas de cualquier edad, aunque pone la mirada en un grupo fundamental, los mayores. Ellos son la población más expuesta a los cambios de los últimos tiempo; no crecieron rodeados de pantallas y han tenido que adaptarse, paso a paso, tanto a las transformaciones tecnológicas como a los avances médicos.
 
-  Por eso, la app queda exenta de cualquier complicación. Se apuesta por una navegación sencilla y a una disposición de ayuda necesitada. 
+Por eso, la app queda exenta de cualquier complicación. Se apuesta por una navegación sencilla y a una disposición de ayuda necesitada.
 
 ### 1.5. Alcance del proyecto
+
 Para definir el alcance de la app, lo ideal es estructurarla en tres fases que vayan progresivamente para tenerla muy clara desde el principio.
-* Primera fase: recopilar la información de los usuarios. Una vez completado, desarrollar un programa de recordatorios de medicación con notificaciones, alarmas o registros de tomas. Posibilidad de asociarlo a aplicaciones nativas del móvil como Apple Calendar o Google.
-* Segunda fase: fidelizar a los usuarios sin complicar en exceso la tecnología. Aquí se incluye el control de inventario de pastillas para avisar cuando toque ir a la farmacia, la opción de gestionar perfiles de familiares dependientes, el guardado de fotos de recetas o informes médicos y la generación de un PDF con el historial de tomas para enseñárselo al médico (opcional).
-* Tercera fase: se intentará conectar la app con bases de datos oficiales de medicamentos para buscar la medicina y detectar interacciones entre ellos. Poder integrar APIS con clínicas para reservar citas desde la app y añadir seguimiento de la medicación.
+
+- Primera fase: recopilar la información de los usuarios. Una vez completado, desarrollar un programa de recordatorios de medicación con notificaciones, alarmas o registros de tomas. Posibilidad de asociarlo a aplicaciones nativas del móvil como Apple Calendar o Google.
+- Segunda fase: fidelizar a los usuarios sin complicar en exceso la tecnología. Aquí se incluye el control de inventario de pastillas para avisar cuando toque ir a la farmacia, la opción de gestionar perfiles de familiares dependientes, el guardado de fotos de recetas o informes médicos y la generación de un PDF con el historial de tomas para enseñárselo al médico (opcional).
+- Tercera fase: se intentará conectar la app con bases de datos oficiales de medicamentos para buscar la medicina y detectar interacciones entre ellos. Poder integrar APIS con clínicas para reservar citas desde la app y añadir seguimiento de la medicación.
 
 Los medicamentos tienen que estar protegidos legalmente por la normativa RGPD.
 
 ### 1.6. Limitaciones y exclusiones
+
 El desarrollo de la aplicación no solo define las funciones que se van a construir, sino también aquellas que quedan fuera de la app para evitar costes innecesarios, problemas de tiempo o riesgos en la entrega.
 
 Las limitaciones son los problemas técnicos con los que nace la app. La principal dificultad es la dependencia de los avisos del propio teléfono, los sistemas operativos a veces bloquean o retrasan las notificaciones para ahorrar batería, por lo que la app debe pedir permisos especiales al usuario. Otra limitación clave es que toda la información se guarda únicamente en el móvil durante esta primera versión, si el usuario pierde o cambia de teléfono, perderá su historial a menos que haga una copia de seguridad manual. Además, la precisión de las citas dependerá al 100% de que el usuario escriba bien las fechas y lugares, ya que la app no se conecta en tiempo real con la agenda del médico.
@@ -174,25 +179,30 @@ El interior de la app en Java se compone de cuatro elementos principales:
 **El Gestor de Avisos:** Es la pieza que habla directamente con el móvil para poner las alarmas a sonar a la hora exacta, y tiene la función vital de volver a activar todos los recordatorios si el usuario apaga o reinicia el teléfono.
 
 ### 1.7. Estructura de la memoria
+
 En primer lugar hay que hablar del alcance del proyecto:
-* Objetivo general: desarrollar una aplicación móvil para la gestión personal de tratamientos médicos y recordatorios de citas.
-* Objetivos específicos: reducir el olvido de las tomas, centralizar la agenda de consultas y garantizar la privacidad del usuario mediante almacenamiento local.
+
+- Objetivo general: desarrollar una aplicación móvil para la gestión personal de tratamientos médicos y recordatorios de citas.
+- Objetivos específicos: reducir el olvido de las tomas, centralizar la agenda de consultas y garantizar la privacidad del usuario mediante almacenamiento local.
 
 Módulos y funcionalidades:
-* Módulo de medicación: registro de tratamientos, programación de alarmas/notificaciones y marcar el cumplimiento.
-* Módulo de citas: agenda manual de consultas y sincronización con el calendario nativo.
-* Módulo de persistencia local: almacenamiento seguro en el dispositivo.
+
+- Módulo de medicación: registro de tratamientos, programación de alarmas/notificaciones y marcar el cumplimiento.
+- Módulo de citas: agenda manual de consultas y sincronización con el calendario nativo.
+- Módulo de persistencia local: almacenamiento seguro en el dispositivo.
 
 En segundo lugar, limitaciones del sistema:
-* Gestión en segundo plano: optimización de la dependencia del sistema operativo.
-* Persistencia y Backup: ausencia de sincronización en la nube, la pérdida del dispositivo implica la pérdida del historial.
-* Entrada de datos: la exactitud de los mismos depende totalmente del registro manual introducido por el usuario.
+
+- Gestión en segundo plano: optimización de la dependencia del sistema operativo.
+- Persistencia y Backup: ausencia de sincronización en la nube, la pérdida del dispositivo implica la pérdida del historial.
+- Entrada de datos: la exactitud de los mismos depende totalmente del registro manual introducido por el usuario.
 
 En tercer lugar, exclusiones del proyecto que están fuera de su alcance:
-* Asistencia médica: no se proporciona diagnóstico ni asesoramiento
-* Integración externa: sin conexión a historial clínico oficiales, APIS de salud pública.
-* Hardware y comercio: sin soporte para un pastillero inteligente ni gestión de compra/envío de medicamentos.
-* Urgencias: no incluye botones de pánico ni protocolos de emergencia médica.
+
+- Asistencia médica: no se proporciona diagnóstico ni asesoramiento
+- Integración externa: sin conexión a historial clínico oficiales, APIS de salud pública.
+- Hardware y comercio: sin soporte para un pastillero inteligente ni gestión de compra/envío de medicamentos.
+- Urgencias: no incluye botones de pánico ni protocolos de emergencia médica.
 
 ## 2. ANÁLISIS DEL CONTEXTO Y VIABILIDAD
 
@@ -206,30 +216,29 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 
 - **El ámbito del autocuidado y la salud personal:** Soluciones dirigidas a capacitar al paciente en el control diario de su plan terapéutico
 - **El ámbito del seguimiento y asistencia sanitaria:** Sistemas de programación, control de agenda y seguimiento de citas con profesionales médicos o centros de salud.
-- 
- ### Clasificación y definición de perfiles de usuario
+
+### Clasificación y definición de perfiles de usuario
 
 1. **Perfil Paciente, Usuario Final (Perfil Principal):**
 
-   * **Descripción:** Personas que requieren llevar un control riguroso de su calendario de citas médicas y el horario de toma de sus medicamentos (por ejemplo, pacientes crónicos, personas en tratamientos temporales o adultos mayores).
-   
-   * **Rol en el sistema:** Crear y gestionar recordatorios de medicación, visualizar la agenda de citas, marcar tomas como realizadas y consultar historiales/estadísticas de adherencia al tratamiento.
-
+- **Descripción:** Personas que requieren llevar un control riguroso de su calendario de citas médicas y el horario de toma de sus medicamentos (por ejemplo, pacientes crónicos, personas en tratamientos temporales o adultos mayores).
+- **Rol en el sistema:** Crear y gestionar recordatorios de medicación, visualizar la agenda de citas, marcar tomas como realizadas y consultar historiales/estadísticas de adherencia al tratamiento.
 
 2. **Perfil Cuidador, Familiar (Perfil Secundario):**
 
-   * **Descripción:** Familiares o tutores legales a cargo de la supervisión de la salud de un tercero (por ejemplo, hijos al cuidado de padres mayores o tutores de personas dependientes).
-
-   
-   * **Rol en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas en caso de omisión o incumplimiento en las tomas de medicamentos.
+- **Descripción:** Familiares o tutores legales a cargo de la supervisión de la salud de un tercero (por ejemplo, hijos al cuidado de padres mayores o tutores de personas dependientes).
+- **Rol en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas en caso de omisión o incumplimiento en las tomas de medicamentos.
 
 ### 2.2. Análisis de la necesidad
+
 #### 2.2.1 ¿En qué consiste?
 
-Tras la consultas y análisis de las necesidades del proyecto, hay que verificar si esos problemas son en verdad problemas reales. Se debe de justificar el tiempo en el que se invierte para poder solucionar las necesidad y no carecer de ellas. 
+Tras la consultas y análisis de las necesidades del proyecto, hay que verificar si esos problemas son en verdad problemas reales. Se debe de justificar el tiempo en el que se invierte para poder solucionar las necesidad y no carecer de ellas.
 
 #### 2.2.2 ¿Qué deben hacer y aportar?
+
 #### 2.2.2.1 Diagnóstico de la situación de partida (As-Is)
+
 En la actualidad la gestión cotidiana de los tratamientos farmacológicos y el control de las citas médicas se realiza, en su mayoría, mediante métodos tradicionales y poco estructurados:
 
 **Control de la medicación:** los usuarios suelen confiar en su propia memoria, anotaciones manuscritas en los envases o recordatorios impresos. Esta falta de automatización dificulta el cumplimiento puntual de las tomas.
@@ -239,6 +248,7 @@ En la actualidad la gestión cotidiana de los tratamientos farmacológicos y el 
 **Control de existencias(stock):** el recuento del inventario de medicamentos se realiza de forma visual e intuitiva, lo que provoca que el usuario descubra la falta de dosis cuando ya se ha agotado el tratamiento.
 
 #### 2.2.2.2 Problemas y consecuencias identificadas
+
 Este modelo de gestión manual genera incidencias recurrentes que afectan al bienestar del paciente y a la organización diaria:
 
 **Olvidos y confusiones en las dosis:** la incertidumbre sobre si una toma se ha realizado previamente ocasiona omitir dosis necesarias o repetirlas de forma errónea, lo que compromete la efectividad del tratamiento.
@@ -252,15 +262,16 @@ Este modelo de gestión manual genera incidencias recurrentes que afectan al bie
 #### 2.2.2.3 Propuesta de valor y situación deseada (To-Be)
 
 Tempomedic unifica la gestión personal de la salud en una única aplicación móvil accesible, intuitiva y capaz de funcionar de manera autónoma sin conexión a Internet:
-                                                   
-   - Alertas de medicación y control del stock restante                 
-   - Agenda de citas médicas y archivo de imágenes de recetas           
-   - Interfaz accesible (texto extensible y etiquetas asociadas)        
-   - Almacenamiento local protegido mediante PIN                        
 
-Con estas 4 propuesta se quiere conseguir: 
-Registro instantáneo de la toma: Tomada / Pospuesta / Omitida
-Generación de informe en PDF para la consulta médica
+- Alertas de medicación y control del stock restante
+- Agenda de citas médicas y archivo de imágenes de recetas
+- Interfaz accesible (texto extensible y etiquetas asociadas)
+- Almacenamiento local protegido mediante PIN
+
+Con estas 4 propuesta se quiere conseguir:
+
+- Registro instantáneo de la toma: Tomada / Pospuesta / Omitida
+- Generación de informe en PDF para la consulta médica
 
 ### 2.3. Estudio de soluciones existentes
 
@@ -368,50 +379,91 @@ Su propuesta de valor diferencial reside en tres pilares:
 3. **Privacidad y accesibilidad desde el diseño (*Privacy & Accessibility by Design*):** Funciona 100% offline sin necesidad de servidores externos ni registro obligatorio, protegiendo los datos con PIN local y ofreciendo una interfaz de alto contraste, tipografía escalable y botones táctiles adaptados al 70% de usuarios mayores de 46 años identificados en la investigación.
 
 ### 2.4. Partes interesadas
- #### 2.4.1 ¿En qué consiste?
- #### 2.4.2 ¿Qué deben de hacer y aportar?
-  ##### 2.4.2.1 Identificación exhaustiva
-  ##### 2.4.2.2 Análisis de poder e interés
-  ##### 2.4.2.3 Aportación documental
-  ##### 2.4.2.3.1 Matriz de Interesados (Poder vs. Interés)
+
+#### 2.4.1 ¿En qué consiste?
+
+#### 2.4.2 ¿Qué deben de hacer y aportar?
+
+##### 2.4.2.1 Identificación exhaustiva
+
+##### 2.4.2.2 Análisis de poder e interés
+
+##### 2.4.2.3 Aportación documental
+
+##### 2.4.2.3.1 Matriz de Interesados (Poder vs. Interés)
+
 ### 2.5. Estudio de viabilidad técnica
- #### 2.5.1 ¿En qué consiste?
- #### 2.5.2 ¿Qué deben hacer y aportar?
-  ##### 2.5.2.1 Pila tecnológica (Tech Stack)
-  ##### 2.5.2.2 Requisitos de hardware y despliegue
-  ##### 2.5.2.3 Curva de aprendizaje y madurez técnica
-  ##### 2.5.2.4 Aportación documental
-   ###### 2.5.2.4.1 Ficha técnica del stack de desarrollo y entorno de ejecución
-   ###### 2.5.2.4.2 Conclusión explícita sobre la viabilidad técnica del desarrollo
+
+#### 2.5.1 ¿En qué consiste?
+
+#### 2.5.2 ¿Qué deben hacer y aportar?
+
+##### 2.5.2.1 Pila tecnológica (Tech Stack)
+
+##### 2.5.2.2 Requisitos de hardware y despliegue
+
+##### 2.5.2.3 Curva de aprendizaje y madurez técnica
+
+##### 2.5.2.4 Aportación documental
+
+###### 2.5.2.4.1 Ficha técnica del stack de desarrollo y entorno de ejecución
+
+###### 2.5.2.4.2 Conclusión explícita sobre la viabilidad técnica del desarrollo
+
 ### 2.6. Estudio de viabilidad económica
+
 ### 2.7. Estudio de viabilidad legal y normativa
-   #### 2.7.1. Protección de datos personales
-   #### 2.7.2. Propiedad intelectual y licencias
-   #### 2.7.3. Accesibilidad y otros requisitos aplicables
+
+#### 2.7.1. Protección de datos personales
+
+#### 2.7.2. Propiedad intelectual y licencias
+
+#### 2.7.3. Accesibilidad y otros requisitos aplicables
+
 ### 2.8. Análisis de riesgos inicial
 
-
 ## 3. PLANIFICACIÓN Y GESTIÓN DEL PROYECTO
-  ### 3.1. Metodología de desarrollo empleada
-  ### 3.2. Organización del equipo y reparto de responsabilidades
-  ### 3.3. Roles del proyecto
-  ### 3.4. Plan de trabajo
-  ### 3.5. Cronograma e hitos
-  ### 3.6. Estimación de recursos
-  ### 3.7. Presupuesto estimado
-  ### 3.8. Gestión de riesgos
-  ### 3.9. Herramientas de comunicación, coordinación y seguimiento
-  ### 3.10. Gestión de versiones y repositorio de código
+
+### 3.1. Metodología de desarrollo empleada
+
+### 3.2. Organización del equipo y reparto de responsabilidades
+
+### 3.3. Roles del proyecto
+
+### 3.4. Plan de trabajo
+
+### 3.5. Cronograma e hitos
+
+### 3.6. Estimación de recursos
+
+### 3.7. Presupuesto estimado
+
+### 3.8. Gestión de riesgos
+
+### 3.9. Herramientas de comunicación, coordinación y seguimiento
+
+### 3.10. Gestión de versiones y repositorio de código
+
 ## 4. ANÁLISIS DE REQUISITOS
-  ### 4.1. Identificación de usuarios y perfiles
-  ### 4.2. Requisitos funcionales
-  ### 4.3. Requisitos no funcionales
-  ### 4.4. Reglas de negocio
-  ### 4.5. Casos de uso o historias de usuario
-  ### 4.6. Priorización de requisitos
-  ### 4.7. Matriz de trazabilidad de requisitos
+
+### 4.1. Identificación de usuarios y perfiles
+
+### 4.2. Requisitos funcionales
+
+### 4.3. Requisitos no funcionales
+
+### 4.4. Reglas de negocio
+
+### 4.5. Casos de uso o historias de usuario
+
+### 4.6. Priorización de requisitos
+
+### 4.7. Matriz de trazabilidad de requisitos
+
 ## 6. DESARROLLO E IMPLEMENTACIÓN
+
 ### 6.1. Tecnologías, lenguajes y frameworks utilizados
+
 ### 6.6. Implementación de la interfaz de usuario
 
 ## REFERENCIAS
