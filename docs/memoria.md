@@ -492,25 +492,5 @@ Su propuesta de valor diferencial reside en tres pilares:
 ### 6.6. Implementación de la interfaz de usuario
 
 ## REFERENCIAS
-# Introducción
-## [[proposito|Propósito]]
-## [[alcance|Alcance]]
-## [[definiciones| Definiciones, siglas, y abreviaturas]]
-## [[referencias|Referencias]]
-## [[vision| Visión global]]
-# Descripción General
-## [[perspectiva|Perspectiva del Producto]]
-## [[funciones_producto|Funciones del Producto]]
-## [[usuarios|Características de los Usuarios]]
-## [[restricciones|Restricciones]]
-## [[dependencias|Supuestos y Dependencias]]
-## [[pospuestos|Requisitos Pospuestos]]
-# Requisitos Específicos
-putas todas
-## [[interfaces| Requisitos de la interfaz externa]]
-## [[funcionales| Requisitos funcionales]]
-## [[rendimiento|Requisitos de Rendimiento]]
-## [[restricciones_diseño|Restricciones de Diseño]]
-## [[atributos| Atributos del Sistema de Software]]
-## [[otros_requisitos|Otros Requisitos]]
-# Apéndices
+[^1]: Organización Mundial de la Salud (OMS). *Información sobre la Medicación Sin Daño*.2022
+[^2]: Encuesta propia de validación TempoMedic. 2026
