@@ -229,6 +229,25 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 - **Descripción:** Familiares o tutores legales a cargo de la supervisión de la salud de un tercero (por ejemplo, hijos al cuidado de padres mayores o tutores de personas dependientes).
 - **Rol en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas en caso de omisión o incumplimiento en las tomas de medicamentos.
 
+  ### 2.2.1. ¿Qué deben hacer y aportar?
+
+#### 2.2.1.1. Caracterización del sector
+
+#### A. Ámbito de actividad
+El sector sanitario se encuentra en un proceso de transformación donde la atención no se limita a la visita presencial en el centro médico, sino que se extiende al hogar del paciente a través del seguimiento contínuo desde casa.
+
+#### B. Tendencias de digitalización del sector
+1. **Empoderamiento del paciente:** Transición de un modelo pasivo a uno donde el usuario gestiona activamente sus citas, recetas y hábitos de salud mediante aplicaciones accesibles en dispositivos personales.
+2. **Uso de interfaces accesibles e inclusivas:** Apuesta por diseños limpios, con tonos cromáticos relajantes (como tonos azules) y componentes visuales adaptados a personas de avanzada edad o con diversidad funcional visual.
+3. **Pérdida de adherencia como problema global:** Estudios del sector de la salud digital destacan que entre el 30% y el 50% de los pacientes crónicos no toman adecuadamente su medicación. La digitalización busca resolver este déficit mediante sistemas automáticos de notificación y trazabilidad.
+
+#### C. Necesidades tecnológicas del sector
+* **Centralización de la información sanitaria personal:** Unificar en una única herramienta la agenda y el plan de medicación para evitar la dispersión de datos.
+* **Alertas y notificaciones persistentes:** Implementación de recordatorios fiables que funcionen incluso en segundo plano.
+* **Arquitecturas modulares y escalables (MVC):** Necesidad de plataformas desacopladas que permitan conectar la lógica de negocio con interfaces limpias y adaptables 
+
+
+
 ### 2.2. Análisis de la necesidad
 
 #### 2.2.1 ¿En qué consiste?
@@ -272,6 +291,12 @@ Con estas 4 propuesta se quiere conseguir:
 
 - Registro instantáneo de la toma: Tomada / Pospuesta / Omitida
 - Generación de informe en PDF para la consulta médica
+
+#### 2.2.2.4 Aportación documetal
+
+**Literatura de lo investigado**
+- Organización Mundial de la Salud: la OMS dicta que más del 50% de los pacientes con problemas de salud crónica no se toman la medicación como es debido y, del 75% los psiquiátricos, provocando así que los síntomas se agraven y tengan un coste más elevado para el paciente. La preocupación de los sanitarios no es solo esa, sino que a algunos pacientes, las medicinas le provocan daño evitando que se las tomen. Por esto último, la OMS ha determinado que la Medicación sin daño es el tema del tercer reto mundial por la seguridad del paciente. 
+
 
 ### 2.3. Estudio de soluciones existentes
 
@@ -472,8 +497,10 @@ Su propuesta de valor diferencial reside en tres pilares:
 
 [2] Comunidad de Madrid, "La Tarjeta Sanitaria Virtual alcanza cerca de 57 millones de accesos en 2025" *Nota de Prensa Institucional*, Madrid, España, 2025, <https://www.telemadrid.es/noticias/madrid/La-Tarjeta-Sanitaria-Virtual-supera-los-57-millones-de-accesos-en-Madrid-en-2025-0-2847015272--20251226071127.html>.
 
-[3] Universidad Miguel Hernández (UMH) de Elche, *Desarrollo de Software Móvil para la Autogestión de Pacientes Inmunodeficientes*, Área de Salud Digital UMH, Elche, España, 2025.
+[3] Equipo Desarrollador Tempomedic, *Informe de Resultados de la Encuesta de Necesidades y Usabilidad en Salud Digital (66 Usuarios)*, Repositorio Oficial Tempomedic, `docs/requisitos/ResultadosEncuesta.cxv` <https://github.com/SantiagoGonzalez12/Tempomedic/blob/main/docs/requisitos/ResultadosEncuesta.csv>, 2026.
 
-[4] Equipo Desarrollador Tempomedic, *Informe de Resultados de la Encuesta de Necesidades y Usabilidad en Salud Digital (66 Usuarios)*, Repositorio Oficial Tempomedic, `docs/requisitos/ResultadosEncuesta.xml`, 2026.
+[4] Agencia Estatal Boletín Oficial del Estado, *BOE-A-2023-13221 Real Decreto 405/2023, de 29 de mayo, por el que se actualizan los títulos de la formación profesional del sistema educativo de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y Técnico Superior en Desarrollo de Aplicaciones Web, de la familia profesional Informática y Comunicaciones, y se fijan sus enseñanzas mínimas*, BOE núm. 132, pp. 79000–79096, 3 de junio de 2023 <https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-13221>.
 
-[5] Agencia Estatal Boletín Oficial del Estado, *BOE-A-2023-13221 Real Decreto 405/2023, de 29 de mayo, por el que se actualizan los títulos de la formación profesional del sistema educativo de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y Técnico Superior en Desarrollo de Aplicaciones Web, de la familia profesional Informática y Comunicaciones, y se fijan sus enseñanzas mínimas*, BOE núm. 132, pp. 79000–79096, 3 de junio de 2023 <https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-13221>.
+[5] Organización Mundial de la Salud (OMS). Medicación Sin Daño. 2022 <https://www.who.int/es/initiatives/medication-without-harm>
+
+[6] Servicio de Información sobre Discapacidad. Porcentaje de pacientes que incumplen el tratamiento. 2019
