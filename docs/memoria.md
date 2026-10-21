@@ -234,19 +234,20 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 #### 2.2.1.1. Caracterización del sector
 
 #### A. Ámbito de actividad
+
 El sector sanitario se encuentra en un proceso de transformación donde la atención no se limita a la visita presencial en el centro médico, sino que se extiende al hogar del paciente a través del seguimiento contínuo desde casa.
 
 #### B. Tendencias de digitalización del sector
+
 1. **Empoderamiento del paciente:** Transición de un modelo pasivo a uno donde el usuario gestiona activamente sus citas, recetas y hábitos de salud mediante aplicaciones accesibles en dispositivos personales.
 2. **Uso de interfaces accesibles e inclusivas:** Apuesta por diseños limpios, con tonos cromáticos relajantes (como tonos azules) y componentes visuales adaptados a personas de avanzada edad o con diversidad funcional visual.
 3. **Pérdida de adherencia como problema global:** Estudios del sector de la salud digital destacan que entre el 30% y el 50% de los pacientes crónicos no toman adecuadamente su medicación. La digitalización busca resolver este déficit mediante sistemas automáticos de notificación y trazabilidad.
 
 #### C. Necesidades tecnológicas del sector
-* **Centralización de la información sanitaria personal:** Unificar en una única herramienta la agenda y el plan de medicación para evitar la dispersión de datos.
-* **Alertas y notificaciones persistentes:** Implementación de recordatorios fiables que funcionen incluso en segundo plano.
-* **Arquitecturas modulares y escalables (MVC):** Necesidad de plataformas desacopladas que permitan conectar la lógica de negocio con interfaces limpias y adaptables 
 
-
+- **Centralización de la información sanitaria personal:** Unificar en una única herramienta la agenda y el plan de medicación para evitar la dispersión de datos.
+- **Alertas y notificaciones persistentes:** Implementación de recordatorios fiables que funcionen incluso en segundo plano.
+- **Arquitecturas modulares y escalables (MVC):** Necesidad de plataformas desacopladas que permitan conectar la lógica de negocio con interfaces limpias y adaptables 
 
 ### 2.2. Análisis de la necesidad
 
@@ -295,8 +296,8 @@ Con estas 4 propuesta se quiere conseguir:
 #### 2.2.2.4 Aportación documetal
 
 **Literatura de lo investigado**
-- Organización Mundial de la Salud: la OMS dicta que más del 50% de los pacientes con problemas de salud crónica no se toman la medicación como es debido y, del 75% los psiquiátricos, provocando así que los síntomas se agraven y tengan un coste más elevado para el paciente. La preocupación de los sanitarios no es solo esa, sino que a algunos pacientes, las medicinas le provocan daño evitando que se las tomen. Por esto último, la OMS ha determinado que la Medicación sin daño es el tema del tercer reto mundial por la seguridad del paciente. 
 
+- Organización Mundial de la Salud: la OMS dicta que más del 50% de los pacientes con problemas de salud crónica no se toman la medicación como es debido y, del 75% los psiquiátricos, provocando así que los síntomas se agraven y tengan un coste más elevado para el paciente. La preocupación de los sanitarios no es solo esa, sino que a algunos pacientes, las medicinas le provocan daño evitando que se las tomen. Por esto último, la OMS ha determinado que la Medicación sin daño es el tema del tercer reto mundial por la seguridad del paciente.
 
 ### 2.3. Estudio de soluciones existentes
 
