@@ -467,3 +467,13 @@ Su propuesta de valor diferencial reside en tres pilares:
 ### 6.6. Implementación de la interfaz de usuario
 
 ## REFERENCIAS
+
+[1] Centro FP Superior Campus Cámara Comercio Sevilla, *Guía Didáctica AEE Sprint Review 02: Análisis del Contexto y Viabilidad (Capítulo II)*, Módulo 0492 Proyecto Intermodular, Sevilla, España, 2026.
+
+[2] Comunidad de Madrid, "La Tarjeta Sanitaria Virtual alcanza cerca de 57 millones de accesos en 2025" *Nota de Prensa Institucional*, Madrid, España, 2025, <https://www.telemadrid.es/noticias/madrid/La-Tarjeta-Sanitaria-Virtual-supera-los-57-millones-de-accesos-en-Madrid-en-2025-0-2847015272--20251226071127.html>.
+
+[3] Universidad Miguel Hernández (UMH) de Elche, *Desarrollo de Software Móvil para la Autogestión de Pacientes Inmunodeficientes*, Área de Salud Digital UMH, Elche, España, 2025.
+
+[4] Equipo Desarrollador Tempomedic, *Informe de Resultados de la Encuesta de Necesidades y Usabilidad en Salud Digital (66 Usuarios)*, Repositorio Oficial Tempomedic, `docs/requisitos/ResultadosEncuesta.xml`, 2026.
+
+[5] Agencia Estatal Boletín Oficial del Estado, *BOE-A-2023-13221 Real Decreto 405/2023, de 29 de mayo, por el que se actualizan los títulos de la formación profesional del sistema educativo de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y Técnico Superior en Desarrollo de Aplicaciones Web, de la familia profesional Informática y Comunicaciones, y se fijan sus enseñanzas mínimas*, BOE núm. 132, pp. 79000–79096, 3 de junio de 2023 <https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-13221>.
