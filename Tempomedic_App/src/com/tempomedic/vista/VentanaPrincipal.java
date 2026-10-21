@@ -42,7 +42,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnAjustes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(360, 640));
+        setMaximumSize(new java.awt.Dimension(1920, 1080));
+        setMinimumSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
         jpContenedorPrincipal.setLayout(new java.awt.CardLayout());
 
@@ -50,11 +52,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jpVistaHoy.setLayout(jpVistaHoyLayout);
         jpVistaHoyLayout.setHorizontalGroup(
             jpVistaHoyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 360, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         jpVistaHoyLayout.setVerticalGroup(
             jpVistaHoyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 590, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
 
         jpContenedorPrincipal.add(jpVistaHoy, "card2");

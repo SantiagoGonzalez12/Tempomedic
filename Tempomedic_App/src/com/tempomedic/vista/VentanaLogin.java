@@ -128,8 +128,8 @@ public class VentanaLogin extends javax.swing.JFrame {
         btnVolverLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(360, 640));
-        setPreferredSize(new java.awt.Dimension(360, 640));
+        setMinimumSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
         jpContenedorLogin.setMinimumSize(new java.awt.Dimension(360, 640));
         jpContenedorLogin.setLayout(new java.awt.CardLayout());
@@ -157,26 +157,29 @@ public class VentanaLogin extends javax.swing.JFrame {
         jpTarjetaLoginLayout.setHorizontalGroup(
             jpTarjetaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpTarjetaLoginLayout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addGroup(jpTarjetaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jpTarjetaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpTarjetaLoginLayout.createSequentialGroup()
-                        .addComponent(lblContrasena)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpTarjetaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jpTarjetaLoginLayout.createSequentialGroup()
-                            .addComponent(lblCorreo)
-                            .addGap(18, 18, 18)
-                            .addComponent(txtCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(320, 320, 320)
                         .addGroup(jpTarjetaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnIrARegistro)
-                            .addComponent(btnIngresar))))
-                .addContainerGap(113, Short.MAX_VALUE))
+                            .addComponent(btnIngresar)))
+                    .addGroup(jpTarjetaLoginLayout.createSequentialGroup()
+                        .addGap(237, 237, 237)
+                        .addGroup(jpTarjetaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jpTarjetaLoginLayout.createSequentialGroup()
+                                .addComponent(lblContrasena)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jpTarjetaLoginLayout.createSequentialGroup()
+                                .addComponent(lblCorreo)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(292, Short.MAX_VALUE))
         );
         jpTarjetaLoginLayout.setVerticalGroup(
             jpTarjetaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpTarjetaLoginLayout.createSequentialGroup()
-                .addGap(279, 279, 279)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTarjetaLoginLayout.createSequentialGroup()
+                .addContainerGap(274, Short.MAX_VALUE)
                 .addGroup(jpTarjetaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCorreo)
                     .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -184,11 +187,11 @@ public class VentanaLogin extends javax.swing.JFrame {
                 .addGroup(jpTarjetaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblContrasena)
                     .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
+                .addGap(18, 18, 18)
                 .addComponent(btnIngresar)
-                .addGap(47, 47, 47)
+                .addGap(18, 18, 18)
                 .addComponent(btnIrARegistro)
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addGap(234, 234, 234))
         );
 
         jpContenedorLogin.add(jpTarjetaLogin, "jpTarjetaLogin");
@@ -240,7 +243,7 @@ public class VentanaLogin extends javax.swing.JFrame {
                     .addGroup(jpTarjetaRegistroLayout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(btnVolverLogin)))
-                .addGap(0, 92, Short.MAX_VALUE))
+                .addGap(0, 401, Short.MAX_VALUE))
         );
         jpTarjetaRegistroLayout.setVerticalGroup(
             jpTarjetaRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
