@@ -6,9 +6,12 @@
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[800, 600]"/>
     </Property>
+<<<<<<< HEAD
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[1920, 1080]"/>
     </Property>
+=======
+>>>>>>> 58388484ae1fb965ef288719d38ecffb7f2241d4
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -138,9 +141,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Iniciar Sesi&#xf3;n"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnIngresarActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnIrARegistro">
               <Properties>
@@ -266,9 +266,6 @@
               <Properties>
                 <Property name="label" type="java.lang.String" value="Crear cuenta"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarRegistroActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnVolverLogin">
               <Properties>

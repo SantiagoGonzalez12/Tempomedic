@@ -3,6 +3,7 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+<<<<<<< HEAD
     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[1920, 1080]"/>
     </Property>
@@ -12,6 +13,8 @@
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[1920, 1080]"/>
     </Property>
+=======
+>>>>>>> 58388484ae1fb965ef288719d38ecffb7f2241d4
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -44,7 +47,7 @@
         <Container class="javax.swing.JPanel" name="jpVistaHoy">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card2"/>
+              <CardConstraints cardName="hoy"/>
             </Constraint>
           </Constraints>
 
@@ -64,7 +67,7 @@
         <Container class="javax.swing.JPanel" name="jpVistaMedicamentos">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card2"/>
+              <CardConstraints cardName="medicamentos"/>
             </Constraint>
           </Constraints>
 
@@ -81,10 +84,10 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Container class="javax.swing.JPanel" name="jpVistaAjustes1">
+        <Container class="javax.swing.JPanel" name="jpVistaCitas">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card2"/>
+              <CardConstraints cardName="citas"/>
             </Constraint>
           </Constraints>
 
@@ -104,7 +107,7 @@
         <Container class="javax.swing.JPanel" name="jpVistaAjustes">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card2"/>
+              <CardConstraints cardName="ajustes"/>
             </Constraint>
           </Constraints>
 
@@ -153,16 +156,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Hoy"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHoyActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnMedicamentos">
           <Properties>
             <Property name="text" type="java.lang.String" value="Medicamentos"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMedicamentosActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCitas">
           <Properties>
             <Property name="text" type="java.lang.String" value="Citas"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCitasActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnAjustes">
           <Properties>
