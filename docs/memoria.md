@@ -405,18 +405,38 @@ Su propuesta de valor diferencial reside en tres pilares:
 3. **Privacidad y accesibilidad desde el diseño (*Privacy & Accessibility by Design*):** Funciona 100% offline sin necesidad de servidores externos ni registro obligatorio, protegiendo los datos con PIN local y ofreciendo una interfaz de alto contraste, tipografía escalable y botones táctiles adaptados al 70% de usuarios mayores de 46 años identificados en la investigación.
 
 ### 2.4. Partes interesadas
-
 #### 2.4.1 ¿En qué consiste?
+El análisis de partes interesadas consiste en mapear a todas las personas, colectivos, departamentos o entidades que tienen interés en el proyecto o que se verán impactados directa o indirectamente por su implantación. En el contexto de Tempomedic, este mapeo es crítico debido a la naturaleza sensible de los datos tratados y a la brecha digital existente en el público objetivo.
 
 #### 2.4.2 ¿Qué deben de hacer y aportar?
-
 ##### 2.4.2.1 Identificación exhaustiva
+Se diferencian dos grandes bloques de actores:
+*   **Partes interesadas internas:**
+    *   **Equipo de desarrollo (Grupo 2):** Encargados del diseño, prototipado y desarrollo de la aplicación. Formado por perfiles Frontend, Backend, QA Tester y Scrum Master.
+    *   **Tutor del módulo (Willman Acosta Lugo):** Actúa como *Product Owner* académico, evaluando el cumplimiento de los criterios de evaluación del Real Decreto 405/2023 [1] y guiando el alcance del proyecto.
+*   **Partes interesadas externas:**
+    *   **Pacientes/Usuarios finales (Perfil principal):** Personas con tratamientos crónicos o puntuales que necesitan gestionar su medicación y citas. Incluye un alto porcentaje de adultos mayores (según nuestra encuesta, el 70% supera los 46 años), lo que exige interfaces de alta accesibilidad.
+    *   **Cuidadores/Familiares (Perfil secundario):** Personas que supervisan la medicación de dependientes.
+    *   **Profesionales sanitarios (Indirecto):** Médicos y farmacéuticos que se benefician de una mayor adherencia al tratamiento por parte del paciente, aunque no interactúan directamente con la app en esta fase.
+    *   **Organismos reguladores (Indirecto):** La Agencia Española de Protección de Datos (AEPD), que vela por el cumplimiento del RGPD y la LOPDGDD [2].
 
 ##### 2.4.2.2 Análisis de poder e interés
+Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs. interés (Mendelow):
+*   **Alto poder / Alto interés (Gestionar de cerca):** El tutor del módulo y el equipo de desarrollo. Su implicación es total y las decisiones afectan al núcleo del proyecto.
+*   **Bajo poder / Alto interés (Mantener informados):** Los pacientes y cuidadores. Aunque no deciden sobre el software, son los usuarios finales; su feedback a través de la encuesta ha definido el diseño de la interfaz (UI/UX).
+*   **Alto poder / Bajo interés (Mantener satisfechos):** Organismos reguladores (AEPD). No intervienen en el día a día, pero sus normas condicionan la arquitectura (privacidad desde el diseño).
+*   **Bajo poder / Bajo interés (Monitorizar):** Profesionales sanitarios, cuyo interés aumentará en futuras fases si se integran APIs de historiales clínicos.
 
 ##### 2.4.2.3 Aportación documental
-
 ##### 2.4.2.3.1 Matriz de Interesados (Poder vs. Interés)
+| Rol / Grupo | Tipo (Interno/Externo) | Expectativas principales | Nivel de influencia | Estrategia de comunicación recomendada |
+| :--- | :--- | :--- | :--- | :--- |
+| **Equipo de desarrollo** | Interno | Claridad en los requisitos, cumplimiento de plazos, buena comunicación. | Alto | Reuniones diarias (Daily Scrum), tablero de GitHub Projects. |
+| **Tutor del Proyecto** | Interno | Rigor técnico, cumplimiento normativo y de los RA del currículo. | Alto | Tutorías programadas, entregas documentales vía repositorio. |
+| **Paciente / Mayor** | Externo | Facilidad de uso, recordatorios fiables, texto legible, no fallos. | Bajo | Encuestas (fase de diseño), pruebas de usabilidad (fase de test). |
+| **Cuidador / Familiar** | Externo | Delegación de alertas, control de tomas omitidas. | Bajo | (Futuro) Manual de usuario y guías de accesibilidad. |
+| **AEPD / Reguladores** | Externo | Cumplimiento estricto del RGPD, seguridad de datos sensibles. | Alto | Documentación técnica (Privacy by Design), políticas de privacidad. |
+| **Profesionales Sanitarios** | Externo | Mejora de la adherencia al tratamiento. | Bajo | Informes/documentación generada por el paciente (fase 2). |
 
 ### 2.5. Estudio de viabilidad técnica
 
@@ -505,3 +525,11 @@ Su propuesta de valor diferencial reside en tres pilares:
 [5] Organización Mundial de la Salud (OMS). Medicación Sin Daño. 2022 <https://www.who.int/es/initiatives/medication-without-harm>
 
 [6] Servicio de Información sobre Discapacidad. Porcentaje de pacientes que incumplen el tratamiento. 2019
+
+[7] Agencia Española de Protección de Datos (AEPD), "Guía de Privacidad desde el Diseño," Madrid, España, 2019. 21/10/2026. Disponible en: <https://www.aepd.es/guias/guia-privacidad-desde-el-diseno.pdf>
+
+[8] FormDev Software GmbH, "FlatLaf - Flat Look and Feel for Java Swing," *Maven Central Repository*, 2024. 21/10/2026. Disponible en: <https://central.sonatype.com/artifact/com.formdev/flatlaf>
+
+[9] K. Beck, *Extreme Programming Explained: Embrace Change*, 2nd ed. Boston, MA, USA: Addison-Wesley, 2004.
+
+[10] Asociación Española de Normalización (AENOR), "Requisitos de accesibilidad para productos y servicios TIC (Norma UNE-EN 301 549:2022)," Madrid, España, 2022. 21/10/2026. Disponible en: <https://www.en-301-549.info/>
