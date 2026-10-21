@@ -230,6 +230,7 @@ Tras la consultas y análisis de las necesidades del proyecto, hay que verificar
 #### 2.2.2 ¿Qué deben hacer y aportar?
 #### 2.2.2.1 Diagnóstico de la situación de partida (As-Is)
 En la actualidad la gestión cotidiana de los tratamientos farmacológicos y el control de las citas médicas se realiza, en su mayoría, mediante métodos tradicionales y poco estructurados:
+
 **Control de la medicación:** los usuarios suelen confiar en su propia memoria, anotaciones manuscritas en los envases o recordatorios impresos. Esta falta de automatización dificulta el cumplimiento puntual de las tomas.
 
 **Gestión de consultas y documentación:** los justificantes, recetas e informes médicos se conservan en papel o en distintos soportes físicos, lo que facilita su pérdida y complica llevar un seguimiento claro de cara a las siguientes revisiones
