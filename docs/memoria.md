@@ -71,27 +71,27 @@ Java - Swing - NetBeans Matisse - MVC - salud digital - Health - recordatorios d
   - [4.5. Casos de uso o historias de usuario](#45-casos-de-uso-o-historias-de-usuario)
   - [4.6. Priorización de requisitos](#46-priorización-de-requisitos)
   - [4.7. Matriz de trazabilidad de requisitos](#47-matriz-de-trazabilidad-de-requisitos)
-- [5. DISEÑO DE LA SOLUCIÓN]()
-  - [5.1. Visión general de la arquitectura]()
-  - [5.2. Arquitectura software]()
-    - [5.2.1. Patrón arquitectónico utilizado]()
-    - [5.2.2. Componentes y módulos]()
-    - [5.2.3. Comunicación entre componentes]()
-  - [5.3. Diseño de la base de datos]()
-    - [5.3.1. Modelo conceptual]()
-    - [5.3.2. Modelo lógico]()
-    - [5.3.3. Modelo físico]()
-    - [5.3.4. Diccionario de datos]()
-  - [5.4. Diseño de la interfaz de usuario]()
-    - [5.4.1. Principios de usabilidad y accesibilidad]()
-    - [5.4.2. Mapa de navegación]()
-    - [5.4.3. Wireframes o prototipos]()
-    - [5.4.4. Diseño visual final]()
-  - [5.5. Diseño de seguridad]()
-    - [5.5.1. Autenticación y autorización]()
-    - [5.5.2. Protección de datos]()
-    - [5.5.3. Gestión de errores y validaciones]()
-  - [5.6. Diseño de integraciones y APIs externas]()
+- [5. DISEÑO DE LA SOLUCIÓN](#5-diseño-de-la-solución)
+  - [5.1. Visión general de la arquitectura](#51-visión-general-de-la-arquitectura)
+  - [5.2. Arquitectura software](#52-arquitectura-software)
+    - [5.2.1. Patrón arquitectónico utilizado](#521-patrón-arquitectónico-utilizado)
+    - [5.2.2. Componentes y módulos](#522-componentes-y-módulos)
+    - [5.2.3. Comunicación entre componentes](#523-comunicación-entre-componentes)
+  - [5.3. Diseño de la base de datos](#53-diseño-de-la-base-de-datos)
+    - [5.3.1. Modelo conceptual](#531-modelo-conceptual)
+    - [5.3.2. Modelo lógico](#532-modelo-lógico)
+    - [5.3.3. Modelo físico](#533-modelo-físico)
+    - [5.3.4. Diccionario de datos](#534-diccionario-de-datos)
+  - [5.4. Diseño de la interfaz de usuario](#54-diseño-de-la-interfaz-de-usuario)
+    - [5.4.1. Principios de usabilidad y accesibilidad](#541-principios-de-usabilidad-y-accesibilidad)
+    - [5.4.2. Mapa de navegación](#542-mapa-de-navegación)
+    - [5.4.3. Wireframes o prototipos](#543-wireframes-o-prototipos)
+    - [5.4.4. Diseño visual final](#544-diseño-visual-final)
+  - [5.5. Diseño de seguridad](#55-diseño-de-seguridad)
+    - [5.5.1. Autenticación y autorización](#551-autenticación-y-autorización)
+    - [5.5.2. Protección de datos](#552-protección-de-datos)
+    - [5.5.3. Gestión de errores y validaciones](#553-gestión-de-errores-y-validaciones)
+  - [5.6. Diseño de integraciones y APIs externas](#56-diseño-de-integraciones-y-apis-externas)
 - [6. DESARROLLO E IMPLEMENTACIÓN](#6-desarrollo-e-implementación)
   - [6.1. Tecnologías, lenguajes y frameworks utilizados](#61-tecnologías-lenguajes-y-frameworks-utilizados)
   - [6.6. Implementación de la interfaz de usuario](#66-implementación-de-la-interfaz-de-usuario)
@@ -595,6 +595,48 @@ El análisis del árbol de dependencias confirma la **ausencia total de Incompat
 
 ### 4.7. Matriz de trazabilidad de requisitos
 
+## 5. DISEÑO DE LA SOLUCIÓN
+
+### 5.1. Visión general de la arquitectura
+
+### 5.2. Arquitectura software
+
+#### 5.2.1. Patrón arquitectónico utilizado
+
+#### 5.2.2. Componentes y módulos
+
+#### 5.2.3. Comunicación entre componentes
+
+### 5.3. Diseño de la base de datos
+
+#### 5.3.1. Modelo conceptual
+
+#### 5.3.2. Modelo lógico
+
+#### 5.3.3. Modelo físico
+
+#### 5.3.4. Diccionario de datos
+
+### 5.4. Diseño de la interfaz de usuario
+
+#### 5.4.1. Principios de usabilidad y accesibilidad
+
+#### 5.4.2. Mapa de navegación
+
+#### 5.4.3. Wireframes o prototipos
+
+#### 5.4.4. Diseño visual final
+
+### 5.5. Diseño de seguridad
+
+#### 5.5.1. Autenticación y autorización
+
+#### 5.5.2. Protección de datos
+
+#### 5.5.3. Gestión de errores y validaciones
+
+### 5.6. Diseño de integraciones y APIs externas
+
 ## 6. DESARROLLO E IMPLEMENTACIÓN
 
 ### 6.1. Tecnologías, lenguajes y frameworks utilizados
@@ -623,11 +665,11 @@ El análisis del árbol de dependencias confirma la **ausencia total de Incompat
 
 [10] Asociación Española de Normalización (AENOR), "Requisitos de accesibilidad para productos y servicios TIC (Norma UNE-EN 301 549:2022)," Madrid, España, 2022. 21/10/2026. Disponible en: <https://www.en-301-549.info/>
 
-[11] Organización Mundial de la Salud (OMS), *Adherencia a los tratamientos a largo plazo: Pruebas para la acción*. Ginebra: Organización Mundial de la Salud, 2003. [En línea]. Disponible en: https://iris.who.int/handle/10665/42704
+[11] Organización Mundial de la Salud (OMS), *Adherencia a los tratamientos a largo plazo: Pruebas para la acción*. Ginebra: Organización Mundial de la Salud, 2003. [En línea]. Disponible en: <https://iris.who.int/handle/10665/42704>
 
-[12] Organización Mundial de la Salud (OMS), *Global strategy on digital health 2020-2025*. Geneva: World Health Organization, 2021. [En línea]. Disponible en: https://iris.who.int/handle/10665/344249
+[12] Organización Mundial de la Salud (OMS), *Global strategy on digital health 2020-2025*. Geneva: World Health Organization, 2021. [En línea]. Disponible en: <https://iris.who.int/handle/10665/344249>
 
-[13] E. Heller, *Psicología del color: Cómo actúan los colores sobre los sentimientos y la razón*. Barcelona: Editorial Gustavo Gili, 2008. [En línea]. Disponible en: https://gustavogili.com/psicologia-del-color-libro.html
+[13] E. Heller, *Psicología del color: Cómo actúan los colores sobre los sentimientos y la razón*. Barcelona: Editorial Gustavo Gili, 2008. [En línea]. Disponible en: <https://gustavogili.com/psicologia-del-color-libro.html>
 
 [14] "Reglamento (UE) 2016/679 (RGPD)" Boe.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.boe.es/doue/2016/119/L00001-00088.pdf>
 
