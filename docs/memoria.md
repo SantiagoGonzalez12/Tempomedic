@@ -472,7 +472,9 @@ Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs
 | **Profesionales Sanitarios** | Externo | Mejora de la adherencia al tratamiento. | Bajo | Informes/documentación generada por el paciente (fase 2). |
 
 ### 2.5. Estudio de viabilidad técnica
+
 #### 2.5.1 ¿En qué consiste?
+
 Demuestra de forma razonada que el equipo y la infraestructura disponible cuentan con la capacidad técnica necesaria para construir, integrar y desplegar la solución con garantías. Dado que Tempomedic se encuentra en su fase de prototipado, esta viabilidad se centra en la elección del *stack*(conjunto de herramientas, lenguajes de programación, bases de datos y frameworks) para el prototipo de escritorio y la preparación para el salto a móvil.
 
 #### 2.5.2 ¿Qué deben hacer y aportar?
@@ -520,9 +522,36 @@ Atendiendo al principio de Privacidad desde el Diseño y por Defecto (Art. 25 RG
 
 #### Derechos ARSOPL y política de retención
 
-Tempomedic asegura el ejercicio completo de los derechos de Acceso, Rectificación, Supresión, Oposición, Portabilidad y Limitación del tratamiento. A través de la pantalla de Ajustes, la función «Eliminar cuenta» realiza la supresión física, inmediata e irreversible de todas las credenciales y registros locales del usuario en el dispositivo
+Tempomedic asegura el ejercicio completo de los derechos de Acceso, Rectificación, Supresión, Oposición, Portabilidad y Limitación del tratamiento. A través de la pantalla de Ajustes, la función `Eliminar cuenta` realiza la supresión física, inmediata e irreversible de todas las credenciales y registros locales del usuario en el dispositivo
 
 #### 2.7.2. Propiedad intelectual y licencias
+
+El proyecto Tempomedic respeta la normativa europea y nacional sobre propiedad intelectual (Real Decreto Legislativo 1/1996, de Ley de Propiedad Intelectual), asegurando el uso legítimo del software y de todos los componentes de terceros integrados en la pila tecnológica.
+
+#### Licencia elegida para el proyecto
+
+Tempomedic se distribuye bajo la **Licencia MIT**. Se ha seleccionado esta licencia de código abierto de carácter permisivo por los siguientes motivos:
+
+- **Ámbito académico y colaborativo:** Facilita la reutilización del código y la auditoría por parte del equipo docente y la comunidad de desarrolladores.
+- **Flexibilidad y protección:** Otorga libertad para usar, copiar, modificar y redistribuir el software, exigiendo únicamente la conservación del aviso de copyright original, al tiempo que exime a los autores de cualquier responsabilidad o garantía.
+
+#### Inventario de licencias de dependencias
+
+A continuación se detalla el inventario de las librerías y componentes de terceros integrados mediante el gestor de dependencias Maven (`pom.xml`) y el entorno de ejecución Java:
+
+| Componente / Librería | Versión | Uso / Módulo en la App | Licencia de Terceros | Compatibilidad con MIT |
+| :--- | :--- | :--- | :--- | :--- |
+| **FlatLaf** | 3.x | Look and Feel moderno de Swing, temas claro/oscuro y componentes visuales adaptados | Apache License 2.0 | **Totalmente compatible** (Permisiva, requiere conservar avisos de licencia). |
+| **JUnit Jupiter** | 5.x | Framework de pruebas unitarias y automatizadas en entorno de desarrollo (`test`) | Eclipse Public License 2.0 (EPL 2.0) | **Compatible** (Uso aislado en fase de compilación/test sin afectación de código final). |
+| **Java Swing (OpenJDK)** | JDK 21 | Framework de interfaz gráfica de usuario y gestión de eventos de ventana | GPLv2 + Classpath Exception | **Totalmente compatible** (La cláusula *Classpath Exception* permite enlazado dinámico sin forzar GPL). |
+| **NetBeans Layout Library** | Bundled | Generación de layouts dinámicos (`GroupLayout`) mediante el diseñador visual Matisse | BSD 3-Clause / Apache 2.0 | **Totalmente compatible** (Licencia permisiva sin restricciones de redistribución). |
+
+#### Análisis de compatibilidad jurídica
+
+El análisis del árbol de dependencias confirma la **ausencia total de Incompatibilidades legales**:
+
+1. **Compatibilidad Apache 2.0 y MIT:** La librería gráfica **FlatLaf** opera bajo Apache 2.0, la cual permite la integración directa con proyectos bajo licencia MIT siempre que se mantenga el fichero de licencias de la librería.
+2. **Exención de Copyleft de la JVM:** Aunque OpenJDK se distribuye bajo GPLv2, la presencia explícita de la excepción *Classpath Exception* garantiza que las aplicaciones desarrolladas sobre Java Swing no queden sujetas a la obligación de redistribuirse bajo GPL pura.
 
 #### 2.7.3. Accesibilidad y otros requisitos aplicables
 
@@ -607,3 +636,11 @@ Tempomedic asegura el ejercicio completo de los derechos de Acceso, Rectificaci�
 [16] "Resumen EUR-Lex RGPD" Europa.eu. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://eur-lex.europa.eu/ES/legal-content/summary/general-data-protection-regulation-gdpr.html>
 
 [17] “Normativa sobre datos personales”, Gob.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.hacienda.gob.es/es-ES/El%20Ministerio/Paginas/DPD/Normativa_PD.aspx>
+
+[18] P. Álgidos, “Marco de seguridad, legalidad y accesibilidad riguroso”, Github.com. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://github.com/user-attachments/files/33927910/DAM_DAW_PI.Sprint02MarcoLegal.pdf>
+
+[19] LICENSE at main · JFormDesigner/FlatLaf. Disponible en: <https://github.com/JFormDesigner/FlatLaf/blob/main/LICENSE>
+
+[20] LICENSE.md at main · junit-team/junit-framework. Disponible en: <https://github.com/junit-team/junit-framework/blob/main/LICENSE.md>
+
+[21] “BOE-A-2023-13221 Real Decreto 405/2023, de 29 de mayo, por el que se actualizan los títulos de la formación profesional del sistema educativo de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y Técnico Superior en Desarrollo de Aplicaciones Web, de la familia profesional Informática y Comunicaciones, y se fijan sus enseñanzas mínimas”, Boe.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-13221>
