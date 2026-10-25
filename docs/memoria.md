@@ -478,18 +478,39 @@ Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs
 Demuestra de forma razonada que el equipo y la infraestructura disponible cuentan con la capacidad técnica necesaria para construir, integrar y desplegar la solución con garantías. Dado que Tempomedic se encuentra en su fase de prototipado, esta viabilidad se centra en la elección del *stack*(conjunto de herramientas, lenguajes de programación, bases de datos y frameworks) para el prototipo de escritorio y la preparación para el salto a móvil.
 
 #### 2.5.2 ¿Qué deben hacer y aportar?
-
 ##### 2.5.2.1 Pila tecnológica (Tech Stack)
+La elección del *stack* se ha realizado priorizando la robustez, el conocimiento previo del equipo (curva de aprendizaje) y la capacidad de generar interfaces accesibles.
+*   **Lenguaje:** **Java (JDK 17 o superior)**. Lenguaje maduro, tipado y multiplataforma, núcleo del ciclo DAM.
+*   **Interfaz Gráfica:** **Java Swing con NetBeans Matisse**. Se utiliza el editor visual para agilizar la maquetación de las 5 vistas principales. Para solventar la estética anticuada de Swing, se integra la librería **FlatLaf (v3.7.2)** [8]. Esta librería es crucial porque permite implementar temas claros/oscuros y mejorar el contraste visual, es un requisito indispensable para la accesibilidad de usuarios mayores.
+*   **Arquitectura:** **MVC (Modelo-Vista-Controlador)**. Permite separar la lógica de negocio (Modelo) de la interfaz (Vista) y de la gestión de eventos (Controlador).
+*   **Gestión de dependencias:** **Apache Maven**. Facilita la inclusión de librerías externas (como FlatLaf) y el empaquetado del proyecto.
+*   **Persistencia:** En el Sprint 1, los datos se gestionan **en memoria**. Para fases posteriores, se prevé el uso de SQLite (local) o PostgreSQL (servidor).
 
 ##### 2.5.2.2 Requisitos de hardware y despliegue
+*   **Equipos de desarrollo:** Ordenadores personales con Windows/Linux, 8GB de RAM mínimo (recomendado 16GB) y JDK instalado.
+*   **Equipos cliente (Prototipo actual):** Cualquier equipo de escritorio con JRE instalado. Al ser Swing, el consumo de recursos es bajo, lo que garantiza su funcionamiento en equipos antiguos de centros de salud o de usuarios finales.
+*   **Equipos cliente (Producto final):** Dispositivos móviles con Android 8.0 o superior (API 26+), garantizando cobertura para más del 90% de los dispositivos del mercado.
 
 ##### 2.5.2.3 Curva de aprendizaje y madurez técnica
+El equipo posee conocimientos sólidos en Java y Swing. Sin embargo, la introducción de **FlatLaf** supone un reto inicial. Para mitigar el riesgo (identificado en el apartado 8), se ha realizado un *Tech Spike* temprano [9] para validar su integración.
+*   **Resultado del Spike:** Se ha comprobado que la inicialización de FlatLaf mediante `FlatLightLaf.setup()` y el cambio dinámico a modo oscuro mediante `FlatDarkLaf.setup()` funcionan correctamente en el prototipo de NetBeans sin romper la navegación por teclado.
+*   **Accesibilidad:** El equipo ha tenido que formarse en los principios de las pautas WCAG 2.1 y la norma UNE-EN 301 549 [10] para garantizar que los componentes (botones, textos, contrastes) cumplan con los requisitos legales de accesibilidad.
 
 ##### 2.5.2.4 Aportación documental
-
 ###### 2.5.2.4.1 Ficha técnica del stack de desarrollo y entorno de ejecución
+| Componente | Tecnología / Herramienta | Justificación técnica |
+| :--- | :--- | :--- |
+| **Lenguaje** | Java (JDK 17) | Conocimiento del equipo, robustez, multiplataforma. |
+| **GUI** | Swing + NetBeans Matisse | Desarrollo rápido de UI, editor visual integrado. |
+| **Look & Feel** | FlatLaf 3.7.2 | Mejora de usabilidad, contraste y soporte de temas oscuros (WCAG). |
+| **Arquitectura** | Patrón MVC | Separación de responsabilidades, mantenibilidad y testabilidad. |
+| **Dependencias** | Apache Maven | Gestión automatizada de librerías y ciclo de vida. |
+| **Persistencia (Sprint 1)** | Estructuras en memoria (Colecciones Java) | Suficiente para validar la lógica del prototipo sin sobrecargar el diseño. |
+| **Persistencia (Futuro)** | SQLite / Room | Almacenamiento local offline (requisito de privacidad de la app). |
+| **Control de versiones** | Git / GitHub | Trazabilidad de cambios y gestión ágil del Sprint. |
 
 ###### 2.5.2.4.2 Conclusión explícita sobre la viabilidad técnica del desarrollo
+El desarrollo de Tempomedic es **técnicamente viable**. El uso de Java, Swing y Maven se alinea perfectamente con las competencias adquiridas en el ciclo formativo de DAM. La integración de FlatLaf soluciona la principal debilidad visual de Swing y garantiza que el prototipo pueda cumplir con los requisitos de accesibilidad exigidos. La separación mediante MVC asegura que, de cara a futuros sprints, la migración de la lógica desde el prototipo de escritorio hacia una aplicación móvil (Android o multiplataforma) sea escalable, reutilizando gran parte del modelo de datos y las reglas de negocio.
 
 ### 2.6. Estudio de viabilidad económica
 
