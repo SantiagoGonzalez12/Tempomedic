@@ -623,11 +623,11 @@ El análisis del árbol de dependencias confirma la **ausencia total de Incompat
 
 [10] Asociación Española de Normalización (AENOR), "Requisitos de accesibilidad para productos y servicios TIC (Norma UNE-EN 301 549:2022)," Madrid, España, 2022. 21/10/2026. Disponible en: <https://www.en-301-549.info/>
 
-[11] Organización Mundial de la Salud (OMS), *Adherencia a los tratamientos a largo plazo: Pruebas para la acción*. Ginebra: Organización Mundial de la Salud, 2003.
+[11] Organización Mundial de la Salud (OMS), *Adherencia a los tratamientos a largo plazo: Pruebas para la acción*. Ginebra: Organización Mundial de la Salud, 2003. [En línea]. Disponible en: https://iris.who.int/handle/10665/42704
 
-[12] Organización Mundial de la Salud (OMS), *Global strategy on digital health 2020-2025*. Geneva: World Health Organization, 2021.
+[12] Organización Mundial de la Salud (OMS), *Global strategy on digital health 2020-2025*. Geneva: World Health Organization, 2021. [En línea]. Disponible en: https://iris.who.int/handle/10665/344249
 
-[13] E. Heller, *Psicología del color: Cómo actúan los colores sobre los sentimientos y la razón*. Barcelona: Editorial Gustavo Gili, 2008.
+[13] E. Heller, *Psicología del color: Cómo actúan los colores sobre los sentimientos y la razón*. Barcelona: Editorial Gustavo Gili, 2008. [En línea]. Disponible en: https://gustavogili.com/psicologia-del-color-libro.html
 
 [14] "Reglamento (UE) 2016/679 (RGPD)" Boe.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.boe.es/doue/2016/119/L00001-00088.pdf>
 
