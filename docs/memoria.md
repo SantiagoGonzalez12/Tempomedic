@@ -461,8 +461,8 @@ Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs
 | **Profesionales Sanitarios** | Externo | Mejora de la adherencia al tratamiento. | Bajo | Informes/documentación generada por el paciente (fase 2). |
 
 ### 2.5. Estudio de viabilidad técnica
-
 #### 2.5.1 ¿En qué consiste?
+Demuestra de forma razonada que el equipo y la infraestructura disponible cuentan con la capacidad técnica necesaria para construir, integrar y desplegar la solución con garantías. Dado que Tempomedic se encuentra en su fase de prototipado, esta viabilidad se centra en la elección del *stack*(conjunto de herramientas, lenguajes de programación, bases de datos y frameworks) para el prototipo de escritorio y la preparación para el salto a móvil.
 
 #### 2.5.2 ¿Qué deben hacer y aportar?
 
