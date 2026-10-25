@@ -247,7 +247,28 @@ El sector sanitario se encuentra en un proceso de transformación donde la atenc
 
 - **Centralización de la información sanitaria personal:** Unificar en una única herramienta la agenda y el plan de medicación para evitar la dispersión de datos.
 - **Alertas y notificaciones persistentes:** Implementación de recordatorios fiables que funcionen incluso en segundo plano.
-- **Arquitecturas modulares y escalables (MVC):** Necesidad de plataformas desacopladas que permitan conectar la lógica de negocio con interfaces limpias y adaptables 
+- **Arquitecturas modulares y escalables (MVC):** Necesidad de plataformas desacopladas que permitan conectar la lógica de negocio con interfaces limpias y adaptables
+
+  #### 2.2.1.2. Caracterización del sector
+  #### Ficha 1: Usuario Final / Paciente (User Persona Principal)
+* **Nombre:** María García
+* **Edad / Ocupación:** 68 años / Jubilada
+* **Perfil:** Paciente con hipertensión y diabetes que acude periódicamente a revisiones con su médico de cabecera y diferentes especialistas.
+* **Necesidades y Puntos de Dolor:** 
+  * Se olvida con frecuencia de la hora exacta de algunas tomas diarias de su medicación.
+  * Le cuesta llevar la cuenta de cuándo tiene la próxima cita en el centro de salud y si le quedan suficientes pastillas hasta esa fecha.
+* **Rol y aportación en el sistema:** Crear y gestionar recordatorios de medicación, visualizar la agenda de citas, marcar tomas como realizadas y consultar su historial de adherencia al tratamiento. Valida la usabilidad y la claridad visual de la interfaz.
+
+---
+
+#### Ficha 2: Cuidador / Familiar (User Persona Secundario)
+* **Nombre ficticio:** Carlos García
+* **Edad / Ocupación:** 42 años / Ingeniero informático (hijo de María)
+* **Perfil:** Familiar a cargo de supervisar la salud de un tercero sin convivir diariamente con él.
+* **Necesidades y Puntos de Dolor:** 
+  * Necesita la tranquilidad de saber que sus familiares están cumpliendo estrictamente con el tratamiento prescrito.
+  * Requiere una vista clara para programar las citas médicas de sus dependientes sin interferir con su horario laboral diario.
+* **Rol y aportación en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas automáticas en caso de omisión o incumplimiento en las tomas de medicamentos.
 
 ### 2.2. Análisis de la necesidad
 
