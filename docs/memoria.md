@@ -555,3 +555,9 @@ Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs
 [9] K. Beck, *Extreme Programming Explained: Embrace Change*, 2nd ed. Boston, MA, USA: Addison-Wesley, 2004.
 
 [10] Asociación Española de Normalización (AENOR), "Requisitos de accesibilidad para productos y servicios TIC (Norma UNE-EN 301 549:2022)," Madrid, España, 2022. 21/10/2026. Disponible en: <https://www.en-301-549.info/>
+
+[11] Organización Mundial de la Salud (OMS), *Adherencia a los tratamientos a largo plazo: Pruebas para la acción*. Ginebra: Organización Mundial de la Salud, 2003.
+
+[12] Organización Mundial de la Salud (OMS), *Global strategy on digital health 2020-2025*. Geneva: World Health Organization, 2021.
+
+[13] E. Heller, *Psicología del color: Cómo actúan los colores sobre los sentimientos y la razón*. Barcelona: Editorial Gustavo Gili, 2008.
