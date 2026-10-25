@@ -478,26 +478,34 @@ Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs
 Demuestra de forma razonada que el equipo y la infraestructura disponible cuentan con la capacidad técnica necesaria para construir, integrar y desplegar la solución con garantías. Dado que Tempomedic se encuentra en su fase de prototipado, esta viabilidad se centra en la elección del *stack*(conjunto de herramientas, lenguajes de programación, bases de datos y frameworks) para el prototipo de escritorio y la preparación para el salto a móvil.
 
 #### 2.5.2 ¿Qué deben hacer y aportar?
+
 ##### 2.5.2.1 Pila tecnológica (Tech Stack)
+
 La elección del *stack* se ha realizado priorizando la robustez, el conocimiento previo del equipo (curva de aprendizaje) y la capacidad de generar interfaces accesibles.
-*   **Lenguaje:** **Java (JDK 17 o superior)**. Lenguaje maduro, tipado y multiplataforma, núcleo del ciclo DAM.
-*   **Interfaz Gráfica:** **Java Swing con NetBeans Matisse**. Se utiliza el editor visual para agilizar la maquetación de las 5 vistas principales. Para solventar la estética anticuada de Swing, se integra la librería **FlatLaf (v3.7.2)** [8]. Esta librería es crucial porque permite implementar temas claros/oscuros y mejorar el contraste visual, es un requisito indispensable para la accesibilidad de usuarios mayores.
-*   **Arquitectura:** **MVC (Modelo-Vista-Controlador)**. Permite separar la lógica de negocio (Modelo) de la interfaz (Vista) y de la gestión de eventos (Controlador).
-*   **Gestión de dependencias:** **Apache Maven**. Facilita la inclusión de librerías externas (como FlatLaf) y el empaquetado del proyecto.
-*   **Persistencia:** En el Sprint 1, los datos se gestionan **en memoria**. Para fases posteriores, se prevé el uso de SQLite (local) o PostgreSQL (servidor).
+
+- **Lenguaje:** **Java (JDK 17 o superior)**. Lenguaje maduro, tipado y multiplataforma, núcleo del ciclo DAM.
+- **Interfaz Gráfica:** **Java Swing con NetBeans Matisse**. Se utiliza el editor visual para agilizar la maquetación de las 5 vistas principales. Para solventar la estética anticuada de Swing, se integra la librería **FlatLaf (v3.7.2)** [8]. Esta librería es crucial porque permite implementar temas claros/oscuros y mejorar el contraste visual, es un requisito indispensable para la accesibilidad de usuarios mayores.
+- **Arquitectura:** **MVC (Modelo-Vista-Controlador)**. Permite separar la lógica de negocio (Modelo) de la interfaz (Vista) y de la gestión de eventos (Controlador).
+- **Gestión de dependencias:** **Apache Maven**. Facilita la inclusión de librerías externas (como FlatLaf) y el empaquetado del proyecto.
+- **Persistencia:** En el Sprint 1, los datos se gestionan **en memoria**. Para fases posteriores, se prevé el uso de SQLite (local) o PostgreSQL (servidor).
 
 ##### 2.5.2.2 Requisitos de hardware y despliegue
-*   **Equipos de desarrollo:** Ordenadores personales con Windows/Linux, 8GB de RAM mínimo (recomendado 16GB) y JDK instalado.
-*   **Equipos cliente (Prototipo actual):** Cualquier equipo de escritorio con JRE instalado. Al ser Swing, el consumo de recursos es bajo, lo que garantiza su funcionamiento en equipos antiguos de centros de salud o de usuarios finales.
-*   **Equipos cliente (Producto final):** Dispositivos móviles con Android 8.0 o superior (API 26+), garantizando cobertura para más del 90% de los dispositivos del mercado.
+
+- **Equipos de desarrollo:** Ordenadores personales con Windows/Linux, 8GB de RAM mínimo (recomendado 16GB) y JDK instalado.
+- **Equipos cliente (Prototipo actual):** Cualquier equipo de escritorio con JRE instalado. Al ser Swing, el consumo de recursos es bajo, lo que garantiza su funcionamiento en equipos antiguos de centros de salud o de usuarios finales.
+- **Equipos cliente (Producto final):** Dispositivos móviles con Android 8.0 o superior (API 26+), garantizando cobertura para más del 90% de los dispositivos del mercado.
 
 ##### 2.5.2.3 Curva de aprendizaje y madurez técnica
+
 El equipo posee conocimientos sólidos en Java y Swing. Sin embargo, la introducción de **FlatLaf** supone un reto inicial. Para mitigar el riesgo (identificado en el apartado 8), se ha realizado un *Tech Spike* temprano [9] para validar su integración.
-*   **Resultado del Spike:** Se ha comprobado que la inicialización de FlatLaf mediante `FlatLightLaf.setup()` y el cambio dinámico a modo oscuro mediante `FlatDarkLaf.setup()` funcionan correctamente en el prototipo de NetBeans sin romper la navegación por teclado.
-*   **Accesibilidad:** El equipo ha tenido que formarse en los principios de las pautas WCAG 2.1 y la norma UNE-EN 301 549 [10] para garantizar que los componentes (botones, textos, contrastes) cumplan con los requisitos legales de accesibilidad.
+
+- **Resultado del Spike:** Se ha comprobado que la inicialización de FlatLaf mediante `FlatLightLaf.setup()` y el cambio dinámico a modo oscuro mediante `FlatDarkLaf.setup()` funcionan correctamente en el prototipo de NetBeans sin romper la navegación por teclado.
+- **Accesibilidad:** El equipo ha tenido que formarse en los principios de las pautas WCAG 2.1 y la norma UNE-EN 301 549 [10] para garantizar que los componentes (botones, textos, contrastes) cumplan con los requisitos legales de accesibilidad.
 
 ##### 2.5.2.4 Aportación documental
+
 ###### 2.5.2.4.1 Ficha técnica del stack de desarrollo y entorno de ejecución
+
 | Componente | Tecnología / Herramienta | Justificación técnica |
 | :--- | :--- | :--- |
 | **Lenguaje** | Java (JDK 17) | Conocimiento del equipo, robustez, multiplataforma. |
@@ -510,6 +518,7 @@ El equipo posee conocimientos sólidos en Java y Swing. Sin embargo, la introduc
 | **Control de versiones** | Git / GitHub | Trazabilidad de cambios y gestión ágil del Sprint. |
 
 ###### 2.5.2.4.2 Conclusión explícita sobre la viabilidad técnica del desarrollo
+
 El desarrollo de Tempomedic es **técnicamente viable**. El uso de Java, Swing y Maven se alinea perfectamente con las competencias adquiridas en el ciclo formativo de DAM. La integración de FlatLaf soluciona la principal debilidad visual de Swing y garantiza que el prototipo pueda cumplir con los requisitos de accesibilidad exigidos. La separación mediante MVC asegura que, de cara a futuros sprints, la migración de la lógica desde el prototipo de escritorio hacia una aplicación móvil (Android o multiplataforma) sea escalable, reutilizando gran parte del modelo de datos y las reglas de negocio.
 
 ### 2.6. Estudio de viabilidad económica
@@ -575,6 +584,27 @@ El análisis del árbol de dependencias confirma la **ausencia total de Incompat
 2. **Exención de Copyleft de la JVM:** Aunque OpenJDK se distribuye bajo GPLv2, la presencia explícita de la excepción *Classpath Exception* garantiza que las aplicaciones desarrolladas sobre Java Swing no queden sujetas a la obligación de redistribuirse bajo GPL pura.
 
 #### 2.7.3. Accesibilidad y otros requisitos aplicables
+
+La accesibilidad universal se ha integrado como un requisito no funcional desde el inicio del diseño de Tempomedic, atendiendo a la normativa legal europea y nacional así como a las limitaciones sensoriales y motrices identificadas en la encuesta previa de necesidades.
+
+#### Adopción de principios de accesibilidad y marco normativo
+
+El desarrollo de las interfaces gráficas sigue los cuatro principios rectores de las Pautas de Accesibilidad para el Contenido Web (WCAG 2.2 Nivel AA) y la norma UNE-EN 301 549:2022 sobre requisitos de accesibilidad para productos y servicios TIC:
+
+1. **Perceptible:** La información visual respeta ratios de contraste exigentes y no depende únicamente del color.
+2. **Operable:** La totalidad de las acciones se pueden ejecutar por teclado de forma secuencial y estructurada.
+3. **Comprensible:** Los textos, botones y estados son claros, legibles y previsibles.
+4. **Robusto:** Los componentes Swing incorporan información semántica para lectores de pantalla de asistencia.
+
+#### Justificación de decisiones en la interfaz de usuario
+
+| Criterio de Accesibilidad | Especificación Técnica en Tempomedic | Justificación Normativa y Emprírica |
+| :--- | :--- | :--- |
+| **Contraste cromático** | Colores corporativos: `#3B6A76` (Azul oscuro), `#BAD1D9` (Azul claro), `#FFFFFF` (Blanco), `#000000` (Negro) y `#9BE5AA` (Verde). El texto principal (`#000000` o `#3B6A76`) sobre fondos claros (`#FFFFFF` o `#BAD1D9`) alcanza ratios de contraste superiores a **4.5:1**. | Supera el umbral exigido por WCAG 2.2 (Criterio 1.4.3 Nivel AA) para lectura cómoda sin fatiga visual. |
+| **Doble codificación de estados** | Toda indicación de toma o cita combina icono gráfico y etiqueta de texto explícita (*"Tomada"*, *"Pospuesta"*, *"Omitida"*). | Responde al dato empírico donde el 29 % de los encuestados no distingue iconos médicos aislados y a WCAG 2.2 (Criterio 1.4.1). |
+| **Escalabilidad de fuentes** | Tipografía Sans-Serif con tres modos de escala global seleccionables en Ajustes:<br>- **Normal:** Botones 14pt \| Texto 18pt \| Encabezados 24pt<br>- **Grande:** Botones 18pt \| Texto 22pt \| Encabezados 30pt<br>- **Muy grande:** Botones 22pt \| Texto 26pt \| Encabezados 36pt | Garantiza la legibilidad al ~70 % de usuarios encuestados con 46 años o más, dando cumplimiento al Criterio 1.4.4 de WCAG 2.2. |
+| **Navegación por teclado** | Recorrido de foco con tabulación lógica (`Tab` / `Shift+Tab`), activación por `Enter` / `Espacio` y cancelación por `Esc`. Indicador de foco visible (*focus ring*). | Cumple con la operabilidad sin ratón establecida en la norma UNE-EN 301 549 (Sección 11.3) y WCAG 2.2 (Criterios 2.1.1 y 2.4.7). |
+| **Lectores de pantalla y resolución** | Declaración de `AccessibleContext` (`AccessibleName`, `AccessibleDescription`) en componentes Swing. Resolución de pantalla adaptada a ordenador a **1920 x 1080 px** (mínimo soportado **1280 x 720 px**). | Facilita la interpretación por tecnologías de asistencia como NVDA o JAWS (UNE-EN 301 549, Sección 11.5) y asegura un maquetado claro en escritorio. |
 
 ### 2.8. Análisis de riesgos inicial
 
@@ -707,3 +737,7 @@ El análisis del árbol de dependencias confirma la **ausencia total de Incompat
 [20] LICENSE.md at main · junit-team/junit-framework. Disponible en: <https://github.com/junit-team/junit-framework/blob/main/LICENSE.md>
 
 [21] “BOE-A-2023-13221 Real Decreto 405/2023, de 29 de mayo, por el que se actualizan los títulos de la formación profesional del sistema educativo de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y Técnico Superior en Desarrollo de Aplicaciones Web, de la familia profesional Informática y Comunicaciones, y se fijan sus enseñanzas mínimas”, Boe.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-13221>
+
+[22] “Qué es la UNE EN 301549”, Accede Me. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://accedeme.com/blog/que-es-la-une-en-301549>
+
+[23] "W3C Web Content Accessibility Guidelines (WCAG) 2.2" w3.org. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.w3.org/TR/WCAG22/>
