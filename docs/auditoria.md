@@ -32,7 +32,7 @@ Para la auditoría y la recolección de datos se emplearán las siguientes herra
 4. **Plantilla de Registro de Problemas (Issue Log):**
    * Formato normalizado para categorizar y priorizar incidencias detectadas.
 
-## 3. Guion de Prueba con Usuarios (Para Tarea #72)
+## 3. Guion de Prueba con Usuarios (Para Tarea 2.4)
 
 ### Perfil del Participante
 * **Muestra:** 3 a 5 personas.
@@ -53,7 +53,7 @@ Para la auditoría y la recolección de datos se emplearán las siguientes herra
   * *Escenario:* "Tienes una revisión con tu médico de cabecera el próximo martes a las 10:00 AM en el Centro de Salud. Añade esta cita a la agenda de la app."
 
 
-## 4. Lista de Comprobación de Auditoría Interna (Para Tarea #41)
+## 4. Lista de Comprobación de Auditoría Interna (Para Tarea 2.3)
 
 | Criterio | Descripción / Verificación | Cumple (S/N) | Notas / Observaciones |
 | :--- | :--- | :---: | :--- |
