@@ -248,28 +248,30 @@ El sector sanitario se encuentra en un proceso de transformación donde la atenc
 - **Centralización de la información sanitaria personal:** Unificar en una única herramienta la agenda y el plan de medicación para evitar la dispersión de datos.
 - **Alertas y notificaciones persistentes:** Implementación de recordatorios fiables que funcionen incluso en segundo plano.
 - **Arquitecturas modulares y escalables (MVC):** Necesidad de plataformas desacopladas que permitan conectar la lógica de negocio con interfaces limpias y adaptables
+
 -----
 
-  #### 2.2.1.2. Caracterización del sector
-  #### Ficha 1: Usuario Final / Paciente (User Persona Principal)
-* **Nombre:** María García
-* **Edad / Ocupación:** 68 años / Jubilada
-* **Perfil:** Paciente con hipertensión y diabetes que acude periódicamente a revisiones con su médico de cabecera y diferentes especialistas.
-* **Necesidades y Puntos de Dolor:** 
-  * Se olvida con frecuencia de la hora exacta de algunas tomas diarias de su medicación.
-  * Le cuesta llevar la cuenta de cuándo tiene la próxima cita en el centro de salud y si le quedan suficientes pastillas hasta esa fecha.
-* **Rol y aportación en el sistema:** Crear y gestionar recordatorios de medicación, visualizar la agenda de citas, marcar tomas como realizadas y consultar su historial de adherencia al tratamiento. Valida la usabilidad y la claridad visual de la interfaz.
+#### 2.2.1.2. Caracterización del sector
 
+#### Ficha 1: Usuario Final / Paciente (User Persona Principal)
 
+- **Nombre:** María García
+- **Edad / Ocupación:** 68 años / Jubilada
+- **Perfil:** Paciente con hipertensión y diabetes que acude periódicamente a revisiones con su médico de cabecera y diferentes especialistas.
+- **Necesidades y Puntos de Dolor:**
+  - Se olvida con frecuencia de la hora exacta de algunas tomas diarias de su medicación.
+  - Le cuesta llevar la cuenta de cuándo tiene la próxima cita en el centro de salud y si le quedan suficientes pastillas hasta esa fecha.
+- **Rol y aportación en el sistema:** Crear y gestionar recordatorios de medicación, visualizar la agenda de citas, marcar tomas como realizadas y consultar su historial de adherencia al tratamiento. Valida la usabilidad y la claridad visual de la interfaz.
 
 #### Ficha 2: Cuidador / Familiar (User Persona Secundario)
-* **Nombre ficticio:** Carlos García
-* **Edad / Ocupación:** 42 años / Ingeniero informático (hijo de María)
-* **Perfil:** Familiar a cargo de supervisar la salud de un tercero sin convivir diariamente con él.
-* **Necesidades y Puntos de Dolor:** 
-  * Necesita la tranquilidad de saber que sus familiares están cumpliendo estrictamente con el tratamiento prescrito.
-  * Requiere una vista clara para programar las citas médicas de sus dependientes sin interferir con su horario laboral diario.
-* **Rol y aportación en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas automáticas en caso de omisión o incumplimiento en las tomas de medicamentos.
+
+- **Nombre ficticio:** Carlos García
+- **Edad / Ocupación:** 42 años / Ingeniero informático (hijo de María)
+- **Perfil:** Familiar a cargo de supervisar la salud de un tercero sin convivir diariamente con él.
+- **Necesidades y Puntos de Dolor:**
+  - Necesita la tranquilidad de saber que sus familiares están cumpliendo estrictamente con el tratamiento prescrito.
+  - Requiere una vista clara para programar las citas médicas de sus dependientes sin interferir con su horario laboral diario.
+- **Rol y aportación en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas automáticas en caso de omisión o incumplimiento en las tomas de medicamentos.
 
 ### 2.2. Análisis de la necesidad
 
@@ -427,30 +429,39 @@ Su propuesta de valor diferencial reside en tres pilares:
 3. **Privacidad y accesibilidad desde el diseño (*Privacy & Accessibility by Design*):** Funciona 100% offline sin necesidad de servidores externos ni registro obligatorio, protegiendo los datos con PIN local y ofreciendo una interfaz de alto contraste, tipografía escalable y botones táctiles adaptados al 70% de usuarios mayores de 46 años identificados en la investigación.
 
 ### 2.4. Partes interesadas
+
 #### 2.4.1 ¿En qué consiste?
+
 El análisis de partes interesadas consiste en mapear a todas las personas, colectivos, departamentos o entidades que tienen interés en el proyecto o que se verán impactados directa o indirectamente por su implantación. En el contexto de Tempomedic, este mapeo es crítico debido a la naturaleza sensible de los datos tratados y a la brecha digital existente en el público objetivo.
 
 #### 2.4.2 ¿Qué deben de hacer y aportar?
+
 ##### 2.4.2.1 Identificación exhaustiva
+
 Se diferencian dos grandes bloques de actores:
-*   **Partes interesadas internas:**
-    *   **Equipo de desarrollo (Grupo 2):** Encargados del diseño, prototipado y desarrollo de la aplicación. Formado por perfiles Frontend, Backend, QA Tester y Scrum Master.
-    *   **Tutor del módulo (Willman Acosta Lugo):** Actúa como *Product Owner* académico, evaluando el cumplimiento de los criterios de evaluación del Real Decreto 405/2023 [4] y guiando el alcance del proyecto.
-*   **Partes interesadas externas:**
-    *   **Pacientes/Usuarios finales (Perfil principal):** Personas con tratamientos crónicos o puntuales que necesitan gestionar su medicación y citas. Incluye un alto porcentaje de adultos mayores (según nuestra encuesta, el 70% supera los 46 años), lo que exige interfaces de alta accesibilidad.
-    *   **Cuidadores/Familiares (Perfil secundario):** Personas que supervisan la medicación de dependientes.
-    *   **Profesionales sanitarios (Indirecto):** Médicos y farmacéuticos que se benefician de una mayor adherencia al tratamiento por parte del paciente, aunque no interactúan directamente con la app en esta fase.
-    *   **Organismos reguladores (Indirecto):** La Agencia Española de Protección de Datos (AEPD), que vela por el cumplimiento del RGPD y la LOPDGDD [7].
+
+- **Partes interesadas internas:**
+  - **Equipo de desarrollo (Grupo 2):** Encargados del diseño, prototipado y desarrollo de la aplicación. Formado por perfiles Frontend, Backend, QA Tester y Scrum Master.
+  - **Tutor del módulo (Willman Acosta Lugo):** Actúa como *Product Owner* académico, evaluando el cumplimiento de los criterios de evaluación del Real Decreto 405/2023 [4] y guiando el alcance del proyecto.
+- **Partes interesadas externas:**
+  - **Pacientes/Usuarios finales (Perfil principal):** Personas con tratamientos crónicos o puntuales que necesitan gestionar su medicación y citas. Incluye un alto porcentaje de adultos mayores (según nuestra encuesta, el 70% supera los 46 años), lo que exige interfaces de alta accesibilidad.
+  - **Cuidadores/Familiares (Perfil secundario):** Personas que supervisan la medicación de dependientes.
+  - **Profesionales sanitarios (Indirecto):** Médicos y farmacéuticos que se benefician de una mayor adherencia al tratamiento por parte del paciente, aunque no interactúan directamente con la app en esta fase.
+  - **Organismos reguladores (Indirecto):** La Agencia Española de Protección de Datos (AEPD), que vela por el cumplimiento del RGPD y la LOPDGDD [7].
 
 ##### 2.4.2.2 Análisis de poder e interés
+
 Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs. interés (Mendelow):
-*   **Alto poder / Alto interés (Gestionar de cerca):** El tutor del módulo y el equipo de desarrollo. Su implicación es total y las decisiones afectan al núcleo del proyecto.
-*   **Bajo poder / Alto interés (Mantener informados):** Los pacientes y cuidadores. Aunque no deciden sobre el software, son los usuarios finales; su feedback a través de la encuesta ha definido el diseño de la interfaz (UI/UX).
-*   **Alto poder / Bajo interés (Mantener satisfechos):** Organismos reguladores (AEPD). No intervienen en el día a día, pero sus normas condicionan la arquitectura (privacidad desde el diseño).
-*   **Bajo poder / Bajo interés (Monitorizar):** Profesionales sanitarios, cuyo interés aumentará en futuras fases si se integran APIs de historiales clínicos.
+
+- **Alto poder / Alto interés (Gestionar de cerca):** El tutor del módulo y el equipo de desarrollo. Su implicación es total y las decisiones afectan al núcleo del proyecto.
+- **Bajo poder / Alto interés (Mantener informados):** Los pacientes y cuidadores. Aunque no deciden sobre el software, son los usuarios finales; su feedback a través de la encuesta ha definido el diseño de la interfaz (UI/UX).
+- **Alto poder / Bajo interés (Mantener satisfechos):** Organismos reguladores (AEPD). No intervienen en el día a día, pero sus normas condicionan la arquitectura (privacidad desde el diseño).
+- **Bajo poder / Bajo interés (Monitorizar):** Profesionales sanitarios, cuyo interés aumentará en futuras fases si se integran APIs de historiales clínicos.
 
 ##### 2.4.2.3 Aportación documental
+
 ##### 2.4.2.3.1 Matriz de Interesados (Poder vs. Interés)
+
 | Rol / Grupo | Tipo (Interno/Externo) | Expectativas principales | Nivel de influencia | Estrategia de comunicación recomendada |
 | :--- | :--- | :--- | :--- | :--- |
 | **Equipo de desarrollo** | Interno | Claridad en los requisitos, cumplimiento de plazos, buena comunicación. | Alto | Reuniones diarias (Daily Scrum), tablero de GitHub Projects. |
@@ -483,6 +494,33 @@ Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs
 ### 2.7. Estudio de viabilidad legal y normativa
 
 #### 2.7.1. Protección de datos personales
+
+El desarrollo y despliegue de Tempomedic cumple estrictamente con el marco legal europeo y español regulado por el Reglamento General de Protección de Datos (RGPD, Reglamento UE 2016/679) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).
+
+#### Identificación de los datos recabados
+
+La aplicación procesa dos categorías diferenciadas de datos de carácter personal:
+
+1. **Datos identificativos y de acceso:** Correo electrónico, nombre o apodo, hash de la contraseña de la cuenta y PIN local opcional de 4 dígitos.
+2. **Datos de salud (Categoría especial, Art. 9 RGPD):** Nombres de medicamentos, dosis, pautas de toma (frecuencias y horarios), historial de seguimiento diario de tomas (marcadas como tomada, pospuesta u omitida) y la agenda de citas médicas (especialidades, médicos y lugares).
+
+#### Base de legitimación jurídica
+
+- **Ejecución contractual / relación de servicio (Art. 6.1.b RGPD):** Aplica a la gestión de las credenciales de la cuenta de usuario.
+- **Consentimiento explícito e inequívoco (Art. 6.1.a y Art. 9.2.a RGPD):** Exigido obligatoriamente para el tratamiento de datos de salud mediante una casilla de verificación (*checkbox*) desmarcada por defecto en el formulario de registro, vinculada a la Política de Privacidad de Tempomedic.
+
+#### Medidas de diseño orientadas a la privacidad (Privacy by Design y Privacy by Default)
+
+Atendiendo al principio de Privacidad desde el Diseño y por Defecto (Art. 25 RGPD):
+
+- **Control de Acceso basado en Roles (RBAC):** Garantiza que los módulos de datos y repositorios restringen el acceso exclusivamente al usuario propietario.
+- **Cifrado y hashing seguro de credenciales:** Las contraseñas se almacenan procesadas mediante algoritmos de hashing lento con sal aleatoria (*salting*) BCrypt / Argon2id. La aplicación no almacena contraseñas en texto claro.
+- **Persistencia local restrictiva (Privacy by Default):** Todos los registros de tratamientos y citas permanecen exclusivamente en el almacenamiento local del dispositivo móvil durante la fase actual del software.
+- **Capa adicional de protección física:** Opción de bloqueo al iniciar la app mediante PIN de 4 dígitos o biometría simulada.
+
+#### Derechos ARSOPL y política de retención
+
+Tempomedic asegura el ejercicio completo de los derechos de Acceso, Rectificación, Supresión, Oposición, Portabilidad y Limitación del tratamiento. A través de la pantalla de Ajustes, la función «Eliminar cuenta» realiza la supresión física, inmediata e irreversible de todas las credenciales y registros locales del usuario en el dispositivo
 
 #### 2.7.2. Propiedad intelectual y licencias
 
@@ -561,3 +599,11 @@ Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs
 [12] Organización Mundial de la Salud (OMS), *Global strategy on digital health 2020-2025*. Geneva: World Health Organization, 2021.
 
 [13] E. Heller, *Psicología del color: Cómo actúan los colores sobre los sentimientos y la razón*. Barcelona: Editorial Gustavo Gili, 2008.
+
+[14] "Reglamento (UE) 2016/679 (RGPD)" Boe.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.boe.es/doue/2016/119/L00001-00088.pdf>
+
+[15] “BOE-A-2018-16673 Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales”, Boe.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673>
+
+[16] "Resumen EUR-Lex RGPD" Europa.eu. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://eur-lex.europa.eu/ES/legal-content/summary/general-data-protection-regulation-gdpr.html>
+
+[17] “Normativa sobre datos personales”, Gob.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.hacienda.gob.es/es-ES/El%20Ministerio/Paginas/DPD/Normativa_PD.aspx>
