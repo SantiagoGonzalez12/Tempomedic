@@ -124,3 +124,10 @@ Esas pautas hacen referencia a las 4 principios fundamentales:
 | **MSG-08** | Advertencia / Confirmación | Ajustes | `¿Seguro que quieres borrar todo?` | `¿Quieres eliminar tu cuenta? Se borrarán todos tus medicamentos y citas guardados.` | Explica el impacto exacto de la acción irrecuperable. |
 | **MSG-09** | Error de Acceso | Desbloqueo por PIN | `PIN erróneo.` | `El PIN introducido no es correcto. Te quedan 2 intentos.` | Informa del fallo y del margen de intentos restantes. |
 | **MSG-10** | Estado Vacío | Módulo Citas | `No hay registros.` | `No tienes citas programadas. Pulsa en "+ Pedir cita" para añadir la primera.` | Convierte una pantalla vacía en una llamada a la acción (CTA). |
+
+
+## Referencias
+[1] “Principios y pautas de WCAG 2.1”, Universidad de Alicante. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://accesibilidadweb.dlsi.ua.es/?menu=principios-2.1>
+
+[2] “WCAG 2.1: qué son y cómo respetarlas”, torresburriel. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://torresburriel.com/weblog/wcag-2-1-que-son-y-como-respetarlas/>
+
