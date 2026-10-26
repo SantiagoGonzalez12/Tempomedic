@@ -284,6 +284,45 @@ El sector sanitario se encuentra en un proceso de transformación donde la atenc
 | **Brecha Digital y Demografía** | El sector atiende a una población mayoritaria de más de 46 años con competencias digitales básicas o limitadas. | Exigencia estricta de usabilidad (botones amplios, fuentes escalables y contraste). |
 | **Seguridad y Normativa** | Alta exigencia de privacidad por parte del usuario (95% en encuesta). | Arquitectura *Privacy by Design*: almacenamiento 100% local en el dispositivo, PIN opcional de desbloqueo y consentimiento expreso|
 | **Interoperabilidad y Autonomía** | Restricciones de ahorro de batería de los SO  y falta de flexibilidad en agendas sanitarias tradicionales | Ejecución autónoma de alarmas locales en el cliente y prevención de cancelación de avisos en segundo plano |
+-----
+
+#### 2.2.3. Segmentación de perfiles de usuario (User Personas)
+
+A partir de los datos recopilados en la encuesta propia realizada a 66 usuarios y del análisis de competencias digitales del sector público y socio-sanitario, se han definido tres arquetipos o *User Personas* representativos. 
+
+#### 2.2.3.1. Fichas de Buyer Persona / User Persona
+
+##### Ficha 1: Carmen Ruiz – Paciente Mayor / Crónica Polimedicada (User Persona Principal)
+* **Rol laboral / Ocupación:** Jubilada (68 años) / Paciente con hipertensión y diabetes tipo 2.
+* **Competencias digitales previas:** **Básicas / Limitadas.** Usuario funcional de *smartphone* para WhatsApp y llamadas. Presenta dificultades ante menús anidados, fuentes pequeñas e iconos abstractos sin texto
+* **Entorno de uso habitual:** **Dispositivo móvil (*Smartphone*)** personal en el entorno del hogar.
+* **Objetivos principales al utilizar el sistema:**
+  * Confirmar con un solo clic sus 4 tomas diarias de medicación evitando descuidos mediante avisos sonoros fiables
+
+  * Consultar rápidamente la fecha y hora de sus próximas revisiones médicas en el centro de salud sin perderse por la app
+* **Condicionantes UI/UX (DII / Swing):** Ajuste de texto "Muy grande", botones amplios con contraste visual elevado (≥ 4.5:1), ausencia de gestos complejos y texto explicativo en todos los iconos
+
+
+##### Ficha 2: Javier Martínez – Cuidador Familiar / Perfil Ocupado (User Persona Secundario)
+* **Rol laboral / Ocupación:** Responsable Administrativo (48 años) / Familiar a cargo de la gestión médica de su madre dependiente
+* **Competencias digitales previas:** **Intermedias / Avanzadas.** Habituado al uso diario de herramientas ofimáticas, correo y gestión multitarea en ordenador
+* **Entorno de uso habitual:** **Entorno mixto:** **Terminal de escritorio (PC)** durante su jornada laboral y **dispositivo móvil** fuera de la oficina.
+* **Objetivos principales al utilizar el sistema:**
+  * Organizar las citas médicas de su familiar sin interferir en su jornada laboral y reprogramar pautas complejas rápidamente
+  * Operar la herramienta con máxima agilidad desde el ordenador mediante el teclado
+* **Condicionantes UI/UX (DII / Swing):** Panel de navegación lateral en versión de escritorio, tabulación asistida completa con foco visible (`Tab`, `Enter`, `Esc`), atajos de teclado y formularios bien estructurados.
+
+##### Ficha 3: Elena Gómez – Tratamiento Temporal / Perfil Joven (User Persona Terciario)
+* **Rol laboral / Ocupación:** Estudiante universitaria / Empleada júnior (24 años) / Tratamiento de antibióticos por 10 días
+* **Competencias digitales previas:** **Nativas / Muy Altas.** Manejo fluido de aplicaciones móviles y entornos digitales complejos
+* **Entorno de uso habitual:** **Dispositivo móvil (*Smartphone*)** en movilidad (universidad, transporte, trabajo).
+* **Objetivos principales al utilizar el sistema:**
+  * Dar de alta un tratamiento puntual "cada 8 horas" en menos de un minuto
+  * Recibir notificaciones discretas que no interrumpan su actividad laboral o académica
+  * Archivar o eliminar la pauta al terminar los 10 días sin dejar rastro de datos residuales
+* **Condicionantes UI/UX (DII / Swing):** Formularios de alta rápida, estética visual moderna (*FlatLaf*), notificaciones nativas silenciosas y flujo directo para marcar tomas
+
+
 
 ### 2.2. Análisis de la necesidad
 
