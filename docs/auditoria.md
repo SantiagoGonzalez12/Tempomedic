@@ -91,3 +91,67 @@ Para cada problema **P1** o **P2** corregido, se adjuntará la evidencia gráfic
 * **Descripción del ajuste:** Explicación técnica/visual del cambio.
 * **Captura Antes:** `![Antes](ruta/a/captura_antes.png)`
 * **Captura Después:** `![Después](ruta/a/captura_despues.png)`
+
+---
+
+## 7. Revisar mensajes y textos
+
+En cumplimiento de las pautas WCAG 2.1 y con el objetivo de garantizar una comunicación clara para personas mayores y cuidadores, se ha investigado y rediseñado la interfaz de la aplicación TempoMedic.
+
+Esas pautas hacen referencia a las 4 principios fundamentales:
+
+- Perceptible: la información y los componentes de la interfaz deben presentarse de manera que los usuarios puedan percibirlos.
+- Operable: los componentes de la interfaz y la navegación deben poder ser utilizados mediante el teclado y otros dispositivos de apoyo.
+- Comprensible: la información y el funcionamiento de la interfaz deben ser claros, legibles y con un comportamiento predecible.
+- Robusto: el contenido debe ser lo suficientemente fiable para ser interpretado por una gran variedad de agentes de usuario, incluidas las tecnologías de asistencia.
+
+### Criterios de Redacción Aplicados
+* **Claridad y Empatía:** explicar el problema sin usar tecnicismos ni códigos de error.
+* **Orientación a la Acción:** indicar siempre el paso siguiente para solucionar la situación.
+* **Brevedad:** textos concisos y directos para evitar la sobrecarga cognitiva.
+
+### Tabla Comparativa de Mensajes (Antes -> Después)
+
+| ID | Tipo de Mensaje | Pantalla / Contexto | Texto Original (Antes) | Texto Rediseñado (Después) | Justificación / Mejora Aplicada |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **MSG-01** | Error de Validación | Iniciar Sesión | `Error 401: Credenciales inválidas.` | `El correo o la contraseña no son correctos. Por favor, revisa los datos e inténtalo de nuevo.` | Elimina el código técnico y explica qué verificar. |
+| **MSG-02** | Error de Formulario | Crear Cuenta | `Formato de email no válido.` | `Escribe un correo electrónico válido (ejemplo: usuario@correo.com).` | Añade un ejemplo para orientar a personas con menor competencia digital. |
+| **MSG-03** | Confirmación | Módulo Medicamentos | `Registro guardado con éxito.` | `¡Medicamento guardado! Te avisaremos según el horario configurado.` | Confirma la acción y aporta tranquilidad sobre el aviso. |
+| **MSG-04** | Confirmación | Vista "Hoy" (Dashboard) | `Estado cambiado.` | `Toma registrada como "Tomada". ¡Buen trabajo!` | Da retroalimentación clara sobre el estado asignado. |
+| **MSG-05** | Confirmación / Alerta | Vista "Hoy" (Dashboard) | `Toma pospuesta.` | `Toma pospuesta. Te volveremos a avisar en 15 minutos.` | Especifica el tiempo en el que reaparecerá la alarma. |
+| **MSG-06** | Ayuda | Formulario Citas | `Introduce dirección...` | `Escribe el centro de salud, hospital o dirección de la consulta.` | Aclara qué tipo de lugar se espera en el campo. |
+| **MSG-07** | Error de Campo Vacío | Añadir Medicamento | `Campo requerido.` | `Por favor, escribe el nombre del medicamento para poder continuar.` | Indica de forma amable el campo que falta por completar. |
+| **MSG-08** | Advertencia / Confirmación | Ajustes | `¿Seguro que quieres borrar todo?` | `¿Quieres eliminar tu cuenta? Se borrarán todos tus medicamentos y citas guardados.` | Explica el impacto exacto de la acción irrecuperable. |
+| **MSG-09** | Error de Acceso | Desbloqueo por PIN | `PIN erróneo.` | `El PIN introducido no es correcto. Te quedan 2 intentos.` | Informa del fallo y del margen de intentos restantes. |
+| **MSG-10** | Estado Vacío | Módulo Citas | `No hay registros.` | `No tienes citas programadas. Pulsa en "+ Pedir cita" para añadir la primera.` | Convierte una pantalla vacía en una llamada a la acción (CTA). |
+
+---
+
+## 8. Informe de Auditoría de Accesibilidad y Consistencia 
+
+Revisión técnica y soluciones de los errores dados. 
+
+### 8.1. Registro de Incidencias Detectadas (Issue Log)
+
+| ID | Vista / Pantalla | Criterio Afectado | Descripción del Problema | Prioridad | Estado | Solución Aplicada |
+| :--- | :--- | :--- | :--- | :---: | :---: | :--- |
+| **AUD-01** | General (Swing / FlatLaf) | Integración de Librería | Al importar la paleta de componentes de FlatLaf en el editor visual de NetBeans (Matisse), no se muestran los iconos y algunos elementos no se dejan arrastrar o aplicar correctamente desde la interfaz gráfica. | **P2** | **Pospuesto (próximos Sprint)** | Se decide mantener la maquetación y estructura nativa en Swing durante el Sprint 2 y posponer la implementación completa de FlatLaf por código Java para el Sprint 3. |
+
+---
+
+### 8.2. Informe de Estado y Decisiones Técnicas
+
+* **Incidencia principal:** problemas de renderizado y arrastre de la paleta de componentes de FlatLaf dentro de NetBeans Matisse.
+* **Decisión adoptada:** para no retrasar las entregas ni el flujo de trabajo del Sprint 2, se mantiene la interfaz maquetada con los componentes base de Swing y se deja la integración del Look & Feel de FlatLaf mediante código fuente para el siguiente sprint.
+* **Captura del error:**
+
+  
+![Fallo de iconos y arrastre en paleta FlatLaf](img/Auditoria/aud-01-error-flatlaf.png)
+
+![Error al arrastrar componente FlatLaf](img/Auditoria/aud-01.1-error-flatlaf.png)
+
+## Referencias
+[1] “Principios y pautas de WCAG 2.1”, Universidad de Alicante. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://accesibilidadweb.dlsi.ua.es/?menu=principios-2.1>
+
+[2] “WCAG 2.1: qué son y cómo respetarlas”, torresburriel. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://torresburriel.com/weblog/wcag-2-1-que-son-y-como-respetarlas/>
+
