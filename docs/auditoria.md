@@ -144,7 +144,9 @@ En este apartado se recoge la revisión técnica sobre las 10 pantallas de Tempo
 * **Incidencia principal:** problemas de renderizado y arrastre de la paleta de componentes de FlatLaf dentro de NetBeans Matisse.
 * **Decisión adoptada:** para no retrasar las entregas ni el flujo de trabajo del Sprint 2, se mantiene la interfaz maquetada con los componentes base de Swing y se deja la integración del Look & Feel de FlatLaf mediante código fuente para el siguiente sprint.
 * **Captura del error:**
+![Fallo de iconos y arrastre en paleta FlatLaf](imagen/Auditoria/aud-01-error-flatlaf.png)
 
+(imagen/auditoria/aud-01.1-error-flatlaf.png)
 
 ## Referencias
 [1] “Principios y pautas de WCAG 2.1”, Universidad de Alicante. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://accesibilidadweb.dlsi.ua.es/?menu=principios-2.1>
