@@ -741,3 +741,5 @@ El desarrollo de las interfaces gráficas sigue los cuatro principios rectores d
 [22] “Qué es la UNE EN 301549”, Accede Me. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://accedeme.com/blog/que-es-la-une-en-301549>
 
 [23] "W3C Web Content Accessibility Guidelines (WCAG) 2.2" w3.org. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.w3.org/TR/WCAG22/>
+
+[24] "Los problemas de suministro de medicamentos, un desafío creciente que pude generar desconfianza hacia los profesionales". elglobal. Consultado: el 21 de octubre de 2026. [En línea]. Disponible en: <https://elglobalfarma.com/farmacia/los-problemas-de-suministro-de-medicamentos-un-desafio-creciente-que-puede-generar-desconfianza-hacia-los-profesionales/>
