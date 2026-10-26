@@ -125,6 +125,26 @@ Esas pautas hacen referencia a las 4 principios fundamentales:
 | **MSG-09** | Error de Acceso | Desbloqueo por PIN | `PIN erróneo.` | `El PIN introducido no es correcto. Te quedan 2 intentos.` | Informa del fallo y del margen de intentos restantes. |
 | **MSG-10** | Estado Vacío | Módulo Citas | `No hay registros.` | `No tienes citas programadas. Pulsa en "+ Pedir cita" para añadir la primera.` | Convierte una pantalla vacía en una llamada a la acción (CTA). |
 
+---
+
+## 8. Informe de Auditoría de Accesibilidad y Consistencia (Ejecución Issue #41)
+
+En este apartado se recoge la revisión técnica sobre las 10 pantallas de TempoMedic y la gestión de la principal incidencia detectada durante el proceso de maquetación en Swing.
+
+### 8.1. Registro de Incidencias Detectadas (Issue Log)
+
+| ID | Vista / Pantalla | Criterio Afectado | Descripción del Problema | Prioridad | Estado | Solución Aplicada |
+| :--- | :--- | :--- | :--- | :---: | :---: | :--- |
+| **AUD-01** | General (Swing / FlatLaf) | Integración de Librería | Al importar la paleta de componentes de FlatLaf en el editor visual de NetBeans (Matisse), no se muestran los iconos y algunos elementos no se dejan arrastrar o aplicar correctamente desde la interfaz gráfica. | **P2** | **Pospuesto (Sprint 3)** | Se decide mantener la maquetación y estructura nativa en Swing durante el Sprint 2 y posponer la implementación completa de FlatLaf por código Java para el Sprint 3. |
+
+---
+
+### 8.2. Informe de Estado y Decisiones Técnicas
+
+* **Incidencia principal:** problemas de renderizado y arrastre de la paleta de componentes de FlatLaf dentro de NetBeans Matisse.
+* **Decisión adoptada:** para no retrasar las entregas ni el flujo de trabajo del Sprint 2, se mantiene la interfaz maquetada con los componentes base de Swing y se deja la integración del Look & Feel de FlatLaf mediante código fuente para el siguiente sprint.
+* **Captura del error:**
+
 
 ## Referencias
 [1] “Principios y pautas de WCAG 2.1”, Universidad de Alicante. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://accesibilidadweb.dlsi.ua.es/?menu=principios-2.1>
