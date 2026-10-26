@@ -342,6 +342,8 @@ Con estas 4 propuesta se quiere conseguir:
 
 - Organización Mundial de la Salud: la OMS dicta que más del 50% de los pacientes con problemas de salud crónica no se toman la medicación como es debido y, del 75% los psiquiátricos, provocando así que los síntomas se agraven y tengan un coste más elevado para el paciente. La preocupación de los sanitarios no es solo esa, sino que a algunos pacientes, las medicinas le provocan daño evitando que se las tomen. Por esto último, la OMS ha determinado que la Medicación sin daño es el tema del tercer reto mundial por la seguridad del paciente.
 
+- - quironsalud: señala que las varias organizaciones sanitarias detectan varios errores en los pacientes a la hora de la toma de la medicación, según el estudio, oscilan entre el 20% y el 60% de los que originaron daños de salud en el paciente. Piensan que la causa de esto es el desconocimiento. Para apaciguar estos datos, el Instituto para el Uso Seguro de los Medicamentos ha lanzado una campaña de concienciación e información.
+
 ### 2.3. Estudio de soluciones existentes
 
 #### 2.3.1. ¿En qué consiste?
@@ -762,3 +764,5 @@ El desarrollo de las interfaces gráficas sigue los cuatro principios rectores d
 [23] "W3C Web Content Accessibility Guidelines (WCAG) 2.2" w3.org. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.w3.org/TR/WCAG22/>
 
 [24] "Los problemas de suministro de medicamentos, un desafío creciente que pude generar desconfianza hacia los profesionales". elglobal. Consultado: el 21 de octubre de 2026. [En línea]. Disponible en: <https://elglobalfarma.com/farmacia/los-problemas-de-suministro-de-medicamentos-un-desafio-creciente-que-puede-generar-desconfianza-hacia-los-profesionales/>
+
+[25] "Prevenir los errores en la toma de medicamentos". quironsalud. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://www.tucanaldesalud.com/es/tusaludaldia/articulos/prevenir-errores-toma-medicamentos>
