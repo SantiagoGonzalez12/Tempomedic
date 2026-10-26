@@ -253,26 +253,14 @@ El sector sanitario se encuentra en un proceso de transformación donde la atenc
 
 #### 2.2.1.2. Caracterización del sector
 
-#### Ficha 1: Usuario Final / Paciente (User Persona Principal)
+El ámbito en el que se enmarca **Tempomedic** forma parte del sector de la **Salud Digital (*eHealth / mHealth*)**, una de las áreas tecnológicas con mayor crecimiento e impacto en el bienestar de las personas. La digitalización de la salud ha dejado de ser una simple opción moderna para convertirse en una necesidad básica que garantiza el cuidado de los pacientes, el seguimiento continuado de los tratamientos 
+Para comprender a fondo el entorno en el que operará la aplicación, sus tendencias y las formas de trabajo del sector, se ha analizado la información procedente de indicadores oficiales de la Comisión Europea, las estrategias del Ministerio de Sanidad y diversos informes de la sanidad pública:
 
-- **Nombre:** María García
-- **Edad / Ocupación:** 68 años / Jubilada
-- **Perfil:** Paciente con hipertensión y diabetes que acude periódicamente a revisiones con su médico de cabecera y diferentes especialistas.
-- **Necesidades y Puntos de Dolor:**
-  - Se olvida con frecuencia de la hora exacta de algunas tomas diarias de su medicación.
-  - Le cuesta llevar la cuenta de cuándo tiene la próxima cita en el centro de salud y si le quedan suficientes pastillas hasta esa fecha.
-- **Rol y aportación en el sistema:** Crear y gestionar recordatorios de medicación, visualizar la agenda de citas, marcar tomas como realizadas y consultar su historial de adherencia al tratamiento. Valida la usabilidad y la claridad visual de la interfaz.
+1. **Ámbito de actividad y modelo de atención:** El sector está cambiando el modelo tradicional, basado casi exclusivamente en ir en persona al centro médico, por un sistema mixto de salud digital. Este nuevo enfoque se centra en dar herramientas al propio paciente para que pueda gestionar su salud desde casa, ya sea para tratamientos diarios de por vida o para medicaciones temporales.
+2. **Brecha digital y perfil de la población:** A pesar de que la tecnología está al alcance de la mayoría, el sector se enfrenta a una brecha digital evidente. Los informes europeos sobre economía y sociedad digital señalan que, aunque España cuenta con excelentes infraestructuras de salud digital, gran parte de las personas que toman medicación de forma continua (adultos mayores de 46 años) no tienen competencias digitales avanzadas. Esto coincide punto por punto con los resultados de la encuesta propia realizada a 66 personas para este proyecto, donde el 70% supera los 46 años y un 29% admite que le cuesta entender las aplicaciones si los iconos no llevan un texto explicativo a su lado.
+3. **Seguridad, normas y funcionamiento sin internet:** Las aplicaciones de este sector deben diseñarse garantizando la privacidad desde el primer minuto. Además, debido a que los teléfonos móviles modernos restringen las aplicaciones en segundo plano para ahorrar batería, el sistema de avisos y alarmas debe ser capaz de sonar por sí solo de forma local y autónoma, sin depender de si el usuario tiene o no conexión a internet en ese momento.
 
-#### Ficha 2: Cuidador / Familiar (User Persona Secundario)
-
-- **Nombre ficticio:** Carlos García
-- **Edad / Ocupación:** 42 años / Ingeniero informático (hijo de María)
-- **Perfil:** Familiar a cargo de supervisar la salud de un tercero sin convivir diariamente con él.
-- **Necesidades y Puntos de Dolor:**
-  - Necesita la tranquilidad de saber que sus familiares están cumpliendo estrictamente con el tratamiento prescrito.
-  - Requiere una vista clara para programar las citas médicas de sus dependientes sin interferir con su horario laboral diario.
-- **Rol y aportación en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas automáticas en caso de omisión o incumplimiento en las tomas de medicamentos.
-  -------------
+  -----------
   ### 2.2.2 Aportación documental
 ##### 2.2.2.1. Tabla descriptiva del sector de la Salud Digital y características organizativas
 
