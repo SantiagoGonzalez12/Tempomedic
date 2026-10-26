@@ -272,6 +272,18 @@ El sector sanitario se encuentra en un proceso de transformación donde la atenc
   - Necesita la tranquilidad de saber que sus familiares están cumpliendo estrictamente con el tratamiento prescrito.
   - Requiere una vista clara para programar las citas médicas de sus dependientes sin interferir con su horario laboral diario.
 - **Rol y aportación en el sistema:** Consultar o administrar de forma delegada la agenda de citas y recibir alertas automáticas en caso de omisión o incumplimiento en las tomas de medicamentos.
+  -------------
+  ### 2.2.2 Aportación documental
+##### 2.2.2.1. Tabla descriptiva del sector de la Salud Digital y características organizativas
+
+| Dimensión / Parámetro | Descripción y Situación Actual en el Sector | Impacto y Requisito Operativo para Tempomedic |
+| :--- | :--- | :--- |
+| **Ámbito de Actividad** | Salud Digital (*eHealth* / *mHealth*), centrada en el autocuidado, la adherencia terapéutica y la gestión personal de consultas en atención primaria y especializada. | Centralización de tratamientos y citas en un único dashboard diario ("Hoy"), eliminando la dispersión de datos. |
+| **Estructura Organizativa de Partida** | Procesos tradicionales basados en agendas en papel, pastilleros físicos y recordatorios manuales con elevada tasa de olvidos. | Digitalización estructurada de pautas de tomas y alertas automáticas locales sin requerir conexión a internet. |
+| **Tendencias de Digitalización** | Crecimiento exponencial del uso de aplicaciones móviles de salud. | Adopción de un flujo continuo de notificaciones/alarmas y preparación del sistema para exportación a calendarios.|
+| **Brecha Digital y Demografía** | El sector atiende a una población mayoritaria de más de 46 años con competencias digitales básicas o limitadas. | Exigencia estricta de usabilidad (botones amplios, fuentes escalables y contraste). |
+| **Seguridad y Normativa** | Alta exigencia de privacidad por parte del usuario (95% en encuesta). | Arquitectura *Privacy by Design*: almacenamiento 100% local en el dispositivo, PIN opcional de desbloqueo y consentimiento expreso|
+| **Interoperabilidad y Autonomía** | Restricciones de ahorro de batería de los SO  y falta de flexibilidad en agendas sanitarias tradicionales | Ejecución autónoma de alarmas locales en el cliente y prevención de cancelación de avisos en segundo plano |
 
 ### 2.2. Análisis de la necesidad
 
