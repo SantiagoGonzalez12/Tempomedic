@@ -231,26 +231,6 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 
   ### 2.2.1. ¿Qué deben hacer y aportar?
 
-#### 2.2.1.1. Caracterización del sector
-
-#### A. Ámbito de actividad
-
-El sector sanitario se encuentra en un proceso de transformación donde la atención no se limita a la visita presencial en el centro médico, sino que se extiende al hogar del paciente a través del seguimiento contínuo desde casa.
-
-#### B. Tendencias de digitalización del sector
-
-1. **Empoderamiento del paciente:** Transición de un modelo pasivo a uno donde el usuario gestiona activamente sus citas, recetas y hábitos de salud mediante aplicaciones accesibles en dispositivos personales.
-2. **Uso de interfaces accesibles e inclusivas:** Apuesta por diseños limpios, con tonos cromáticos relajantes (como tonos azules) y componentes visuales adaptados a personas de avanzada edad o con diversidad funcional visual.
-3. **Pérdida de adherencia como problema global:** Estudios del sector de la salud digital destacan que entre el 30% y el 50% de los pacientes crónicos no toman adecuadamente su medicación. La digitalización busca resolver este déficit mediante sistemas automáticos de notificación y trazabilidad.
-
-#### C. Necesidades tecnológicas del sector
-
-- **Centralización de la información sanitaria personal:** Unificar en una única herramienta la agenda y el plan de medicación para evitar la dispersión de datos.
-- **Alertas y notificaciones persistentes:** Implementación de recordatorios fiables que funcionen incluso en segundo plano.
-- **Arquitecturas modulares y escalables (MVC):** Necesidad de plataformas desacopladas que permitan conectar la lógica de negocio con interfaces limpias y adaptables
-
------
-
 #### 2.2.1.2. Caracterización del sector
 
 El ámbito en el que se enmarca **Tempomedic** forma parte del sector de la **Salud Digital (*eHealth / mHealth*)**, una de las áreas tecnológicas con mayor crecimiento e impacto en el bienestar de las personas. La digitalización de la salud ha dejado de ser una simple opción moderna para convertirse en una necesidad básica que garantiza el cuidado de los pacientes, el seguimiento continuado de los tratamientos 
