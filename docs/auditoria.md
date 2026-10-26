@@ -91,3 +91,36 @@ Para cada problema **P1** o **P2** corregido, se adjuntará la evidencia gráfic
 * **Descripción del ajuste:** Explicación técnica/visual del cambio.
 * **Captura Antes:** `![Antes](ruta/a/captura_antes.png)`
 * **Captura Después:** `![Después](ruta/a/captura_despues.png)`
+
+---
+
+## 7. Revisar mensajes y textos
+
+En cumplimiento de las pautas WCAG 2.1 y con el objetivo de garantizar una comunicación clara para personas mayores y cuidadores, se ha investigado y rediseñado la interfaz de la aplicación TempoMedic.
+
+Esas pautas hacen referencia a las 4 principios fundamentales:
+
+- Perceptible: la información y los componentes de la interfaz deben presentarse de manera que los usuarios puedan percibirlos.
+- Operable: los componentes de la interfaz y la navegación deben poder ser utilizados mediante el teclado y otros dispositivos de apoyo.
+- Comprensible: la información y el funcionamiento de la interfaz deben ser claros, legibles y con un comportamiento predecible.
+- Robusto: el contenido debe ser lo suficientemente fiable para ser interpretado por una gran variedad de agentes de usuario, incluidas las tecnologías de asistencia.
+
+### Criterios de Redacción Aplicados
+* **Claridad y Empatía:** explicar el problema sin usar tecnicismos ni códigos de error.
+* **Orientación a la Acción:** indicar siempre el paso siguiente para solucionar la situación.
+* **Brevedad:** textos concisos y directos para evitar la sobrecarga cognitiva.
+
+### Tabla Comparativa de Mensajes (Antes -> Después)
+
+| ID | Tipo de Mensaje | Pantalla / Contexto | Texto Original (Antes) | Texto Rediseñado (Después) | Justificación / Mejora Aplicada |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **MSG-01** | Error de Validación | Iniciar Sesión | `Error 401: Credenciales inválidas.` | `El correo o la contraseña no son correctos. Por favor, revisa los datos e inténtalo de nuevo.` | Elimina el código técnico y explica qué verificar. |
+| **MSG-02** | Error de Formulario | Crear Cuenta | `Formato de email no válido.` | `Escribe un correo electrónico válido (ejemplo: usuario@correo.com).` | Añade un ejemplo para orientar a personas con menor competencia digital. |
+| **MSG-03** | Confirmación | Módulo Medicamentos | `Registro guardado con éxito.` | `¡Medicamento guardado! Te avisaremos según el horario configurado.` | Confirma la acción y aporta tranquilidad sobre el aviso. |
+| **MSG-04** | Confirmación | Vista "Hoy" (Dashboard) | `Estado cambiado.` | `Toma registrada como "Tomada". ¡Buen trabajo!` | Da retroalimentación clara sobre el estado asignado. |
+| **MSG-05** | Confirmación / Alerta | Vista "Hoy" (Dashboard) | `Toma pospuesta.` | `Toma pospuesta. Te volveremos a avisar en 15 minutos.` | Especifica el tiempo en el que reaparecerá la alarma. |
+| **MSG-06** | Ayuda | Formulario Citas | `Introduce dirección...` | `Escribe el centro de salud, hospital o dirección de la consulta.` | Aclara qué tipo de lugar se espera en el campo. |
+| **MSG-07** | Error de Campo Vacío | Añadir Medicamento | `Campo requerido.` | `Por favor, escribe el nombre del medicamento para poder continuar.` | Indica de forma amable el campo que falta por completar. |
+| **MSG-08** | Advertencia / Confirmación | Ajustes | `¿Seguro que quieres borrar todo?` | `¿Quieres eliminar tu cuenta? Se borrarán todos tus medicamentos y citas guardados.` | Explica el impacto exacto de la acción irrecuperable. |
+| **MSG-09** | Error de Acceso | Desbloqueo por PIN | `PIN erróneo.` | `El PIN introducido no es correcto. Te quedan 2 intentos.` | Informa del fallo y del margen de intentos restantes. |
+| **MSG-10** | Estado Vacío | Módulo Citas | `No hay registros.` | `No tienes citas programadas. Pulsa en "+ Pedir cita" para añadir la primera.` | Convierte una pantalla vacía en una llamada a la acción (CTA). |
