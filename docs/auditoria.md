@@ -144,6 +144,8 @@ En este apartado se recoge la revisión técnica sobre las 10 pantallas de Tempo
 * **Incidencia principal:** problemas de renderizado y arrastre de la paleta de componentes de FlatLaf dentro de NetBeans Matisse.
 * **Decisión adoptada:** para no retrasar las entregas ni el flujo de trabajo del Sprint 2, se mantiene la interfaz maquetada con los componentes base de Swing y se deja la integración del Look & Feel de FlatLaf mediante código fuente para el siguiente sprint.
 * **Captura del error:**
+
+  
 ![Fallo de iconos y arrastre en paleta FlatLaf](img/Auditoria/aud-01-error-flatlaf.png)
 
 ![Error al arrastrar componente FlatLaf](img/Auditoria/aud-01.1-error-flatlaf.png)
