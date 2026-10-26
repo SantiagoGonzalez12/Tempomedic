@@ -127,9 +127,9 @@ Esas pautas hacen referencia a las 4 principios fundamentales:
 
 ---
 
-## 8. Informe de Auditoría de Accesibilidad y Consistencia (Ejecución Issue #41)
+## 8. Informe de Auditoría de Accesibilidad y Consistencia 
 
-En este apartado se recoge la revisión técnica sobre las 10 pantallas de TempoMedic y la gestión de la principal incidencia detectada durante el proceso de maquetación en Swing.
+Revisión técnica y soluciones de los errores dados. 
 
 ### 8.1. Registro de Incidencias Detectadas (Issue Log)
 
