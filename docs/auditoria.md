@@ -46,11 +46,11 @@ Para la auditoría y la recolección de datos se emplearán las siguientes herra
 ### Tareas a Evaluar
 
 * **Tarea 1: añadir un medicamento**
-  * *Escenario:* "Acabas de volver del médico y te ha recetado Ibuprofeno 600mg cada 8 horas durante 7 días. Registra este medicamento en la app para recibir alertas."
+  * *Ejamplo:* "Acabas de volver del médico y te ha recetado Ibuprofeno 600mg cada 8 horas durante 7 días. Registra este medicamento en la app para recibir alertas."
 * **Tarea 2: marcar una toma diaria**
-  * *Escenario:* "Es la hora de tu medicación de la tarde. Revisa la pantalla principal y marca la toma pendiente de Ibuprofeno como 'Tomada'."
+  * *Ejamplo:* "Es la hora de tu medicación de la tarde. Revisa la pantalla principal y marca la toma pendiente de Ibuprofeno como 'Tomada'."
 * **Tarea 3: pedir / programar una cita médica**
-  * *Escenario:* "Tienes una revisión con tu médico de cabecera el próximo martes a las 10:00 AM en el Centro de Salud. Añade esta cita a la agenda de la app."
+  * *Ejemplo:* "Tienes una revisión con tu médico de cabecera el próximo martes a las 10:00 AM en el Centro de Salud. Añade esta cita a la agenda de la app."
 
 
 ## 4. Lista de Comprobación de Auditoría Interna (Para Tarea 2.3)
