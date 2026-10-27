@@ -132,7 +132,7 @@ Revisión técnica y soluciones de los errores dados.
 
 | ID | Vista / Pantalla | Criterio Afectado | Descripción del Problema | Prioridad | Estado | Solución Aplicada |
 | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
-| **AUD-01** | General (Swing / FlatLaf) | Integración de Librería | Al importar la paleta de componentes de FlatLaf en el editor visual de NetBeans (Matisse), no se muestran los iconos y algunos elementos no se dejan arrastrar o aplicar correctamente desde la interfaz gráfica. | **P2** | **Pospuesto (próximos Sprint)** | Se decide mantener la maquetación y estructura nativa en Swing durante el Sprint 2 y posponer la implementación completa de FlatLaf por código Java para el Sprint 3. |
+| **AUD-01** | General (Swing / FlatLaf) | Integración de Librería | Al importar la paleta de componentes de FlatLaf en el editor visual de NetBeans (Matisse), no se muestran los iconos y algunos elementos no se dejan arrastrar o aplicar correctamente desde la interfaz gráfica. | **P2** | **Pospuesto (próximos Sprint)** | Se decide mantener la maquetación y estructura nativa en Swing durante el Sprint 2 y posponer la implementación completa de FlatLaf por código Java para próximos Sprint. |
 
 
 ### 8.2. Informe de Estado y Decisiones Técnicas
