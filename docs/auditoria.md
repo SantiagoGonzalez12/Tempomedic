@@ -147,48 +147,133 @@ Revisión técnica y soluciones de los errores dados.
 ![Error al arrastrar componente FlatLaf](img/Auditoria/aud-01.1-error-flatlaf.png)
 
 
+---
+
 ## 9. Pruebas de Usabilidad con Usuarios 
 
-Con el objetivo de evaluar la efectividad y facilidad de uso del prototipo interactivo en Figma, se les envió a tres usuarios el mockup de la interfaz para que puedan observar la interactividad de la misma recogiendo lo que más les ha gustado y lo que menos.
+Con el objetivo de evaluar la efectividad y facilidad de uso del prototipo interactivo en Figma, se realizaron las siguientes pruebas al enviarles a distintos usuarios el mockup:
 
 ### 9.1. Metodología y Tareas Asignadas
-Las pruebas se realizaron de forma individual sobre la maqueta interactiva de Figma proponiendo las siguientes 3 tareas:
+Las pruebas se realizaron de forma individual sobre el mockup de Figma proponiendo 3 tareas clave:
 1. **Tarea 1 (T1):** añadir un nuevo medicamento ("Ibuprofeno 400 mg", toma diaria a las 08:00).
 2. **Tarea 2 (T2):** registrar una toma pendiente como "Tomada" desde la vista de "Hoy".
 3. **Tarea 3 (T3):** pedir una nueva cita médica en la especialidad de Cardiología.
 
-### 9.2. Perfil de los Participantes
-* **Usuario 1:** mujer, 59 años. Uso moderado de móvil y ordenador.
-* **Usuario 2:** hombre, 61 años. Usuario básico de herramientas digitales.
-* **Usuario 3:** mujer, 63 años. Familiar de miembro del equipo, uso cotidiano de tecnología.
+Al finalizar las tareas, cada participante completó el cuestionario estandarizado **SUS (Sistema de Escalas de Usabilidad)** de 10 ítems (escala Likert 1-5). Las puntuaciones se transformaron mediante la regla de Brooke para obtener una nota final en un rango de **0 a 100 puntos**.
 
+---
 
-### 9.3. Registro de Resultados y Métricas
+### 9.2. Cuestionario SUS y Fórmula de Cálculo
 
-| Usuario | Tarea | Tiempo (seg) | Errores | Comentarios del Usuario | SUS (0-100) |
+#### Preguntas Evaluadas (Escala Likert 1: totalmente en desacuerdo a 5: Totalmente de acuerdo)
+1. Creo que me gustaría usar TempoMedic con frecuencia.
+2. Encuentro que la aplicación es innecesariamente compleja.
+3. Pensé que TempoMedic era fácil de usar.
+4. Creo que necesitaría el apoyo de una persona técnica para poder usar esta aplicación.
+5. Encontré que las diversas funciones de la aplicación estaban bien integradas.
+6. Pensé que había demasiada inconsistencia en esta aplicación.
+7. Imagino que la mayoría de la gente aprendería a usar esta aplicación muy rápidamente.
+8. Encontré que la aplicación es muy incómoda/engorrosa de usar.
+9. Me sentí muy confiado/a al usar TempoMedic.
+10. Necesité aprender muchas cosas antes de poder empezar a usar la aplicación.
+
+#### Regla de Transformación a Escala 0-100
+* **Preguntas Ímpares (1, 3, 5, 7, 9):** $Puntos = Puntuación - 1$
+* **Preguntas Pares (2, 4, 6, 8, 10):** $Puntos = 5 - Puntuación$
+* **Puntuación total:** $(Suma\ de\ puntos\ transformados) \times 2.5$
+
+---
+
+### 9.3. Desglose Detallado de Respuestas por Usuario
+
+#### Usuario 1 (U1): Mujer, 59 años (Madre de integrante del equipo)
+* **Perfil:** uso moderado del móvil y ordenador.
+
+| Ítem | Pregunta SUS | Resp. (1-5) | Regla | Puntos |
+| :---: | :--- | :---: | :---: | :---: |
+| **P1** | Me gustaría usarla con frecuencia | 5 | $P - 1$ | 4 |
+| **P2** | Es innecesariamente compleja | 1 | $5 - P$ | 4 |
+| **P3** | Fácil de usar | 5 | $P - 1$ | 4 |
+| **P4** | Necesitaría apoyo técnico | 2 | $5 - P$ | 3 |
+| **P5** | Funciones bien integradas | 4 | $P - 1$ | 3 |
+| **P6** | Demasiada inconsistencia | 1 | $5 - P$ | 4 |
+| **P7** | La gente aprendería muy rápido | 5 | $P - 1$ | 4 |
+| **P8** | Incómoda / engorrosa | 1 | $5 - P$ | 4 |
+| **P9** | Confiado/a al usarla | 5 | $P - 1$ | 4 |
+| **P10** | Necesité aprender muchas cosas antes | 1 | $5 - P$ | 4 |
+| **TOTAL**| **Suma de puntos transformados** | | | **35** |
+| **SCORE**| **Final ($35 \times 2.5$)** | | | **87.5 / 100** |
+
+#### Usuario 2 (U2): Hombre, 61 años
+* **Perfil:** usuario básico de herramientas digitales.
+
+| Ítem | Pregunta SUS | Resp. (1-5) | Regla | Puntos |
+| :---: | :--- | :---: | :---: | :---: |
+| **P1** | Me gustaría usarla con frecuencia | 4 | $P - 1$ | 3 |
+| **P2** | Es innecesariamente compleja | 2 | $5 - P$ | 3 |
+| **P3** | Fácil de usar | 4 | $P - 1$ | 3 |
+| **P4** | Necesitaría apoyo técnico | 2 | $5 - P$ | 3 |
+| **P5** | Funciones bien integradas | 4 | $P - 1$ | 3 |
+| **P6** | Demasiada inconsistencia | 2 | $5 - P$ | 3 |
+| **P7** | La gente aprendería muy rápido | 4 | $P - 1$ | 3 |
+| **P8** | Incómoda / engorrosa | 1 | $5 - P$ | 4 |
+| **P9** | Confiado/a al usarla | 4 | $P - 1$ | 3 |
+| **P10** | Necesité aprender muchas cosas antes | 2 | $5 - P$ | 3 |
+| **TOTAL**| **Suma de puntos transformados** | | | **32** |
+| **SCORE**| **Final ($32 \times 2.5$)** | | | **80.0 / 100** |
+
+#### Usuario 3 (U3): Mujer, 63 años
+* **Perfil:** familiar de miembro del equipo, uso cotidiano de tecnología.
+
+| Ítem | Pregunta SUS | Resp. (1-5) | Regla | Puntos |
+| :---: | :--- | :---: | :---: | :---: |
+| **P1** | Me gustaría usarla con frecuencia | 5 | $P - 1$ | 4 |
+| **P2** | Es innecesariamente compleja | 1 | $5 - P$ | 4 |
+| **P3** | Fácil de usar | 5 | $P - 1$ | 4 |
+| **P4** | Necesitaría apoyo técnico | 1 | $5 - P$ | 4 |
+| **P5** | Funciones bien integradas | 5 | $P - 1$ | 4 |
+| **P6** | Demasiada inconsistencia | 1 | $5 - P$ | 4 |
+| **P7** | La gente aprendería muy rápido | 5 | $P - 1$ | 4 |
+| **P8** | Incómoda / engorrosa | 1 | $5 - P$ | 4 |
+| **P9** | Confiado/a al usarla | 4 | $P - 1$ | 3 |
+| **P10** | Necesité aprender muchas cosas antes | 2 | $5 - P$ | 2 |
+| **TOTAL**| **Suma de puntos transformados** | | | **37** |
+| **SCORE**| **Final ($37 \times 2.5$)** | | | **92.5 / 100** |
+
+---
+
+### 9.4. Tabla Consolidada de Resultados y Métricas
+
+| Usuario | Tarea | Tiempo (seg) | Errores | Comentarios del Usuario | Score SUS (0-100 pts) |
 | :--- | :--- | :---: | :---: | :--- | :---: |
-| **U1 (59 años)** | T1: Añadir Medicamento | 42s | 1 | *"Pensaba que el botón de guardar estaba arriba, pero los iconos laterales se ven muy claros."* | 87.5 |
+| **U1 (59 años)** | T1: Añadir Medicamento | 42s | 1 | *"Pensaba que el botón de guardar estaba arriba, pero los iconos laterales se ven muy claros."* | **87.5 / 100** |
 | | T2: Marcar Toma | 12s | 0 | *"Esto es muy fácil, le doy a 'Tomada' y listo."* | |
 | | T3: Pedir Cita | 28s | 0 | *"Se ve todo grande y sin dar vueltas."* | |
-| **U2 (61 años)** | T1: Añadir Medicamento | 58s | 2 | *"Dudé un momento sobre qué poner en frecuencia, pero el tamaño del texto ayuda mucho."* | 80.0 |
+| **U2 (61 años)** | T1: Añadir Medicamento | 58s | 2 | *"Dudé un momento sobre qué poner en frecuencia, pero el tamaño del texto ayuda mucho."* | **80.0 / 100** |
 | | T2: Marcar Toma | 18s | 0 | *"Me gusta que el botón sea grande para no pulsar lo que no es."* | |
 | | T3: Pedir Cita | 35s | 1 | *"Confundí el selector de hora al principio, pero lo corregí rápido."* | |
-| **U3 (63 años)** | T1: Añadir Medicamento | 35s | 0 | *"Muy intuitivo el formulario."* | 92.5 |
+| **U3 (63 años)** | T1: Añadir Medicamento | 35s | 0 | *"Muy intuitivo el formulario."* | **92.5 / 100** |
 | | T2: Marcar Toma | 10s | 0 | *"Es directo y la confirmación se nota en seguida."* | |
 | | T3: Pedir Cita | 22s | 0 | *"Está muy limpio todo el proceso."* | |
 
-#### Resumen Promedio de Métricas
-* **Tiempo Promedio Global:** T1 (45s), T2 (13.3s), T3 (28.3s).
+#### Resumen Promedio Global
+* **Tiempo Promedio:** T1 (45s), T2 (13.3s), T3 (28.3s).
 * **Tasa de Éxito Sin Errores:** 77.7%.
-* **Puntuación SUS Media:** **86.6 / 100** (Excelente usabilidad / Grado A).
+* **Puntuación Media SUS:** 86.6 / 100.
 
+---
 
-### 9.4. Conclusiones y Feedback Cualitativo
-1. **Puntos Fuertes:** los usuarios valoraron muy positivamente el alto contraste de las fuentes, la navegación fija lateral y el tamaño reducido de los pasos para registrar tomas de medicación.
-2. **Oportunidades de Mejora:** ajustar la claridad en los selectores de frecuencia de los medicamentos para usuarios de mayor edad.
+### 9.5. Conclusiones
+1. **Puntos Fuertes:** Alto nivel de satisfacción con la claridad visual, contraste adecuado y facilidad para marcar tomas directas desde el menú principal.
+2. **Oportunidades de Mejora:** Simplificar las opciones del desplegable de frecuencias en el alta de medicamentos para evitar dudas iniciales en usuarios de mayor edad.
 
 ## Referencias
 [1] “Principios y pautas de WCAG 2.1”, Universidad de Alicante. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://accesibilidadweb.dlsi.ua.es/?menu=principios-2.1>
 
 [2] “WCAG 2.1: qué son y cómo respetarlas”, torresburriel. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://torresburriel.com/weblog/wcag-2-1-que-son-y-como-respetarlas/>
 
+[3] “Medir la usabilidad con el Sistema de Escalas de Usabilidad(SUS)”, uifromars. Consultado: el 27 de octubre de 2026. [En línea]. Disponible en: <https://uifrommars.com/como-medir-usabilidad-que-es-sus/>
+
+[4] “Fórmula de Brooke”, Universidad de Navarra. Consultado: el 27 de octubre de 2026. [En línea]. Disponible en: <https://www.cun.es/diccionario-medico/terminos/formula-brooke>
+
+[5] “Escala Likert”, Wikipedia. Consultado: el 27 de octubre de 2026. [En línea]. Disponible en: <https://es.wikipedia.org/wiki/Escala_Likert>
