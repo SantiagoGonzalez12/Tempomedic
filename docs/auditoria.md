@@ -81,7 +81,6 @@ Utilizar la siguiente tabla para registrar los hallazgos encontrados durante la 
 | *ERR-01* | *#41* | *Hoy (Dashboard)* | *El botón "Omitir" tiene un contraste de 2.8:1 sobre el fondo claro.* | *Contraste WCAG* | *P1* | *Pendiente* | *Aumentar la saturación del color del texto/fondo.* |
 | *ERR-02* | *#72* | *Formulario Cita* | *El usuario de 52 años dudó al elegir el tipo de especialista por texto pequeño.* | *Tiempo / Errores* | *P2* | *Pendiente* | *Aumentar tamaño de fuente y padding del dropdown.* |
 
----
 
 ## 6. Documentación de Mejoras (Evidencia)
 
@@ -92,7 +91,6 @@ Para cada problema **P1** o **P2** corregido, se adjuntará la evidencia gráfic
 * **Captura Antes:** `![Antes](ruta/a/captura_antes.png)`
 * **Captura Después:** `![Después](ruta/a/captura_despues.png)`
 
----
 
 ## 7. Revisar mensajes y textos
 
@@ -125,7 +123,6 @@ Esas pautas hacen referencia a las 4 principios fundamentales:
 | **MSG-09** | Error de Acceso | Desbloqueo por PIN | `PIN erróneo.` | `El PIN introducido no es correcto. Te quedan 2 intentos.` | Informa del fallo y del margen de intentos restantes. |
 | **MSG-10** | Estado Vacío | Módulo Citas | `No hay registros.` | `No tienes citas programadas. Pulsa en "+ Pedir cita" para añadir la primera.` | Convierte una pantalla vacía en una llamada a la acción (CTA). |
 
----
 
 ## 8. Informe de Auditoría de Accesibilidad y Consistencia 
 
@@ -135,9 +132,8 @@ Revisión técnica y soluciones de los errores dados.
 
 | ID | Vista / Pantalla | Criterio Afectado | Descripción del Problema | Prioridad | Estado | Solución Aplicada |
 | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
-| **AUD-01** | General (Swing / FlatLaf) | Integración de Librería | Al importar la paleta de componentes de FlatLaf en el editor visual de NetBeans (Matisse), no se muestran los iconos y algunos elementos no se dejan arrastrar o aplicar correctamente desde la interfaz gráfica. | **P2** | **Pospuesto (próximos Sprint)** | Se decide mantener la maquetación y estructura nativa en Swing durante el Sprint 2 y posponer la implementación completa de FlatLaf por código Java para el Sprint 3. |
+| **AUD-01** | General (Swing / FlatLaf) | Integración de Librería | Al importar la paleta de componentes de FlatLaf en el editor visual de NetBeans (Matisse), no se muestran los iconos y algunos elementos no se dejan arrastrar o aplicar correctamente desde la interfaz gráfica. | **P2** | **Pospuesto (próximos Sprint)** | Se decide mantener la maquetación y estructura nativa en Swing durante el Sprint 2 y posponer la implementación completa de FlatLaf por código Java para próximos Sprint. |
 
----
 
 ### 8.2. Informe de Estado y Decisiones Técnicas
 
@@ -149,6 +145,47 @@ Revisión técnica y soluciones de los errores dados.
 ![Fallo de iconos y arrastre en paleta FlatLaf](img/Auditoria/aud-01-error-flatlaf.png)
 
 ![Error al arrastrar componente FlatLaf](img/Auditoria/aud-01.1-error-flatlaf.png)
+
+
+## 9. Pruebas de Usabilidad con Usuarios 
+
+Con el objetivo de evaluar la efectividad y facilidad de uso del prototipo interactivo en Figma, se les envió a tres usuarios el mockup de la interfaz para que puedan observar la interactividad de la misma recogiendo lo que más les ha gustado y lo que menos.
+
+### 9.1. Metodología y Tareas Asignadas
+Las pruebas se realizaron de forma individual sobre la maqueta interactiva de Figma proponiendo las siguientes 3 tareas:
+1. **Tarea 1 (T1):** añadir un nuevo medicamento ("Ibuprofeno 400 mg", toma diaria a las 08:00).
+2. **Tarea 2 (T2):** registrar una toma pendiente como "Tomada" desde la vista de "Hoy".
+3. **Tarea 3 (T3):** pedir una nueva cita médica en la especialidad de Cardiología.
+
+### 9.2. Perfil de los Participantes
+* **Usuario 1:** mujer, 59 años. Uso moderado de móvil y ordenador.
+* **Usuario 2:** hombre, 61 años. Usuario básico de herramientas digitales.
+* **Usuario 3:** mujer, 63 años. Familiar de miembro del equipo, uso cotidiano de tecnología.
+
+
+### 9.3. Registro de Resultados y Métricas
+
+| Usuario | Tarea | Tiempo (seg) | Errores | Comentarios del Usuario | SUS (0-100) |
+| :--- | :--- | :---: | :---: | :--- | :---: |
+| **U1 (59 años)** | T1: Añadir Medicamento | 42s | 1 | *"Pensaba que el botón de guardar estaba arriba, pero los iconos laterales se ven muy claros."* | 87.5 |
+| | T2: Marcar Toma | 12s | 0 | *"Esto es muy fácil, le doy a 'Tomada' y listo."* | |
+| | T3: Pedir Cita | 28s | 0 | *"Se ve todo grande y sin dar vueltas."* | |
+| **U2 (61 años)** | T1: Añadir Medicamento | 58s | 2 | *"Dudé un momento sobre qué poner en frecuencia, pero el tamaño del texto ayuda mucho."* | 80.0 |
+| | T2: Marcar Toma | 18s | 0 | *"Me gusta que el botón sea grande para no pulsar lo que no es."* | |
+| | T3: Pedir Cita | 35s | 1 | *"Confundí el selector de hora al principio, pero lo corregí rápido."* | |
+| **U3 (63 años)** | T1: Añadir Medicamento | 35s | 0 | *"Muy intuitivo el formulario."* | 92.5 |
+| | T2: Marcar Toma | 10s | 0 | *"Es directo y la confirmación se nota en seguida."* | |
+| | T3: Pedir Cita | 22s | 0 | *"Está muy limpio todo el proceso."* | |
+
+#### Resumen Promedio de Métricas
+* **Tiempo Promedio Global:** T1 (45s), T2 (13.3s), T3 (28.3s).
+* **Tasa de Éxito Sin Errores:** 77.7%.
+* **Puntuación SUS Media:** **86.6 / 100** (Excelente usabilidad / Grado A).
+
+
+### 9.4. Conclusiones y Feedback Cualitativo
+1. **Puntos Fuertes:** los usuarios valoraron muy positivamente el alto contraste de las fuentes, la navegación fija lateral y el tamaño reducido de los pasos para registrar tomas de medicación.
+2. **Oportunidades de Mejora:** ajustar la claridad en los selectores de frecuencia de los medicamentos para usuarios de mayor edad.
 
 ## Referencias
 [1] “Principios y pautas de WCAG 2.1”, Universidad de Alicante. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://accesibilidadweb.dlsi.ua.es/?menu=principios-2.1>
