@@ -46,21 +46,21 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         txtMedicamentos = new javax.swing.JLabel();
         sclpnlListaMedicamentos = new javax.swing.JScrollPane();
         pnlListaMedicamentos = new javax.swing.JPanel();
-        pnlTarjeta = new javax.swing.JPanel();
+        pnlTarjetaToma = new javax.swing.JPanel();
         lblNombre = new javax.swing.JLabel();
         lblPauta = new javax.swing.JLabel();
         lblProximaToma = new javax.swing.JLabel();
         btnEditar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 12), new java.awt.Dimension(0, 12), new java.awt.Dimension(0, 12));
-        pnlTarjeta1 = new javax.swing.JPanel();
+        pnlTarjetaToma1 = new javax.swing.JPanel();
         lblNombre1 = new javax.swing.JLabel();
         lblPauta1 = new javax.swing.JLabel();
         lblProximaToma1 = new javax.swing.JLabel();
         btnEditar1 = new javax.swing.JButton();
         btnEliminar1 = new javax.swing.JButton();
         filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 12), new java.awt.Dimension(0, 12), new java.awt.Dimension(0, 12));
-        pnlTarjeta2 = new javax.swing.JPanel();
+        pnlTarjetaToma2 = new javax.swing.JPanel();
         lblNombre2 = new javax.swing.JLabel();
         lblPauta2 = new javax.swing.JLabel();
         lblProximaToma2 = new javax.swing.JLabel();
@@ -185,13 +185,13 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         pnlListaMedicamentos.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 18, 0, 18));
         pnlListaMedicamentos.setLayout(new javax.swing.BoxLayout(pnlListaMedicamentos, javax.swing.BoxLayout.Y_AXIS));
 
-        pnlTarjeta.setBackground(new java.awt.Color(186, 209, 217));
-        pnlTarjeta.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
-        pnlTarjeta.setAlignmentX(0.0F);
-        pnlTarjeta.setMaximumSize(new java.awt.Dimension(32767, 121));
-        pnlTarjeta.setMinimumSize(new java.awt.Dimension(100, 121));
-        pnlTarjeta.setPreferredSize(new java.awt.Dimension(800, 121));
-        pnlTarjeta.setLayout(new java.awt.GridBagLayout());
+        pnlTarjetaToma.setBackground(new java.awt.Color(186, 209, 217));
+        pnlTarjetaToma.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+        pnlTarjetaToma.setAlignmentX(0.0F);
+        pnlTarjetaToma.setMaximumSize(new java.awt.Dimension(32767, 121));
+        pnlTarjetaToma.setMinimumSize(new java.awt.Dimension(100, 121));
+        pnlTarjetaToma.setPreferredSize(new java.awt.Dimension(800, 121));
+        pnlTarjetaToma.setLayout(new java.awt.GridBagLayout());
 
         lblNombre.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         lblNombre.setForeground(new java.awt.Color(59, 106, 118));
@@ -202,7 +202,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        pnlTarjeta.add(lblNombre, gridBagConstraints);
+        pnlTarjetaToma.add(lblNombre, gridBagConstraints);
 
         lblPauta.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblPauta.setText("Cada 8 horas");
@@ -212,7 +212,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        pnlTarjeta.add(lblPauta, gridBagConstraints);
+        pnlTarjetaToma.add(lblPauta, gridBagConstraints);
 
         lblProximaToma.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblProximaToma.setForeground(new java.awt.Color(59, 106, 118));
@@ -223,7 +223,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        pnlTarjeta.add(lblProximaToma, gridBagConstraints);
+        pnlTarjetaToma.add(lblProximaToma, gridBagConstraints);
 
         btnEditar.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(59, 106, 118));
@@ -240,7 +240,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 12);
-        pnlTarjeta.add(btnEditar, gridBagConstraints);
+        pnlTarjetaToma.add(btnEditar, gridBagConstraints);
 
         btnEliminar.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(59, 106, 118));
@@ -257,18 +257,18 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(8, 12, 0, 0);
-        pnlTarjeta.add(btnEliminar, gridBagConstraints);
+        pnlTarjetaToma.add(btnEliminar, gridBagConstraints);
 
-        pnlListaMedicamentos.add(pnlTarjeta);
+        pnlListaMedicamentos.add(pnlTarjetaToma);
         pnlListaMedicamentos.add(filler3);
 
-        pnlTarjeta1.setBackground(new java.awt.Color(186, 209, 217));
-        pnlTarjeta1.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
-        pnlTarjeta1.setAlignmentX(0.0F);
-        pnlTarjeta1.setMaximumSize(new java.awt.Dimension(32767, 121));
-        pnlTarjeta1.setMinimumSize(new java.awt.Dimension(100, 121));
-        pnlTarjeta1.setPreferredSize(new java.awt.Dimension(800, 121));
-        pnlTarjeta1.setLayout(new java.awt.GridBagLayout());
+        pnlTarjetaToma1.setBackground(new java.awt.Color(186, 209, 217));
+        pnlTarjetaToma1.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+        pnlTarjetaToma1.setAlignmentX(0.0F);
+        pnlTarjetaToma1.setMaximumSize(new java.awt.Dimension(32767, 121));
+        pnlTarjetaToma1.setMinimumSize(new java.awt.Dimension(100, 121));
+        pnlTarjetaToma1.setPreferredSize(new java.awt.Dimension(800, 121));
+        pnlTarjetaToma1.setLayout(new java.awt.GridBagLayout());
 
         lblNombre1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         lblNombre1.setForeground(new java.awt.Color(59, 106, 118));
@@ -279,7 +279,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        pnlTarjeta1.add(lblNombre1, gridBagConstraints);
+        pnlTarjetaToma1.add(lblNombre1, gridBagConstraints);
 
         lblPauta1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblPauta1.setText("Diaria - 09:00");
@@ -289,7 +289,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        pnlTarjeta1.add(lblPauta1, gridBagConstraints);
+        pnlTarjetaToma1.add(lblPauta1, gridBagConstraints);
 
         lblProximaToma1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblProximaToma1.setForeground(new java.awt.Color(59, 106, 118));
@@ -300,7 +300,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        pnlTarjeta1.add(lblProximaToma1, gridBagConstraints);
+        pnlTarjetaToma1.add(lblProximaToma1, gridBagConstraints);
 
         btnEditar1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         btnEditar1.setForeground(new java.awt.Color(59, 106, 118));
@@ -317,7 +317,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 12);
-        pnlTarjeta1.add(btnEditar1, gridBagConstraints);
+        pnlTarjetaToma1.add(btnEditar1, gridBagConstraints);
 
         btnEliminar1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         btnEliminar1.setForeground(new java.awt.Color(59, 106, 118));
@@ -334,18 +334,18 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(8, 12, 0, 0);
-        pnlTarjeta1.add(btnEliminar1, gridBagConstraints);
+        pnlTarjetaToma1.add(btnEliminar1, gridBagConstraints);
 
-        pnlListaMedicamentos.add(pnlTarjeta1);
+        pnlListaMedicamentos.add(pnlTarjetaToma1);
         pnlListaMedicamentos.add(filler4);
 
-        pnlTarjeta2.setBackground(new java.awt.Color(186, 209, 217));
-        pnlTarjeta2.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
-        pnlTarjeta2.setAlignmentX(0.0F);
-        pnlTarjeta2.setMaximumSize(new java.awt.Dimension(32767, 121));
-        pnlTarjeta2.setMinimumSize(new java.awt.Dimension(100, 121));
-        pnlTarjeta2.setPreferredSize(new java.awt.Dimension(800, 121));
-        pnlTarjeta2.setLayout(new java.awt.GridBagLayout());
+        pnlTarjetaToma2.setBackground(new java.awt.Color(186, 209, 217));
+        pnlTarjetaToma2.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+        pnlTarjetaToma2.setAlignmentX(0.0F);
+        pnlTarjetaToma2.setMaximumSize(new java.awt.Dimension(32767, 121));
+        pnlTarjetaToma2.setMinimumSize(new java.awt.Dimension(100, 121));
+        pnlTarjetaToma2.setPreferredSize(new java.awt.Dimension(800, 121));
+        pnlTarjetaToma2.setLayout(new java.awt.GridBagLayout());
 
         lblNombre2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         lblNombre2.setForeground(new java.awt.Color(59, 106, 118));
@@ -356,7 +356,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        pnlTarjeta2.add(lblNombre2, gridBagConstraints);
+        pnlTarjetaToma2.add(lblNombre2, gridBagConstraints);
 
         lblPauta2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblPauta2.setText("Lunes y jueves - 21:00");
@@ -366,7 +366,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        pnlTarjeta2.add(lblPauta2, gridBagConstraints);
+        pnlTarjetaToma2.add(lblPauta2, gridBagConstraints);
 
         lblProximaToma2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblProximaToma2.setForeground(new java.awt.Color(59, 106, 118));
@@ -377,7 +377,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        pnlTarjeta2.add(lblProximaToma2, gridBagConstraints);
+        pnlTarjetaToma2.add(lblProximaToma2, gridBagConstraints);
 
         btnEditar2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         btnEditar2.setForeground(new java.awt.Color(59, 106, 118));
@@ -394,7 +394,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 12);
-        pnlTarjeta2.add(btnEditar2, gridBagConstraints);
+        pnlTarjetaToma2.add(btnEditar2, gridBagConstraints);
 
         btnEliminar2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         btnEliminar2.setForeground(new java.awt.Color(59, 106, 118));
@@ -411,9 +411,9 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(8, 12, 0, 0);
-        pnlTarjeta2.add(btnEliminar2, gridBagConstraints);
+        pnlTarjetaToma2.add(btnEliminar2, gridBagConstraints);
 
-        pnlListaMedicamentos.add(pnlTarjeta2);
+        pnlListaMedicamentos.add(pnlTarjetaToma2);
 
         sclpnlListaMedicamentos.setViewportView(pnlListaMedicamentos);
 
@@ -524,9 +524,9 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
     private javax.swing.JPanel pnlEncabezado;
     private javax.swing.JPanel pnlListaMedicamentos;
     private javax.swing.JPanel pnlSidebar;
-    private javax.swing.JPanel pnlTarjeta;
-    private javax.swing.JPanel pnlTarjeta1;
-    private javax.swing.JPanel pnlTarjeta2;
+    private javax.swing.JPanel pnlTarjetaToma;
+    private javax.swing.JPanel pnlTarjetaToma1;
+    private javax.swing.JPanel pnlTarjetaToma2;
     private javax.swing.JScrollPane sclpnlListaMedicamentos;
     private javax.swing.JLabel txtMedicamentos;
     private javax.swing.JLabel txtTempomedic;

@@ -296,7 +296,7 @@
                 <Property name="axis" type="int" value="1"/>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="pnlTarjeta">
+                <Container class="javax.swing.JPanel" name="pnlTarjetaToma">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="d9" green="d1" red="ba" type="rgb"/>
@@ -441,7 +441,7 @@
                     <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.RigidArea"/>
                   </AuxValues>
                 </Component>
-                <Container class="javax.swing.JPanel" name="pnlTarjeta1">
+                <Container class="javax.swing.JPanel" name="pnlTarjetaToma1">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="d9" green="d1" red="ba" type="rgb"/>
@@ -586,7 +586,7 @@
                     <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.RigidArea"/>
                   </AuxValues>
                 </Component>
-                <Container class="javax.swing.JPanel" name="pnlTarjeta2">
+                <Container class="javax.swing.JPanel" name="pnlTarjetaToma2">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="d9" green="d1" red="ba" type="rgb"/>
