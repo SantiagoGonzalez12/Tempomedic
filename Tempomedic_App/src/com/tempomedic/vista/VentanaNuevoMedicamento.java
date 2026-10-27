@@ -237,7 +237,7 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         rbNotificacion.setForeground(new java.awt.Color(255, 255, 255));
         rbNotificacion.setSelected(true);
         rbNotificacion.setText("Notificación");
-        rbNotificacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(59, 106, 118), 2, true));
+        rbNotificacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         rbNotificacion.setBorderPainted(true);
         rbNotificacion.setFocusPainted(false);
         rbNotificacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
