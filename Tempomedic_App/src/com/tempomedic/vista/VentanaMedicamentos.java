@@ -139,9 +139,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
 
         pnlEncabezado.setBackground(new java.awt.Color(255, 255, 255));
         pnlEncabezado.setMaximumSize(new java.awt.Dimension(100, 100));
-        pnlEncabezado.setMinimumSize(null);
         pnlEncabezado.setOpaque(false);
-        pnlEncabezado.setPreferredSize(null);
         pnlEncabezado.setLayout(new java.awt.GridBagLayout());
 
         logo.setText("LOGO");
@@ -185,8 +183,6 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
 
         pnlListaMedicamentos.setBackground(new java.awt.Color(255, 255, 255));
         pnlListaMedicamentos.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 18, 0, 18));
-        pnlListaMedicamentos.setMaximumSize(null);
-        pnlListaMedicamentos.setPreferredSize(null);
         pnlListaMedicamentos.setLayout(new javax.swing.BoxLayout(pnlListaMedicamentos, javax.swing.BoxLayout.Y_AXIS));
 
         pnlTarjeta.setBackground(new java.awt.Color(186, 209, 217));
@@ -428,7 +424,6 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         btnAnadir.setText("Añadir medicamento");
         btnAnadir.setBorderPainted(false);
         btnAnadir.setFocusPainted(false);
-        btnAnadir.setMaximumSize(null);
         btnAnadir.setPreferredSize(new java.awt.Dimension(800, 45));
         pnlAcciones.add(btnAnadir, java.awt.BorderLayout.CENTER);
 

@@ -8,14 +8,14 @@ package com.tempomedic.vista;
  *
  * @author Santiago González
  */
-public class VentanaNuevoMedicamento extends javax.swing.JFrame {
+public class VentanaInicioSesion extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaNuevoMedicamento.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaInicioSesion.class.getName());
 
     /**
      * Creates new form VentanaMedicamentos
      */
-    public VentanaNuevoMedicamento() {
+    public VentanaInicioSesion() {
         initComponents();
     }
 
@@ -35,25 +35,16 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         logo = new javax.swing.JLabel();
         txtTempomedic = new javax.swing.JLabel();
         pnlTitulo = new javax.swing.JPanel();
-        btnVolver = new javax.swing.JButton();
         txtNuevoMedicamento = new javax.swing.JLabel();
-        pnlFormulario = new javax.swing.JPanel();
-        lblNombre = new javax.swing.JLabel();
-        lblDosis = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
-        txtDosis = new javax.swing.JTextField();
-        lblFrecuencia = new javax.swing.JLabel();
-        lblPrimeraToma = new javax.swing.JLabel();
-        cmbFrecuencia = new javax.swing.JComboBox<>();
-        txtPrimeraToma = new javax.swing.JTextField();
-        lblAviso = new javax.swing.JLabel();
-        pnlAviso = new javax.swing.JPanel();
-        rbNotificacion = new javax.swing.JRadioButton();
-        rbAlarma = new javax.swing.JRadioButton();
-        rbAmbos = new javax.swing.JRadioButton();
-        pnlAcciones = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        txtNombre1 = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VentanaNuevoMedicamentos");
@@ -90,21 +81,12 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
 
         pnlTitulo.setBackground(new java.awt.Color(255, 255, 255));
         pnlTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 123, 0, 0));
-        pnlTitulo.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 12, 0));
+        pnlTitulo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnVolver.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        btnVolver.setForeground(new java.awt.Color(59, 106, 118));
-        btnVolver.setText("<");
-        btnVolver.setBorderPainted(false);
-        btnVolver.setContentAreaFilled(false);
-        btnVolver.setFocusPainted(false);
-        btnVolver.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        pnlTitulo.add(btnVolver);
-
-        txtNuevoMedicamento.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        txtNuevoMedicamento.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
         txtNuevoMedicamento.setForeground(new java.awt.Color(59, 106, 118));
-        txtNuevoMedicamento.setText("Nuevo medicamento");
-        pnlTitulo.add(txtNuevoMedicamento);
+        txtNuevoMedicamento.setText("Tempomedic");
+        pnlTitulo.add(txtNuevoMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, -1));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -119,185 +101,56 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
 
         pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
 
-        pnlFormulario.setBackground(new java.awt.Color(255, 255, 255));
-        pnlFormulario.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 123, 0, 123));
-        pnlFormulario.setLayout(new java.awt.GridBagLayout());
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblNombre.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        lblNombre.setText("Nombre");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 4, 14);
-        pnlFormulario.add(lblNombre, gridBagConstraints);
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setText("Entra con tu correo y contraseña");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 270, -1));
 
-        lblDosis.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        lblDosis.setText("Dosis");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 14, 4, 0);
-        pnlFormulario.add(lblDosis, gridBagConstraints);
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setText("Contraseña");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
 
         txtNombre.setBackground(new java.awt.Color(186, 209, 217));
         txtNombre.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtNombre.setText("Ibuprofeno");
+        txtNombre.setText("•••••••••");
         txtNombre.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
         txtNombre.setPreferredSize(new java.awt.Dimension(343, 41));
         txtNombre.addActionListener(this::txtNombreActionPerformed);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 14);
-        pnlFormulario.add(txtNombre, gridBagConstraints);
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 730, -1));
 
-        txtDosis.setBackground(new java.awt.Color(186, 209, 217));
-        txtDosis.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtDosis.setText("400 mg");
-        txtDosis.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtDosis.setPreferredSize(new java.awt.Dimension(343, 41));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 14, 0, 0);
-        pnlFormulario.add(txtDosis, gridBagConstraints);
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setText("Correo");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, -1, -1));
 
-        lblFrecuencia.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        lblFrecuencia.setText("Frecuencia");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 4, 14);
-        pnlFormulario.add(lblFrecuencia, gridBagConstraints);
-
-        lblPrimeraToma.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        lblPrimeraToma.setText("Primera toma");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(20, 14, 4, 0);
-        pnlFormulario.add(lblPrimeraToma, gridBagConstraints);
-
-        cmbFrecuencia.setBackground(new java.awt.Color(186, 209, 217));
-        cmbFrecuencia.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        cmbFrecuencia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cada X horas", "Diaria", "Días concretos" }));
-        cmbFrecuencia.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        cmbFrecuencia.setPreferredSize(new java.awt.Dimension(343, 41));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 14);
-        pnlFormulario.add(cmbFrecuencia, gridBagConstraints);
-
-        txtPrimeraToma.setBackground(new java.awt.Color(186, 209, 217));
-        txtPrimeraToma.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtPrimeraToma.setText("--:--");
-        txtPrimeraToma.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtPrimeraToma.setPreferredSize(new java.awt.Dimension(343, 41));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 14, 0, 0);
-        pnlFormulario.add(txtPrimeraToma, gridBagConstraints);
-
-        lblAviso.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        lblAviso.setText("AVISO");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 4, 0);
-        pnlFormulario.add(lblAviso, gridBagConstraints);
-
-        pnlAviso.setBackground(new java.awt.Color(255, 255, 255));
-        pnlAviso.setPreferredSize(new java.awt.Dimension(714, 36));
-        pnlAviso.setLayout(new java.awt.GridLayout(1, 3, 6, 0));
-
-        rbNotificacion.setBackground(new java.awt.Color(59, 106, 118));
-        AVISOS.add(rbNotificacion);
-        rbNotificacion.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        rbNotificacion.setForeground(new java.awt.Color(255, 255, 255));
-        rbNotificacion.setSelected(true);
-        rbNotificacion.setText("Notificación");
-        rbNotificacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(59, 106, 118), 2, true));
-        rbNotificacion.setBorderPainted(true);
-        rbNotificacion.setFocusPainted(false);
-        rbNotificacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rbNotificacion.setOpaque(true);
-        pnlAviso.add(rbNotificacion);
-
-        rbAlarma.setBackground(new java.awt.Color(186, 209, 217));
-        AVISOS.add(rbAlarma);
-        rbAlarma.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        rbAlarma.setText("Alarma");
-        rbAlarma.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        rbAlarma.setBorderPainted(true);
-        rbAlarma.setFocusPainted(false);
-        rbAlarma.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rbAlarma.setOpaque(true);
-        pnlAviso.add(rbAlarma);
-
-        rbAmbos.setBackground(new java.awt.Color(186, 209, 217));
-        AVISOS.add(rbAmbos);
-        rbAmbos.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        rbAmbos.setText("Ambos");
-        rbAmbos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        rbAmbos.setBorderPainted(true);
-        rbAmbos.setFocusPainted(false);
-        rbAmbos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rbAmbos.setOpaque(true);
-        pnlAviso.add(rbAmbos);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        pnlFormulario.add(pnlAviso, gridBagConstraints);
-
-        pnlContenido.add(pnlFormulario, java.awt.BorderLayout.CENTER);
-
-        pnlAcciones.setBackground(new java.awt.Color(255, 255, 255));
-        pnlAcciones.setBorder(javax.swing.BorderFactory.createEmptyBorder(30, 151, 57, 151));
-        pnlAcciones.setPreferredSize(new java.awt.Dimension(960, 132));
-        pnlAcciones.setLayout(new java.awt.GridLayout(1, 2, 28, 0));
+        txtNombre1.setBackground(new java.awt.Color(186, 209, 217));
+        txtNombre1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        txtNombre1.setText("nombre@correo.com");
+        txtNombre1.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtNombre1.setPreferredSize(new java.awt.Dimension(343, 41));
+        txtNombre1.addActionListener(this::txtNombre1ActionPerformed);
+        jPanel1.add(txtNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 730, -1));
 
         btnGuardar.setBackground(new java.awt.Color(59, 106, 118));
         btnGuardar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setText("Guardar");
+        btnGuardar.setText("Iniciar Sesión");
         btnGuardar.setBorderPainted(false);
         btnGuardar.setFocusPainted(false);
-        pnlAcciones.add(btnGuardar);
+        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 730, 40));
 
-        btnCancelar.setBackground(new java.awt.Color(59, 106, 118));
-        btnCancelar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar.setText("Cancelar");
-        btnCancelar.setBorderPainted(false);
-        btnCancelar.setFocusPainted(false);
-        pnlAcciones.add(btnCancelar);
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 136, 255));
+        jLabel4.setText("¿Olvidaste tu contraseña?");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
 
-        pnlContenido.add(pnlAcciones, java.awt.BorderLayout.SOUTH);
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 136, 255));
+        jLabel5.setText("Crear cuenta");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, -1, -1));
+
+        pnlContenido.add(jPanel1, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(pnlContenido, java.awt.BorderLayout.CENTER);
 
@@ -308,6 +161,10 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombre1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -331,34 +188,25 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new VentanaNuevoMedicamento().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new VentanaInicioSesion().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
-    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnGuardar;
-    private javax.swing.JButton btnVolver;
-    private javax.swing.JComboBox<String> cmbFrecuencia;
-    private javax.swing.JLabel lblAviso;
-    private javax.swing.JLabel lblDosis;
-    private javax.swing.JLabel lblFrecuencia;
-    private javax.swing.JLabel lblNombre;
-    private javax.swing.JLabel lblPrimeraToma;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel logo;
-    private javax.swing.JPanel pnlAcciones;
-    private javax.swing.JPanel pnlAviso;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlEncabezado;
-    private javax.swing.JPanel pnlFormulario;
     private javax.swing.JPanel pnlTitulo;
-    private javax.swing.JRadioButton rbAlarma;
-    private javax.swing.JRadioButton rbAmbos;
-    private javax.swing.JRadioButton rbNotificacion;
-    private javax.swing.JTextField txtDosis;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNombre1;
     private javax.swing.JLabel txtNuevoMedicamento;
-    private javax.swing.JTextField txtPrimeraToma;
     private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }
