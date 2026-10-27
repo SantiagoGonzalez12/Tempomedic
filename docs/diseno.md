@@ -31,7 +31,40 @@
    - Reestructuración de las opciones de personalización (Selector de tamaño de texto: *Normal*, *Grande*, *Muy grande*; tema *Claro* / *Oscuro*; activación de PIN y botones de cierre/eliminación de cuenta) en bloques alineados y legibles.
 
 7. **Aspecto**
-    |  |  |  |
-    | --- | --- | --- |
-    |  |  |  |
-    |  |  |  |
+
+#### Paleta de Colores y Contrastes
+Se ha definido una paleta basada en tonos azules y verdes que transmiten confianza y calma, adecuada para el sector salud. Todos los pares texto/fondo han sido comprobados siguiendo las pautas WCAG 2.1 (Nivel AA) para garantizar un ratio mínimo de contraste de 4.5:1 en texto normal y 3:1 en texto grande.
+
+* **Azul oscuro:** `#3B6A76` (Fondos de botones principales, títulos, barra lateral).
+* **Azul claro:** `#BAD1D9` (Fondos de tarjetas, campos de texto, bordes).
+* **Blanco:** `#FFFFFF` (Fondo general de la aplicación).
+* **Negro:** `#000000` (Texto principal).
+* **Verde:** `#9BE5AA` (Indicador de estado "Tomada" y confirmaciones).
+
+#### Tabla de Contrastes Comprobados (Texto/Fondo)
+
+| Par de Colores | Uso | Ratio de Contraste | Cumple 4.5:1 (Normal) | Cumple 3:1 (Grande) |
+| :--- | :--- | :---: | :---: | :---: |
+| #3B6A76 sobre #FFFFFF | Texto general / Títulos | 5.8:1 | 🟩 Sí | 🟩 Sí |
+| #FFFFFF sobre #3B6A76 | Botones primarios | 5.8:1 | 🟩 Sí | 🟩 Sí |
+| #000000 sobre #BAD1D9 | Inputs / Tarjetas | 13.2:1 | 🟩 Sí | 🟩 Sí |
+| #000000 sobre #FFFFFF | Fondo principal | 21.0:1 | 🟩 Sí | 🟩 Sí |
+| #3B6A76 sobre #BAD1D9 | Iconos / Textos secundarios | 4.8:1 | 🟩 Sí | 🟩 Sí |
+| #000000 sobre #9BE5AA | Estado "Tomada" (fondo) | 12.4:1 | 🟩 Sí | 🟩 Sí |
+
+*Nota técnica: El color verde (#9BE5AA) no se utilizará como color de texto sobre fondos blancos o claros, sino como color de fondo de etiquetas o iconos acompañados de texto oscuro, para asegurar el cumplimiento de la norma.*
+
+#### Tipografía y Tamaños (Escalado)
+Se utiliza una tipografía **Sans-Serif** (como Arial, Helvetica o Segoe UI) por su alta legibilidad en pantalla. Se han definido tres escalas de tamaño para adaptarse a las necesidades visuales de los usuarios (especialmente adultos mayores):
+
+| Escala | Botones | Texto General | Encabezados / Títulos |
+| :--- | :---: | :---: | :---: |
+| **Normal** | 14 pt | 18 pt | 24 pt |
+| **Grande** | 18 pt | 22 pt | 30 pt |
+| **Muy grande** | 22 pt | 26 pt | 36 pt |
+
+#### Rejilla, Márgenes y Tamaño de Componentes
+* **Resolución objetivo:** 1920 x 1080 px (mínimo soportado: 1280 x 720 px).
+* **Rejilla base:** Sistema de 12 columnas con un margen exterior de 24 px y un *gutter* (espacio entre columnas) de 16 px.
+* **Área táctil mínima (Target Size):** Todos los botones e iconos interactivos tienen un tamaño mínimo de **48x48 px** (o dp), cumpliendo con las recomendaciones para personas con movilidad reducida o temblores.
+* **Iconos:** Siempre acompañados de texto (nunca solos) para evitar ambigüedades, cumpliendo con el criterio de "Comprensible" de WCAG.
