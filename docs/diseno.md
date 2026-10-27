@@ -29,3 +29,9 @@
 
 6. **Pantalla de Ajustes:**
    - Reestructuración de las opciones de personalización (Selector de tamaño de texto: *Normal*, *Grande*, *Muy grande*; tema *Claro* / *Oscuro*; activación de PIN y botones de cierre/eliminación de cuenta) en bloques alineados y legibles.
+
+7. **Aspecto**
+    |  |  |  |
+    | --- | --- | --- |
+    |  |  |  |
+    |  |  |  |
