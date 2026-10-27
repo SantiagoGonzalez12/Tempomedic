@@ -178,9 +178,9 @@ Al finalizar las tareas, cada participante completó el cuestionario estandariza
 10. Necesité aprender muchas cosas antes de poder empezar a usar la aplicación.
 
 #### Regla de Transformación a Escala 0-100
-* **Preguntas Ímpares (1, 3, 5, 7, 9):** $Puntos = Puntuación - 1$
-* **Preguntas Pares (2, 4, 6, 8, 10):** $Puntos = 5 - Puntuación$
-* **Puntuación total:** $(Suma\ de\ puntos\ transformados) \times 2.5$
+* **Preguntas Ímpares (1, 3, 5, 7, 9):** Puntos = Puntuación - 1
+* **Preguntas Pares (2, 4, 6, 8, 10):** Puntos = 5 - Puntuación
+* **Puntuación total:** (Suma de puntos transformados) x 2.5
 
 ---
 
@@ -191,54 +191,54 @@ Al finalizar las tareas, cada participante completó el cuestionario estandariza
 
 | Ítem | Pregunta SUS | Resp. (1-5) | Regla | Puntos |
 | :---: | :--- | :---: | :---: | :---: |
-| **P1** | Me gustaría usarla con frecuencia | 5 | $P - 1$ | 4 |
-| **P2** | Es innecesariamente compleja | 1 | $5 - P$ | 4 |
-| **P3** | Fácil de usar | 5 | $P - 1$ | 4 |
-| **P4** | Necesitaría apoyo técnico | 2 | $5 - P$ | 3 |
-| **P5** | Funciones bien integradas | 4 | $P - 1$ | 3 |
-| **P6** | Demasiada inconsistencia | 1 | $5 - P$ | 4 |
-| **P7** | La gente aprendería muy rápido | 5 | $P - 1$ | 4 |
-| **P8** | Incómoda / engorrosa | 1 | $5 - P$ | 4 |
-| **P9** | Confiado/a al usarla | 5 | $P - 1$ | 4 |
-| **P10** | Necesité aprender muchas cosas antes | 1 | $5 - P$ | 4 |
+| **P1** | Me gustaría usarla con frecuencia | 5 | P - 1 | 4 |
+| **P2** | Es innecesariamente compleja | 1 | 5 - P | 4 |
+| **P3** | Fácil de usar | 5 | P - 1 | 4 |
+| **P4** | Necesitaría apoyo técnico | 2 | 5 - P | 3 |
+| **P5** | Funciones bien integradas | 4 | P - 1 | 3 |
+| **P6** | Demasiada inconsistencia | 1 | 5 - P | 4 |
+| **P7** | La gente aprendería muy rápido | 5 | P - 1 | 4 |
+| **P8** | Incómoda / engorrosa | 1 | 5 - P | 4 |
+| **P9** | Confiado/a al usarla | 5 | P - 1 | 4 |
+| **P10** | Necesité aprender muchas cosas antes | 1 | 5 - P | 4 |
 | **TOTAL**| **Suma de puntos transformados** | | | **35** |
-| **SCORE**| **Final ($35 \times 2.5$)** | | | **87.5 / 100** |
+| **SCORE**| **Final (35 x 2.5)** | | | **87.5 / 100** |
 
 #### Usuario 2 (U2): Hombre, 61 años
 * **Perfil:** usuario básico de herramientas digitales.
 
 | Ítem | Pregunta SUS | Resp. (1-5) | Regla | Puntos |
 | :---: | :--- | :---: | :---: | :---: |
-| **P1** | Me gustaría usarla con frecuencia | 4 | $P - 1$ | 3 |
-| **P2** | Es innecesariamente compleja | 2 | $5 - P$ | 3 |
-| **P3** | Fácil de usar | 4 | $P - 1$ | 3 |
-| **P4** | Necesitaría apoyo técnico | 2 | $5 - P$ | 3 |
-| **P5** | Funciones bien integradas | 4 | $P - 1$ | 3 |
-| **P6** | Demasiada inconsistencia | 2 | $5 - P$ | 3 |
-| **P7** | La gente aprendería muy rápido | 4 | $P - 1$ | 3 |
-| **P8** | Incómoda / engorrosa | 1 | $5 - P$ | 4 |
-| **P9** | Confiado/a al usarla | 4 | $P - 1$ | 3 |
-| **P10** | Necesité aprender muchas cosas antes | 2 | $5 - P$ | 3 |
+| **P1** | Me gustaría usarla con frecuencia | 4 | P - 1 | 3 |
+| **P2** | Es innecesariamente compleja | 2 | 5 - P | 3 |
+| **P3** | Fácil de usar | 4 | P - 1 | 3 |
+| **P4** | Necesitaría apoyo técnico | 2 | 5 - P | 3 |
+| **P5** | Funciones bien integradas | 4 | P - 1 | 3 |
+| **P6** | Demasiada inconsistencia | 2 | 5 - P | 3 |
+| **P7** | La gente aprendería muy rápido | 4 | P - 1 | 3 |
+| **P8** | Incómoda / engorrosa | 1 | 5 - P | 4 |
+| **P9** | Confiado/a al usarla | 4 | P - 1 | 3 |
+| **P10** | Necesité aprender muchas cosas antes | 2 | 5 - P | 3 |
 | **TOTAL**| **Suma de puntos transformados** | | | **32** |
-| **SCORE**| **Final ($32 \times 2.5$)** | | | **80.0 / 100** |
+| **SCORE**| **Final (32 x 2.5)** | | | **80.0 / 100** |
 
 #### Usuario 3 (U3): Mujer, 63 años
 * **Perfil:** familiar de miembro del equipo, uso cotidiano de tecnología.
 
 | Ítem | Pregunta SUS | Resp. (1-5) | Regla | Puntos |
 | :---: | :--- | :---: | :---: | :---: |
-| **P1** | Me gustaría usarla con frecuencia | 5 | $P - 1$ | 4 |
-| **P2** | Es innecesariamente compleja | 1 | $5 - P$ | 4 |
-| **P3** | Fácil de usar | 5 | $P - 1$ | 4 |
-| **P4** | Necesitaría apoyo técnico | 1 | $5 - P$ | 4 |
-| **P5** | Funciones bien integradas | 5 | $P - 1$ | 4 |
-| **P6** | Demasiada inconsistencia | 1 | $5 - P$ | 4 |
-| **P7** | La gente aprendería muy rápido | 5 | $P - 1$ | 4 |
-| **P8** | Incómoda / engorrosa | 1 | $5 - P$ | 4 |
-| **P9** | Confiado/a al usarla | 4 | $P - 1$ | 3 |
-| **P10** | Necesité aprender muchas cosas antes | 2 | $5 - P$ | 2 |
+| **P1** | Me gustaría usarla con frecuencia | 5 | P - 1 | 4 |
+| **P2** | Es innecesariamente compleja | 1 | 5 - P | 4 |
+| **P3** | Fácil de usar | 5 | P - 1 | 4 |
+| **P4** | Necesitaría apoyo técnico | 1 | 5 - P | 4 |
+| **P5** | Funciones bien integradas | 5 | P - 1 | 4 |
+| **P6** | Demasiada inconsistencia | 1 | 5 - P | 4 |
+| **P7** | La gente aprendería muy rápido | 5 | P - 1 | 4 |
+| **P8** | Incómoda / engorrosa | 1 | 5 - P | 4 |
+| **P9** | Confiado/a al usarla | 4 | P - 1 | 3 |
+| **P10** | Necesité aprender muchas cosas antes | 2 | 5 - P | 2 |
 | **TOTAL**| **Suma de puntos transformados** | | | **37** |
-| **SCORE**| **Final ($37 \times 2.5$)** | | | **92.5 / 100** |
+| **SCORE**| **Final (37 x 2.5)** | | | **92.5 / 100** |
 
 ---
 
