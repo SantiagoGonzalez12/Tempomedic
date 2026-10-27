@@ -31,19 +31,37 @@ public class VentanaHoy extends javax.swing.JFrame {
 
         AVISOS = new javax.swing.ButtonGroup();
         pnlContenido = new javax.swing.JPanel();
-        pnlEncabezado = new javax.swing.JPanel();
-        logo = new javax.swing.JLabel();
-        txtTempomedic = new javax.swing.JLabel();
-        pnlTitulo = new javax.swing.JPanel();
-        txtIntroduceTuPIN = new javax.swing.JLabel();
+        pnlSidebar = new javax.swing.JPanel();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        btnHoy = new javax.swing.JButton();
+        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        btnMedicamentos = new javax.swing.JButton();
+        filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        btnCitas = new javax.swing.JButton();
+        filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        btnAjustes = new javax.swing.JButton();
+        filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         jPanel1 = new javax.swing.JPanel();
-        jdescripcion = new javax.swing.JLabel();
-        jOlvidoPIN = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jPasswordField3 = new javax.swing.JPasswordField();
-        jPasswordField4 = new javax.swing.JPasswordField();
-        btnDesbloquear = new javax.swing.JButton();
+        jProxCitas = new javax.swing.JLabel();
+        txtTempomedic = new javax.swing.JLabel();
+        jHoy = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jFecha1 = new javax.swing.JLabel();
+        pnlTarjeta = new javax.swing.JPanel();
+        lblNombre = new javax.swing.JLabel();
+        lblTomado1 = new javax.swing.JLabel();
+        btnPosponer = new javax.swing.JButton();
+        pnlTarjeta1 = new javax.swing.JPanel();
+        lblNombre1 = new javax.swing.JLabel();
+        lblTomado = new javax.swing.JLabel();
+        jMedicacion1 = new javax.swing.JLabel();
+        pnlTarjeta2 = new javax.swing.JPanel();
+        lblNombre2 = new javax.swing.JLabel();
+        lblTomado2 = new javax.swing.JLabel();
+        Posponer1 = new javax.swing.JButton();
+        pnlTarjeta3 = new javax.swing.JPanel();
+        lblNombre3 = new javax.swing.JLabel();
+        lblTomado3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VentanaNuevoMedicamentos");
@@ -52,98 +70,253 @@ public class VentanaHoy extends javax.swing.JFrame {
 
         pnlContenido.setBackground(new java.awt.Color(255, 255, 255));
         pnlContenido.setPreferredSize(new java.awt.Dimension(960, 540));
-        pnlContenido.setLayout(new java.awt.BorderLayout());
+        pnlContenido.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pnlEncabezado.setBackground(new java.awt.Color(255, 255, 255));
-        pnlEncabezado.setPreferredSize(new java.awt.Dimension(960, 130));
-        pnlEncabezado.setLayout(new java.awt.GridBagLayout());
+        pnlSidebar.setBackground(new java.awt.Color(59, 106, 118));
+        pnlSidebar.setPreferredSize(new java.awt.Dimension(100, 540));
+        pnlSidebar.setRequestFocusEnabled(false);
+        pnlSidebar.setLayout(new javax.swing.BoxLayout(pnlSidebar, javax.swing.BoxLayout.Y_AXIS));
+        pnlSidebar.add(filler1);
 
-        logo.setText("LOGO");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 8);
-        pnlEncabezado.add(logo, gridBagConstraints);
+        btnHoy.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnHoy.setForeground(new java.awt.Color(255, 255, 255));
+        btnHoy.setText("Hoy");
+        btnHoy.setAlignmentX(0.5F);
+        btnHoy.setBorderPainted(false);
+        btnHoy.setContentAreaFilled(false);
+        btnHoy.setFocusPainted(false);
+        btnHoy.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnHoy.setMaximumSize(new java.awt.Dimension(100, 70));
+        btnHoy.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        pnlSidebar.add(btnHoy);
+        pnlSidebar.add(filler2);
+
+        btnMedicamentos.setFont(new java.awt.Font("SansSerif", 1, 9)); // NOI18N
+        btnMedicamentos.setForeground(new java.awt.Color(255, 255, 255));
+        btnMedicamentos.setText("Medicamentos");
+        btnMedicamentos.setAlignmentX(0.5F);
+        btnMedicamentos.setBorderPainted(false);
+        btnMedicamentos.setContentAreaFilled(false);
+        btnMedicamentos.setFocusPainted(false);
+        btnMedicamentos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnMedicamentos.setMaximumSize(new java.awt.Dimension(100, 70));
+        btnMedicamentos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        pnlSidebar.add(btnMedicamentos);
+        pnlSidebar.add(filler5);
+
+        btnCitas.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnCitas.setForeground(new java.awt.Color(255, 255, 255));
+        btnCitas.setText("Citas");
+        btnCitas.setAlignmentX(0.5F);
+        btnCitas.setBorderPainted(false);
+        btnCitas.setContentAreaFilled(false);
+        btnCitas.setFocusPainted(false);
+        btnCitas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCitas.setMaximumSize(new java.awt.Dimension(100, 70));
+        btnCitas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        pnlSidebar.add(btnCitas);
+        pnlSidebar.add(filler6);
+
+        btnAjustes.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnAjustes.setForeground(new java.awt.Color(255, 255, 255));
+        btnAjustes.setText("Ajustes");
+        btnAjustes.setAlignmentX(0.5F);
+        btnAjustes.setBorderPainted(false);
+        btnAjustes.setContentAreaFilled(false);
+        btnAjustes.setFocusPainted(false);
+        btnAjustes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAjustes.setMaximumSize(new java.awt.Dimension(100, 70));
+        btnAjustes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        pnlSidebar.add(btnAjustes);
+        pnlSidebar.add(filler7);
+
+        pnlContenido.add(pnlSidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, 530));
+        pnlContenido.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
+
+        jProxCitas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jProxCitas.setText("PRÓXIMAS CITAS");
+        pnlContenido.add(jProxCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, -1, -1));
 
         txtTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         txtTempomedic.setForeground(new java.awt.Color(59, 106, 118));
         txtTempomedic.setText("Tempomedic");
+        pnlContenido.add(txtTempomedic, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, -1, -1));
+
+        jHoy.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jHoy.setForeground(new java.awt.Color(59, 106, 118));
+        jHoy.setText("Hoy");
+        pnlContenido.add(jHoy, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, -1, -1));
+
+        jLabel2.setText("LOGO");
+        pnlContenido.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, -1, -1));
+
+        jFecha1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jFecha1.setText("Viernes 30 de octumbre");
+        pnlContenido.add(jFecha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, -1));
+
+        pnlTarjeta.setBackground(new java.awt.Color(186, 209, 217));
+        pnlTarjeta.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+        pnlTarjeta.setAlignmentX(0.0F);
+        pnlTarjeta.setMaximumSize(new java.awt.Dimension(32767, 121));
+        pnlTarjeta.setMinimumSize(new java.awt.Dimension(100, 121));
+        pnlTarjeta.setPreferredSize(new java.awt.Dimension(800, 121));
+        pnlTarjeta.setLayout(new java.awt.GridBagLayout());
+
+        lblNombre.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblNombre.setForeground(new java.awt.Color(59, 106, 118));
+        lblNombre.setText("Omeprazol 20 mg ∙ 09:00");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 0);
-        pnlEncabezado.add(txtTempomedic, gridBagConstraints);
+        gridBagConstraints.weightx = 1.0;
+        pnlTarjeta.add(lblNombre, gridBagConstraints);
 
-        pnlTitulo.setBackground(new java.awt.Color(255, 255, 255));
-        pnlTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 123, 0, 0));
-        pnlTitulo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtIntroduceTuPIN.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        txtIntroduceTuPIN.setForeground(new java.awt.Color(59, 106, 118));
-        txtIntroduceTuPIN.setText("Introduce tu PIN");
-        pnlTitulo.add(txtIntroduceTuPIN, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, -1, -1));
-
+        lblTomado1.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        lblTomado1.setForeground(new java.awt.Color(51, 204, 0));
+        lblTomado1.setText("✔Tomada");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
-        pnlEncabezado.add(pnlTitulo, gridBagConstraints);
+        pnlTarjeta.add(lblTomado1, gridBagConstraints);
 
-        pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
+        btnPosponer.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        btnPosponer.setForeground(new java.awt.Color(59, 106, 118));
+        btnPosponer.setText("Posponer");
+        btnPosponer.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnPosponer.setContentAreaFilled(false);
+        btnPosponer.setFocusPainted(false);
+        btnPosponer.setMargin(new java.awt.Insets(4, 14, 3, 14));
+        btnPosponer.addActionListener(this::btnPosponerActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(8, 12, 0, 0);
+        pnlTarjeta.add(btnPosponer, gridBagConstraints);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setForeground(new java.awt.Color(52, 199, 89));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlContenido.add(pnlTarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, 90));
 
-        jdescripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jdescripcion.setText("PIN de 4 dígitos");
-        jPanel1.add(jdescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, 380, -1));
+        pnlTarjeta1.setBackground(new java.awt.Color(186, 209, 217));
+        pnlTarjeta1.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+        pnlTarjeta1.setAlignmentX(0.0F);
+        pnlTarjeta1.setMaximumSize(new java.awt.Dimension(32767, 121));
+        pnlTarjeta1.setMinimumSize(new java.awt.Dimension(100, 121));
+        pnlTarjeta1.setPreferredSize(new java.awt.Dimension(800, 121));
+        pnlTarjeta1.setLayout(new java.awt.GridBagLayout());
 
-        jOlvidoPIN.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jOlvidoPIN.setForeground(new java.awt.Color(0, 136, 255));
-        jOlvidoPIN.setText("¿Olvidaste el PIN? Inicia sesión con tu contraseña");
-        jPanel1.add(jOlvidoPIN, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, -1, 20));
+        lblNombre1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblNombre1.setForeground(new java.awt.Color(59, 106, 118));
+        lblNombre1.setText("Traumatología  15/10  09:00");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        pnlTarjeta1.add(lblNombre1, gridBagConstraints);
 
-        jPasswordField1.setBackground(new java.awt.Color(186, 209, 217));
-        jPasswordField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPasswordField1.addActionListener(this::jPasswordField1ActionPerformed);
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 90, 60, 80));
+        lblTomado.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
+        lblTomado.setText("Hospital Vírgen Macarena");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        pnlTarjeta1.add(lblTomado, gridBagConstraints);
 
-        jPasswordField2.setBackground(new java.awt.Color(186, 209, 217));
-        jPasswordField2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPasswordField2.addActionListener(this::jPasswordField2ActionPerformed);
-        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 60, 80));
+        pnlContenido.add(pnlTarjeta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 450, -1, 50));
 
-        jPasswordField3.setBackground(new java.awt.Color(186, 209, 217));
-        jPasswordField3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPasswordField3.addActionListener(this::jPasswordField3ActionPerformed);
-        jPanel1.add(jPasswordField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 60, 80));
+        jMedicacion1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jMedicacion1.setText("MEDICACIÓN DE HOY");
+        pnlContenido.add(jMedicacion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
 
-        jPasswordField4.setBackground(new java.awt.Color(186, 209, 217));
-        jPasswordField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPasswordField4.addActionListener(this::jPasswordField4ActionPerformed);
-        jPanel1.add(jPasswordField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 60, 80));
+        pnlTarjeta2.setBackground(new java.awt.Color(186, 209, 217));
+        pnlTarjeta2.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+        pnlTarjeta2.setAlignmentX(0.0F);
+        pnlTarjeta2.setMaximumSize(new java.awt.Dimension(32767, 121));
+        pnlTarjeta2.setMinimumSize(new java.awt.Dimension(100, 121));
+        pnlTarjeta2.setPreferredSize(new java.awt.Dimension(800, 121));
+        pnlTarjeta2.setLayout(new java.awt.GridBagLayout());
 
-        btnDesbloquear.setBackground(new java.awt.Color(59, 106, 118));
-        btnDesbloquear.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        btnDesbloquear.setForeground(new java.awt.Color(255, 255, 255));
-        btnDesbloquear.setText("Desbloquear");
-        btnDesbloquear.setBorderPainted(false);
-        btnDesbloquear.setFocusPainted(false);
-        btnDesbloquear.setPreferredSize(new java.awt.Dimension(800, 45));
-        btnDesbloquear.addActionListener(this::btnDesbloquearActionPerformed);
-        jPanel1.add(btnDesbloquear, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 200, -1));
+        lblNombre2.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblNombre2.setForeground(new java.awt.Color(59, 106, 118));
+        lblNombre2.setText("Paracetamol 650 mg ∙ 14:00");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        pnlTarjeta2.add(lblNombre2, gridBagConstraints);
 
-        pnlContenido.add(jPanel1, java.awt.BorderLayout.CENTER);
+        lblTomado2.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        lblTomado2.setForeground(new java.awt.Color(255, 153, 0));
+        lblTomado2.setText("•Pendiente");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        pnlTarjeta2.add(lblTomado2, gridBagConstraints);
+
+        Posponer1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        Posponer1.setForeground(new java.awt.Color(59, 106, 118));
+        Posponer1.setText("Posponer");
+        Posponer1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        Posponer1.setContentAreaFilled(false);
+        Posponer1.setFocusPainted(false);
+        Posponer1.setMargin(new java.awt.Insets(4, 14, 3, 14));
+        Posponer1.addActionListener(this::Posponer1ActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.ipady = 8;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(8, 12, 0, 0);
+        pnlTarjeta2.add(Posponer1, gridBagConstraints);
+
+        pnlContenido.add(pnlTarjeta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, 90));
+
+        pnlTarjeta3.setBackground(new java.awt.Color(186, 209, 217));
+        pnlTarjeta3.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+        pnlTarjeta3.setAlignmentX(0.0F);
+        pnlTarjeta3.setMaximumSize(new java.awt.Dimension(32767, 121));
+        pnlTarjeta3.setMinimumSize(new java.awt.Dimension(100, 121));
+        pnlTarjeta3.setPreferredSize(new java.awt.Dimension(800, 121));
+        pnlTarjeta3.setLayout(new java.awt.GridBagLayout());
+
+        lblNombre3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblNombre3.setForeground(new java.awt.Color(59, 106, 118));
+        lblNombre3.setText("Cardiología · 03/10 · 10:30");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        pnlTarjeta3.add(lblNombre3, gridBagConstraints);
+
+        lblTomado3.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
+        lblTomado3.setText("Hospital Vírgen del Rocío");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        pnlTarjeta3.add(lblTomado3, gridBagConstraints);
+
+        pnlContenido.add(pnlTarjeta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, -1, 50));
 
         getContentPane().add(pnlContenido, java.awt.BorderLayout.CENTER);
 
@@ -151,25 +324,13 @@ public class VentanaHoy extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void btnPosponerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPosponerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_btnPosponerActionPerformed
 
-    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+    private void Posponer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Posponer1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField2ActionPerformed
-
-    private void jPasswordField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField3ActionPerformed
-
-    private void jPasswordField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField4ActionPerformed
-
-    private void btnDesbloquearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesbloquearActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDesbloquearActionPerformed
+    }//GEN-LAST:event_Posponer1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,19 +359,37 @@ public class VentanaHoy extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
-    private javax.swing.JButton btnDesbloquear;
-    private javax.swing.JLabel jOlvidoPIN;
+    private javax.swing.JButton Posponer1;
+    private javax.swing.JButton btnAjustes;
+    private javax.swing.JButton btnCitas;
+    private javax.swing.JButton btnHoy;
+    private javax.swing.JButton btnMedicamentos;
+    private javax.swing.JButton btnPosponer;
+    private javax.swing.Box.Filler filler1;
+    private javax.swing.Box.Filler filler2;
+    private javax.swing.Box.Filler filler5;
+    private javax.swing.Box.Filler filler6;
+    private javax.swing.Box.Filler filler7;
+    private javax.swing.JLabel jFecha1;
+    private javax.swing.JLabel jHoy;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jMedicacion1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JPasswordField jPasswordField3;
-    private javax.swing.JPasswordField jPasswordField4;
-    private javax.swing.JLabel jdescripcion;
-    private javax.swing.JLabel logo;
+    private javax.swing.JLabel jProxCitas;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNombre1;
+    private javax.swing.JLabel lblNombre2;
+    private javax.swing.JLabel lblNombre3;
+    private javax.swing.JLabel lblTomado;
+    private javax.swing.JLabel lblTomado1;
+    private javax.swing.JLabel lblTomado2;
+    private javax.swing.JLabel lblTomado3;
     private javax.swing.JPanel pnlContenido;
-    private javax.swing.JPanel pnlEncabezado;
-    private javax.swing.JPanel pnlTitulo;
-    private javax.swing.JLabel txtIntroduceTuPIN;
+    private javax.swing.JPanel pnlSidebar;
+    private javax.swing.JPanel pnlTarjeta;
+    private javax.swing.JPanel pnlTarjeta1;
+    private javax.swing.JPanel pnlTarjeta2;
+    private javax.swing.JPanel pnlTarjeta3;
     private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }
