@@ -8,14 +8,14 @@ package com.tempomedic.vista;
  *
  * @author Santiago González
  */
-public class VentanaRecuperarContraseña extends javax.swing.JFrame {
+public class VentanaBloqueoPIN extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaRecuperarContraseña.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaBloqueoPIN.class.getName());
 
     /**
      * Creates new form VentanaMedicamentos
      */
-    public VentanaRecuperarContraseña() {
+    public VentanaBloqueoPIN() {
         initComponents();
     }
 
@@ -35,16 +35,15 @@ public class VentanaRecuperarContraseña extends javax.swing.JFrame {
         logo = new javax.swing.JLabel();
         txtTempomedic = new javax.swing.JLabel();
         pnlTitulo = new javax.swing.JPanel();
-        txtNuevoMedicamento = new javax.swing.JLabel();
+        txtIntroduceTuPIN = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtNombre1 = new javax.swing.JTextField();
-        btnGuardar = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jdescripcion = new javax.swing.JLabel();
+        jOlvidoPIN = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jPasswordField2 = new javax.swing.JPasswordField();
+        jPasswordField3 = new javax.swing.JPasswordField();
+        jPasswordField4 = new javax.swing.JPasswordField();
+        btnDesbloquear = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VentanaNuevoMedicamentos");
@@ -83,10 +82,10 @@ public class VentanaRecuperarContraseña extends javax.swing.JFrame {
         pnlTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 123, 0, 0));
         pnlTitulo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtNuevoMedicamento.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        txtNuevoMedicamento.setForeground(new java.awt.Color(59, 106, 118));
-        txtNuevoMedicamento.setText("Tempomedic");
-        pnlTitulo.add(txtNuevoMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, -1));
+        txtIntroduceTuPIN.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        txtIntroduceTuPIN.setForeground(new java.awt.Color(59, 106, 118));
+        txtIntroduceTuPIN.setText("Introduce tu PIN");
+        pnlTitulo.add(txtIntroduceTuPIN, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, -1, -1));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -102,53 +101,47 @@ public class VentanaRecuperarContraseña extends javax.swing.JFrame {
         pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setForeground(new java.awt.Color(52, 199, 89));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Entra con tu correo y contraseña");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 270, -1));
+        jdescripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jdescripcion.setText("PIN de 4 dígitos");
+        jPanel1.add(jdescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, 380, -1));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Contraseña");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
+        jOlvidoPIN.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jOlvidoPIN.setForeground(new java.awt.Color(0, 136, 255));
+        jOlvidoPIN.setText("¿Olvidaste el PIN? Inicia sesión con tu contraseña");
+        jPanel1.add(jOlvidoPIN, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, -1, 20));
 
-        txtNombre.setBackground(new java.awt.Color(186, 209, 217));
-        txtNombre.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtNombre.setText("•••••••••");
-        txtNombre.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtNombre.setPreferredSize(new java.awt.Dimension(343, 41));
-        txtNombre.addActionListener(this::txtNombreActionPerformed);
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 730, -1));
+        jPasswordField1.setBackground(new java.awt.Color(186, 209, 217));
+        jPasswordField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPasswordField1.addActionListener(this::jPasswordField1ActionPerformed);
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 90, 60, 80));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setText("Correo");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, -1, -1));
+        jPasswordField2.setBackground(new java.awt.Color(186, 209, 217));
+        jPasswordField2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPasswordField2.addActionListener(this::jPasswordField2ActionPerformed);
+        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 60, 80));
 
-        txtNombre1.setBackground(new java.awt.Color(186, 209, 217));
-        txtNombre1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtNombre1.setText("nombre@correo.com");
-        txtNombre1.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtNombre1.setPreferredSize(new java.awt.Dimension(343, 41));
-        txtNombre1.addActionListener(this::txtNombre1ActionPerformed);
-        jPanel1.add(txtNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 730, -1));
+        jPasswordField3.setBackground(new java.awt.Color(186, 209, 217));
+        jPasswordField3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPasswordField3.addActionListener(this::jPasswordField3ActionPerformed);
+        jPanel1.add(jPasswordField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 60, 80));
 
-        btnGuardar.setBackground(new java.awt.Color(59, 106, 118));
-        btnGuardar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setText("Iniciar Sesión");
-        btnGuardar.setBorderPainted(false);
-        btnGuardar.setFocusPainted(false);
-        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 730, 40));
+        jPasswordField4.setBackground(new java.awt.Color(186, 209, 217));
+        jPasswordField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPasswordField4.addActionListener(this::jPasswordField4ActionPerformed);
+        jPanel1.add(jPasswordField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 60, 80));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 136, 255));
-        jLabel4.setText("¿Olvidaste tu contraseña?");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 136, 255));
-        jLabel5.setText("Crear cuenta");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, -1, -1));
+        btnDesbloquear.setBackground(new java.awt.Color(59, 106, 118));
+        btnDesbloquear.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        btnDesbloquear.setForeground(new java.awt.Color(255, 255, 255));
+        btnDesbloquear.setText("Desbloquear");
+        btnDesbloquear.setBorderPainted(false);
+        btnDesbloquear.setFocusPainted(false);
+        btnDesbloquear.setPreferredSize(new java.awt.Dimension(800, 45));
+        btnDesbloquear.addActionListener(this::btnDesbloquearActionPerformed);
+        jPanel1.add(btnDesbloquear, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 200, -1));
 
         pnlContenido.add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -158,13 +151,25 @@ public class VentanaRecuperarContraseña extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreActionPerformed
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
-    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
+    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre1ActionPerformed
+    }//GEN-LAST:event_jPasswordField2ActionPerformed
+
+    private void jPasswordField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField3ActionPerformed
+
+    private void jPasswordField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField4ActionPerformed
+
+    private void btnDesbloquearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesbloquearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDesbloquearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,25 +193,24 @@ public class VentanaRecuperarContraseña extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new VentanaRecuperarContraseña().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new VentanaBloqueoPIN().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
-    private javax.swing.JButton btnGuardar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton btnDesbloquear;
+    private javax.swing.JLabel jOlvidoPIN;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
+    private javax.swing.JPasswordField jPasswordField3;
+    private javax.swing.JPasswordField jPasswordField4;
+    private javax.swing.JLabel jdescripcion;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlEncabezado;
     private javax.swing.JPanel pnlTitulo;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtNombre1;
-    private javax.swing.JLabel txtNuevoMedicamento;
+    private javax.swing.JLabel txtIntroduceTuPIN;
     private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }
