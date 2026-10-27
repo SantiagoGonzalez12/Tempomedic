@@ -8,14 +8,14 @@ package com.tempomedic.vista;
  *
  * @author Santiago González
  */
-public class VentanaBloqueoPIN extends javax.swing.JFrame {
+public class VentanaHoy extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaBloqueoPIN.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaHoy.class.getName());
 
     /**
      * Creates new form VentanaMedicamentos
      */
-    public VentanaBloqueoPIN() {
+    public VentanaHoy() {
         initComponents();
     }
 
@@ -193,7 +193,7 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new VentanaBloqueoPIN().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new VentanaHoy().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

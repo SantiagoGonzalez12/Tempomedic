@@ -39,14 +39,14 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jDescripción = new javax.swing.JLabel();
         jContraseña = new javax.swing.JLabel();
-        txtContraseña = new javax.swing.JTextField();
         jRepetirContraseña = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
         btnCrearCuenta = new javax.swing.JButton();
         Jiniciasesion = new javax.swing.JLabel();
         jCorreo = new javax.swing.JLabel();
-        txtContraseña1 = new javax.swing.JTextField();
         jDatosSalud = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jPasswordField2 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VentanaNuevoMedicamentos");
@@ -114,14 +114,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         jContraseña.setText("Contraseña");
         jPanel1.add(jContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
 
-        txtContraseña.setBackground(new java.awt.Color(186, 209, 217));
-        txtContraseña.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtContraseña.setText("•••••••••");
-        txtContraseña.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtContraseña.setPreferredSize(new java.awt.Dimension(343, 41));
-        txtContraseña.addActionListener(this::txtContraseñaActionPerformed);
-        jPanel1.add(txtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 730, -1));
-
         jRepetirContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jRepetirContraseña.setText("Repetir contraseña");
         jPanel1.add(jRepetirContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, -1, -1));
@@ -151,17 +143,19 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         jCorreo.setText("Correo");
         jPanel1.add(jCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
 
-        txtContraseña1.setBackground(new java.awt.Color(186, 209, 217));
-        txtContraseña1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtContraseña1.setText("•••••••••");
-        txtContraseña1.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtContraseña1.setPreferredSize(new java.awt.Dimension(343, 41));
-        txtContraseña1.addActionListener(this::txtContraseña1ActionPerformed);
-        jPanel1.add(txtContraseña1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 730, -1));
-
         jDatosSalud.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jDatosSalud.setText("Tus datos de salud son privados. Después podrás activar un PIN en Ajustes");
         jPanel1.add(jDatosSalud, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, 490, -1));
+
+        jPasswordField1.setBackground(new java.awt.Color(186, 209, 217));
+        jPasswordField1.setText("jContraseña");
+        jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 730, 40));
+
+        jPasswordField2.setBackground(new java.awt.Color(186, 209, 217));
+        jPasswordField2.setText("jContraseña");
+        jPasswordField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 142, 730, 40));
 
         pnlContenido.add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -171,17 +165,9 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseñaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtContraseñaActionPerformed
-
     private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCorreoActionPerformed
-
-    private void txtContraseña1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseña1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtContraseña1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,13 +203,13 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
     private javax.swing.JLabel jDatosSalud;
     private javax.swing.JLabel jDescripción;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JLabel jRepetirContraseña;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlEncabezado;
     private javax.swing.JPanel pnlTitulo;
-    private javax.swing.JTextField txtContraseña;
-    private javax.swing.JTextField txtContraseña1;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JLabel txtNuevoMedicamento;
     private javax.swing.JLabel txtTempomedic;
