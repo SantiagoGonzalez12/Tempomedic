@@ -239,6 +239,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 12);
         pnlTarjeta.add(btnEditar, gridBagConstraints);
 
         btnEliminar.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
@@ -255,6 +256,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(8, 12, 0, 0);
         pnlTarjeta.add(btnEliminar, gridBagConstraints);
 
         pnlListaMedicamentos.add(pnlTarjeta);
@@ -314,6 +316,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 12);
         pnlTarjeta1.add(btnEditar1, gridBagConstraints);
 
         btnEliminar1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
@@ -330,6 +333,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(8, 12, 0, 0);
         pnlTarjeta1.add(btnEliminar1, gridBagConstraints);
 
         pnlListaMedicamentos.add(pnlTarjeta1);
@@ -389,6 +393,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 12);
         pnlTarjeta2.add(btnEditar2, gridBagConstraints);
 
         btnEliminar2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
@@ -405,6 +410,7 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(8, 12, 0, 0);
         pnlTarjeta2.add(btnEliminar2, gridBagConstraints);
 
         pnlListaMedicamentos.add(pnlTarjeta2);
