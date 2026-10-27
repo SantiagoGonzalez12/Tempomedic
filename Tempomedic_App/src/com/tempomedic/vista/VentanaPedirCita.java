@@ -36,24 +36,20 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         txtTempomedic = new javax.swing.JLabel();
         pnlTitulo = new javax.swing.JPanel();
         btnVolver = new javax.swing.JButton();
-        txtNuevoMedicamento = new javax.swing.JLabel();
+        txtPedirCita = new javax.swing.JLabel();
         pnlFormulario = new javax.swing.JPanel();
-        lblNombre = new javax.swing.JLabel();
-        lblDosis = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
-        txtDosis = new javax.swing.JTextField();
-        lblFrecuencia = new javax.swing.JLabel();
-        lblPrimeraToma = new javax.swing.JLabel();
-        cmbFrecuencia = new javax.swing.JComboBox<>();
-        txtPrimeraToma = new javax.swing.JTextField();
-        lblAviso = new javax.swing.JLabel();
-        pnlAviso = new javax.swing.JPanel();
-        rbNotificacion = new javax.swing.JRadioButton();
-        rbAlarma = new javax.swing.JRadioButton();
-        rbAmbos = new javax.swing.JRadioButton();
+        lblEspecialidad = new javax.swing.JLabel();
+        cmbEspecialidad = new javax.swing.JComboBox<>();
+        lblCentro = new javax.swing.JLabel();
+        txtCentro = new javax.swing.JTextField();
+        sclSugerencias = new javax.swing.JScrollPane();
+        lstSugerencias = new javax.swing.JList<>();
+        lblFecha = new javax.swing.JLabel();
+        txtFecha = new javax.swing.JTextField();
+        lblHora = new javax.swing.JLabel();
+        txtHora = new javax.swing.JTextField();
         pnlAcciones = new javax.swing.JPanel();
-        btnGuardar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
+        btnConfirmar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VentanaPedirCita");
@@ -101,10 +97,10 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         btnVolver.setMargin(new java.awt.Insets(0, 0, 0, 0));
         pnlTitulo.add(btnVolver);
 
-        txtNuevoMedicamento.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        txtNuevoMedicamento.setForeground(new java.awt.Color(59, 106, 118));
-        txtNuevoMedicamento.setText("Nuevo medicamento");
-        pnlTitulo.add(txtNuevoMedicamento);
+        txtPedirCita.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        txtPedirCita.setForeground(new java.awt.Color(59, 106, 118));
+        txtPedirCita.setText("Pedir cita");
+        pnlTitulo.add(txtPedirCita);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -123,179 +119,139 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         pnlFormulario.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 123, 0, 123));
         pnlFormulario.setLayout(new java.awt.GridBagLayout());
 
-        lblNombre.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        lblNombre.setText("Nombre");
+        lblEspecialidad.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblEspecialidad.setText("Especialidad");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 4, 14);
-        pnlFormulario.add(lblNombre, gridBagConstraints);
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 4, 0);
+        pnlFormulario.add(lblEspecialidad, gridBagConstraints);
 
-        lblDosis.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        lblDosis.setText("Dosis");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 14, 4, 0);
-        pnlFormulario.add(lblDosis, gridBagConstraints);
-
-        txtNombre.setBackground(new java.awt.Color(186, 209, 217));
-        txtNombre.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtNombre.setText("Ibuprofeno");
-        txtNombre.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtNombre.setPreferredSize(new java.awt.Dimension(343, 41));
-        txtNombre.addActionListener(this::txtNombreActionPerformed);
+        cmbEspecialidad.setBackground(new java.awt.Color(186, 209, 217));
+        cmbEspecialidad.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        cmbEspecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cardiología", "Dermatología", "Medicina general", "Traumatología" }));
+        cmbEspecialidad.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        cmbEspecialidad.setPreferredSize(new java.awt.Dimension(343, 41));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 14);
-        pnlFormulario.add(txtNombre, gridBagConstraints);
+        gridBagConstraints.weightx = 1.0;
+        pnlFormulario.add(cmbEspecialidad, gridBagConstraints);
 
-        txtDosis.setBackground(new java.awt.Color(186, 209, 217));
-        txtDosis.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtDosis.setText("400 mg");
-        txtDosis.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtDosis.setPreferredSize(new java.awt.Dimension(343, 41));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 14, 0, 0);
-        pnlFormulario.add(txtDosis, gridBagConstraints);
-
-        lblFrecuencia.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        lblFrecuencia.setText("Frecuencia");
+        lblCentro.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblCentro.setText("Centro o dirección");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 4, 14);
-        pnlFormulario.add(lblFrecuencia, gridBagConstraints);
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 4, 0);
+        pnlFormulario.add(lblCentro, gridBagConstraints);
 
-        lblPrimeraToma.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        lblPrimeraToma.setText("Primera toma");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(20, 14, 4, 0);
-        pnlFormulario.add(lblPrimeraToma, gridBagConstraints);
-
-        cmbFrecuencia.setBackground(new java.awt.Color(186, 209, 217));
-        cmbFrecuencia.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        cmbFrecuencia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cada X horas", "Diaria", "Días concretos" }));
-        cmbFrecuencia.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        cmbFrecuencia.setPreferredSize(new java.awt.Dimension(343, 41));
+        txtCentro.setBackground(new java.awt.Color(186, 209, 217));
+        txtCentro.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        txtCentro.setText("Hosp");
+        txtCentro.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtCentro.setPreferredSize(new java.awt.Dimension(343, 41));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 14);
-        pnlFormulario.add(cmbFrecuencia, gridBagConstraints);
+        gridBagConstraints.weightx = 1.0;
+        pnlFormulario.add(txtCentro, gridBagConstraints);
 
-        txtPrimeraToma.setBackground(new java.awt.Color(186, 209, 217));
-        txtPrimeraToma.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtPrimeraToma.setText("--:--");
-        txtPrimeraToma.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtPrimeraToma.setPreferredSize(new java.awt.Dimension(343, 41));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(0, 14, 0, 0);
-        pnlFormulario.add(txtPrimeraToma, gridBagConstraints);
+        sclSugerencias.setBackground(new java.awt.Color(186, 209, 217));
+        sclSugerencias.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        sclSugerencias.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        sclSugerencias.setPreferredSize(new java.awt.Dimension(713, 88));
 
-        lblAviso.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        lblAviso.setText("AVISO");
+        lstSugerencias.setBackground(new java.awt.Color(186, 209, 217));
+        lstSugerencias.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        lstSugerencias.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Hospital Virgen del Rocío", "Hospital Virgen Macarena", "Hospital Quirónsalud Sevilla" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        lstSugerencias.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        sclSugerencias.setViewportView(lstSugerencias);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 4, 0);
-        pnlFormulario.add(lblAviso, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
+        pnlFormulario.add(sclSugerencias, gridBagConstraints);
 
-        pnlAviso.setBackground(new java.awt.Color(255, 255, 255));
-        pnlAviso.setPreferredSize(new java.awt.Dimension(714, 36));
-        pnlAviso.setLayout(new java.awt.GridLayout(1, 3, 6, 0));
-
-        rbNotificacion.setBackground(new java.awt.Color(59, 106, 118));
-        AVISOS.add(rbNotificacion);
-        rbNotificacion.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        rbNotificacion.setForeground(new java.awt.Color(255, 255, 255));
-        rbNotificacion.setSelected(true);
-        rbNotificacion.setText("Notificación");
-        rbNotificacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(59, 106, 118), 2, true));
-        rbNotificacion.setBorderPainted(true);
-        rbNotificacion.setFocusPainted(false);
-        rbNotificacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rbNotificacion.setOpaque(true);
-        pnlAviso.add(rbNotificacion);
-
-        rbAlarma.setBackground(new java.awt.Color(186, 209, 217));
-        AVISOS.add(rbAlarma);
-        rbAlarma.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        rbAlarma.setText("Alarma");
-        rbAlarma.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        rbAlarma.setBorderPainted(true);
-        rbAlarma.setFocusPainted(false);
-        rbAlarma.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rbAlarma.setOpaque(true);
-        pnlAviso.add(rbAlarma);
-
-        rbAmbos.setBackground(new java.awt.Color(186, 209, 217));
-        AVISOS.add(rbAmbos);
-        rbAmbos.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        rbAmbos.setText("Ambos");
-        rbAmbos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        rbAmbos.setBorderPainted(true);
-        rbAmbos.setFocusPainted(false);
-        rbAmbos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rbAmbos.setOpaque(true);
-        pnlAviso.add(rbAmbos);
-
+        lblFecha.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblFecha.setText("Fecha");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 4, 14);
+        pnlFormulario.add(lblFecha, gridBagConstraints);
+
+        txtFecha.setBackground(new java.awt.Color(186, 209, 217));
+        txtFecha.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        txtFecha.setText("dd/mm/aaaa");
+        txtFecha.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtFecha.setPreferredSize(new java.awt.Dimension(343, 41));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        pnlFormulario.add(pnlAviso, gridBagConstraints);
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 14);
+        pnlFormulario.add(txtFecha, gridBagConstraints);
+
+        lblHora.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblHora.setText("Hora");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(10, 14, 4, 0);
+        pnlFormulario.add(lblHora, gridBagConstraints);
+
+        txtHora.setBackground(new java.awt.Color(186, 209, 217));
+        txtHora.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        txtHora.setText("--:--");
+        txtHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtHora.setPreferredSize(new java.awt.Dimension(343, 41));
+        txtHora.addActionListener(this::txtHoraActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.insets = new java.awt.Insets(0, 14, 0, 0);
+        pnlFormulario.add(txtHora, gridBagConstraints);
 
         pnlContenido.add(pnlFormulario, java.awt.BorderLayout.CENTER);
 
         pnlAcciones.setBackground(new java.awt.Color(255, 255, 255));
-        pnlAcciones.setBorder(javax.swing.BorderFactory.createEmptyBorder(30, 151, 57, 151));
-        pnlAcciones.setPreferredSize(new java.awt.Dimension(960, 132));
-        pnlAcciones.setLayout(new java.awt.GridLayout(1, 2, 28, 0));
+        pnlAcciones.setBorder(javax.swing.BorderFactory.createEmptyBorder(14, 123, 24, 123));
+        pnlAcciones.setPreferredSize(new java.awt.Dimension(960, 83));
+        pnlAcciones.setLayout(new java.awt.GridLayout(1, 1));
 
-        btnGuardar.setBackground(new java.awt.Color(59, 106, 118));
-        btnGuardar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setText("Guardar");
-        btnGuardar.setBorderPainted(false);
-        btnGuardar.setFocusPainted(false);
-        pnlAcciones.add(btnGuardar);
-
-        btnCancelar.setBackground(new java.awt.Color(59, 106, 118));
-        btnCancelar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar.setText("Cancelar");
-        btnCancelar.setBorderPainted(false);
-        btnCancelar.setFocusPainted(false);
-        pnlAcciones.add(btnCancelar);
+        btnConfirmar.setBackground(new java.awt.Color(59, 106, 118));
+        btnConfirmar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        btnConfirmar.setForeground(new java.awt.Color(255, 255, 255));
+        btnConfirmar.setText("Confirmar");
+        btnConfirmar.setBorderPainted(false);
+        btnConfirmar.setFocusPainted(false);
+        pnlAcciones.add(btnConfirmar);
 
         pnlContenido.add(pnlAcciones, java.awt.BorderLayout.SOUTH);
 
@@ -305,9 +261,9 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+    private void txtHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHoraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreActionPerformed
+    }//GEN-LAST:event_txtHoraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -336,29 +292,25 @@ public class VentanaPedirCita extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnConfirmar;
     private javax.swing.JButton btnVolver;
-    private javax.swing.JComboBox<String> cmbFrecuencia;
-    private javax.swing.JLabel lblAviso;
-    private javax.swing.JLabel lblDosis;
-    private javax.swing.JLabel lblFrecuencia;
-    private javax.swing.JLabel lblNombre;
-    private javax.swing.JLabel lblPrimeraToma;
+    private javax.swing.JComboBox<String> cmbEspecialidad;
+    private javax.swing.JLabel lblCentro;
+    private javax.swing.JLabel lblEspecialidad;
+    private javax.swing.JLabel lblFecha;
+    private javax.swing.JLabel lblHora;
     private javax.swing.JLabel logo;
+    private javax.swing.JList<String> lstSugerencias;
     private javax.swing.JPanel pnlAcciones;
-    private javax.swing.JPanel pnlAviso;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlEncabezado;
     private javax.swing.JPanel pnlFormulario;
     private javax.swing.JPanel pnlTitulo;
-    private javax.swing.JRadioButton rbAlarma;
-    private javax.swing.JRadioButton rbAmbos;
-    private javax.swing.JRadioButton rbNotificacion;
-    private javax.swing.JTextField txtDosis;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JLabel txtNuevoMedicamento;
-    private javax.swing.JTextField txtPrimeraToma;
+    private javax.swing.JScrollPane sclSugerencias;
+    private javax.swing.JTextField txtCentro;
+    private javax.swing.JTextField txtFecha;
+    private javax.swing.JTextField txtHora;
+    private javax.swing.JLabel txtPedirCita;
     private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }
