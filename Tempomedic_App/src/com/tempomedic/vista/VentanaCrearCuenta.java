@@ -37,15 +37,16 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         pnlTitulo = new javax.swing.JPanel();
         txtNuevoMedicamento = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jDescripción = new javax.swing.JLabel();
+        jContraseña = new javax.swing.JLabel();
         txtContraseña = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        jRepetirContraseña = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
-        btnGuardar = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        btnCrearCuenta = new javax.swing.JButton();
+        Jiniciasesion = new javax.swing.JLabel();
+        jCorreo = new javax.swing.JLabel();
         txtContraseña1 = new javax.swing.JTextField();
+        jDatosSalud = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VentanaNuevoMedicamentos");
@@ -105,13 +106,13 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Crea tu cuenta para guardar tu medación y tus citas");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 420, 30));
+        jDescripción.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jDescripción.setText("Crea tu cuenta para guardar tu medación y tus citas");
+        jPanel1.add(jDescripción, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 420, 30));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Contraseña");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
+        jContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jContraseña.setText("Contraseña");
+        jPanel1.add(jContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
 
         txtContraseña.setBackground(new java.awt.Color(186, 209, 217));
         txtContraseña.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -121,9 +122,9 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         txtContraseña.addActionListener(this::txtContraseñaActionPerformed);
         jPanel1.add(txtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 730, -1));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setText("Repetir contraseña");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, -1, -1));
+        jRepetirContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRepetirContraseña.setText("Repetir contraseña");
+        jPanel1.add(jRepetirContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, -1, -1));
 
         txtCorreo.setBackground(new java.awt.Color(186, 209, 217));
         txtCorreo.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -133,22 +134,22 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         txtCorreo.addActionListener(this::txtCorreoActionPerformed);
         jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 730, -1));
 
-        btnGuardar.setBackground(new java.awt.Color(59, 106, 118));
-        btnGuardar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setText("Crear cuenta");
-        btnGuardar.setBorderPainted(false);
-        btnGuardar.setFocusPainted(false);
-        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 730, 40));
+        btnCrearCuenta.setBackground(new java.awt.Color(59, 106, 118));
+        btnCrearCuenta.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        btnCrearCuenta.setForeground(new java.awt.Color(255, 255, 255));
+        btnCrearCuenta.setText("Crear cuenta");
+        btnCrearCuenta.setBorderPainted(false);
+        btnCrearCuenta.setFocusPainted(false);
+        jPanel1.add(btnCrearCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 730, 40));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 136, 255));
-        jLabel5.setText("¿Ya tienes cuenta? Inicia Sesión");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
+        Jiniciasesion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Jiniciasesion.setForeground(new java.awt.Color(0, 136, 255));
+        Jiniciasesion.setText("¿Ya tienes cuenta? Inicia Sesión");
+        jPanel1.add(Jiniciasesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setText("Correo");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
+        jCorreo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jCorreo.setText("Correo");
+        jPanel1.add(jCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
 
         txtContraseña1.setBackground(new java.awt.Color(186, 209, 217));
         txtContraseña1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -157,6 +158,10 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         txtContraseña1.setPreferredSize(new java.awt.Dimension(343, 41));
         txtContraseña1.addActionListener(this::txtContraseña1ActionPerformed);
         jPanel1.add(txtContraseña1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 730, -1));
+
+        jDatosSalud.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jDatosSalud.setText("Tus datos de salud son privados. Después podrás activar un PIN en Ajustes");
+        jPanel1.add(jDatosSalud, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, 490, -1));
 
         pnlContenido.add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -205,13 +210,14 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
-    private javax.swing.JButton btnGuardar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel Jiniciasesion;
+    private javax.swing.JButton btnCrearCuenta;
+    private javax.swing.JLabel jContraseña;
+    private javax.swing.JLabel jCorreo;
+    private javax.swing.JLabel jDatosSalud;
+    private javax.swing.JLabel jDescripción;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jRepetirContraseña;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlEncabezado;

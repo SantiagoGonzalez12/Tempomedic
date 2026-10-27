@@ -8,14 +8,14 @@ package com.tempomedic.vista;
  *
  * @author Santiago González
  */
-public class VentanaInicioSesion extends javax.swing.JFrame {
+public class VentanaRecuperarContraseña extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaInicioSesion.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaRecuperarContraseña.class.getName());
 
     /**
      * Creates new form VentanaMedicamentos
      */
-    public VentanaInicioSesion() {
+    public VentanaRecuperarContraseña() {
         initComponents();
     }
 
@@ -106,7 +106,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Entra con tu correo y contraseña");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 270, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 270, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("Contraseña");
@@ -188,7 +188,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new VentanaInicioSesion().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new VentanaRecuperarContraseña().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
