@@ -9,7 +9,7 @@ El mapa de navegación de TempoMedic organiza las 10 vistas principales de la ap
 
 ## 2. Diagrama de Flujo de Navegación (Sintaxis Mermaid)
 
-```mermaid
+mermaid
 graph TD
     %% Nodos de Autenticación
     A[Inicio / Abrir App] --> B{¿Tiene Cuenta?}
