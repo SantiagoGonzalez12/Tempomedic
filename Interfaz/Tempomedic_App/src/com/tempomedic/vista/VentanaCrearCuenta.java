@@ -34,22 +34,20 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         pnlEncabezado = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
         txtTempomedic = new javax.swing.JLabel();
-        pnlTitulo = new javax.swing.JPanel();
-        txtNuevoMedicamento = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jDescripción = new javax.swing.JLabel();
-        jContraseña = new javax.swing.JLabel();
-        jRepetirContraseña = new javax.swing.JLabel();
+        pnlFormulario = new javax.swing.JPanel();
+        lblDescripcion = new javax.swing.JLabel();
+        lblCorreo = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
+        lblContrasena = new javax.swing.JLabel();
+        pwdContrasena = new javax.swing.JPasswordField();
+        lblRepetirContrasena = new javax.swing.JLabel();
+        pwdRepetirContrasena = new javax.swing.JPasswordField();
         btnCrearCuenta = new javax.swing.JButton();
-        Jiniciasesion = new javax.swing.JLabel();
-        jCorreo = new javax.swing.JLabel();
-        jDatosSalud = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        lblIniciaSesion = new javax.swing.JLabel();
+        lblDatosSalud = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("VentanaNuevoMedicamentos");
+        setTitle("VentanaCrearCuenta");
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(960, 540));
 
@@ -65,8 +63,7 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 8);
         pnlEncabezado.add(logo, gridBagConstraints);
 
@@ -74,57 +71,106 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         txtTempomedic.setForeground(new java.awt.Color(59, 106, 118));
         txtTempomedic.setText("Tempomedic");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 0);
         pnlEncabezado.add(txtTempomedic, gridBagConstraints);
 
-        pnlTitulo.setBackground(new java.awt.Color(255, 255, 255));
-        pnlTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 123, 0, 0));
-        pnlTitulo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
 
-        txtNuevoMedicamento.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        txtNuevoMedicamento.setForeground(new java.awt.Color(59, 106, 118));
-        txtNuevoMedicamento.setText("Tempomedic");
-        pnlTitulo.add(txtNuevoMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, -1));
+        pnlFormulario.setBackground(new java.awt.Color(255, 255, 255));
+        pnlFormulario.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 198, 0, 198));
+        pnlFormulario.setLayout(new java.awt.GridBagLayout());
 
+        lblDescripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblDescripcion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDescripcion.setText("Crea tu cuenta para guardar tu medicación y tus citas.");
+        lblDescripcion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.weightx = 1.0;
+        pnlFormulario.add(lblDescripcion, gridBagConstraints);
+
+        lblCorreo.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lblCorreo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblCorreo.setText("Correo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
-        pnlEncabezado.add(pnlTitulo, gridBagConstraints);
-
-        pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jDescripción.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jDescripción.setText("Crea tu cuenta para guardar tu medación y tus citas");
-        jPanel1.add(jDescripción, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 420, 30));
-
-        jContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jContraseña.setText("Contraseña");
-        jPanel1.add(jContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, -1));
-
-        jRepetirContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jRepetirContraseña.setText("Repetir contraseña");
-        jPanel1.add(jRepetirContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, -1, -1));
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 4, 0);
+        pnlFormulario.add(lblCorreo, gridBagConstraints);
 
         txtCorreo.setBackground(new java.awt.Color(186, 209, 217));
         txtCorreo.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         txtCorreo.setText("nombre@correo.com");
-        txtCorreo.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtCorreo.setPreferredSize(new java.awt.Dimension(343, 41));
+        txtCorreo.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(59, 106, 118), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtCorreo.setPreferredSize(new java.awt.Dimension(563, 41));
         txtCorreo.addActionListener(this::txtCorreoActionPerformed);
-        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 730, -1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.ipadx = 666;
+        gridBagConstraints.ipady = 13;
+        gridBagConstraints.weightx = 1.0;
+        pnlFormulario.add(txtCorreo, gridBagConstraints);
+
+        lblContrasena.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lblContrasena.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblContrasena.setText("Contraseña");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 4, 0);
+        pnlFormulario.add(lblContrasena, gridBagConstraints);
+
+        pwdContrasena.setBackground(new java.awt.Color(186, 209, 217));
+        pwdContrasena.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        pwdContrasena.setText("Contraseña");
+        pwdContrasena.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(59, 106, 118), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        pwdContrasena.setPreferredSize(new java.awt.Dimension(563, 41));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.ipadx = 666;
+        gridBagConstraints.ipady = 20;
+        gridBagConstraints.weightx = 1.0;
+        pnlFormulario.add(pwdContrasena, gridBagConstraints);
+
+        lblRepetirContrasena.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lblRepetirContrasena.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblRepetirContrasena.setText("Repetir contraseña");
+        lblRepetirContrasena.setMaximumSize(null);
+        lblRepetirContrasena.setPreferredSize(null);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 4, 0);
+        pnlFormulario.add(lblRepetirContrasena, gridBagConstraints);
+
+        pwdRepetirContrasena.setBackground(new java.awt.Color(186, 209, 217));
+        pwdRepetirContrasena.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        pwdRepetirContrasena.setText("Contraseña");
+        pwdRepetirContrasena.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(59, 106, 118), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        pwdRepetirContrasena.setPreferredSize(new java.awt.Dimension(563, 41));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.ipadx = 666;
+        gridBagConstraints.ipady = 20;
+        gridBagConstraints.weightx = 1.0;
+        pnlFormulario.add(pwdRepetirContrasena, gridBagConstraints);
 
         btnCrearCuenta.setBackground(new java.awt.Color(59, 106, 118));
         btnCrearCuenta.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
@@ -132,32 +178,45 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         btnCrearCuenta.setText("Crear cuenta");
         btnCrearCuenta.setBorderPainted(false);
         btnCrearCuenta.setFocusPainted(false);
-        jPanel1.add(btnCrearCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 730, 40));
+        btnCrearCuenta.setMaximumSize(null);
+        btnCrearCuenta.setPreferredSize(null);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.ipadx = 609;
+        gridBagConstraints.ipady = 14;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
+        pnlFormulario.add(btnCrearCuenta, gridBagConstraints);
 
-        Jiniciasesion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Jiniciasesion.setForeground(new java.awt.Color(0, 136, 255));
-        Jiniciasesion.setText("¿Ya tienes cuenta? Inicia Sesión");
-        jPanel1.add(Jiniciasesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, -1, -1));
+        lblIniciaSesion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblIniciaSesion.setForeground(new java.awt.Color(0, 136, 255));
+        lblIniciaSesion.setText("¿Ya tienes cuenta? Inicia sesión");
+        lblIniciaSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
+        pnlFormulario.add(lblIniciaSesion, gridBagConstraints);
 
-        jCorreo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jCorreo.setText("Correo");
-        jPanel1.add(jCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
+        lblDatosSalud.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        lblDatosSalud.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDatosSalud.setText("Tus datos de salud son privados. Después podrás activar un PIN en Ajustes.");
+        lblDatosSalud.setPreferredSize(null);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.ipadx = 32;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(6, 0, 0, 0);
+        pnlFormulario.add(lblDatosSalud, gridBagConstraints);
 
-        jDatosSalud.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jDatosSalud.setText("Tus datos de salud son privados. Después podrás activar un PIN en Ajustes");
-        jPanel1.add(jDatosSalud, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, 490, -1));
-
-        jPasswordField1.setBackground(new java.awt.Color(186, 209, 217));
-        jPasswordField1.setText("jContraseña");
-        jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 730, 40));
-
-        jPasswordField2.setBackground(new java.awt.Color(186, 209, 217));
-        jPasswordField2.setText("jContraseña");
-        jPasswordField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 142, 730, 40));
-
-        pnlContenido.add(jPanel1, java.awt.BorderLayout.CENTER);
+        pnlContenido.add(pnlFormulario, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(pnlContenido, java.awt.BorderLayout.CENTER);
 
@@ -196,22 +255,20 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
-    private javax.swing.JLabel Jiniciasesion;
     private javax.swing.JButton btnCrearCuenta;
-    private javax.swing.JLabel jContraseña;
-    private javax.swing.JLabel jCorreo;
-    private javax.swing.JLabel jDatosSalud;
-    private javax.swing.JLabel jDescripción;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JLabel jRepetirContraseña;
+    private javax.swing.JLabel lblContrasena;
+    private javax.swing.JLabel lblCorreo;
+    private javax.swing.JLabel lblDatosSalud;
+    private javax.swing.JLabel lblDescripcion;
+    private javax.swing.JLabel lblIniciaSesion;
+    private javax.swing.JLabel lblRepetirContrasena;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlEncabezado;
-    private javax.swing.JPanel pnlTitulo;
+    private javax.swing.JPanel pnlFormulario;
+    private javax.swing.JPasswordField pwdContrasena;
+    private javax.swing.JPasswordField pwdRepetirContrasena;
     private javax.swing.JTextField txtCorreo;
-    private javax.swing.JLabel txtNuevoMedicamento;
     private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }
