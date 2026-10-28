@@ -344,6 +344,56 @@ Con estas 4 propuesta se quiere conseguir:
 
 - Quironsalud: señala que las varias organizaciones sanitarias detectan varios errores en los pacientes a la hora de la toma de la medicación, según el estudio, oscilan entre el 20% y el 60% de los que originaron daños de salud en el paciente. Piensan que la causa de esto es el desconocimiento. Para apaciguar estos datos, el Instituto para el Uso Seguro de los Medicamentos ha lanzado una campaña de concienciación e información.
 
+
+**Diagrama de conceptual de flujo**
+
+graph TD
+    %% Módulo de Autenticación
+    subgraph Autenticacion["1. Autenticación y Acceso"]
+        S01["01. Crear cuenta"]
+        S02["02. Iniciar sesión"]
+        S03["03. Recuperar contraseña"]
+        S04["04. Bloqueo por PIN"]
+    end
+
+    %% Módulo Principal
+    subgraph Core["2. Gestión de Salud (Navegación Principal)"]
+        S05["05. Hoy (Dashboard)"]
+        S06["06. Medicamentos"]
+        S07["07. Añadir medicamento"]
+        S08["08. Citas"]
+        S09["09. Pedir cita"]
+    end
+
+    %% Módulo Configuración
+    subgraph Ajustes["3. Ajustes y Cuenta"]
+        S10["10. Ajustes"]
+    end
+
+    %% Relaciones de Autenticación
+    S01 -->|Registrarse| S02
+    S02 -->|¿Olvidaste contraseña?| S03
+    S03 -->|Volver| S02
+    S02 -->|Acceso con credenciales| S05
+    S04 -->|Ingresar PIN correcto| S05
+
+    %% Relaciones del Core / Menú Lateral
+    S05 <-->|Navegación Menú| S06
+    S05 <-->|Navegación Menú| S08
+    S05 <-->|Navegación Menú| S10
+
+    %% Acciones específicas
+    S05 -->|Acción: Tomar/Posponer/Omitir| S05
+    S06 -->|Boton: Añadir medicamento| S07
+    S07 -->|Guardar / Cancelar| S06
+
+    S08 -->|Boton: Pedir cita| S09
+    S09 -->|Confirmar / Cancelar| S08
+
+    S10 -->|Cerrar sesión| S02
+    S10 -->|Eliminar cuenta| S01
+```
+
 ### 2.3. Estudio de soluciones existentes
 
 #### 2.3.1. ¿En qué consiste?
