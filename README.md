@@ -1,6 +1,6 @@
 # Tempomedic
 
-<img src="docs/img/logo/Logo_Tempomedic.svg" alt="Logo" width="100%" height="100">
+<img src="Proyecto/docs/img/logo/Logo_Tempomedic.svg" alt="Logo" width="100%" height="100">
 
 > Recordatorio de medicamentos y gestión de citas médicas: registra tus tratamientos, avisa por notificación o alarma a la hora de cada toma y te ayuda a organizar tus citas médicas.
 
