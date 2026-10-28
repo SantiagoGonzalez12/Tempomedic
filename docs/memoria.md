@@ -342,7 +342,7 @@ Con estas 4 propuesta se quiere conseguir:
 
 - Organización Mundial de la Salud: la OMS dicta que más del 50% de los pacientes con problemas de salud crónica no se toman la medicación como es debido y, del 75% los psiquiátricos, provocando así que los síntomas se agraven y tengan un coste más elevado para el paciente. La preocupación de los sanitarios no es solo esa, sino que a algunos pacientes, las medicinas le provocan daño evitando que se las tomen. Por esto último, la OMS ha determinado que la Medicación sin daño es el tema del tercer reto mundial por la seguridad del paciente.
 
-- - quironsalud: señala que las varias organizaciones sanitarias detectan varios errores en los pacientes a la hora de la toma de la medicación, según el estudio, oscilan entre el 20% y el 60% de los que originaron daños de salud en el paciente. Piensan que la causa de esto es el desconocimiento. Para apaciguar estos datos, el Instituto para el Uso Seguro de los Medicamentos ha lanzado una campaña de concienciación e información.
+- Quironsalud: señala que las varias organizaciones sanitarias detectan varios errores en los pacientes a la hora de la toma de la medicación, según el estudio, oscilan entre el 20% y el 60% de los que originaron daños de salud en el paciente. Piensan que la causa de esto es el desconocimiento. Para apaciguar estos datos, el Instituto para el Uso Seguro de los Medicamentos ha lanzado una campaña de concienciación e información.
 
 ### 2.3. Estudio de soluciones existentes
 
