@@ -37,13 +37,12 @@ public class VentanaRecuperarContraseña extends javax.swing.JFrame {
         pnlTitulo = new javax.swing.JPanel();
         txtNuevoMedicamento = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        txtNombre1 = new javax.swing.JTextField();
-        btnGuardar = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        txtNombre2 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        lblDescripcion = new javax.swing.JLabel();
+        lblCorreo = new javax.swing.JLabel();
+        txtCorreo = new javax.swing.JTextField();
+        btnEnviar = new javax.swing.JButton();
+        txtConfirmacion = new javax.swing.JTextField();
+        lblVolverInicioSesion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VentanaNuevoMedicamentos");
@@ -104,47 +103,43 @@ public class VentanaRecuperarContraseña extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(52, 199, 89));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Escribe tu correo y te enviaremos instrucciones");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 380, -1));
+        lblDescripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblDescripcion.setText("Escribe tu correo y te enviaremos instrucciones");
+        jPanel1.add(lblDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 380, -1));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setText("Correo");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, -1, -1));
+        lblCorreo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblCorreo.setText("Correo");
+        jPanel1.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, -1, -1));
 
-        txtNombre1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtNombre1.setForeground(new java.awt.Color(52, 199, 89));
-        txtNombre1.setText("Te hemos enviado un correo con las instrucciones para restablecer tu contraseña");
-        txtNombre1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(52, 199, 89), 3, true));
-        txtNombre1.setPreferredSize(new java.awt.Dimension(343, 41));
-        txtNombre1.setSelectionColor(new java.awt.Color(52, 199, 89));
-        txtNombre1.addActionListener(this::txtNombre1ActionPerformed);
-        jPanel1.add(txtNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 730, 60));
+        txtCorreo.setBackground(new java.awt.Color(186, 209, 217));
+        txtCorreo.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        txtCorreo.setText("nombre@correo.com");
+        txtCorreo.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtCorreo.setPreferredSize(new java.awt.Dimension(343, 41));
+        txtCorreo.addActionListener(this::txtCorreoActionPerformed);
+        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 730, 60));
 
-        btnGuardar.setBackground(new java.awt.Color(59, 106, 118));
-        btnGuardar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setText("Enviar instrucciones");
-        btnGuardar.setBorderPainted(false);
-        btnGuardar.setFocusPainted(false);
-        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 730, 60));
+        btnEnviar.setBackground(new java.awt.Color(59, 106, 118));
+        btnEnviar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        btnEnviar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEnviar.setText("Enviar instrucciones");
+        btnEnviar.setBorderPainted(false);
+        btnEnviar.setFocusPainted(false);
+        jPanel1.add(btnEnviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 730, 60));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 136, 255));
-        jLabel5.setText("Volver a iniciar sesión");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, -1, 20));
+        txtConfirmacion.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        txtConfirmacion.setForeground(new java.awt.Color(52, 199, 89));
+        txtConfirmacion.setText("Te hemos enviado un correo con las instrucciones para restablecer tu contraseña");
+        txtConfirmacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(52, 199, 89), 3, true));
+        txtConfirmacion.setPreferredSize(new java.awt.Dimension(343, 41));
+        txtConfirmacion.setSelectionColor(new java.awt.Color(52, 199, 89));
+        txtConfirmacion.addActionListener(this::txtConfirmacionActionPerformed);
+        jPanel1.add(txtConfirmacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 730, 60));
 
-        txtNombre2.setBackground(new java.awt.Color(186, 209, 217));
-        txtNombre2.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtNombre2.setText("nombre@correo.com");
-        txtNombre2.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtNombre2.setPreferredSize(new java.awt.Dimension(343, 41));
-        txtNombre2.addActionListener(this::txtNombre2ActionPerformed);
-        jPanel1.add(txtNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 730, 60));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("(El mensaje aparece tras pulsar <Enviar instrucciones>)");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, -1, -1));
+        lblVolverInicioSesion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblVolverInicioSesion.setForeground(new java.awt.Color(0, 136, 255));
+        lblVolverInicioSesion.setText("Volver a iniciar sesión");
+        jPanel1.add(lblVolverInicioSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, -1, 20));
 
         pnlContenido.add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -154,13 +149,13 @@ public class VentanaRecuperarContraseña extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
+    private void txtConfirmacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConfirmacionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre1ActionPerformed
+    }//GEN-LAST:event_txtConfirmacionActionPerformed
 
-    private void txtNombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre2ActionPerformed
+    private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre2ActionPerformed
+    }//GEN-LAST:event_txtCorreoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,18 +184,17 @@ public class VentanaRecuperarContraseña extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
-    private javax.swing.JButton btnGuardar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton btnEnviar;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblCorreo;
+    private javax.swing.JLabel lblDescripcion;
+    private javax.swing.JLabel lblVolverInicioSesion;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlEncabezado;
     private javax.swing.JPanel pnlTitulo;
-    private javax.swing.JTextField txtNombre1;
-    private javax.swing.JTextField txtNombre2;
+    private javax.swing.JTextField txtConfirmacion;
+    private javax.swing.JTextField txtCorreo;
     private javax.swing.JLabel txtNuevoMedicamento;
     private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables

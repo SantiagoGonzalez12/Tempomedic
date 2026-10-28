@@ -31,22 +31,21 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
 
         AVISOS = new javax.swing.ButtonGroup();
         pnlContenido = new javax.swing.JPanel();
-        pnlEncabezado = new javax.swing.JPanel();
+        pnlPIN = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
-        txtTempomedic = new javax.swing.JLabel();
-        pnlTitulo = new javax.swing.JPanel();
         txtIntroduceTuPIN = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jdescripcion = new javax.swing.JLabel();
-        jOlvidoPIN = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jPasswordField3 = new javax.swing.JPasswordField();
-        jPasswordField4 = new javax.swing.JPasswordField();
+        lblDescripcion = new javax.swing.JLabel();
+        pnlCasillasPIN = new javax.swing.JPanel();
+        pwdPin1 = new javax.swing.JPasswordField();
+        pwdPin2 = new javax.swing.JPasswordField();
+        pwdPin3 = new javax.swing.JPasswordField();
+        pwdPin4 = new javax.swing.JPasswordField();
         btnDesbloquear = new javax.swing.JButton();
+        lblOlvidoPIN = new javax.swing.JLabel();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("VentanaNuevoMedicamentos");
+        setTitle("VentanaBloqueoPIN");
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(960, 540));
 
@@ -54,84 +53,98 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         pnlContenido.setPreferredSize(new java.awt.Dimension(960, 540));
         pnlContenido.setLayout(new java.awt.BorderLayout());
 
-        pnlEncabezado.setBackground(new java.awt.Color(255, 255, 255));
-        pnlEncabezado.setPreferredSize(new java.awt.Dimension(960, 130));
-        pnlEncabezado.setLayout(new java.awt.GridBagLayout());
+        pnlPIN.setBackground(new java.awt.Color(255, 255, 255));
+        pnlPIN.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 100, 0, 100));
+        pnlPIN.setForeground(new java.awt.Color(255, 255, 255));
+        pnlPIN.setLayout(new java.awt.GridBagLayout());
 
         logo.setText("LOGO");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 8);
-        pnlEncabezado.add(logo, gridBagConstraints);
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        gridBagConstraints.weighty = 1.0;
+        pnlPIN.add(logo, gridBagConstraints);
 
-        txtTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        txtTempomedic.setForeground(new java.awt.Color(59, 106, 118));
-        txtTempomedic.setText("Tempomedic");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
-        gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 0);
-        pnlEncabezado.add(txtTempomedic, gridBagConstraints);
-
-        pnlTitulo.setBackground(new java.awt.Color(255, 255, 255));
-        pnlTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 123, 0, 0));
-        pnlTitulo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtIntroduceTuPIN.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        txtIntroduceTuPIN.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         txtIntroduceTuPIN.setForeground(new java.awt.Color(59, 106, 118));
         txtIntroduceTuPIN.setText("Introduce tu PIN");
-        pnlTitulo.add(txtIntroduceTuPIN, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, -1, -1));
-
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
-        pnlEncabezado.add(pnlTitulo, gridBagConstraints);
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
+        pnlPIN.add(txtIntroduceTuPIN, gridBagConstraints);
 
-        pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
+        lblDescripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblDescripcion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDescripcion.setText("PIN de 4 dígitos");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipadx = 252;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
+        pnlPIN.add(lblDescripcion, gridBagConstraints);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setForeground(new java.awt.Color(52, 199, 89));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlCasillasPIN.setBackground(new java.awt.Color(255, 255, 255));
+        pnlCasillasPIN.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 14, 0));
 
-        jdescripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jdescripcion.setText("PIN de 4 dígitos");
-        jPanel1.add(jdescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, 380, -1));
+        pwdPin1.setBackground(new java.awt.Color(186, 209, 217));
+        pwdPin1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        pwdPin1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pwdPin1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        pwdPin1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        pwdPin1.setMaximumSize(new java.awt.Dimension(64, 72));
+        pwdPin1.setMinimumSize(new java.awt.Dimension(64, 72));
+        pwdPin1.setOpaque(true);
+        pwdPin1.setPreferredSize(new java.awt.Dimension(64, 72));
+        pwdPin1.addActionListener(this::pwdPin1ActionPerformed);
+        pnlCasillasPIN.add(pwdPin1);
 
-        jOlvidoPIN.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jOlvidoPIN.setForeground(new java.awt.Color(0, 136, 255));
-        jOlvidoPIN.setText("¿Olvidaste el PIN? Inicia sesión con tu contraseña");
-        jPanel1.add(jOlvidoPIN, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, -1, 20));
+        pwdPin2.setBackground(new java.awt.Color(186, 209, 217));
+        pwdPin2.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        pwdPin2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pwdPin2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        pwdPin2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        pwdPin2.setMaximumSize(new java.awt.Dimension(64, 72));
+        pwdPin2.setMinimumSize(new java.awt.Dimension(64, 72));
+        pwdPin2.setOpaque(true);
+        pwdPin2.setPreferredSize(new java.awt.Dimension(64, 72));
+        pwdPin2.addActionListener(this::pwdPin2ActionPerformed);
+        pnlCasillasPIN.add(pwdPin2);
 
-        jPasswordField1.setBackground(new java.awt.Color(186, 209, 217));
-        jPasswordField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPasswordField1.addActionListener(this::jPasswordField1ActionPerformed);
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 90, 60, 80));
+        pwdPin3.setBackground(new java.awt.Color(186, 209, 217));
+        pwdPin3.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        pwdPin3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pwdPin3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        pwdPin3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        pwdPin3.setMaximumSize(new java.awt.Dimension(64, 72));
+        pwdPin3.setMinimumSize(new java.awt.Dimension(64, 72));
+        pwdPin3.setOpaque(true);
+        pwdPin3.setPreferredSize(new java.awt.Dimension(64, 72));
+        pwdPin3.addActionListener(this::pwdPin3ActionPerformed);
+        pnlCasillasPIN.add(pwdPin3);
 
-        jPasswordField2.setBackground(new java.awt.Color(186, 209, 217));
-        jPasswordField2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPasswordField2.addActionListener(this::jPasswordField2ActionPerformed);
-        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 60, 80));
+        pwdPin4.setBackground(new java.awt.Color(186, 209, 217));
+        pwdPin4.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        pwdPin4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pwdPin4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        pwdPin4.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        pwdPin4.setMaximumSize(new java.awt.Dimension(64, 72));
+        pwdPin4.setMinimumSize(new java.awt.Dimension(64, 72));
+        pwdPin4.setOpaque(true);
+        pwdPin4.setPreferredSize(new java.awt.Dimension(64, 72));
+        pwdPin4.addActionListener(this::pwdPin4ActionPerformed);
+        pnlCasillasPIN.add(pwdPin4);
 
-        jPasswordField3.setBackground(new java.awt.Color(186, 209, 217));
-        jPasswordField3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPasswordField3.addActionListener(this::jPasswordField3ActionPerformed);
-        jPanel1.add(jPasswordField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 60, 80));
-
-        jPasswordField4.setBackground(new java.awt.Color(186, 209, 217));
-        jPasswordField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jPasswordField4.addActionListener(this::jPasswordField4ActionPerformed);
-        jPanel1.add(jPasswordField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 60, 80));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.insets = new java.awt.Insets(14, 0, 0, 0);
+        pnlPIN.add(pnlCasillasPIN, gridBagConstraints);
 
         btnDesbloquear.setBackground(new java.awt.Color(59, 106, 118));
         btnDesbloquear.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
@@ -139,11 +152,37 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         btnDesbloquear.setText("Desbloquear");
         btnDesbloquear.setBorderPainted(false);
         btnDesbloquear.setFocusPainted(false);
-        btnDesbloquear.setPreferredSize(new java.awt.Dimension(800, 45));
+        btnDesbloquear.setMaximumSize(new java.awt.Dimension(150, 45));
+        btnDesbloquear.setMinimumSize(new java.awt.Dimension(150, 45));
+        btnDesbloquear.setPreferredSize(new java.awt.Dimension(150, 45));
         btnDesbloquear.addActionListener(this::btnDesbloquearActionPerformed);
-        jPanel1.add(btnDesbloquear, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 200, -1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.insets = new java.awt.Insets(14, 0, 0, 0);
+        pnlPIN.add(btnDesbloquear, gridBagConstraints);
 
-        pnlContenido.add(jPanel1, java.awt.BorderLayout.CENTER);
+        lblOlvidoPIN.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        lblOlvidoPIN.setForeground(new java.awt.Color(0, 136, 255));
+        lblOlvidoPIN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblOlvidoPIN.setText("¿Olvidaste el PIN? Inicia sesión con tu contraseña");
+        lblOlvidoPIN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipady = -5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
+        gridBagConstraints.insets = new java.awt.Insets(14, 0, 0, 0);
+        pnlPIN.add(lblOlvidoPIN, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.weighty = 1.0;
+        pnlPIN.add(filler1, gridBagConstraints);
+
+        pnlContenido.add(pnlPIN, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(pnlContenido, java.awt.BorderLayout.CENTER);
 
@@ -151,25 +190,25 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void pwdPin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdPin1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_pwdPin1ActionPerformed
 
-    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+    private void pwdPin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdPin2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField2ActionPerformed
+    }//GEN-LAST:event_pwdPin2ActionPerformed
 
-    private void jPasswordField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField3ActionPerformed
+    private void pwdPin3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdPin3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField3ActionPerformed
-
-    private void jPasswordField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField4ActionPerformed
+    }//GEN-LAST:event_pwdPin3ActionPerformed
 
     private void btnDesbloquearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDesbloquearActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDesbloquearActionPerformed
+
+    private void pwdPin4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdPin4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,18 +238,17 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
     private javax.swing.JButton btnDesbloquear;
-    private javax.swing.JLabel jOlvidoPIN;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JPasswordField jPasswordField3;
-    private javax.swing.JPasswordField jPasswordField4;
-    private javax.swing.JLabel jdescripcion;
+    private javax.swing.Box.Filler filler1;
+    private javax.swing.JLabel lblDescripcion;
+    private javax.swing.JLabel lblOlvidoPIN;
     private javax.swing.JLabel logo;
+    private javax.swing.JPanel pnlCasillasPIN;
     private javax.swing.JPanel pnlContenido;
-    private javax.swing.JPanel pnlEncabezado;
-    private javax.swing.JPanel pnlTitulo;
+    private javax.swing.JPanel pnlPIN;
+    private javax.swing.JPasswordField pwdPin1;
+    private javax.swing.JPasswordField pwdPin2;
+    private javax.swing.JPasswordField pwdPin3;
+    private javax.swing.JPasswordField pwdPin4;
     private javax.swing.JLabel txtIntroduceTuPIN;
-    private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }
