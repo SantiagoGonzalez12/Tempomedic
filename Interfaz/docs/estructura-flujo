@@ -1,0 +1,55 @@
+# Mapa de Navegación y Flujo de Control en TempoMedic
+
+## 1. Introducción y Arquitectura de Navegación
+
+El mapa de navegación de TempoMedic organiza las 10 vistas principales de la aplicación en dos bloques funcionales diferenciados:
+1. **Flujo de Autenticación y Acceso:** controla el registro de usuarios, el inicio de sesión, la recuperación de contraseña y la validación de seguridad biométrica o PIN.
+2. **Flujo Principal de la Aplicación:** estructurado en torno a una barra de navegación lateral fija (Sidebar / Menú principal) que permite la transición directa entre las cuatro secciones principales: **Hoy**, **Medicamentos**, **Citas** y **Ajustes**.
+
+
+## 2. Diagrama de Flujo de Navegación (Sintaxis Mermaid)
+
+```mermaid
+graph TD
+    %% Nodos de Autenticación
+    A[Inicio / Abrir App] --> B{¿Tiene Cuenta?}
+    B -- No --> C[01. Crear cuenta]
+    B -- Sí --> D[02. Iniciar sesión]
+    
+    C --> D
+    D -- Restablecer --> E[03. Recuperar contraseña]
+    E --> D
+    
+    D -- Sesión Activa --> F[04. Bloqueo por PIN / Biometría]
+    
+    %% Flujo Principal
+    F -- PIN Correcto --> G[05. Hoy - Dashboard Principal]
+    
+    %% Menú Lateral Principal (Navegación Global)
+    subgraph Menú Principal / Lateral
+        G
+        H[06. Medicamentos]
+        I[08. Citas]
+        J[10. Ajustes]
+    end
+    
+    %% Transiciones del Menú
+    G <--> H
+    G <--> I
+    G <--> J
+    H <--> I
+    H <--> J
+    I <--> J
+    
+    %% Subflujos
+    H -->|Añadir Medicamento| K[07. Añadir medicamento]
+    K -->|Guardar / Cancelar| H
+    
+    I -->|Pedir Nueva Cita| L[09. Pedir cita]
+    L -->|Confirmar / Cancelar| I
+    
+    J -->|Cerrar Sesión| D
+
+    %% Estilos de Nodos
+    style G fill:#006666,color:#fff,stroke:#333,stroke-width:2px
+    style F fill:#e6f2f2,stroke:#006666,stroke-width:2px
