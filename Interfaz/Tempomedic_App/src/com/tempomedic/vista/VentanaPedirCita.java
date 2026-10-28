@@ -133,7 +133,7 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         cmbEspecialidad.setBackground(new java.awt.Color(186, 209, 217));
         cmbEspecialidad.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         cmbEspecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cardiología", "Dermatología", "Medicina general", "Traumatología" }));
-        cmbEspecialidad.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        cmbEspecialidad.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(5, 12, 5, 12)));
         cmbEspecialidad.setPreferredSize(new java.awt.Dimension(343, 41));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -157,7 +157,7 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         txtCentro.setBackground(new java.awt.Color(186, 209, 217));
         txtCentro.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         txtCentro.setText("Hosp");
-        txtCentro.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtCentro.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(5, 12, 5, 12)));
         txtCentro.setPreferredSize(new java.awt.Dimension(343, 41));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -170,6 +170,7 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         sclSugerencias.setBackground(new java.awt.Color(186, 209, 217));
         sclSugerencias.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         sclSugerencias.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        sclSugerencias.setMinimumSize(new java.awt.Dimension(713, 88));
         sclSugerencias.setPreferredSize(new java.awt.Dimension(713, 88));
 
         lstSugerencias.setBackground(new java.awt.Color(186, 209, 217));
@@ -204,7 +205,7 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         txtFecha.setBackground(new java.awt.Color(186, 209, 217));
         txtFecha.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         txtFecha.setText("dd/mm/aaaa");
-        txtFecha.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtFecha.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(5, 12, 5, 12)));
         txtFecha.setPreferredSize(new java.awt.Dimension(343, 41));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -227,7 +228,7 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         txtHora.setBackground(new java.awt.Color(186, 209, 217));
         txtHora.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         txtHora.setText("--:--");
-        txtHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(5, 12, 5, 12)));
         txtHora.setPreferredSize(new java.awt.Dimension(343, 41));
         txtHora.addActionListener(this::txtHoraActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();

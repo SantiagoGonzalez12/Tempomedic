@@ -146,7 +146,7 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         txtNombre.setBackground(new java.awt.Color(186, 209, 217));
         txtNombre.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         txtNombre.setText("Ibuprofeno");
-        txtNombre.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtNombre.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 12, 10, 12)));
         txtNombre.setPreferredSize(new java.awt.Dimension(343, 41));
         txtNombre.addActionListener(this::txtNombreActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -160,7 +160,7 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         txtDosis.setBackground(new java.awt.Color(186, 209, 217));
         txtDosis.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         txtDosis.setText("400 mg");
-        txtDosis.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtDosis.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 12, 10, 12)));
         txtDosis.setPreferredSize(new java.awt.Dimension(343, 41));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -193,7 +193,7 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         cmbFrecuencia.setBackground(new java.awt.Color(186, 209, 217));
         cmbFrecuencia.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         cmbFrecuencia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cada X horas", "Diaria", "Días concretos" }));
-        cmbFrecuencia.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        cmbFrecuencia.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 12, 10, 12)));
         cmbFrecuencia.setPreferredSize(new java.awt.Dimension(343, 41));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -206,7 +206,7 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         txtPrimeraToma.setBackground(new java.awt.Color(186, 209, 217));
         txtPrimeraToma.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         txtPrimeraToma.setText("--:--");
-        txtPrimeraToma.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtPrimeraToma.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 12, 10, 12)));
         txtPrimeraToma.setPreferredSize(new java.awt.Dimension(343, 41));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -237,7 +237,7 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         rbNotificacion.setForeground(new java.awt.Color(255, 255, 255));
         rbNotificacion.setSelected(true);
         rbNotificacion.setText("Notificación");
-        rbNotificacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        rbNotificacion.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 12, 10, 12)));
         rbNotificacion.setBorderPainted(true);
         rbNotificacion.setFocusPainted(false);
         rbNotificacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -248,7 +248,7 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         AVISOS.add(rbAlarma);
         rbAlarma.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         rbAlarma.setText("Alarma");
-        rbAlarma.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        rbAlarma.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 12, 10, 12)));
         rbAlarma.setBorderPainted(true);
         rbAlarma.setFocusPainted(false);
         rbAlarma.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -259,7 +259,7 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         AVISOS.add(rbAmbos);
         rbAmbos.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         rbAmbos.setText("Ambos");
-        rbAmbos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        rbAmbos.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 12, 10, 12)));
         rbAmbos.setBorderPainted(true);
         rbAmbos.setFocusPainted(false);
         rbAmbos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

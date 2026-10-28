@@ -210,7 +210,7 @@
                         <LineBorder roundedCorners="true" thickness="2"/>
                       </Border>
                       <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
-                        <EmptyBorder bottom="0" left="12" right="12" top="0"/>
+                        <EmptyBorder bottom="10" left="12" right="12" top="10"/>
                       </Border>
                     </CompoundBorder>
                   </Border>
@@ -244,7 +244,7 @@
                         <LineBorder roundedCorners="true" thickness="2"/>
                       </Border>
                       <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
-                        <EmptyBorder bottom="0" left="12" right="12" top="0"/>
+                        <EmptyBorder bottom="10" left="12" right="12" top="10"/>
                       </Border>
                     </CompoundBorder>
                   </Border>
@@ -307,7 +307,7 @@
                         <LineBorder roundedCorners="true" thickness="2"/>
                       </Border>
                       <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
-                        <EmptyBorder bottom="0" left="12" right="12" top="0"/>
+                        <EmptyBorder bottom="10" left="12" right="12" top="10"/>
                       </Border>
                     </CompoundBorder>
                   </Border>
@@ -341,7 +341,7 @@
                         <LineBorder roundedCorners="true" thickness="2"/>
                       </Border>
                       <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
-                        <EmptyBorder bottom="0" left="12" right="12" top="0"/>
+                        <EmptyBorder bottom="10" left="12" right="12" top="10"/>
                       </Border>
                     </CompoundBorder>
                   </Border>
@@ -407,8 +407,15 @@
                     <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="Notificaci&#xf3;n"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder roundedCorners="true" thickness="2"/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder roundedCorners="true" thickness="2"/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="12" right="12" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="true"/>
@@ -430,8 +437,15 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Alarma"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder roundedCorners="true" thickness="2"/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder roundedCorners="true" thickness="2"/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="12" right="12" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="true"/>
@@ -453,8 +467,15 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Ambos"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder roundedCorners="true" thickness="2"/>
+                      <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                        <CompoundBorder>
+                          <Border PropertyName="outside" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder roundedCorners="true" thickness="2"/>
+                          </Border>
+                          <Border PropertyName="inside" info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                            <EmptyBorder bottom="10" left="12" right="12" top="10"/>
+                          </Border>
+                        </CompoundBorder>
                       </Border>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="true"/>
