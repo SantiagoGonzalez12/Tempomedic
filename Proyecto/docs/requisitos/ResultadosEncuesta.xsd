@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <!-- raiz-->
+  <xs:element name="encuestas_salud">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="encuesta" type="tipoEncuesta" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- encuesta -->
+  <xs:complexType name="tipoEncuesta">
+    <xs:sequence>
+      <xs:element name="marcaTemporal" type="xs:dateTime"/>
+      <xs:element name="rangoEdad" type="tipoRangoEdad"/>
+      <xs:element name="preferenciaInicio" type="tipoPreferenciaInicio"/>
+      <xs:element name="distinguirSimbolos" type="tipoSiNo"/>
+      <xs:element name="frecuenciaOlvido" type="xs:string"/>
+      <xs:element name="appActual" type="xs:string" minOccurs="0"/>
+      <xs:element name="quejaApp" type="xs:string" minOccurs="0"/>
+      <xs:element name="privacidad" type="tipoSiNo"/>
+      <xs:element name="usaAppRecordatorio" type="tipoSiNo" minOccurs="0"/>
+      <xs:element name="preferenciaRecordatorio" type="tipoPreferenciaRecordatorio" minOccurs="0"/>
+      <xs:element name="mayorProblema" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+  </xs:complexType>
+
+  <!-- enumeracion -->
+
+  <!-- Rangos de edad -->
+  <xs:simpleType name="tipoRangoEdad">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="menos_18"/>
+      <xs:enumeration value="18_30"/>
+      <xs:enumeration value="31_45"/>
+      <xs:enumeration value="46_60"/>
+      <xs:enumeration value="61_75"/>
+      <xs:enumeration value="mas_75"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Si / No unificado -->
+  <xs:simpleType name="tipoSiNo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="si"/>
+      <xs:enumeration value="no"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Preferencia al abrir la app -->
+  <xs:simpleType name="tipoPreferenciaInicio">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="los_tres"/>
+      <xs:enumeration value="calendario_citas"/>
+      <xs:enumeration value="recordatorios"/>
+      <xs:enumeration value="medicacion_prescrita"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Preferencia de recordatorio + opcion "ambas" -->
+  <xs:simpleType name="tipoPreferenciaRecordatorio">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="una_alarma_con_sonido"/>
+      <xs:enumeration value="una_notificacion_discreta"/>
+      <xs:enumeration value="ambas"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
