@@ -729,13 +729,13 @@ El desarrollo de las interfaces gráficas sigue los cuatro principios rectores d
 
 [6] Servicio de Información sobre Discapacidad. Porcentaje de pacientes que incumplen el tratamiento. 2019
 
-[7] Agencia Española de Protección de Datos (AEPD), "Guía de Privacidad desde el Diseño," Madrid, España, 2019. 21/10/2026. Disponible en: <https://www.aepd.es/guias/guia-privacidad-desde-el-diseno.pdf>
+[7] Agencia Española de Protección de Datos (AEPD), "Guía de Privacidad desde el Diseño," Madrid, España, 2019. 21/10/2026. Disponible en: <https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf>
 
 [8] FormDev Software GmbH, "FlatLaf - Flat Look and Feel for Java Swing," *Maven Central Repository*, 2024. 21/10/2026. Disponible en: <https://central.sonatype.com/artifact/com.formdev/flatlaf>
 
-[9] K. Beck, *Extreme Programming Explained: Embrace Change*, 2nd ed. Boston, MA, USA: Addison-Wesley, 2004.
+[9] K. Beck, *Extreme Programming Explained: Embrace Change*, 2nd ed. Boston, MA, USA: Addison-Wesley, 2004. 21/10/2026. Disponible en: <https://ptgmedia.pearsoncmg.com/images/9780321278654/samplepages/9780321278654.pdf>
 
-[10] Asociación Española de Normalización (AENOR), "Requisitos de accesibilidad para productos y servicios TIC (Norma UNE-EN 301 549:2022)," Madrid, España, 2022. 21/10/2026. Disponible en: <https://www.en-301-549.info/>
+[10] Asociación Española de Normalización (AENOR), "Requisitos de accesibilidad para productos y servicios TIC (Norma UNE-EN 301 549:2022)," Madrid, España, 2022. 21/10/2026. Disponible en: <https://www.une.org/encuentra-tu-norma/busca-tu-norma/norma?c=N0068037>
 
 [11] Organización Mundial de la Salud (OMS), *Adherencia a los tratamientos a largo plazo: Pruebas para la acción*. Ginebra: Organización Mundial de la Salud, 2003. [En línea]. Disponible en: <https://iris.who.int/handle/10665/42704>
 
