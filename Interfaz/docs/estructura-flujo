@@ -4,30 +4,7 @@ Este documento describe cómo se mueve el usuario por **Tempomedic**: desde que 
 
 ## 1. Diagrama del flujo de la aplicación
 
-```mermaid
-flowchart TD
-    A([Abrir app]) --> B{¿Sesión iniciada?}
 
-    B -- No --> L[Iniciar sesión]
-    L --> C[Crear cuenta]
-    L --> R[Recuperar contraseña]
-    L --> P
-    C --> H
-
-    B -- Sí --> P{¿PIN activado?}
-    P -- Sí --> PIN[Bloqueo por PIN]
-    P -- No --> H
-    PIN -- "PIN o biometría" --> H
-
-    H[Hoy] --> MENU{{Menú lateral}}
-    MENU --> M[Medicamentos]
-    MENU --> CI[Citas]
-    MENU --> AJ[Ajustes]
-
-    M --> AM[Añadir medicamento]
-    CI --> PC[Pedir cita]
-    AJ --> OUT[Cerrar sesión o eliminar cuenta]
-```
 
 ## 2. Explicación del flujo
 
