@@ -45,7 +45,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         lblCrearCuenta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("VentanaNuevoMedicamentos");
+        setTitle("VentanaInicioSesion");
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(960, 540));
 
