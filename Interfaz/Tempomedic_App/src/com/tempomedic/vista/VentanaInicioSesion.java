@@ -33,7 +33,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         pnlContenido = new javax.swing.JPanel();
         pnlEncabezado = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
-        txtTempomedic = new javax.swing.JLabel();
+        lblTempomedic = new javax.swing.JLabel();
         pnlFormulario = new javax.swing.JPanel();
         lblDescripcion = new javax.swing.JLabel();
         lblCorreo = new javax.swing.JLabel();
@@ -65,15 +65,15 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 8);
         pnlEncabezado.add(logo, gridBagConstraints);
 
-        txtTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        txtTempomedic.setForeground(new java.awt.Color(59, 106, 118));
-        txtTempomedic.setText("Tempomedic");
+        lblTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        lblTempomedic.setForeground(new java.awt.Color(59, 106, 118));
+        lblTempomedic.setText("Tempomedic");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 0);
-        pnlEncabezado.add(txtTempomedic, gridBagConstraints);
+        pnlEncabezado.add(lblTempomedic, gridBagConstraints);
 
         pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
 
@@ -228,12 +228,12 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
     private javax.swing.JLabel lblCrearCuenta;
     private javax.swing.JLabel lblDescripcion;
     private javax.swing.JLabel lblOlvidaContrasena;
+    private javax.swing.JLabel lblTempomedic;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlEncabezado;
     private javax.swing.JPanel pnlFormulario;
     private javax.swing.JPasswordField pwdContrasena;
     private javax.swing.JTextField txtCorreo;
-    private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }

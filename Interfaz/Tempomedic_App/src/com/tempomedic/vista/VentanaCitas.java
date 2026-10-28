@@ -42,18 +42,18 @@ public class VentanaCitas extends javax.swing.JFrame {
         pnlContenido = new javax.swing.JPanel();
         pnlEncabezado = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
-        txtTempomedic = new javax.swing.JLabel();
-        txtCitas = new javax.swing.JLabel();
+        lblTempomedic = new javax.swing.JLabel();
+        lblCitas = new javax.swing.JLabel();
         sclpnlListaCitas = new javax.swing.JScrollPane();
         pnlListaCitas = new javax.swing.JPanel();
-        pnlTarjetaCita = new javax.swing.JPanel();
+        pnlTarjetaCita1 = new javax.swing.JPanel();
         lblEspecialidad = new javax.swing.JLabel();
         lblFechaHora = new javax.swing.JLabel();
         lblHospital = new javax.swing.JLabel();
         btnEditar = new javax.swing.JButton();
         btnCancelarCita = new javax.swing.JButton();
         filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 12), new java.awt.Dimension(0, 12), new java.awt.Dimension(0, 12));
-        pnlTarjetaCita1 = new javax.swing.JPanel();
+        pnlTarjetaCita2 = new javax.swing.JPanel();
         lblEspecialidad1 = new javax.swing.JLabel();
         lblFechaHora1 = new javax.swing.JLabel();
         lblHospital1 = new javax.swing.JLabel();
@@ -69,6 +69,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         pnlSidebar.setBackground(new java.awt.Color(59, 106, 118));
+        pnlSidebar.setMaximumSize(new java.awt.Dimension(120, 32767));
         pnlSidebar.setMinimumSize(new java.awt.Dimension(120, 0));
         pnlSidebar.setPreferredSize(new java.awt.Dimension(120, 540));
         pnlSidebar.setRequestFocusEnabled(false);
@@ -139,11 +140,11 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.12;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(pnlSidebar, gridBagConstraints);
 
         pnlContenido.setBackground(new java.awt.Color(255, 255, 255));
+        pnlContenido.setPreferredSize(new java.awt.Dimension(860, 540));
         pnlContenido.setLayout(new java.awt.BorderLayout());
 
         pnlEncabezado.setBackground(new java.awt.Color(255, 255, 255));
@@ -160,19 +161,20 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 8);
         pnlEncabezado.add(logo, gridBagConstraints);
 
-        txtTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        txtTempomedic.setForeground(new java.awt.Color(59, 106, 118));
-        txtTempomedic.setText("Tempomedic");
+        lblTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        lblTempomedic.setForeground(new java.awt.Color(59, 106, 118));
+        lblTempomedic.setText("Tempomedic");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 0.5;
-        pnlEncabezado.add(txtTempomedic, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 0);
+        pnlEncabezado.add(lblTempomedic, gridBagConstraints);
 
-        txtCitas.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        txtCitas.setForeground(new java.awt.Color(59, 106, 118));
-        txtCitas.setText("Citas");
+        lblCitas.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblCitas.setForeground(new java.awt.Color(59, 106, 118));
+        lblCitas.setText("Citas");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -180,7 +182,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(4, 18, 4, 0);
-        pnlEncabezado.add(txtCitas, gridBagConstraints);
+        pnlEncabezado.add(lblCitas, gridBagConstraints);
 
         pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
 
@@ -194,13 +196,13 @@ public class VentanaCitas extends javax.swing.JFrame {
         pnlListaCitas.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 18, 0, 18));
         pnlListaCitas.setLayout(new javax.swing.BoxLayout(pnlListaCitas, javax.swing.BoxLayout.Y_AXIS));
 
-        pnlTarjetaCita.setBackground(new java.awt.Color(186, 209, 217));
-        pnlTarjetaCita.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
-        pnlTarjetaCita.setAlignmentX(0.0F);
-        pnlTarjetaCita.setMaximumSize(new java.awt.Dimension(32767, 121));
-        pnlTarjetaCita.setMinimumSize(new java.awt.Dimension(100, 121));
-        pnlTarjetaCita.setPreferredSize(new java.awt.Dimension(800, 121));
-        pnlTarjetaCita.setLayout(new java.awt.GridBagLayout());
+        pnlTarjetaCita1.setBackground(new java.awt.Color(186, 209, 217));
+        pnlTarjetaCita1.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+        pnlTarjetaCita1.setAlignmentX(0.0F);
+        pnlTarjetaCita1.setMaximumSize(new java.awt.Dimension(32767, 121));
+        pnlTarjetaCita1.setMinimumSize(new java.awt.Dimension(100, 121));
+        pnlTarjetaCita1.setPreferredSize(new java.awt.Dimension(300, 121));
+        pnlTarjetaCita1.setLayout(new java.awt.GridBagLayout());
 
         lblEspecialidad.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         lblEspecialidad.setForeground(new java.awt.Color(59, 106, 118));
@@ -211,7 +213,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        pnlTarjetaCita.add(lblEspecialidad, gridBagConstraints);
+        pnlTarjetaCita1.add(lblEspecialidad, gridBagConstraints);
 
         lblFechaHora.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblFechaHora.setForeground(new java.awt.Color(59, 106, 118));
@@ -223,7 +225,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 0);
-        pnlTarjetaCita.add(lblFechaHora, gridBagConstraints);
+        pnlTarjetaCita1.add(lblFechaHora, gridBagConstraints);
 
         lblHospital.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblHospital.setText("Hospital Virgen del Rocío");
@@ -234,7 +236,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 0);
-        pnlTarjetaCita.add(lblHospital, gridBagConstraints);
+        pnlTarjetaCita1.add(lblHospital, gridBagConstraints);
 
         btnEditar.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(59, 106, 118));
@@ -251,7 +253,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 12);
-        pnlTarjetaCita.add(btnEditar, gridBagConstraints);
+        pnlTarjetaCita1.add(btnEditar, gridBagConstraints);
 
         btnCancelarCita.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         btnCancelarCita.setForeground(new java.awt.Color(59, 106, 118));
@@ -268,18 +270,18 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(8, 12, 0, 0);
-        pnlTarjetaCita.add(btnCancelarCita, gridBagConstraints);
+        pnlTarjetaCita1.add(btnCancelarCita, gridBagConstraints);
 
-        pnlListaCitas.add(pnlTarjetaCita);
+        pnlListaCitas.add(pnlTarjetaCita1);
         pnlListaCitas.add(filler3);
 
-        pnlTarjetaCita1.setBackground(new java.awt.Color(186, 209, 217));
-        pnlTarjetaCita1.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
-        pnlTarjetaCita1.setAlignmentX(0.0F);
-        pnlTarjetaCita1.setMaximumSize(new java.awt.Dimension(32767, 121));
-        pnlTarjetaCita1.setMinimumSize(new java.awt.Dimension(100, 121));
-        pnlTarjetaCita1.setPreferredSize(new java.awt.Dimension(800, 121));
-        pnlTarjetaCita1.setLayout(new java.awt.GridBagLayout());
+        pnlTarjetaCita2.setBackground(new java.awt.Color(186, 209, 217));
+        pnlTarjetaCita2.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
+        pnlTarjetaCita2.setAlignmentX(0.0F);
+        pnlTarjetaCita2.setMaximumSize(new java.awt.Dimension(32767, 121));
+        pnlTarjetaCita2.setMinimumSize(new java.awt.Dimension(100, 121));
+        pnlTarjetaCita2.setPreferredSize(new java.awt.Dimension(300, 121));
+        pnlTarjetaCita2.setLayout(new java.awt.GridBagLayout());
 
         lblEspecialidad1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         lblEspecialidad1.setForeground(new java.awt.Color(59, 106, 118));
@@ -290,7 +292,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
-        pnlTarjetaCita1.add(lblEspecialidad1, gridBagConstraints);
+        pnlTarjetaCita2.add(lblEspecialidad1, gridBagConstraints);
 
         lblFechaHora1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblFechaHora1.setForeground(new java.awt.Color(59, 106, 118));
@@ -302,7 +304,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 0);
-        pnlTarjetaCita1.add(lblFechaHora1, gridBagConstraints);
+        pnlTarjetaCita2.add(lblFechaHora1, gridBagConstraints);
 
         lblHospital1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblHospital1.setText("Hospital Virgen Macarena");
@@ -313,7 +315,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 0);
-        pnlTarjetaCita1.add(lblHospital1, gridBagConstraints);
+        pnlTarjetaCita2.add(lblHospital1, gridBagConstraints);
 
         btnEditar1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         btnEditar1.setForeground(new java.awt.Color(59, 106, 118));
@@ -330,7 +332,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 12);
-        pnlTarjetaCita1.add(btnEditar1, gridBagConstraints);
+        pnlTarjetaCita2.add(btnEditar1, gridBagConstraints);
 
         btnCancelarCita1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         btnCancelarCita1.setForeground(new java.awt.Color(59, 106, 118));
@@ -347,9 +349,9 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.ipady = 8;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(8, 12, 0, 0);
-        pnlTarjetaCita1.add(btnCancelarCita1, gridBagConstraints);
+        pnlTarjetaCita2.add(btnCancelarCita1, gridBagConstraints);
 
-        pnlListaCitas.add(pnlTarjetaCita1);
+        pnlListaCitas.add(pnlTarjetaCita2);
 
         sclpnlListaCitas.setViewportView(pnlListaCitas);
 
@@ -376,7 +378,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.88;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(pnlContenido, gridBagConstraints);
 
@@ -445,22 +447,22 @@ public class VentanaCitas extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler5;
     private javax.swing.Box.Filler filler6;
     private javax.swing.Box.Filler filler7;
+    private javax.swing.JLabel lblCitas;
     private javax.swing.JLabel lblEspecialidad;
     private javax.swing.JLabel lblEspecialidad1;
     private javax.swing.JLabel lblFechaHora;
     private javax.swing.JLabel lblFechaHora1;
     private javax.swing.JLabel lblHospital;
     private javax.swing.JLabel lblHospital1;
+    private javax.swing.JLabel lblTempomedic;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlAcciones;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlEncabezado;
     private javax.swing.JPanel pnlListaCitas;
     private javax.swing.JPanel pnlSidebar;
-    private javax.swing.JPanel pnlTarjetaCita;
     private javax.swing.JPanel pnlTarjetaCita1;
+    private javax.swing.JPanel pnlTarjetaCita2;
     private javax.swing.JScrollPane sclpnlListaCitas;
-    private javax.swing.JLabel txtCitas;
-    private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }

@@ -33,10 +33,10 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         pnlContenido = new javax.swing.JPanel();
         pnlEncabezado = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
-        txtTempomedic = new javax.swing.JLabel();
+        lblTempomedic = new javax.swing.JLabel();
         pnlTitulo = new javax.swing.JPanel();
         btnVolver = new javax.swing.JButton();
-        txtPedirCita = new javax.swing.JLabel();
+        lblPedirCita = new javax.swing.JLabel();
         pnlFormulario = new javax.swing.JPanel();
         lblEspecialidad = new javax.swing.JLabel();
         cmbEspecialidad = new javax.swing.JComboBox<>();
@@ -73,16 +73,16 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 8);
         pnlEncabezado.add(logo, gridBagConstraints);
 
-        txtTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        txtTempomedic.setForeground(new java.awt.Color(59, 106, 118));
-        txtTempomedic.setText("Tempomedic");
+        lblTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        lblTempomedic.setForeground(new java.awt.Color(59, 106, 118));
+        lblTempomedic.setText("Tempomedic");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 0);
-        pnlEncabezado.add(txtTempomedic, gridBagConstraints);
+        pnlEncabezado.add(lblTempomedic, gridBagConstraints);
 
         pnlTitulo.setBackground(new java.awt.Color(255, 255, 255));
         pnlTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 123, 0, 0));
@@ -97,10 +97,10 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         btnVolver.setMargin(new java.awt.Insets(0, 0, 0, 0));
         pnlTitulo.add(btnVolver);
 
-        txtPedirCita.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        txtPedirCita.setForeground(new java.awt.Color(59, 106, 118));
-        txtPedirCita.setText("Pedir cita");
-        pnlTitulo.add(txtPedirCita);
+        lblPedirCita.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblPedirCita.setForeground(new java.awt.Color(59, 106, 118));
+        lblPedirCita.setText("Pedir cita");
+        pnlTitulo.add(lblPedirCita);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -299,6 +299,8 @@ public class VentanaPedirCita extends javax.swing.JFrame {
     private javax.swing.JLabel lblEspecialidad;
     private javax.swing.JLabel lblFecha;
     private javax.swing.JLabel lblHora;
+    private javax.swing.JLabel lblPedirCita;
+    private javax.swing.JLabel lblTempomedic;
     private javax.swing.JLabel logo;
     private javax.swing.JList<String> lstSugerencias;
     private javax.swing.JPanel pnlAcciones;
@@ -310,7 +312,5 @@ public class VentanaPedirCita extends javax.swing.JFrame {
     private javax.swing.JTextField txtCentro;
     private javax.swing.JTextField txtFecha;
     private javax.swing.JTextField txtHora;
-    private javax.swing.JLabel txtPedirCita;
-    private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }

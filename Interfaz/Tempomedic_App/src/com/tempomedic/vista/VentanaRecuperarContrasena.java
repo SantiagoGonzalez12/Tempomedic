@@ -33,7 +33,7 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         pnlContenido = new javax.swing.JPanel();
         pnlRecuperar = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
-        txtRecuperarAcceso = new javax.swing.JLabel();
+        lblRecuperarAcceso = new javax.swing.JLabel();
         lblDescripcion = new javax.swing.JLabel();
         lblCorreo = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
@@ -64,15 +64,15 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         gridBagConstraints.weighty = 1.0;
         pnlRecuperar.add(logo, gridBagConstraints);
 
-        txtRecuperarAcceso.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        txtRecuperarAcceso.setForeground(new java.awt.Color(59, 106, 118));
-        txtRecuperarAcceso.setText("Recuperar contraseña");
+        lblRecuperarAcceso.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        lblRecuperarAcceso.setForeground(new java.awt.Color(59, 106, 118));
+        lblRecuperarAcceso.setText("Recuperar contraseña");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
-        pnlRecuperar.add(txtRecuperarAcceso, gridBagConstraints);
+        pnlRecuperar.add(lblRecuperarAcceso, gridBagConstraints);
 
         lblDescripcion.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         lblDescripcion.setText("Escribe tu correo y te enviaremos instrucciones.");
@@ -201,11 +201,11 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
     private javax.swing.JLabel lblConfirmacion;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblDescripcion;
+    private javax.swing.JLabel lblRecuperarAcceso;
     private javax.swing.JLabel lblVolverInicioSesion;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlRecuperar;
     private javax.swing.JTextField txtCorreo;
-    private javax.swing.JLabel txtRecuperarAcceso;
     // End of variables declaration//GEN-END:variables
 }

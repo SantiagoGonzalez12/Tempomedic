@@ -33,7 +33,7 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         pnlContenido = new javax.swing.JPanel();
         pnlPIN = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
-        txtIntroduceTuPIN = new javax.swing.JLabel();
+        lblIntroduceTuPIN = new javax.swing.JLabel();
         lblDescripcion = new javax.swing.JLabel();
         pnlCasillasPIN = new javax.swing.JPanel();
         pwdPin1 = new javax.swing.JPasswordField();
@@ -67,15 +67,15 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         gridBagConstraints.weighty = 1.0;
         pnlPIN.add(logo, gridBagConstraints);
 
-        txtIntroduceTuPIN.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        txtIntroduceTuPIN.setForeground(new java.awt.Color(59, 106, 118));
-        txtIntroduceTuPIN.setText("Introduce tu PIN");
+        lblIntroduceTuPIN.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        lblIntroduceTuPIN.setForeground(new java.awt.Color(59, 106, 118));
+        lblIntroduceTuPIN.setText("Introduce tu PIN");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
-        pnlPIN.add(txtIntroduceTuPIN, gridBagConstraints);
+        pnlPIN.add(lblIntroduceTuPIN, gridBagConstraints);
 
         lblDescripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblDescripcion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -240,6 +240,7 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
     private javax.swing.JButton btnDesbloquear;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel lblDescripcion;
+    private javax.swing.JLabel lblIntroduceTuPIN;
     private javax.swing.JLabel lblOlvidoPIN;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlCasillasPIN;
@@ -249,6 +250,5 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
     private javax.swing.JPasswordField pwdPin2;
     private javax.swing.JPasswordField pwdPin3;
     private javax.swing.JPasswordField pwdPin4;
-    private javax.swing.JLabel txtIntroduceTuPIN;
     // End of variables declaration//GEN-END:variables
 }

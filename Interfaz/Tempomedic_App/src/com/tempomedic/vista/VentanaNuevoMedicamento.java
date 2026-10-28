@@ -33,10 +33,10 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         pnlContenido = new javax.swing.JPanel();
         pnlEncabezado = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
-        txtTempomedic = new javax.swing.JLabel();
+        lblTempomedic = new javax.swing.JLabel();
         pnlTitulo = new javax.swing.JPanel();
         btnVolver = new javax.swing.JButton();
-        txtNuevoMedicamento = new javax.swing.JLabel();
+        lblNuevoMedicamento = new javax.swing.JLabel();
         pnlFormulario = new javax.swing.JPanel();
         lblNombre = new javax.swing.JLabel();
         lblDosis = new javax.swing.JLabel();
@@ -77,16 +77,16 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 8);
         pnlEncabezado.add(logo, gridBagConstraints);
 
-        txtTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        txtTempomedic.setForeground(new java.awt.Color(59, 106, 118));
-        txtTempomedic.setText("Tempomedic");
+        lblTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        lblTempomedic.setForeground(new java.awt.Color(59, 106, 118));
+        lblTempomedic.setText("Tempomedic");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 0);
-        pnlEncabezado.add(txtTempomedic, gridBagConstraints);
+        pnlEncabezado.add(lblTempomedic, gridBagConstraints);
 
         pnlTitulo.setBackground(new java.awt.Color(255, 255, 255));
         pnlTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 123, 0, 0));
@@ -101,10 +101,10 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         btnVolver.setMargin(new java.awt.Insets(0, 0, 0, 0));
         pnlTitulo.add(btnVolver);
 
-        txtNuevoMedicamento.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        txtNuevoMedicamento.setForeground(new java.awt.Color(59, 106, 118));
-        txtNuevoMedicamento.setText("Nuevo medicamento");
-        pnlTitulo.add(txtNuevoMedicamento);
+        lblNuevoMedicamento.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblNuevoMedicamento.setForeground(new java.awt.Color(59, 106, 118));
+        lblNuevoMedicamento.setText("Nuevo medicamento");
+        pnlTitulo.add(lblNuevoMedicamento);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -344,7 +344,9 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
     private javax.swing.JLabel lblDosis;
     private javax.swing.JLabel lblFrecuencia;
     private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNuevoMedicamento;
     private javax.swing.JLabel lblPrimeraToma;
+    private javax.swing.JLabel lblTempomedic;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlAcciones;
     private javax.swing.JPanel pnlAviso;
@@ -357,8 +359,6 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbNotificacion;
     private javax.swing.JTextField txtDosis;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JLabel txtNuevoMedicamento;
     private javax.swing.JTextField txtPrimeraToma;
-    private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }

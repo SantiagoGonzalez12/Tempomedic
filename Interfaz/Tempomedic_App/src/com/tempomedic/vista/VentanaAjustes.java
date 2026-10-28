@@ -45,8 +45,8 @@ public class VentanaAjustes extends javax.swing.JFrame {
         pnlContenido = new javax.swing.JPanel();
         pnlEncabezado = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
-        txtTempomedic = new javax.swing.JLabel();
-        txtAjustes = new javax.swing.JLabel();
+        lblTempomedic = new javax.swing.JLabel();
+        lblAjustes = new javax.swing.JLabel();
         pnlAjustes = new javax.swing.JPanel();
         lblAvisoDefecto = new javax.swing.JLabel();
         pnlAvisoDefecto = new javax.swing.JPanel();
@@ -77,6 +77,7 @@ public class VentanaAjustes extends javax.swing.JFrame {
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         pnlSidebar.setBackground(new java.awt.Color(59, 106, 118));
+        pnlSidebar.setMaximumSize(new java.awt.Dimension(120, 32767));
         pnlSidebar.setMinimumSize(new java.awt.Dimension(120, 0));
         pnlSidebar.setPreferredSize(new java.awt.Dimension(120, 540));
         pnlSidebar.setRequestFocusEnabled(false);
@@ -148,11 +149,11 @@ public class VentanaAjustes extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.12;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(pnlSidebar, gridBagConstraints);
 
         pnlContenido.setBackground(new java.awt.Color(255, 255, 255));
+        pnlContenido.setPreferredSize(new java.awt.Dimension(860, 540));
         pnlContenido.setLayout(new java.awt.BorderLayout());
 
         pnlEncabezado.setBackground(new java.awt.Color(255, 255, 255));
@@ -169,19 +170,20 @@ public class VentanaAjustes extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 8);
         pnlEncabezado.add(logo, gridBagConstraints);
 
-        txtTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        txtTempomedic.setForeground(new java.awt.Color(59, 106, 118));
-        txtTempomedic.setText("Tempomedic");
+        lblTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        lblTempomedic.setForeground(new java.awt.Color(59, 106, 118));
+        lblTempomedic.setText("Tempomedic");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 0.5;
-        pnlEncabezado.add(txtTempomedic, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(8, 0, 0, 0);
+        pnlEncabezado.add(lblTempomedic, gridBagConstraints);
 
-        txtAjustes.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        txtAjustes.setForeground(new java.awt.Color(59, 106, 118));
-        txtAjustes.setText("Ajustes");
+        lblAjustes.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        lblAjustes.setForeground(new java.awt.Color(59, 106, 118));
+        lblAjustes.setText("Ajustes");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -189,7 +191,7 @@ public class VentanaAjustes extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(4, 18, 4, 0);
-        pnlEncabezado.add(txtAjustes, gridBagConstraints);
+        pnlEncabezado.add(lblAjustes, gridBagConstraints);
 
         pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
 
@@ -217,7 +219,7 @@ public class VentanaAjustes extends javax.swing.JFrame {
         rbNotificacion.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         rbNotificacion.setForeground(new java.awt.Color(255, 255, 255));
         rbNotificacion.setText("Notificación");
-        rbNotificacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        rbNotificacion.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 0, 10, 0)));
         rbNotificacion.setBorderPainted(true);
         rbNotificacion.setFocusPainted(false);
         rbNotificacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -228,7 +230,7 @@ public class VentanaAjustes extends javax.swing.JFrame {
         grpAviso.add(rbAlarma);
         rbAlarma.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         rbAlarma.setText("Alarma");
-        rbAlarma.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        rbAlarma.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 0, 10, 0)));
         rbAlarma.setBorderPainted(true);
         rbAlarma.setFocusPainted(false);
         rbAlarma.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -239,7 +241,7 @@ public class VentanaAjustes extends javax.swing.JFrame {
         grpAviso.add(rbAmbos);
         rbAmbos.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         rbAmbos.setText("Ambos");
-        rbAmbos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        rbAmbos.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 0, 10, 0)));
         rbAmbos.setBorderPainted(true);
         rbAmbos.setFocusPainted(false);
         rbAmbos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -274,7 +276,7 @@ public class VentanaAjustes extends javax.swing.JFrame {
         rbNormal.setForeground(new java.awt.Color(255, 255, 255));
         rbNormal.setSelected(true);
         rbNormal.setText("Normal");
-        rbNormal.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        rbNormal.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 0, 10, 0)));
         rbNormal.setBorderPainted(true);
         rbNormal.setFocusPainted(false);
         rbNormal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -285,7 +287,7 @@ public class VentanaAjustes extends javax.swing.JFrame {
         grpTamano.add(rbGrande);
         rbGrande.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         rbGrande.setText("Grande");
-        rbGrande.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        rbGrande.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 0, 10, 0)));
         rbGrande.setBorderPainted(true);
         rbGrande.setFocusPainted(false);
         rbGrande.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -296,7 +298,7 @@ public class VentanaAjustes extends javax.swing.JFrame {
         grpTamano.add(rbMuyGrande);
         rbMuyGrande.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         rbMuyGrande.setText("Muy grande");
-        rbMuyGrande.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        rbMuyGrande.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 0, 10, 0)));
         rbMuyGrande.setBorderPainted(true);
         rbMuyGrande.setFocusPainted(false);
         rbMuyGrande.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -331,7 +333,7 @@ public class VentanaAjustes extends javax.swing.JFrame {
         rbClaro.setForeground(new java.awt.Color(255, 255, 255));
         rbClaro.setSelected(true);
         rbClaro.setText("Claro");
-        rbClaro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        rbClaro.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 0, 10, 0)));
         rbClaro.setBorderPainted(true);
         rbClaro.setFocusPainted(false);
         rbClaro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -342,7 +344,7 @@ public class VentanaAjustes extends javax.swing.JFrame {
         grpTema.add(rbOscuro);
         rbOscuro.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         rbOscuro.setText("Oscuro");
-        rbOscuro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        rbOscuro.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 0, 10, 0)));
         rbOscuro.setBorderPainted(true);
         rbOscuro.setFocusPainted(false);
         rbOscuro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -398,14 +400,14 @@ public class VentanaAjustes extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new java.awt.Color(186, 209, 217));
         btnCerrarSesion.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         btnCerrarSesion.setText("Cerrar sesión");
-        btnCerrarSesion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btnCerrarSesion.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 0, 10, 0)));
         btnCerrarSesion.setFocusPainted(false);
         btnCerrarSesion.setOpaque(true);
         pnlCuenta.add(btnCerrarSesion);
 
         btnEliminarCuenta.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        btnEliminarCuenta.setForeground(new java.awt.Color(255, 59, 59));
-        btnEliminarCuenta.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 59, 59), 2, true));
+        btnEliminarCuenta.setForeground(new java.awt.Color(234, 0, 4));
+        btnEliminarCuenta.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(234, 0, 4), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 0, 10, 0)));
         btnEliminarCuenta.setFocusPainted(false);
         btnEliminarCuenta.setLabel("Eliminar cuenta");
         btnEliminarCuenta.setOpaque(true);
@@ -437,7 +439,7 @@ public class VentanaAjustes extends javax.swing.JFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.88;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(pnlContenido, gridBagConstraints);
 
@@ -486,12 +488,14 @@ public class VentanaAjustes extends javax.swing.JFrame {
     private javax.swing.ButtonGroup grpAviso;
     private javax.swing.ButtonGroup grpTamano;
     private javax.swing.ButtonGroup grpTema;
+    private javax.swing.JLabel lblAjustes;
     private javax.swing.JLabel lblAvisoDefecto;
     private javax.swing.JLabel lblCuenta;
     private javax.swing.JLabel lblNotaEliminar;
     private javax.swing.JLabel lblPrivacidad;
     private javax.swing.JLabel lblTamano;
     private javax.swing.JLabel lblTema;
+    private javax.swing.JLabel lblTempomedic;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlAjustes;
     private javax.swing.JPanel pnlAvisoDefecto;
@@ -509,7 +513,5 @@ public class VentanaAjustes extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbNormal;
     private javax.swing.JRadioButton rbNotificacion;
     private javax.swing.JRadioButton rbOscuro;
-    private javax.swing.JLabel txtAjustes;
-    private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }
