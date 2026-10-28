@@ -55,7 +55,7 @@ Se ha definido una paleta basada en tonos azules y verdes que transmiten confian
 *Nota técnica: El color verde (#9BE5AA) no se utilizará como color de texto sobre fondos blancos o claros, sino como color de fondo de etiquetas o iconos acompañados de texto oscuro, para asegurar el cumplimiento de la norma.*
 
 #### Tipografía y Tamaños (Escalado)
-Se utiliza una tipografía **Sans-Serif** (como Arial, Helvetica o Segoe UI) por su alta legibilidad en pantalla. Se han definido tres escalas de tamaño para adaptarse a las necesidades visuales de los usuarios (especialmente adultos mayores):
+Se utiliza una tipografía **Sans-Serif** (como Arial, Helvetica o Segoe UI) por su alta legibilidad en pantalla. Se han definido tres escalas de tamaño para adaptarse a las necesidades visuales de los usuarios (especialmente edad avanzada):
 
 | Escala | Botones | Texto General | Encabezados / Títulos |
 | :--- | :---: | :---: | :---: |
@@ -65,6 +65,6 @@ Se utiliza una tipografía **Sans-Serif** (como Arial, Helvetica o Segoe UI) por
 
 #### Rejilla, Márgenes y Tamaño de Componentes
 * **Resolución objetivo:** 1920 x 1080 px (mínimo soportado: 1280 x 720 px).
-* **Rejilla base:** Sistema de 12 columnas con un margen exterior de 24 px y un *gutter* (espacio entre columnas) de 16 px.
-* **Área táctil mínima (Target Size):** Todos los botones e iconos interactivos tienen un tamaño mínimo de **48x48 px** (o dp), cumpliendo con las recomendaciones para personas con movilidad reducida o temblores.
-* **Iconos:** Siempre acompañados de texto (nunca solos) para evitar ambigüedades, cumpliendo con el criterio de "Comprensible" de WCAG.
+* **Rejilla base:** sistema de 12 columnas con un margen exterior de 24 px y un *gutter* (espacio entre columnas) de 16 px.
+* **Área táctil mínima (Target Size):** todos los botones e iconos interactivos tienen un tamaño mínimo de **48x48 px** (o dp), cumpliendo con las recomendaciones para personas con movilidad reducida o temblores.
+* **Iconos:** siempre acompañados de texto para evitar ambigüedades, cumpliendo con el criterio de "Comprensible" de WCAG.
