@@ -1,55 +1,74 @@
-# Mapa de Navegación y Flujo de Control en TempoMedic
+# Mapa de navegación y flujo de control
 
-## 1. Introducción y Arquitectura de Navegación
+Este documento describe cómo se mueve el usuario por **Tempomedic**: desde que abre la aplicación hasta que llega a las pantallas principales, y cómo funcionan los menús. Está basado en el mockup de la interfaz (pantallas 01 a 10).
 
-El mapa de navegación de TempoMedic organiza las 10 vistas principales de la aplicación en dos bloques funcionales diferenciados:
-1. **Flujo de Autenticación y Acceso:** controla el registro de usuarios, el inicio de sesión, la recuperación de contraseña y la validación de seguridad biométrica o PIN.
-2. **Flujo Principal de la Aplicación:** estructurado en torno a una barra de navegación lateral fija (Sidebar / Menú principal) que permite la transición directa entre las cuatro secciones principales: **Hoy**, **Medicamentos**, **Citas** y **Ajustes**.
+## 1. Diagrama del flujo de la aplicación
 
+```mermaid
+flowchart TD
+    A([Abrir app]) --> B{¿Sesión iniciada?}
 
-## 2. Diagrama de Flujo de Navegación (Sintaxis Mermaid)
+    B -- No --> L[Iniciar sesión]
+    L --> C[Crear cuenta]
+    L --> R[Recuperar contraseña]
+    L --> P
+    C --> H
 
-mermaid
-graph TD
-    %% Nodos de Autenticación
-    A[Inicio / Abrir App] --> B{¿Tiene Cuenta?}
-    B -- No --> C[01. Crear cuenta]
-    B -- Sí --> D[02. Iniciar sesión]
-    
-    C --> D
-    D -- Restablecer --> E[03. Recuperar contraseña]
-    E --> D
-    
-    D -- Sesión Activa --> F[04. Bloqueo por PIN / Biometría]
-    
-    %% Flujo Principal
-    F -- PIN Correcto --> G[05. Hoy - Dashboard Principal]
-    
-    %% Menú Lateral Principal (Navegación Global)
-    subgraph Menú Principal / Lateral
-        G
-        H[06. Medicamentos]
-        I[08. Citas]
-        J[10. Ajustes]
-    end
-    
-    %% Transiciones del Menú
-    G <--> H
-    G <--> I
-    G <--> J
-    H <--> I
-    H <--> J
-    I <--> J
-    
-    %% Subflujos
-    H -->|Añadir Medicamento| K[07. Añadir medicamento]
-    K -->|Guardar / Cancelar| H
-    
-    I -->|Pedir Nueva Cita| L[09. Pedir cita]
-    L -->|Confirmar / Cancelar| I
-    
-    J -->|Cerrar Sesión| D
+    B -- Sí --> P{¿PIN activado?}
+    P -- Sí --> PIN[Bloqueo por PIN]
+    P -- No --> H
+    PIN -- "PIN o biometría" --> H
 
-    %% Estilos de Nodos
-    style G fill:#006666,color:#fff,stroke:#333,stroke-width:2px
-    style F fill:#e6f2f2,stroke:#006666,stroke-width:2px
+    H[Hoy] --> MENU{{Menú lateral}}
+    MENU --> M[Medicamentos]
+    MENU --> CI[Citas]
+    MENU --> AJ[Ajustes]
+
+    M --> AM[Añadir medicamento]
+    CI --> PC[Pedir cita]
+    AJ --> OUT[Cerrar sesión o eliminar cuenta]
+```
+
+## 2. Explicación del flujo
+
+### Arranque y acceso
+1. **Abrir la app.** Se comprueba si ya hay una sesión iniciada.
+2. **Sin sesión:** se muestra **Iniciar sesión**. Desde ahí el usuario puede:
+   - Entrar con su correo y contraseña.
+   - Ir a **Crear cuenta** si todavía no tiene una. Al crearla accede directamente a **Hoy**.
+   - Ir a **Recuperar contraseña**, donde introduce su correo para recibir instrucciones y después vuelve a Iniciar sesión.
+3. **Con sesión (o tras iniciarla):** si el usuario activó "Pedir PIN al abrir la aplicación" en Ajustes, se muestra **Bloqueo por PIN**. Se desbloquea con el PIN de 4 dígitos o con biometría. Si lo olvida, puede entrar de nuevo con su contraseña. Si el PIN no está activado, se va directo a **Hoy**.
+
+### Pantallas principales y menú
+**Hoy** es la pantalla de inicio. Muestra la medicación del día y las próximas citas. Desde ella, y desde cualquier pantalla principal, el **menú lateral** permite ir a cualquiera de estas secciones:
+
+| Opción del menú | Pantalla | Qué permite |
+|---|---|---|
+| Hoy | 05. Hoy | Ver la medicación de hoy (tomada, pospuesta u omitida) y las próximas citas. |
+| Meds | 06. Medicamentos | Ver, editar y eliminar medicamentos. |
+| Citas | 08. Citas | Ver, editar y cancelar citas médicas. |
+| Ajustes | 10. Ajustes | Configurar avisos, tamaño de texto, tema, privacidad y cuenta. |
+
+Para mantener el diagrama legible no se dibujan las flechas entre todas las secciones: al estar el menú siempre visible, se puede pasar de una a otra directamente.
+
+### Subflujos
+- **Añadir medicamento:** en Medicamentos, el botón "Añadir medicamento" abre el formulario. Al guardar o cancelar se vuelve a la lista.
+- **Pedir cita:** en Citas, el botón "Pedir cita" abre el formulario. Al confirmar se vuelve a la lista.
+- **Ajustes de cuenta:**
+  - *Cerrar sesión* devuelve a Iniciar sesión.
+  - *Eliminar cuenta* (tras confirmación) borra los datos y lleva a Crear cuenta.
+
+## 3. Correspondencia con el mockup
+
+| Nº | Pantalla | Grupo en el mockup |
+|---|---|---|
+| 01 | Crear cuenta | Cuenta |
+| 02 | Iniciar sesión | Cuenta |
+| 03 | Recuperar contraseña | Cuenta |
+| 04 | Bloqueo por PIN | PIN |
+| 05 | Hoy | Normal |
+| 06 | Medicamentos | Normal |
+| 07 | Añadir medicamento | Normal |
+| 08 | Citas | Normal |
+| 09 | Pedir cita | Normal |
+| 10 | Ajustes | Normal |
