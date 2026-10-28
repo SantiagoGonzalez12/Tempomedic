@@ -52,7 +52,7 @@ Es una norma internacional de varias partes desarrollada por la Organización In
 
 ### Aplicación en TempoMedic tras los resultados de la encuesta
 
-En TempoMedic, la adopción rigurosa de estándares responde directamente a las necesidades cuantitativas identificadas en la encuesta inicial realizada a los usuarios ($N = 66$):
+En TempoMedic, la adopción rigurosa de estándares responde directamente a las necesidades cuantitativas identificadas en la encuesta inicial realizada a los usuarios ($N = 75$):
 * **Distribución demográfica (63.6% con 46 años o más):** la gran mayoría del público objetivo presenta necesidades vinculadas al envejecimiento visual (presbicia, pérdida de agudeza visual y menor sensibilidad al contraste), lo que exige tipografías escalables y ratios de contraste reforzados.
 * **Comprensión de simbología e iconos (27.3% indica dificultades para distinguir símbolos):** cerca de un tercio de los usuarios no interpreta con claridad la simbología médica aislada, haciendo imprescindible la asistencia de etiquetas explícitas (Lectura Fácil) y diseño multimodal.
 * **Preferencia de alertas (45.5% prefiere combinación de sonido y notificación):** requiere un sistema flexible de avisos que reduzca los descuidos por olvidos de medicación.
@@ -71,7 +71,7 @@ En TempoMedic, la adopción rigurosa de estándares responde directamente a las 
 
 | Estándar / Pauta | Requisito Principal | Relación con Datos Reales de la Encuesta ($N=66$) | Cómo se aplica en TempoMedic |
 | :--- | :--- | :--- | :--- |
-| **WCAG 2.2 (Criterio 1.4.3)** | Contraste mínimo de 4.5:1 para texto normal y 3:1 para texto grande. | **63.6% de usuarios $\ge$46 años:** Requieren un elevado contraste cromático para prevenir la fatiga y deficiencias visuales. | Paleta de colores seleccionada con un ratio de contraste superior a **7:1** en textos principales, fondos y botones de acción primarios. |
+| **WCAG 2.2 (Criterio 1.4.3)** | Contraste mínimo de 4.5:1 para texto normal y 3:1 para texto grande. | **63.6% de usuarios 46 años:** Requieren un elevado contraste cromático para prevenir la fatiga y deficiencias visuales. | Paleta de colores seleccionada con un ratio de contraste superior a **7:1** en textos principales, fondos y botones de acción primarios. |
 | **WCAG 2.2 (Criterio 1.4.1)** | No depender únicamente del color para transmitir información o estado. | **27.3% no distingue claramente símbolos:** La simbología o el color aislado generan confusión al marcar estados de salud. | Acompañamiento explícito del estado mediante texto e icono reforzado (ej. "Tomada" con un `check` verde o "Pendiente" con texto e icono explicativo). |
 | **ISO 9241-11** | Garantizar usabilidad mediante objetivos claros de eficacia, eficiencia y satisfacción. | **Queja recurrente sobre complejidad y olvidos:** El 63.6 % necesita flujos directos para evitar perderse en la app. | Reducción de la navegación a un máximo de 2 clics para marcar tomas de medicamentos o consultar la agenda médica diaria. |
 | **Heurísticas de Nielsen (#2)** | Relación entre el sistema y el mundo real (uso de lenguaje claro y cotidiano). | **27.3% de dificultad en símbolos/términos:** Los nombres técnicos aumentan el abandono de la app. | Sustitución de términos complejos ("Posología", "Frecuencia circadiana") por expresiones sencillas ("Instrucciones de toma", "¿Cada cuántas horas?"). |
@@ -81,7 +81,7 @@ En TempoMedic, la adopción rigurosa de estándares responde directamente a las 
 
 ## 4. Conclusión
 
-El cumplimiento de estas pautas asegura que TempoMedic no solo se adhiera a las normativas técnicas internacionales, sino que responda de forma personalizada a las necesidades de sus 66 usuarios encuestados, erradicando barreras visuales y cognitivas.
+El cumplimiento de estas pautas asegura que TempoMedic no solo se adhiera a las normativas técnicas internacionales, sino que responda de forma personalizada a las necesidades de sus 75 usuarios encuestados, erradicando barreras visuales y cognitivas.
 
 
 ## Referencias
