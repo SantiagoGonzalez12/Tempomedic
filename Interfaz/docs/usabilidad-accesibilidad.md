@@ -19,14 +19,23 @@ Los principios POUR de WCAG son:
 Se denominan heurísticos porque son reglas generales de usabilidad específica:
 
 **1. Visibilidad del estado del sistema** --> mantener informado a los usuarios
+
 **2. Relación entre el sistema y el mundo real** --> el sistema debe hablar el idioma de los usuarios.
+
 **3. Libertad y control por parte del usuario** --> apoyar funciones de deshacer y rehacer
+
 **4. Consistencia y estándares** --> seguir las convenciones establecidas
+
 **5. Prevención de errores** --> diseño que prevenga la ocurrencia de problemas
+
 **6. Reconocimiento antes que recuerdo** --> las instrucciones deben de estar en la vista o ser fácilmente recuperable cuando sea necesario.
+
 **7. Flexibilidad y eficiencia de uso** --> los usuarios puedan adaptar el sistema a sus usos frecuentes.
+
 **8. Estética y diseño minimalista** --> los diálogos no deben contener información irrelevante o poco usada.
+
 **9. Ayudar a los usuarios a reconocer** --> los mensajes de error se deben entregar en un lenguaje claro y simple para poder ayudar a los usuarios.
+
 **10. Ayuda y documentación** --> cuando sea necesario, ofrecer ayuda y documentación. 
 
 
