@@ -34,8 +34,8 @@
 | | 6.2. Documentar los componentes usados: características y campo de aplicación | [#18](https://github.com/SantiagoGonzalez12/Tempomedic/issues/18) | 28/10/2026 | Santiago González, Alba Durán |
 | | 7. Pautas de la secuencia de control de la aplicación | [#133](https://github.com/SantiagoGonzalez12/Tempomedic/issues/133) | | Jorge Espejo, María Dolores Barba |
 | | 7.1. Mapa de navegación y flujo de control | [#62](https://github.com/SantiagoGonzalez12/Tempomedic/issues/62) | 28/10/2026 | Jorge Espejo, María Dolores Barba |
-| | 8. Cronograma de ejecución | [#55](https://github.com/SantiagoGonzalez12/Tempomedic/issues/55) | | Jorge Espejo, Alba Durán |
-| | 8.1. Crear el cronograma (Gantt) | [#56](https://github.com/SantiagoGonzalez12/Tempomedic/issues/56) | | Jorge Espejo, Alba Durán |
+| | 8. Cronograma de ejecución | [#55](https://github.com/SantiagoGonzalez12/Tempomedic/issues/55) | |antiago González, Jorge Espejo, Alba Durán, María Dolores Barba |
+| | 8.1. Crear el cronograma (Gantt) | [#56](https://github.com/SantiagoGonzalez12/Tempomedic/issues/56) | | antiago González, Jorge Espejo, Alba Durán, María Dolores Barba |
 | | 9. Entrega y evidencias Sprint 2 | [#134](https://github.com/SantiagoGonzalez12/Tempomedic/issues/134) | | Santiago González, Jorge Espejo, Alba Durán, María Dolores Barba |
-| | 9.1. Redactar el README | [#75](https://github.com/SantiagoGonzalez12/Tempomedic/issues/75) | | Jorge Espejo, Alba Durán |
-| | 9.2. Presentación en Google Slides y ensayo | [#76](https://github.com/SantiagoGonzalez12/Tempomedic/issues/76) | | Jorge Espejo, Alba Durán |
+| | 9.1. Redactar el README | [#75](https://github.com/SantiagoGonzalez12/Tempomedic/issues/75) | | antiago González, Jorge Espejo, Alba Durán, María Dolores Barba |
+| | 9.2. Presentación en Google Slides y ensayo | [#76](https://github.com/SantiagoGonzalez12/Tempomedic/issues/76) | | antiago González, Jorge Espejo, Alba Durán, María Dolores Barba |
