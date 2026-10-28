@@ -2,4 +2,4 @@
 
 | | Nombre | Nº Issue | Fecha | Contribuyente |
 | --- | --- | --- | --- | --- |
-| X | ... | ... | ... | ... |
+| X | ... | [#](https://github.com/SantiagoGonzalez12/Tempomedic/issues/) | dd/mm/aaaa | @ |
