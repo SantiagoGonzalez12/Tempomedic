@@ -82,7 +82,7 @@ Para mantener el diagrama legible no se dibujan las flechas entre todas las secc
 | 01 | Crear cuenta | Cuenta |
 | 02 | Iniciar sesión | Cuenta |
 | 03 | Recuperar contraseña | Cuenta |
-| 04 | Bloqueo por PIN | pin |
+| 04 | Bloqueo por PIN | PIN |
 | 05 | Hoy | Normal |
 | 06 | Medicamentos | Normal |
 | 07 | Añadir medicamento | Normal |
