@@ -173,13 +173,11 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         pnlFormulario.add(pwdRepetirContrasena, gridBagConstraints);
 
         btnCrearCuenta.setBackground(new java.awt.Color(59, 106, 118));
-        btnCrearCuenta.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        btnCrearCuenta.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         btnCrearCuenta.setForeground(new java.awt.Color(255, 255, 255));
         btnCrearCuenta.setText("Crear cuenta");
         btnCrearCuenta.setBorderPainted(false);
         btnCrearCuenta.setFocusPainted(false);
-        btnCrearCuenta.setMaximumSize(null);
-        btnCrearCuenta.setPreferredSize(null);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;

@@ -34,17 +34,15 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         pnlEncabezado = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
         txtTempomedic = new javax.swing.JLabel();
-        pnlTitulo = new javax.swing.JPanel();
-        txtNuevoMedicamento = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtNombre1 = new javax.swing.JTextField();
-        btnGuardar = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        pnlFormulario = new javax.swing.JPanel();
+        lblDescripcion = new javax.swing.JLabel();
+        lblCorreo = new javax.swing.JLabel();
+        txtCorreo = new javax.swing.JTextField();
+        lblContrasena = new javax.swing.JLabel();
+        pwdContrasena = new javax.swing.JPasswordField();
+        btnCrearCuenta = new javax.swing.JButton();
+        lblOlvidaContrasena = new javax.swing.JLabel();
+        lblCrearCuenta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VentanaNuevoMedicamentos");
@@ -63,8 +61,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 8);
         pnlEncabezado.add(logo, gridBagConstraints);
 
@@ -72,85 +69,121 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         txtTempomedic.setForeground(new java.awt.Color(59, 106, 118));
         txtTempomedic.setText("Tempomedic");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.5;
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 0);
         pnlEncabezado.add(txtTempomedic, gridBagConstraints);
 
-        pnlTitulo.setBackground(new java.awt.Color(255, 255, 255));
-        pnlTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 123, 0, 0));
-        pnlTitulo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
 
-        txtNuevoMedicamento.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        txtNuevoMedicamento.setForeground(new java.awt.Color(59, 106, 118));
-        txtNuevoMedicamento.setText("Tempomedic");
-        pnlTitulo.add(txtNuevoMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, -1));
+        pnlFormulario.setBackground(new java.awt.Color(255, 255, 255));
+        pnlFormulario.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 198, 0, 198));
+        pnlFormulario.setLayout(new java.awt.GridBagLayout());
 
+        lblDescripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblDescripcion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDescripcion.setText("Entra con tu correo y tu contraseña.");
+        lblDescripcion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.weightx = 1.0;
+        pnlFormulario.add(lblDescripcion, gridBagConstraints);
+
+        lblCorreo.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lblCorreo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblCorreo.setText("Correo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 4, 0);
+        pnlFormulario.add(lblCorreo, gridBagConstraints);
+
+        txtCorreo.setBackground(new java.awt.Color(186, 209, 217));
+        txtCorreo.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        txtCorreo.setText("nombre@correo.com");
+        txtCorreo.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(59, 106, 118), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        txtCorreo.setPreferredSize(new java.awt.Dimension(563, 41));
+        txtCorreo.addActionListener(this::txtCorreoActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.ipadx = 666;
+        gridBagConstraints.ipady = 13;
+        gridBagConstraints.weightx = 1.0;
+        pnlFormulario.add(txtCorreo, gridBagConstraints);
+
+        lblContrasena.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        lblContrasena.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblContrasena.setText("Contraseña");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 4, 0);
+        pnlFormulario.add(lblContrasena, gridBagConstraints);
+
+        pwdContrasena.setBackground(new java.awt.Color(186, 209, 217));
+        pwdContrasena.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        pwdContrasena.setText("Contraseña");
+        pwdContrasena.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(59, 106, 118), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
+        pwdContrasena.setPreferredSize(new java.awt.Dimension(563, 41));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.ipadx = 666;
+        gridBagConstraints.ipady = 20;
+        gridBagConstraints.weightx = 1.0;
+        pnlFormulario.add(pwdContrasena, gridBagConstraints);
+
+        btnCrearCuenta.setBackground(new java.awt.Color(59, 106, 118));
+        btnCrearCuenta.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        btnCrearCuenta.setForeground(new java.awt.Color(255, 255, 255));
+        btnCrearCuenta.setText("Iniciar sesión");
+        btnCrearCuenta.setBorderPainted(false);
+        btnCrearCuenta.setFocusPainted(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.ipadx = 609;
+        gridBagConstraints.ipady = 14;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
+        pnlFormulario.add(btnCrearCuenta, gridBagConstraints);
+
+        lblOlvidaContrasena.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblOlvidaContrasena.setForeground(new java.awt.Color(0, 136, 255));
+        lblOlvidaContrasena.setText("¿Olvidaste tu contraseña?");
+        lblOlvidaContrasena.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
+        pnlFormulario.add(lblOlvidaContrasena, gridBagConstraints);
+
+        lblCrearCuenta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblCrearCuenta.setForeground(new java.awt.Color(0, 136, 255));
+        lblCrearCuenta.setText("Crear cuenta");
+        lblCrearCuenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
-        pnlEncabezado.add(pnlTitulo, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
+        pnlFormulario.add(lblCrearCuenta, gridBagConstraints);
 
-        pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Entra con tu correo y contraseña");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 270, -1));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Contraseña");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
-
-        txtNombre.setBackground(new java.awt.Color(186, 209, 217));
-        txtNombre.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtNombre.setText("•••••••••");
-        txtNombre.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtNombre.setPreferredSize(new java.awt.Dimension(343, 41));
-        txtNombre.addActionListener(this::txtNombreActionPerformed);
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 730, -1));
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setText("Correo");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, -1, -1));
-
-        txtNombre1.setBackground(new java.awt.Color(186, 209, 217));
-        txtNombre1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtNombre1.setText("nombre@correo.com");
-        txtNombre1.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtNombre1.setPreferredSize(new java.awt.Dimension(343, 41));
-        txtNombre1.addActionListener(this::txtNombre1ActionPerformed);
-        jPanel1.add(txtNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 730, -1));
-
-        btnGuardar.setBackground(new java.awt.Color(59, 106, 118));
-        btnGuardar.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setText("Iniciar Sesión");
-        btnGuardar.setBorderPainted(false);
-        btnGuardar.setFocusPainted(false);
-        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 730, 40));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 136, 255));
-        jLabel4.setText("¿Olvidaste tu contraseña?");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 136, 255));
-        jLabel5.setText("Crear cuenta");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, -1, -1));
-
-        pnlContenido.add(jPanel1, java.awt.BorderLayout.CENTER);
+        pnlContenido.add(pnlFormulario, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(pnlContenido, java.awt.BorderLayout.CENTER);
 
@@ -158,13 +191,9 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+    private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreActionPerformed
-
-    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre1ActionPerformed
+    }//GEN-LAST:event_txtCorreoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,20 +222,18 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
-    private javax.swing.JButton btnGuardar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton btnCrearCuenta;
+    private javax.swing.JLabel lblContrasena;
+    private javax.swing.JLabel lblCorreo;
+    private javax.swing.JLabel lblCrearCuenta;
+    private javax.swing.JLabel lblDescripcion;
+    private javax.swing.JLabel lblOlvidaContrasena;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlEncabezado;
-    private javax.swing.JPanel pnlTitulo;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtNombre1;
-    private javax.swing.JLabel txtNuevoMedicamento;
+    private javax.swing.JPanel pnlFormulario;
+    private javax.swing.JPasswordField pwdContrasena;
+    private javax.swing.JTextField txtCorreo;
     private javax.swing.JLabel txtTempomedic;
     // End of variables declaration//GEN-END:variables
 }
