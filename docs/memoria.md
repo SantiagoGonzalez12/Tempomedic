@@ -71,27 +71,27 @@ Java - Swing - NetBeans Matisse - MVC - salud digital - Health - recordatorios d
   - [4.5. Casos de uso o historias de usuario](#45-casos-de-uso-o-historias-de-usuario)
   - [4.6. Priorización de requisitos](#46-priorización-de-requisitos)
   - [4.7. Matriz de trazabilidad de requisitos](#47-matriz-de-trazabilidad-de-requisitos)
-- [5. DISEÑO DE LA SOLUCIÓN]()
-  - [5.1. Visión general de la arquitectura]()
-  - [5.2. Arquitectura software]()
-    - [5.2.1. Patrón arquitectónico utilizado]()
-    - [5.2.2. Componentes y módulos]()
-    - [5.2.3. Comunicación entre componentes]()
-  - [5.3. Diseño de la base de datos]()
-    - [5.3.1. Modelo conceptual]()
-    - [5.3.2. Modelo lógico]()
-    - [5.3.3. Modelo físico]()
-    - [5.3.4. Diccionario de datos]()
-  - [5.4. Diseño de la interfaz de usuario]()
-    - [5.4.1. Principios de usabilidad y accesibilidad]()
-    - [5.4.2. Mapa de navegación]()
-    - [5.4.3. Wireframes o prototipos]()
-    - [5.4.4. Diseño visual final]()
-  - [5.5. Diseño de seguridad]()
-    - [5.5.1. Autenticación y autorización]()
-    - [5.5.2. Protección de datos]()
-    - [5.5.3. Gestión de errores y validaciones]()
-  - [5.6. Diseño de integraciones y APIs externas]()
+- [5. DISEÑO DE LA SOLUCIÓN](#5-diseño-de-la-solución)
+  - [5.1. Visión general de la arquitectura](#51-visión-general-de-la-arquitectura)
+  - [5.2. Arquitectura software](#52-arquitectura-software)
+    - [5.2.1. Patrón arquitectónico utilizado](#521-patrón-arquitectónico-utilizado)
+    - [5.2.2. Componentes y módulos](#522-componentes-y-módulos)
+    - [5.2.3. Comunicación entre componentes](#523-comunicación-entre-componentes)
+  - [5.3. Diseño de la base de datos](#53-diseño-de-la-base-de-datos)
+    - [5.3.1. Modelo conceptual](#531-modelo-conceptual)
+    - [5.3.2. Modelo lógico](#532-modelo-lógico)
+    - [5.3.3. Modelo físico](#533-modelo-físico)
+    - [5.3.4. Diccionario de datos](#534-diccionario-de-datos)
+  - [5.4. Diseño de la interfaz de usuario](#54-diseño-de-la-interfaz-de-usuario)
+    - [5.4.1. Principios de usabilidad y accesibilidad](#541-principios-de-usabilidad-y-accesibilidad)
+    - [5.4.2. Mapa de navegación](#542-mapa-de-navegación)
+    - [5.4.3. Wireframes o prototipos](#543-wireframes-o-prototipos)
+    - [5.4.4. Diseño visual final](#544-diseño-visual-final)
+  - [5.5. Diseño de seguridad](#55-diseño-de-seguridad)
+    - [5.5.1. Autenticación y autorización](#551-autenticación-y-autorización)
+    - [5.5.2. Protección de datos](#552-protección-de-datos)
+    - [5.5.3. Gestión de errores y validaciones](#553-gestión-de-errores-y-validaciones)
+  - [5.6. Diseño de integraciones y APIs externas](#56-diseño-de-integraciones-y-apis-externas)
 - [6. DESARROLLO E IMPLEMENTACIÓN](#6-desarrollo-e-implementación)
   - [6.1. Tecnologías, lenguajes y frameworks utilizados](#61-tecnologías-lenguajes-y-frameworks-utilizados)
   - [6.6. Implementación de la interfaz de usuario](#66-implementación-de-la-interfaz-de-usuario)
@@ -231,23 +231,66 @@ El entorno productivo en el que operará la solución es un ecosistema híbrido 
 
   ### 2.2.1. ¿Qué deben hacer y aportar?
 
-#### 2.2.1.1. Caracterización del sector
+#### 2.2.1.2. Caracterización del sector
 
-#### A. Ámbito de actividad
+El ámbito en el que se enmarca **Tempomedic** forma parte del sector de la **Salud Digital (*eHealth / mHealth*)**, una de las áreas tecnológicas con mayor crecimiento e impacto en el bienestar de las personas. La digitalización de la salud ha dejado de ser una simple opción moderna para convertirse en una necesidad básica que garantiza el cuidado de los pacientes, el seguimiento continuado de los tratamientos 
+Para comprender a fondo el entorno en el que operará la aplicación, sus tendencias y las formas de trabajo del sector, se ha analizado la información procedente de indicadores oficiales de la Comisión Europea, las estrategias del Ministerio de Sanidad y diversos informes de la sanidad pública:
 
-El sector sanitario se encuentra en un proceso de transformación donde la atención no se limita a la visita presencial en el centro médico, sino que se extiende al hogar del paciente a través del seguimiento contínuo desde casa.
+1. **Ámbito de actividad y modelo de atención:** El sector está cambiando el modelo tradicional, basado casi exclusivamente en ir en persona al centro médico, por un sistema mixto de salud digital. Este nuevo enfoque se centra en dar herramientas al propio paciente para que pueda gestionar su salud desde casa, ya sea para tratamientos diarios de por vida o para medicaciones temporales.
+2. **Brecha digital y perfil de la población:** A pesar de que la tecnología está al alcance de la mayoría, el sector se enfrenta a una brecha digital evidente. Los informes europeos sobre economía y sociedad digital señalan que, aunque España cuenta con excelentes infraestructuras de salud digital, gran parte de las personas que toman medicación de forma continua (adultos mayores de 46 años) no tienen competencias digitales avanzadas. Esto coincide punto por punto con los resultados de la encuesta propia realizada a 66 personas para este proyecto, donde el 70% supera los 46 años y un 29% admite que le cuesta entender las aplicaciones si los iconos no llevan un texto explicativo a su lado.
+3. **Seguridad, normas y funcionamiento sin internet:** Las aplicaciones de este sector deben diseñarse garantizando la privacidad desde el primer minuto. Además, debido a que los teléfonos móviles modernos restringen las aplicaciones en segundo plano para ahorrar batería, el sistema de avisos y alarmas debe ser capaz de sonar por sí solo de forma local y autónoma, sin depender de si el usuario tiene o no conexión a internet en ese momento.
 
-#### B. Tendencias de digitalización del sector
+  -----------
+  ### 2.2.2 Aportación documental
+##### 2.2.2.1. Tabla descriptiva del sector de la Salud Digital y características organizativas
 
-1. **Empoderamiento del paciente:** Transición de un modelo pasivo a uno donde el usuario gestiona activamente sus citas, recetas y hábitos de salud mediante aplicaciones accesibles en dispositivos personales.
-2. **Uso de interfaces accesibles e inclusivas:** Apuesta por diseños limpios, con tonos cromáticos relajantes (como tonos azules) y componentes visuales adaptados a personas de avanzada edad o con diversidad funcional visual.
-3. **Pérdida de adherencia como problema global:** Estudios del sector de la salud digital destacan que entre el 30% y el 50% de los pacientes crónicos no toman adecuadamente su medicación. La digitalización busca resolver este déficit mediante sistemas automáticos de notificación y trazabilidad.
+| Dimensión / Parámetro | Descripción y Situación Actual en el Sector | Impacto y Requisito Operativo para Tempomedic |
+| :--- | :--- | :--- |
+| **Ámbito de Actividad** | Salud Digital (*eHealth* / *mHealth*), centrada en el autocuidado, la adherencia terapéutica y la gestión personal de consultas en atención primaria y especializada. | Centralización de tratamientos y citas en un único dashboard diario ("Hoy"), eliminando la dispersión de datos. |
+| **Estructura Organizativa de Partida** | Procesos tradicionales basados en agendas en papel, pastilleros físicos y recordatorios manuales con elevada tasa de olvidos. | Digitalización estructurada de pautas de tomas y alertas automáticas locales sin requerir conexión a internet. |
+| **Tendencias de Digitalización** | Crecimiento exponencial del uso de aplicaciones móviles de salud. | Adopción de un flujo continuo de notificaciones/alarmas y preparación del sistema para exportación a calendarios.|
+| **Brecha Digital y Demografía** | El sector atiende a una población mayoritaria de más de 46 años con competencias digitales básicas o limitadas. | Exigencia estricta de usabilidad (botones amplios, fuentes escalables y contraste). |
+| **Seguridad y Normativa** | Alta exigencia de privacidad por parte del usuario (95% en encuesta). | Arquitectura *Privacy by Design*: almacenamiento 100% local en el dispositivo, PIN opcional de desbloqueo y consentimiento expreso|
+| **Interoperabilidad y Autonomía** | Restricciones de ahorro de batería de los SO  y falta de flexibilidad en agendas sanitarias tradicionales | Ejecución autónoma de alarmas locales en el cliente y prevención de cancelación de avisos en segundo plano |
+-----
 
-#### C. Necesidades tecnológicas del sector
+#### 2.2.3. Segmentación de perfiles de usuario (User Personas)
 
-- **Centralización de la información sanitaria personal:** Unificar en una única herramienta la agenda y el plan de medicación para evitar la dispersión de datos.
-- **Alertas y notificaciones persistentes:** Implementación de recordatorios fiables que funcionen incluso en segundo plano.
-- **Arquitecturas modulares y escalables (MVC):** Necesidad de plataformas desacopladas que permitan conectar la lógica de negocio con interfaces limpias y adaptables 
+A partir de los datos recopilados en la encuesta propia realizada a 66 usuarios y del análisis de competencias digitales del sector público y socio-sanitario, se han definido tres arquetipos o *User Personas* representativos. 
+
+#### 2.2.3.1. Fichas de Buyer Persona / User Persona
+
+##### Ficha 1: Carmen Ruiz – Paciente Mayor / Crónica Polimedicada (User Persona Principal)
+* **Rol laboral / Ocupación:** Jubilada (68 años) / Paciente con hipertensión y diabetes tipo 2.
+* **Competencias digitales previas:** **Básicas / Limitadas.** Usuario funcional de *smartphone* para WhatsApp y llamadas. Presenta dificultades ante menús anidados, fuentes pequeñas e iconos abstractos sin texto
+* **Entorno de uso habitual:** **Dispositivo móvil (*Smartphone*)** personal en el entorno del hogar.
+* **Objetivos principales al utilizar el sistema:**
+  * Confirmar con un solo clic sus 4 tomas diarias de medicación evitando descuidos mediante avisos sonoros fiables
+
+  * Consultar rápidamente la fecha y hora de sus próximas revisiones médicas en el centro de salud sin perderse por la app
+* **Condicionantes UI/UX (DII / Swing):** Ajuste de texto "Muy grande", botones amplios con contraste visual elevado (≥ 4.5:1), ausencia de gestos complejos y texto explicativo en todos los iconos
+
+
+##### Ficha 2: Javier Martínez – Cuidador Familiar / Perfil Ocupado (User Persona Secundario)
+* **Rol laboral / Ocupación:** Responsable Administrativo (48 años) / Familiar a cargo de la gestión médica de su madre dependiente
+* **Competencias digitales previas:** **Intermedias / Avanzadas.** Habituado al uso diario de herramientas ofimáticas, correo y gestión multitarea en ordenador
+* **Entorno de uso habitual:** **Entorno mixto:** **Terminal de escritorio (PC)** durante su jornada laboral y **dispositivo móvil** fuera de la oficina.
+* **Objetivos principales al utilizar el sistema:**
+  * Organizar las citas médicas de su familiar sin interferir en su jornada laboral y reprogramar pautas complejas rápidamente
+  * Operar la herramienta con máxima agilidad desde el ordenador mediante el teclado
+* **Condicionantes UI/UX (DII / Swing):** Panel de navegación lateral en versión de escritorio, tabulación asistida completa con foco visible (`Tab`, `Enter`, `Esc`), atajos de teclado y formularios bien estructurados.
+
+##### Ficha 3: Elena Gómez – Tratamiento Temporal / Perfil Joven (User Persona Terciario)
+* **Rol laboral / Ocupación:** Estudiante universitaria / Empleada júnior (24 años) / Tratamiento de antibióticos por 10 días
+* **Competencias digitales previas:** **Nativas / Muy Altas.** Manejo fluido de aplicaciones móviles y entornos digitales complejos
+* **Entorno de uso habitual:** **Dispositivo móvil (*Smartphone*)** en movilidad (universidad, transporte, trabajo).
+* **Objetivos principales al utilizar el sistema:**
+  * Dar de alta un tratamiento puntual "cada 8 horas" en menos de un minuto
+  * Recibir notificaciones discretas que no interrumpan su actividad laboral o académica
+  * Archivar o eliminar la pauta al terminar los 10 días sin dejar rastro de datos residuales
+* **Condicionantes UI/UX (DII / Swing):** Formularios de alta rápida, estética visual moderna (*FlatLaf*), notificaciones nativas silenciosas y flujo directo para marcar tomas
+
+
 
 ### 2.2. Análisis de la necesidad
 
@@ -298,6 +341,8 @@ Con estas 4 propuesta se quiere conseguir:
 **Literatura de lo investigado**
 
 - Organización Mundial de la Salud: la OMS dicta que más del 50% de los pacientes con problemas de salud crónica no se toman la medicación como es debido y, del 75% los psiquiátricos, provocando así que los síntomas se agraven y tengan un coste más elevado para el paciente. La preocupación de los sanitarios no es solo esa, sino que a algunos pacientes, las medicinas le provocan daño evitando que se las tomen. Por esto último, la OMS ha determinado que la Medicación sin daño es el tema del tercer reto mundial por la seguridad del paciente.
+
+- Quironsalud: señala que las varias organizaciones sanitarias detectan varios errores en los pacientes a la hora de la toma de la medicación, según el estudio, oscilan entre el 20% y el 60% de los que originaron daños de salud en el paciente. Piensan que la causa de esto es el desconocimiento. Para apaciguar estos datos, el Instituto para el Uso Seguro de los Medicamentos ha lanzado una campaña de concienciación e información.
 
 ### 2.3. Estudio de soluciones existentes
 
@@ -408,33 +453,94 @@ Su propuesta de valor diferencial reside en tres pilares:
 
 #### 2.4.1 ¿En qué consiste?
 
+El análisis de partes interesadas consiste en mapear a todas las personas, colectivos, departamentos o entidades que tienen interés en el proyecto o que se verán impactados directa o indirectamente por su implantación. En el contexto de Tempomedic, este mapeo es crítico debido a la naturaleza sensible de los datos tratados y a la brecha digital existente en el público objetivo.
+
 #### 2.4.2 ¿Qué deben de hacer y aportar?
 
 ##### 2.4.2.1 Identificación exhaustiva
 
+Se diferencian dos grandes bloques de actores:
+
+- **Partes interesadas internas:**
+  - **Equipo de desarrollo (Grupo 2):** encargados del diseño, prototipado y desarrollo de la aplicación. Formado por perfiles Frontend, Backend, QA Tester y Scrum Master.
+  - **Tutor del módulo (Willman Acosta Lugo):** actúa como *Product Owner* académico, evaluando el cumplimiento de los criterios de evaluación del Real Decreto 405/2023 [4] y guiando el alcance del proyecto.
+- **Partes interesadas externas:**
+  - **Pacientes/Usuarios finales (Perfil principal):** personas con tratamientos crónicos o puntuales que necesitan gestionar su medicación y citas. Incluye un alto porcentaje de adultos mayores (según nuestra encuesta, el 70% supera los 46 años), lo que exige interfaces de alta accesibilidad.
+  - **Cuidadores/Familiares (Perfil secundario):** personas que supervisan la medicación de dependientes.
+  - **Profesionales sanitarios (Indirecto):** médicos y farmacéuticos que se benefician de una mayor adherencia al tratamiento por parte del paciente, aunque no interactúan directamente con la app en esta fase.
+  - **Organismos reguladores (Indirecto):** la Agencia Española de Protección de Datos (AEPD), que vela por el cumplimiento del RGPD y la LOPDGDD [7].
+
 ##### 2.4.2.2 Análisis de poder e interés
+
+Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs. interés (Mendelow):
+
+- **Alto poder / Alto interés (Gestionar de cerca):** el tutor del módulo y el equipo de desarrollo. Su implicación es total y las decisiones afectan al núcleo del proyecto.
+- **Bajo poder / Alto interés (Mantener informados):** los pacientes y cuidadores. Aunque no deciden sobre el software, son los usuarios finales; su feedback a través de la encuesta ha definido el diseño de la interfaz (UI/UX).
+- **Alto poder / Bajo interés (Mantener satisfechos):** organismos reguladores (AEPD). No intervienen en el día a día, pero sus normas condicionan la arquitectura (privacidad desde el diseño).
+- **Bajo poder / Bajo interés (Monitorizar):** profesionales sanitarios, cuyo interés aumentará en futuras fases si se integran APIs de historiales clínicos.
 
 ##### 2.4.2.3 Aportación documental
 
 ##### 2.4.2.3.1 Matriz de Interesados (Poder vs. Interés)
 
+| Rol / Grupo | Tipo (Interno/Externo) | Expectativas principales | Nivel de influencia | Estrategia de comunicación recomendada |
+| :--- | :--- | :--- | :--- | :--- |
+| **Equipo de desarrollo** | Interno | Claridad en los requisitos, cumplimiento de plazos, buena comunicación. | Alto | Reuniones diarias (Daily Scrum), tablero de GitHub Projects. |
+| **Tutor del Proyecto** | Interno | Rigor técnico, cumplimiento normativo y de los RA del currículo. | Alto | Tutorías programadas, entregas documentales vía repositorio. |
+| **Paciente / Mayor** | Externo | Facilidad de uso, recordatorios fiables, texto legible, no fallos. | Bajo | Encuestas (fase de diseño), pruebas de usabilidad (fase de test). |
+| **Cuidador / Familiar** | Externo | Delegación de alertas, control de tomas omitidas. | Bajo | (Futuro) Manual de usuario y guías de accesibilidad. |
+| **AEPD / Reguladores** | Externo | Cumplimiento estricto del RGPD, seguridad de datos sensibles. | Alto | Documentación técnica (Privacy by Design), políticas de privacidad. |
+| **Profesionales Sanitarios** | Externo | Mejora de la adherencia al tratamiento. | Bajo | Informes/documentación generada por el paciente (fase 2). |
+
 ### 2.5. Estudio de viabilidad técnica
 
 #### 2.5.1 ¿En qué consiste?
+
+Demuestra de forma razonada que el equipo y la infraestructura disponible cuentan con la capacidad técnica necesaria para construir, integrar y desplegar la solución con garantías. Dado que Tempomedic se encuentra en su fase de prototipado, esta viabilidad se centra en la elección del *stack*(conjunto de herramientas, lenguajes de programación, bases de datos y frameworks) para el prototipo de escritorio y la preparación para el salto a móvil.
 
 #### 2.5.2 ¿Qué deben hacer y aportar?
 
 ##### 2.5.2.1 Pila tecnológica (Tech Stack)
 
+La elección del *stack* se ha realizado priorizando la robustez, el conocimiento previo del equipo (curva de aprendizaje) y la capacidad de generar interfaces accesibles.
+
+- **Lenguaje:** **Java (JDK 17 o superior)**. Lenguaje maduro, tipado y multiplataforma, núcleo del ciclo DAM.
+- **Interfaz Gráfica:** **Java Swing con NetBeans Matisse**. Se utiliza el editor visual para agilizar la maquetación de las 5 vistas principales. Para solventar la estética anticuada de Swing, se integra la librería **FlatLaf (v3.7.2)** [8]. Esta librería es crucial porque permite implementar temas claros/oscuros y mejorar el contraste visual, es un requisito indispensable para la accesibilidad de usuarios mayores.
+- **Arquitectura:** **MVC (Modelo-Vista-Controlador)**. Permite separar la lógica de negocio (Modelo) de la interfaz (Vista) y de la gestión de eventos (Controlador).
+- **Gestión de dependencias:** **Apache Maven**. Facilita la inclusión de librerías externas (como FlatLaf) y el empaquetado del proyecto.
+- **Persistencia:** en el Sprint 1, los datos se gestionan **en memoria**. Para fases posteriores, se prevé el uso de SQLite (local) o PostgreSQL (servidor).
+
 ##### 2.5.2.2 Requisitos de hardware y despliegue
 
+- **Equipos de desarrollo:** ordenadores personales con Windows/Linux, 8GB de RAM mínimo (recomendado 16GB) y JDK instalado.
+- **Equipos cliente (Prototipo actual):** cualquier equipo de escritorio con JRE instalado. Al ser Swing, el consumo de recursos es bajo, lo que garantiza su funcionamiento en equipos antiguos de centros de salud o de usuarios finales.
+- **Equipos cliente (Producto final):** dispositivos móviles con Android 8.0 o superior (API 26+), garantizando cobertura para más del 90% de los dispositivos del mercado.
+
 ##### 2.5.2.3 Curva de aprendizaje y madurez técnica
+
+El equipo posee conocimientos sólidos en Java y Swing. Sin embargo, la introducción de **FlatLaf** supone un reto inicial. Para mitigar el riesgo (identificado en el apartado 8), se ha realizado un *Tech Spike* temprano [9] para validar su integración.
+
+- **Resultado del Spike:** se ha comprobado que la inicialización de FlatLaf mediante `FlatLightLaf.setup()` y el cambio dinámico a modo oscuro mediante `FlatDarkLaf.setup()` funcionan correctamente en el prototipo de NetBeans sin romper la navegación por teclado.
+- **Accesibilidad:** el equipo ha tenido que formarse en los principios de las pautas WCAG 2.1 y la norma UNE-EN 301 549 [10] para garantizar que los componentes (botones, textos, contrastes) cumplan con los requisitos legales de accesibilidad.
 
 ##### 2.5.2.4 Aportación documental
 
 ###### 2.5.2.4.1 Ficha técnica del stack de desarrollo y entorno de ejecución
 
+| Componente | Tecnología / Herramienta | Justificación técnica |
+| :--- | :--- | :--- |
+| **Lenguaje** | Java (JDK 17) | Conocimiento del equipo, robustez, multiplataforma. |
+| **GUI** | Swing + NetBeans Matisse | Desarrollo rápido de UI, editor visual integrado. |
+| **Look & Feel** | FlatLaf 3.7.2 | Mejora de usabilidad, contraste y soporte de temas oscuros (WCAG). |
+| **Arquitectura** | Patrón MVC | Separación de responsabilidades, mantenibilidad y testabilidad. |
+| **Dependencias** | Apache Maven | Gestión automatizada de librerías y ciclo de vida. |
+| **Persistencia (Sprint 1)** | Estructuras en memoria (Colecciones Java) | Suficiente para validar la lógica del prototipo sin sobrecargar el diseño. |
+| **Persistencia (Futuro)** | SQLite / Room | Almacenamiento local offline (requisito de privacidad de la app). |
+| **Control de versiones** | Git / GitHub | Trazabilidad de cambios y gestión ágil del Sprint. |
+
 ###### 2.5.2.4.2 Conclusión explícita sobre la viabilidad técnica del desarrollo
+
+El desarrollo de Tempomedic es **técnicamente viable**. El uso de Java, Swing y Maven se alinea perfectamente con las competencias adquiridas en el ciclo formativo de DAM. La integración de FlatLaf soluciona la principal debilidad visual de Swing y garantiza que el prototipo pueda cumplir con los requisitos de accesibilidad exigidos. La separación mediante MVC asegura que, de cara a futuros sprints, la migración de la lógica desde el prototipo de escritorio hacia una aplicación móvil (Android o multiplataforma) sea escalable, reutilizando gran parte del modelo de datos y las reglas de negocio.
 
 ### 2.6. Estudio de viabilidad económica
 
@@ -442,9 +548,84 @@ Su propuesta de valor diferencial reside en tres pilares:
 
 #### 2.7.1. Protección de datos personales
 
+El desarrollo y despliegue de Tempomedic cumple estrictamente con el marco legal europeo y español regulado por el Reglamento General de Protección de Datos (RGPD, Reglamento UE 2016/679) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).
+
+#### Identificación de los datos recabados
+
+La aplicación procesa dos categorías diferenciadas de datos de carácter personal:
+
+1. **Datos identificativos y de acceso:** Correo electrónico, nombre o apodo, hash de la contraseña de la cuenta y PIN local opcional de 4 dígitos.
+2. **Datos de salud (Categoría especial, Art. 9 RGPD):** Nombres de medicamentos, dosis, pautas de toma (frecuencias y horarios), historial de seguimiento diario de tomas (marcadas como tomada, pospuesta u omitida) y la agenda de citas médicas (especialidades, médicos y lugares).
+
+#### Base de legitimación jurídica
+
+- **Ejecución contractual / relación de servicio (Art. 6.1.b RGPD):** Aplica a la gestión de las credenciales de la cuenta de usuario.
+- **Consentimiento explícito e inequívoco (Art. 6.1.a y Art. 9.2.a RGPD):** Exigido obligatoriamente para el tratamiento de datos de salud mediante una casilla de verificación (*checkbox*) desmarcada por defecto en el formulario de registro, vinculada a la Política de Privacidad de Tempomedic.
+
+#### Medidas de diseño orientadas a la privacidad (Privacy by Design y Privacy by Default)
+
+Atendiendo al principio de Privacidad desde el Diseño y por Defecto (Art. 25 RGPD):
+
+- **Control de Acceso basado en Roles (RBAC):** Garantiza que los módulos de datos y repositorios restringen el acceso exclusivamente al usuario propietario.
+- **Cifrado y hashing seguro de credenciales:** Las contraseñas se almacenan procesadas mediante algoritmos de hashing lento con sal aleatoria (*salting*) BCrypt / Argon2id. La aplicación no almacena contraseñas en texto claro.
+- **Persistencia local restrictiva (Privacy by Default):** Todos los registros de tratamientos y citas permanecen exclusivamente en el almacenamiento local del dispositivo móvil durante la fase actual del software.
+- **Capa adicional de protección física:** Opción de bloqueo al iniciar la app mediante PIN de 4 dígitos o biometría simulada.
+
+#### Derechos ARSOPL y política de retención
+
+Tempomedic asegura el ejercicio completo de los derechos de Acceso, Rectificación, Supresión, Oposición, Portabilidad y Limitación del tratamiento. A través de la pantalla de Ajustes, la función `Eliminar cuenta` realiza la supresión física, inmediata e irreversible de todas las credenciales y registros locales del usuario en el dispositivo
+
 #### 2.7.2. Propiedad intelectual y licencias
 
+El proyecto Tempomedic respeta la normativa europea y nacional sobre propiedad intelectual (Real Decreto Legislativo 1/1996, de Ley de Propiedad Intelectual), asegurando el uso legítimo del software y de todos los componentes de terceros integrados en la pila tecnológica.
+
+#### Licencia elegida para el proyecto
+
+Tempomedic se distribuye bajo la **Licencia MIT**. Se ha seleccionado esta licencia de código abierto de carácter permisivo por los siguientes motivos:
+
+- **Ámbito académico y colaborativo:** Facilita la reutilización del código y la auditoría por parte del equipo docente y la comunidad de desarrolladores.
+- **Flexibilidad y protección:** Otorga libertad para usar, copiar, modificar y redistribuir el software, exigiendo únicamente la conservación del aviso de copyright original, al tiempo que exime a los autores de cualquier responsabilidad o garantía.
+
+#### Inventario de licencias de dependencias
+
+A continuación se detalla el inventario de las librerías y componentes de terceros integrados mediante el gestor de dependencias Maven (`pom.xml`) y el entorno de ejecución Java:
+
+| Componente / Librería | Versión | Uso / Módulo en la App | Licencia de Terceros | Compatibilidad con MIT |
+| :--- | :--- | :--- | :--- | :--- |
+| **FlatLaf** | 3.x | Look and Feel moderno de Swing, temas claro/oscuro y componentes visuales adaptados | Apache License 2.0 | **Totalmente compatible** (Permisiva, requiere conservar avisos de licencia). |
+| **JUnit Jupiter** | 5.x | Framework de pruebas unitarias y automatizadas en entorno de desarrollo (`test`) | Eclipse Public License 2.0 (EPL 2.0) | **Compatible** (Uso aislado en fase de compilación/test sin afectación de código final). |
+| **Java Swing (OpenJDK)** | JDK 21 | Framework de interfaz gráfica de usuario y gestión de eventos de ventana | GPLv2 + Classpath Exception | **Totalmente compatible** (La cláusula *Classpath Exception* permite enlazado dinámico sin forzar GPL). |
+| **NetBeans Layout Library** | Bundled | Generación de layouts dinámicos (`GroupLayout`) mediante el diseñador visual Matisse | BSD 3-Clause / Apache 2.0 | **Totalmente compatible** (Licencia permisiva sin restricciones de redistribución). |
+
+#### Análisis de compatibilidad jurídica
+
+El análisis del árbol de dependencias confirma la **ausencia total de Incompatibilidades legales**:
+
+1. **Compatibilidad Apache 2.0 y MIT:** La librería gráfica **FlatLaf** opera bajo Apache 2.0, la cual permite la integración directa con proyectos bajo licencia MIT siempre que se mantenga el fichero de licencias de la librería.
+2. **Exención de Copyleft de la JVM:** Aunque OpenJDK se distribuye bajo GPLv2, la presencia explícita de la excepción *Classpath Exception* garantiza que las aplicaciones desarrolladas sobre Java Swing no queden sujetas a la obligación de redistribuirse bajo GPL pura.
+
 #### 2.7.3. Accesibilidad y otros requisitos aplicables
+
+La accesibilidad universal se ha integrado como un requisito no funcional desde el inicio del diseño de Tempomedic, atendiendo a la normativa legal europea y nacional así como a las limitaciones sensoriales y motrices identificadas en la encuesta previa de necesidades.
+
+#### Adopción de principios de accesibilidad y marco normativo
+
+El desarrollo de las interfaces gráficas sigue los cuatro principios rectores de las Pautas de Accesibilidad para el Contenido Web (WCAG 2.2 Nivel AA) y la norma UNE-EN 301 549:2022 sobre requisitos de accesibilidad para productos y servicios TIC:
+
+1. **Perceptible:** La información visual respeta ratios de contraste exigentes y no depende únicamente del color.
+2. **Operable:** La totalidad de las acciones se pueden ejecutar por teclado de forma secuencial y estructurada.
+3. **Comprensible:** Los textos, botones y estados son claros, legibles y previsibles.
+4. **Robusto:** Los componentes Swing incorporan información semántica para lectores de pantalla de asistencia.
+
+#### Justificación de decisiones en la interfaz de usuario
+
+| Criterio de Accesibilidad | Especificación Técnica en Tempomedic | Justificación Normativa y Emprírica |
+| :--- | :--- | :--- |
+| **Contraste cromático** | Colores corporativos: `#3B6A76` (Azul oscuro), `#BAD1D9` (Azul claro), `#FFFFFF` (Blanco), `#000000` (Negro) y `#9BE5AA` (Verde). El texto principal (`#000000` o `#3B6A76`) sobre fondos claros (`#FFFFFF` o `#BAD1D9`) alcanza ratios de contraste superiores a **4.5:1**. | Supera el umbral exigido por WCAG 2.2 (Criterio 1.4.3 Nivel AA) para lectura cómoda sin fatiga visual. |
+| **Doble codificación de estados** | Toda indicación de toma o cita combina icono gráfico y etiqueta de texto explícita (*"Tomada"*, *"Pospuesta"*, *"Omitida"*). | Responde al dato empírico donde el 29 % de los encuestados no distingue iconos médicos aislados y a WCAG 2.2 (Criterio 1.4.1). |
+| **Escalabilidad de fuentes** | Tipografía Sans-Serif con tres modos de escala global seleccionables en Ajustes:<br>- **Normal:** Botones 14pt \| Texto 18pt \| Encabezados 24pt<br>- **Grande:** Botones 18pt \| Texto 22pt \| Encabezados 30pt<br>- **Muy grande:** Botones 22pt \| Texto 26pt \| Encabezados 36pt | Garantiza la legibilidad al ~70 % de usuarios encuestados con 46 años o más, dando cumplimiento al Criterio 1.4.4 de WCAG 2.2. |
+| **Navegación por teclado** | Recorrido de foco con tabulación lógica (`Tab` / `Shift+Tab`), activación por `Enter` / `Espacio` y cancelación por `Esc`. Indicador de foco visible (*focus ring*). | Cumple con la operabilidad sin ratón establecida en la norma UNE-EN 301 549 (Sección 11.3) y WCAG 2.2 (Criterios 2.1.1 y 2.4.7). |
+| **Lectores de pantalla y resolución** | Declaración de `AccessibleContext` (`AccessibleName`, `AccessibleDescription`) en componentes Swing. Resolución de pantalla adaptada a ordenador a **1920 x 1080 px** (mínimo soportado **1280 x 720 px**). | Facilita la interpretación por tecnologías de asistencia como NVDA o JAWS (UNE-EN 301 549, Sección 11.5) y asegura un maquetado claro en escritorio. |
 
 ### 2.8. Análisis de riesgos inicial
 
@@ -486,6 +667,48 @@ Su propuesta de valor diferencial reside en tres pilares:
 
 ### 4.7. Matriz de trazabilidad de requisitos
 
+## 5. DISEÑO DE LA SOLUCIÓN
+
+### 5.1. Visión general de la arquitectura
+
+### 5.2. Arquitectura software
+
+#### 5.2.1. Patrón arquitectónico utilizado
+
+#### 5.2.2. Componentes y módulos
+
+#### 5.2.3. Comunicación entre componentes
+
+### 5.3. Diseño de la base de datos
+
+#### 5.3.1. Modelo conceptual
+
+#### 5.3.2. Modelo lógico
+
+#### 5.3.3. Modelo físico
+
+#### 5.3.4. Diccionario de datos
+
+### 5.4. Diseño de la interfaz de usuario
+
+#### 5.4.1. Principios de usabilidad y accesibilidad
+
+#### 5.4.2. Mapa de navegación
+
+#### 5.4.3. Wireframes o prototipos
+
+#### 5.4.4. Diseño visual final
+
+### 5.5. Diseño de seguridad
+
+#### 5.5.1. Autenticación y autorización
+
+#### 5.5.2. Protección de datos
+
+#### 5.5.3. Gestión de errores y validaciones
+
+### 5.6. Diseño de integraciones y APIs externas
+
 ## 6. DESARROLLO E IMPLEMENTACIÓN
 
 ### 6.1. Tecnologías, lenguajes y frameworks utilizados
@@ -505,3 +728,41 @@ Su propuesta de valor diferencial reside en tres pilares:
 [5] Organización Mundial de la Salud (OMS). Medicación Sin Daño. 2022 <https://www.who.int/es/initiatives/medication-without-harm>
 
 [6] Servicio de Información sobre Discapacidad. Porcentaje de pacientes que incumplen el tratamiento. 2019
+
+[7] Agencia Española de Protección de Datos (AEPD), "Guía de Privacidad desde el Diseño," Madrid, España, 2019. 21/10/2026. Disponible en: <https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf>
+
+[8] FormDev Software GmbH, "FlatLaf - Flat Look and Feel for Java Swing," *Maven Central Repository*, 2024. 21/10/2026. Disponible en: <https://central.sonatype.com/artifact/com.formdev/flatlaf>
+
+[9] K. Beck, *Extreme Programming Explained: Embrace Change*, 2nd ed. Boston, MA, USA: Addison-Wesley, 2004. 21/10/2026. Disponible en: <https://ptgmedia.pearsoncmg.com/images/9780321278654/samplepages/9780321278654.pdf>
+
+[10] Asociación Española de Normalización (AENOR), "Requisitos de accesibilidad para productos y servicios TIC (Norma UNE-EN 301 549:2022)," Madrid, España, 2022. 21/10/2026. Disponible en: <https://www.une.org/encuentra-tu-norma/busca-tu-norma/norma?c=N0068037>
+
+[11] Organización Mundial de la Salud (OMS), *Adherencia a los tratamientos a largo plazo: Pruebas para la acción*. Ginebra: Organización Mundial de la Salud, 2003. [En línea]. Disponible en: <https://iris.who.int/handle/10665/42704>
+
+[12] Organización Mundial de la Salud (OMS), *Global strategy on digital health 2020-2025*. Geneva: World Health Organization, 2021. [En línea]. Disponible en: <https://iris.who.int/handle/10665/344249>
+
+[13] E. Heller, *Psicología del color: Cómo actúan los colores sobre los sentimientos y la razón*. Barcelona: Editorial Gustavo Gili, 2008. [En línea]. Disponible en: <https://gustavogili.com/psicologia-del-color-libro.html>
+
+[14] "Reglamento (UE) 2016/679 (RGPD)" Boe.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.boe.es/doue/2016/119/L00001-00088.pdf>
+
+[15] “BOE-A-2018-16673 Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales”, Boe.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673>
+
+[16] "Resumen EUR-Lex RGPD" Europa.eu. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://eur-lex.europa.eu/ES/legal-content/summary/general-data-protection-regulation-gdpr.html>
+
+[17] “Normativa sobre datos personales”, Gob.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.hacienda.gob.es/es-ES/El%20Ministerio/Paginas/DPD/Normativa_PD.aspx>
+
+[18] P. Álgidos, “Marco de seguridad, legalidad y accesibilidad riguroso”, Github.com. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://github.com/user-attachments/files/33927910/DAM_DAW_PI.Sprint02MarcoLegal.pdf>
+
+[19] LICENSE at main · JFormDesigner/FlatLaf. Disponible en: <https://github.com/JFormDesigner/FlatLaf/blob/main/LICENSE>
+
+[20] LICENSE.md at main · junit-team/junit-framework. Disponible en: <https://github.com/junit-team/junit-framework/blob/main/LICENSE.md>
+
+[21] “BOE-A-2023-13221 Real Decreto 405/2023, de 29 de mayo, por el que se actualizan los títulos de la formación profesional del sistema educativo de Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y Técnico Superior en Desarrollo de Aplicaciones Web, de la familia profesional Informática y Comunicaciones, y se fijan sus enseñanzas mínimas”, Boe.es. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-13221>
+
+[22] “Qué es la UNE EN 301549”, Accede Me. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://accedeme.com/blog/que-es-la-une-en-301549>
+
+[23] "W3C Web Content Accessibility Guidelines (WCAG) 2.2" w3.org. Consultado: el 25 de octubre de 2026. [En línea]. Disponible en: <https://www.w3.org/TR/WCAG22/>
+
+[24] "Los problemas de suministro de medicamentos, un desafío creciente que pude generar desconfianza hacia los profesionales". elglobal. Consultado: el 21 de octubre de 2026. [En línea]. Disponible en: <https://elglobalfarma.com/farmacia/los-problemas-de-suministro-de-medicamentos-un-desafio-creciente-que-puede-generar-desconfianza-hacia-los-profesionales/>
+
+[25] "Prevenir los errores en la toma de medicamentos". quironsalud. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://www.tucanaldesalud.com/es/tusaludaldia/articulos/prevenir-errores-toma-medicamentos>
