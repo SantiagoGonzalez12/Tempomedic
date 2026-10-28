@@ -39,6 +39,11 @@ A continuación se documentan los atajos implementados en el sistema:
 | `Enter` | Confirmar acción principal (Guardar, Iniciar sesión) | Formularios y Diálogos |
 | `Esc` | Cancelar / Cerrar ventana actual | Formularios y Diálogos |
 
+
+## Mapa de navegación y flujo de control
+
+![Diagrama de flujo de TempoMedic](<imagen/DF TempoMedic.png>)
+
 ## Referencias
 
 [1] J. Nielsen, "10 Usability Heuristics for User Interface Design," Nielsen Norman Group, 1994. 28/10/2026. Disponible en: https://www.nngroup.com/articles/ten-usability-heuristics/
