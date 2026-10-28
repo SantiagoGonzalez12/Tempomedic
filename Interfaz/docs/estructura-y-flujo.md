@@ -42,7 +42,7 @@ A continuación se documentan los atajos implementados en el sistema:
 
 ## Mapa de navegación y flujo de control
 
-![Diagrama de flujo de TempoMedic](<imagen/DF TempoMedic.png>)
+![Diagrama de flujo de TempoMedic](img/DF%20TempoMedic.png)
 
 ## Referencias
 
