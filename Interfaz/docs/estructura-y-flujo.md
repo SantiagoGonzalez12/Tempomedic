@@ -42,6 +42,8 @@ A continuación se documentan los atajos implementados en el sistema:
 ## Referencias
 
 [1] J. Nielsen, "10 Usability Heuristics for User Interface Design," Nielsen Norman Group, 1994. 28/10/2026. Disponible en: https://www.nngroup.com/articles/ten-usability-heuristics/
+
 [2] W3C, "Web Content Accessibility Guidelines (WCAG) 2.1," W3C Recommendation, Jun. 2018. 28/10/2026. Disponible en: https://www.w3.org/TR/WCAG21/
+
 [3] International Organization for Standardization, "Ergonomics of human-system interaction — Part 110: Interaction principles," ISO 9241-110:2020, 2020. 28/10/2026. https://standards.iteh.ai/catalog/standards/cen/7cfeb7e3-9a82-44af-871c-116631d1d051/en-iso-9241-110-2020?srsltid=AYCX9vKtdD5r3ffqdpOTbjhs6Ok49pDhoBx865ISll5Ncp0lw-5z90j3
 
