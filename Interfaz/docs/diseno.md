@@ -47,23 +47,23 @@ Se ha definido una paleta basada en tonos azules y verdes que transmiten confian
 
 | Par de Colores | Uso | Ratio de Contraste | Cumple 4.5:1 (Normal) | Cumple 3:1 (Grande) |
 | :--- | :--- | :---: | :---: | :---: |
-| **#3B6A76** (Azul oscuro) sobre **#FFFFFF** (Blanco) | Texto principal, títulos, texto de botones en barra lateral | **5.8 : 1** | 🟩 | 🟩 |
-| **#FFFFFF** (Blanco) sobre **#3B6A76** (Azul oscuro) | Texto en botones primarios (ej. "Iniciar sesión") | **5.8 : 1** | 🟩 | 🟩 |
-| **#000000** (Negro) sobre **#FFFFFF** (Blanco) | Texto general en el fondo de la app | **21.0 : 1** | 🟩 | 🟩 |
-| **#000000** (Negro) sobre **#BAD1D9** (Azul claro) | Texto en campos de texto, tarjetas o tablas | **13.2 : 1** | 🟩 | 🟩 |
-| **#3B6A76** (Azul oscuro) sobre **#BAD1D9** (Azul claro) | Iconos o textos secundarios en las tarjetas | **4.8 : 1** | 🟩 | 🟩 |
-| **#000000** (Negro) sobre **#39C85D** (Verde) | Texto del estado "Tomada" o confirmación (fondo verde) | **7.4 : 1** | 🟩 | 🟩 |
-| **#39C85D** (Verde) sobre **#FFFFFF** (Blanco) | Texto o icono verde sobre fondo blanco | **2.2 : 1** | 🟥 | 🟥 |
-| **#000000** (Negro) sobre **#FF8D28** (Naranja) | Texto del estado "Pendiente" o "Posponer" (fondo naranja) | **8.8 : 1** | 🟩 | 🟩 |
-| **#FF8D28** (Naranja) sobre **#FFFFFF** (Blanco) | Texto o icono naranja sobre fondo blanco | **1.9 : 1** | 🟥 | 🟥 |
-| **#FFFFFF** (Blanco) sobre **#FF3D40** (Rojo) | Texto en botón de acción destructiva (fondo rojo) | **3.7 : 1** | 🟥 (Falla para texto normal) | 🟩 (Válido solo si es texto grande o negrita de 14pt+) |
-| **#FF3D40** (Rojo) sobre **#FFFFFF** (Blanco) | Texto de error o botón "Eliminar cuenta" sin fondo | **3.7 : 1** | 🟥 | 🟩 |
+| **`#3B6A76`** sobre **`#FFFFFF`** | Texto principal, títulos, texto de botones en barra lateral | **5.8 : 1** | 🟩 | 🟩 |
+| **`#FFFFFF`** sobre **`#3B6A76`** | Texto en botones primarios (ej. "Iniciar sesión") | **5.8 : 1** | 🟩 | 🟩 |
+| **`#000000`** sobre **`#FFFFFF`** | Texto general en el fondo de la app | **21.0 : 1** | 🟩 | 🟩 |
+| **`#000000`** sobre **`#BAD1D9`** | Texto en campos de texto, tarjetas o tablas | **13.2 : 1** | 🟩 | 🟩 |
+| **`#3B6A76`** sobre **`#BAD1D9`** | Iconos o textos secundarios en las tarjetas | **4.8 : 1** | 🟩 | 🟩 |
+| **`#000000`** sobre **`#39C85D`** | Texto del estado "Tomada" o confirmación (fondo verde) | **7.4 : 1** | 🟩 | 🟩 |
+| **`#39C85D`** sobre **`#FFFFFF`** | Texto o icono verde sobre fondo blanco | **2.2 : 1** | 🟥 | 🟥 |
+| **`#000000`** sobre **`#FF8D28`** | Texto del estado "Pendiente" o "Posponer" (fondo naranja) | **8.8 : 1** | 🟩 | 🟩 |
+| **`#FF8D28`** sobre **`#FFFFFF`** | Texto o icono naranja sobre fondo blanco | **1.9 : 1** | 🟥 | 🟥 |
+| **`#FFFFFF`** sobre **`#FF3D40`** | Texto en botón de acción destructiva (fondo rojo) | **3.7 : 1** | 🟥 (Falla para texto normal) | 🟩 (Válido solo si es texto grande o negrita de 14pt+) |
+| **`#FF3D40`** sobre **`#FFFFFF`** | Texto de error o botón "Eliminar cuenta" sin fondo | **3.7 : 1** | 🟥 | 🟩 |
 
 Leyenda: 🟩Sí 🟥No
 
 *Nota técnica: 
-* El **Verde (#39C85D)** y el **Naranja (#FF8D28)** no deben usarse como color de texto sobre fondos blancos o azules claros, ya que no superan el ratio de 4.5:1. Para los estados de "Tomada" o "Pendiente", se usarán como **color de fondo de la etiqueta/badge**, manteniendo el texto en color Negro para garantizar un contraste excelente superior a 7:1.
-* El **Rojo (#FF3D40)** sobre fondo blanco (ratio 3.7:1) no cumple el mínimo de 4.5:1 para texto normal. Por lo tanto, si se usa para el botón "Eliminar cuenta", el texto deberá ser de **tamaño grande (18pt+) o ir en negrita (14pt+)** para cumplir la excepción de la norma (que exige 3:1). Como alternativa más segura, se puede usar el rojo como **color de fondo del botón con texto blanco en negrita** (como se ha calculado en la fila del fondo rojo).*
+* El **Verde (`#39C85D`)** y el **Naranja (`#FF8D28`)** no deben usarse como color de texto sobre fondos blancos o azules claros, ya que no superan el ratio de 4.5:1. Para los estados de "Tomada" o "Pendiente", se usarán como **color de fondo de la etiqueta/badge**, manteniendo el texto en color Negro para garantizar un contraste excelente superior a 7:1.
+* El **Rojo (`#FF3D40`)** sobre fondo blanco (ratio 3.7:1) no cumple el mínimo de 4.5:1 para texto normal. Por lo tanto, si se usa para el botón "Eliminar cuenta", el texto deberá ser de **tamaño grande (18pt+) o ir en negrita (14pt+)** para cumplir la excepción de la norma (que exige 3:1). Como alternativa más segura, se puede usar el rojo como **color de fondo del botón con texto blanco en negrita** (como se ha calculado en la fila del fondo rojo).*
 
 #### Tipografía y Tamaños (Escalado)
 Se utiliza una tipografía **Sans-Serif** (como Arial, Helvetica o Segoe UI) por su alta legibilidad en pantalla. Se han definido tres escalas de tamaño para adaptarse a las necesidades visuales de los usuarios (especialmente edad avanzada):
