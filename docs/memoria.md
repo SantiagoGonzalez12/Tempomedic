@@ -462,22 +462,22 @@ El análisis de partes interesadas consiste en mapear a todas las personas, cole
 Se diferencian dos grandes bloques de actores:
 
 - **Partes interesadas internas:**
-  - **Equipo de desarrollo (Grupo 2):** Encargados del diseño, prototipado y desarrollo de la aplicación. Formado por perfiles Frontend, Backend, QA Tester y Scrum Master.
-  - **Tutor del módulo (Willman Acosta Lugo):** Actúa como *Product Owner* académico, evaluando el cumplimiento de los criterios de evaluación del Real Decreto 405/2023 [4] y guiando el alcance del proyecto.
+  - **Equipo de desarrollo (Grupo 2):** encargados del diseño, prototipado y desarrollo de la aplicación. Formado por perfiles Frontend, Backend, QA Tester y Scrum Master.
+  - **Tutor del módulo (Willman Acosta Lugo):** actúa como *Product Owner* académico, evaluando el cumplimiento de los criterios de evaluación del Real Decreto 405/2023 [4] y guiando el alcance del proyecto.
 - **Partes interesadas externas:**
-  - **Pacientes/Usuarios finales (Perfil principal):** Personas con tratamientos crónicos o puntuales que necesitan gestionar su medicación y citas. Incluye un alto porcentaje de adultos mayores (según nuestra encuesta, el 70% supera los 46 años), lo que exige interfaces de alta accesibilidad.
-  - **Cuidadores/Familiares (Perfil secundario):** Personas que supervisan la medicación de dependientes.
-  - **Profesionales sanitarios (Indirecto):** Médicos y farmacéuticos que se benefician de una mayor adherencia al tratamiento por parte del paciente, aunque no interactúan directamente con la app en esta fase.
-  - **Organismos reguladores (Indirecto):** La Agencia Española de Protección de Datos (AEPD), que vela por el cumplimiento del RGPD y la LOPDGDD [7].
+  - **Pacientes/Usuarios finales (Perfil principal):** personas con tratamientos crónicos o puntuales que necesitan gestionar su medicación y citas. Incluye un alto porcentaje de adultos mayores (según nuestra encuesta, el 70% supera los 46 años), lo que exige interfaces de alta accesibilidad.
+  - **Cuidadores/Familiares (Perfil secundario):** personas que supervisan la medicación de dependientes.
+  - **Profesionales sanitarios (Indirecto):** médicos y farmacéuticos que se benefician de una mayor adherencia al tratamiento por parte del paciente, aunque no interactúan directamente con la app en esta fase.
+  - **Organismos reguladores (Indirecto):** la Agencia Española de Protección de Datos (AEPD), que vela por el cumplimiento del RGPD y la LOPDGDD [7].
 
 ##### 2.4.2.2 Análisis de poder e interés
 
 Para gestionar eficazmente a los *stakeholders*, se aplica la matriz de poder vs. interés (Mendelow):
 
-- **Alto poder / Alto interés (Gestionar de cerca):** El tutor del módulo y el equipo de desarrollo. Su implicación es total y las decisiones afectan al núcleo del proyecto.
-- **Bajo poder / Alto interés (Mantener informados):** Los pacientes y cuidadores. Aunque no deciden sobre el software, son los usuarios finales; su feedback a través de la encuesta ha definido el diseño de la interfaz (UI/UX).
-- **Alto poder / Bajo interés (Mantener satisfechos):** Organismos reguladores (AEPD). No intervienen en el día a día, pero sus normas condicionan la arquitectura (privacidad desde el diseño).
-- **Bajo poder / Bajo interés (Monitorizar):** Profesionales sanitarios, cuyo interés aumentará en futuras fases si se integran APIs de historiales clínicos.
+- **Alto poder / Alto interés (Gestionar de cerca):** el tutor del módulo y el equipo de desarrollo. Su implicación es total y las decisiones afectan al núcleo del proyecto.
+- **Bajo poder / Alto interés (Mantener informados):** los pacientes y cuidadores. Aunque no deciden sobre el software, son los usuarios finales; su feedback a través de la encuesta ha definido el diseño de la interfaz (UI/UX).
+- **Alto poder / Bajo interés (Mantener satisfechos):** organismos reguladores (AEPD). No intervienen en el día a día, pero sus normas condicionan la arquitectura (privacidad desde el diseño).
+- **Bajo poder / Bajo interés (Monitorizar):** profesionales sanitarios, cuyo interés aumentará en futuras fases si se integran APIs de historiales clínicos.
 
 ##### 2.4.2.3 Aportación documental
 
@@ -508,20 +508,20 @@ La elección del *stack* se ha realizado priorizando la robustez, el conocimient
 - **Interfaz Gráfica:** **Java Swing con NetBeans Matisse**. Se utiliza el editor visual para agilizar la maquetación de las 5 vistas principales. Para solventar la estética anticuada de Swing, se integra la librería **FlatLaf (v3.7.2)** [8]. Esta librería es crucial porque permite implementar temas claros/oscuros y mejorar el contraste visual, es un requisito indispensable para la accesibilidad de usuarios mayores.
 - **Arquitectura:** **MVC (Modelo-Vista-Controlador)**. Permite separar la lógica de negocio (Modelo) de la interfaz (Vista) y de la gestión de eventos (Controlador).
 - **Gestión de dependencias:** **Apache Maven**. Facilita la inclusión de librerías externas (como FlatLaf) y el empaquetado del proyecto.
-- **Persistencia:** En el Sprint 1, los datos se gestionan **en memoria**. Para fases posteriores, se prevé el uso de SQLite (local) o PostgreSQL (servidor).
+- **Persistencia:** en el Sprint 1, los datos se gestionan **en memoria**. Para fases posteriores, se prevé el uso de SQLite (local) o PostgreSQL (servidor).
 
 ##### 2.5.2.2 Requisitos de hardware y despliegue
 
-- **Equipos de desarrollo:** Ordenadores personales con Windows/Linux, 8GB de RAM mínimo (recomendado 16GB) y JDK instalado.
-- **Equipos cliente (Prototipo actual):** Cualquier equipo de escritorio con JRE instalado. Al ser Swing, el consumo de recursos es bajo, lo que garantiza su funcionamiento en equipos antiguos de centros de salud o de usuarios finales.
-- **Equipos cliente (Producto final):** Dispositivos móviles con Android 8.0 o superior (API 26+), garantizando cobertura para más del 90% de los dispositivos del mercado.
+- **Equipos de desarrollo:** ordenadores personales con Windows/Linux, 8GB de RAM mínimo (recomendado 16GB) y JDK instalado.
+- **Equipos cliente (Prototipo actual):** cualquier equipo de escritorio con JRE instalado. Al ser Swing, el consumo de recursos es bajo, lo que garantiza su funcionamiento en equipos antiguos de centros de salud o de usuarios finales.
+- **Equipos cliente (Producto final):** dispositivos móviles con Android 8.0 o superior (API 26+), garantizando cobertura para más del 90% de los dispositivos del mercado.
 
 ##### 2.5.2.3 Curva de aprendizaje y madurez técnica
 
 El equipo posee conocimientos sólidos en Java y Swing. Sin embargo, la introducción de **FlatLaf** supone un reto inicial. Para mitigar el riesgo (identificado en el apartado 8), se ha realizado un *Tech Spike* temprano [9] para validar su integración.
 
-- **Resultado del Spike:** Se ha comprobado que la inicialización de FlatLaf mediante `FlatLightLaf.setup()` y el cambio dinámico a modo oscuro mediante `FlatDarkLaf.setup()` funcionan correctamente en el prototipo de NetBeans sin romper la navegación por teclado.
-- **Accesibilidad:** El equipo ha tenido que formarse en los principios de las pautas WCAG 2.1 y la norma UNE-EN 301 549 [10] para garantizar que los componentes (botones, textos, contrastes) cumplan con los requisitos legales de accesibilidad.
+- **Resultado del Spike:** se ha comprobado que la inicialización de FlatLaf mediante `FlatLightLaf.setup()` y el cambio dinámico a modo oscuro mediante `FlatDarkLaf.setup()` funcionan correctamente en el prototipo de NetBeans sin romper la navegación por teclado.
+- **Accesibilidad:** el equipo ha tenido que formarse en los principios de las pautas WCAG 2.1 y la norma UNE-EN 301 549 [10] para garantizar que los componentes (botones, textos, contrastes) cumplan con los requisitos legales de accesibilidad.
 
 ##### 2.5.2.4 Aportación documental
 
