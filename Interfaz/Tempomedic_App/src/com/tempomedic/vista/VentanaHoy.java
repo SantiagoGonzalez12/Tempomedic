@@ -30,17 +30,17 @@ public class VentanaHoy extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         AVISOS = new javax.swing.ButtonGroup();
-        pnlContenido = new javax.swing.JPanel();
         pnlSidebar = new javax.swing.JPanel();
-        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
-        btnHoy = new javax.swing.JButton();
-        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
-        btnMedicamentos = new javax.swing.JButton();
-        filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
-        btnCitas = new javax.swing.JButton();
-        filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
-        btnAjustes = new javax.swing.JButton();
-        filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        btnHoy1 = new javax.swing.JButton();
+        filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        btnMedicamentos1 = new javax.swing.JButton();
+        filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        btnCitas1 = new javax.swing.JButton();
+        filler9 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        btnAjustes1 = new javax.swing.JButton();
+        filler10 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        pnlContenido = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jProxCitas = new javax.swing.JLabel();
         txtTempomedic = new javax.swing.JLabel();
@@ -67,70 +67,86 @@ public class VentanaHoy extends javax.swing.JFrame {
         setTitle("VentanaNuevoMedicamentos");
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(960, 540));
+        getContentPane().setLayout(new java.awt.GridBagLayout());
+
+        pnlSidebar.setBackground(new java.awt.Color(59, 106, 118));
+        pnlSidebar.setMinimumSize(new java.awt.Dimension(120, 0));
+        pnlSidebar.setPreferredSize(new java.awt.Dimension(120, 540));
+        pnlSidebar.setRequestFocusEnabled(false);
+        pnlSidebar.setLayout(new javax.swing.BoxLayout(pnlSidebar, javax.swing.BoxLayout.Y_AXIS));
+        pnlSidebar.add(filler3);
+
+        btnHoy1.setBackground(new java.awt.Color(186, 209, 217));
+        btnHoy1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnHoy1.setText("Hoy");
+        btnHoy1.setAlignmentX(0.5F);
+        btnHoy1.setBorderPainted(false);
+        btnHoy1.setFocusPainted(false);
+        btnHoy1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnHoy1.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnHoy1.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnHoy1.setPreferredSize(new java.awt.Dimension(104, 84));
+        btnHoy1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        pnlSidebar.add(btnHoy1);
+        pnlSidebar.add(filler4);
+
+        btnMedicamentos1.setBackground(new java.awt.Color(186, 209, 217));
+        btnMedicamentos1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnMedicamentos1.setForeground(new java.awt.Color(255, 255, 255));
+        btnMedicamentos1.setText("Medicamentos");
+        btnMedicamentos1.setAlignmentX(0.5F);
+        btnMedicamentos1.setBorderPainted(false);
+        btnMedicamentos1.setContentAreaFilled(false);
+        btnMedicamentos1.setFocusPainted(false);
+        btnMedicamentos1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnMedicamentos1.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnMedicamentos1.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnMedicamentos1.setPreferredSize(new java.awt.Dimension(104, 84));
+        btnMedicamentos1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        pnlSidebar.add(btnMedicamentos1);
+        pnlSidebar.add(filler8);
+
+        btnCitas1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnCitas1.setForeground(new java.awt.Color(255, 255, 255));
+        btnCitas1.setText("Citas");
+        btnCitas1.setAlignmentX(0.5F);
+        btnCitas1.setBorderPainted(false);
+        btnCitas1.setContentAreaFilled(false);
+        btnCitas1.setFocusPainted(false);
+        btnCitas1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCitas1.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnCitas1.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnCitas1.setPreferredSize(new java.awt.Dimension(104, 84));
+        btnCitas1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        pnlSidebar.add(btnCitas1);
+        pnlSidebar.add(filler9);
+
+        btnAjustes1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnAjustes1.setForeground(new java.awt.Color(255, 255, 255));
+        btnAjustes1.setText("Ajustes");
+        btnAjustes1.setAlignmentX(0.5F);
+        btnAjustes1.setBorderPainted(false);
+        btnAjustes1.setContentAreaFilled(false);
+        btnAjustes1.setFocusPainted(false);
+        btnAjustes1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAjustes1.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnAjustes1.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnAjustes1.setPreferredSize(new java.awt.Dimension(104, 84));
+        btnAjustes1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        pnlSidebar.add(btnAjustes1);
+        pnlSidebar.add(filler10);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.12;
+        gridBagConstraints.weighty = 1.0;
+        getContentPane().add(pnlSidebar, gridBagConstraints);
 
         pnlContenido.setBackground(new java.awt.Color(255, 255, 255));
         pnlContenido.setPreferredSize(new java.awt.Dimension(960, 540));
         pnlContenido.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        pnlSidebar.setBackground(new java.awt.Color(59, 106, 118));
-        pnlSidebar.setPreferredSize(new java.awt.Dimension(100, 540));
-        pnlSidebar.setRequestFocusEnabled(false);
-        pnlSidebar.setLayout(new javax.swing.BoxLayout(pnlSidebar, javax.swing.BoxLayout.Y_AXIS));
-        pnlSidebar.add(filler1);
-
-        btnHoy.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btnHoy.setForeground(new java.awt.Color(255, 255, 255));
-        btnHoy.setText("Hoy");
-        btnHoy.setAlignmentX(0.5F);
-        btnHoy.setBorderPainted(false);
-        btnHoy.setContentAreaFilled(false);
-        btnHoy.setFocusPainted(false);
-        btnHoy.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnHoy.setMaximumSize(new java.awt.Dimension(100, 70));
-        btnHoy.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        pnlSidebar.add(btnHoy);
-        pnlSidebar.add(filler2);
-
-        btnMedicamentos.setFont(new java.awt.Font("SansSerif", 1, 9)); // NOI18N
-        btnMedicamentos.setForeground(new java.awt.Color(255, 255, 255));
-        btnMedicamentos.setText("Medicamentos");
-        btnMedicamentos.setAlignmentX(0.5F);
-        btnMedicamentos.setBorderPainted(false);
-        btnMedicamentos.setContentAreaFilled(false);
-        btnMedicamentos.setFocusPainted(false);
-        btnMedicamentos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnMedicamentos.setMaximumSize(new java.awt.Dimension(100, 70));
-        btnMedicamentos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        pnlSidebar.add(btnMedicamentos);
-        pnlSidebar.add(filler5);
-
-        btnCitas.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btnCitas.setForeground(new java.awt.Color(255, 255, 255));
-        btnCitas.setText("Citas");
-        btnCitas.setAlignmentX(0.5F);
-        btnCitas.setBorderPainted(false);
-        btnCitas.setContentAreaFilled(false);
-        btnCitas.setFocusPainted(false);
-        btnCitas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCitas.setMaximumSize(new java.awt.Dimension(100, 70));
-        btnCitas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        pnlSidebar.add(btnCitas);
-        pnlSidebar.add(filler6);
-
-        btnAjustes.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btnAjustes.setForeground(new java.awt.Color(255, 255, 255));
-        btnAjustes.setText("Ajustes");
-        btnAjustes.setAlignmentX(0.5F);
-        btnAjustes.setBorderPainted(false);
-        btnAjustes.setContentAreaFilled(false);
-        btnAjustes.setFocusPainted(false);
-        btnAjustes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAjustes.setMaximumSize(new java.awt.Dimension(100, 70));
-        btnAjustes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        pnlSidebar.add(btnAjustes);
-        pnlSidebar.add(filler7);
-
-        pnlContenido.add(pnlSidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, 530));
         pnlContenido.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, -1));
 
         jProxCitas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -175,7 +191,7 @@ public class VentanaHoy extends javax.swing.JFrame {
 
         lblTomado1.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
         lblTomado1.setForeground(new java.awt.Color(51, 204, 0));
-        lblTomado1.setText("✔Tomada");
+        lblTomado1.setText("✔ Tomada");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -259,7 +275,7 @@ public class VentanaHoy extends javax.swing.JFrame {
 
         lblTomado2.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
         lblTomado2.setForeground(new java.awt.Color(255, 153, 0));
-        lblTomado2.setText("•Pendiente");
+        lblTomado2.setText("· Pendiente");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -318,7 +334,13 @@ public class VentanaHoy extends javax.swing.JFrame {
 
         pnlContenido.add(pnlTarjeta3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, -1, 50));
 
-        getContentPane().add(pnlContenido, java.awt.BorderLayout.CENTER);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.88;
+        gridBagConstraints.weighty = 1.0;
+        getContentPane().add(pnlContenido, gridBagConstraints);
 
         pack();
         setLocationRelativeTo(null);
@@ -360,16 +382,16 @@ public class VentanaHoy extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
     private javax.swing.JButton Posponer1;
-    private javax.swing.JButton btnAjustes;
-    private javax.swing.JButton btnCitas;
-    private javax.swing.JButton btnHoy;
-    private javax.swing.JButton btnMedicamentos;
+    private javax.swing.JButton btnAjustes1;
+    private javax.swing.JButton btnCitas1;
+    private javax.swing.JButton btnHoy1;
+    private javax.swing.JButton btnMedicamentos1;
     private javax.swing.JButton btnPosponer;
-    private javax.swing.Box.Filler filler1;
-    private javax.swing.Box.Filler filler2;
-    private javax.swing.Box.Filler filler5;
-    private javax.swing.Box.Filler filler6;
-    private javax.swing.Box.Filler filler7;
+    private javax.swing.Box.Filler filler10;
+    private javax.swing.Box.Filler filler3;
+    private javax.swing.Box.Filler filler4;
+    private javax.swing.Box.Filler filler8;
+    private javax.swing.Box.Filler filler9;
     private javax.swing.JLabel jFecha1;
     private javax.swing.JLabel jHoy;
     private javax.swing.JLabel jLabel2;

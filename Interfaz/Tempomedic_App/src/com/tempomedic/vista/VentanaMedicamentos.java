@@ -74,9 +74,11 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1920, 1080));
         setMinimumSize(new java.awt.Dimension(960, 540));
+        getContentPane().setLayout(new java.awt.GridBagLayout());
 
         pnlSidebar.setBackground(new java.awt.Color(59, 106, 118));
-        pnlSidebar.setPreferredSize(new java.awt.Dimension(100, 540));
+        pnlSidebar.setMinimumSize(new java.awt.Dimension(120, 0));
+        pnlSidebar.setPreferredSize(new java.awt.Dimension(120, 540));
         pnlSidebar.setRequestFocusEnabled(false);
         pnlSidebar.setLayout(new javax.swing.BoxLayout(pnlSidebar, javax.swing.BoxLayout.Y_AXIS));
         pnlSidebar.add(filler1);
@@ -89,19 +91,23 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         btnHoy.setContentAreaFilled(false);
         btnHoy.setFocusPainted(false);
         btnHoy.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnHoy.setMaximumSize(new java.awt.Dimension(100, 70));
+        btnHoy.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnHoy.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnHoy.setPreferredSize(new java.awt.Dimension(104, 84));
         btnHoy.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         pnlSidebar.add(btnHoy);
         pnlSidebar.add(filler2);
 
-        btnMedicamentos.setFont(new java.awt.Font("SansSerif", 1, 9)); // NOI18N
+        btnMedicamentos.setBackground(new java.awt.Color(186, 209, 217));
+        btnMedicamentos.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnMedicamentos.setText("Medicamentos");
         btnMedicamentos.setAlignmentX(0.5F);
         btnMedicamentos.setBorderPainted(false);
-        btnMedicamentos.setContentAreaFilled(false);
         btnMedicamentos.setFocusPainted(false);
         btnMedicamentos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnMedicamentos.setMaximumSize(new java.awt.Dimension(100, 70));
+        btnMedicamentos.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnMedicamentos.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnMedicamentos.setPreferredSize(new java.awt.Dimension(104, 84));
         btnMedicamentos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         pnlSidebar.add(btnMedicamentos);
         pnlSidebar.add(filler5);
@@ -114,7 +120,9 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         btnCitas.setContentAreaFilled(false);
         btnCitas.setFocusPainted(false);
         btnCitas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCitas.setMaximumSize(new java.awt.Dimension(100, 70));
+        btnCitas.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnCitas.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnCitas.setPreferredSize(new java.awt.Dimension(104, 84));
         btnCitas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         pnlSidebar.add(btnCitas);
         pnlSidebar.add(filler6);
@@ -127,12 +135,19 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
         btnAjustes.setContentAreaFilled(false);
         btnAjustes.setFocusPainted(false);
         btnAjustes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAjustes.setMaximumSize(new java.awt.Dimension(100, 70));
+        btnAjustes.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnAjustes.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnAjustes.setPreferredSize(new java.awt.Dimension(104, 84));
         btnAjustes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         pnlSidebar.add(btnAjustes);
         pnlSidebar.add(filler7);
 
-        getContentPane().add(pnlSidebar, java.awt.BorderLayout.WEST);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.12;
+        gridBagConstraints.weighty = 1.0;
+        getContentPane().add(pnlSidebar, gridBagConstraints);
 
         pnlContenido.setBackground(new java.awt.Color(255, 255, 255));
         pnlContenido.setLayout(new java.awt.BorderLayout());
@@ -435,7 +450,13 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
 
         pnlContenido.add(pnlAcciones, java.awt.BorderLayout.SOUTH);
 
-        getContentPane().add(pnlContenido, java.awt.BorderLayout.CENTER);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.88;
+        gridBagConstraints.weighty = 1.0;
+        getContentPane().add(pnlContenido, gridBagConstraints);
 
         pack();
         setLocationRelativeTo(null);
