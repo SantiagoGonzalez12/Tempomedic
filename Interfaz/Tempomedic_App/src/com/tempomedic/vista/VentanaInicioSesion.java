@@ -31,10 +31,9 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
 
         AVISOS = new javax.swing.ButtonGroup();
         pnlContenido = new javax.swing.JPanel();
-        pnlEncabezado = new javax.swing.JPanel();
+        pnlFormulario = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
         lblTempomedic = new javax.swing.JLabel();
-        pnlFormulario = new javax.swing.JPanel();
         lblDescripcion = new javax.swing.JLabel();
         lblCorreo = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
@@ -43,6 +42,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         btnCrearCuenta = new javax.swing.JButton();
         lblOlvidaContrasena = new javax.swing.JLabel();
         lblCrearCuenta = new javax.swing.JLabel();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VentanaInicioSesion");
@@ -53,17 +53,18 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         pnlContenido.setPreferredSize(new java.awt.Dimension(960, 540));
         pnlContenido.setLayout(new java.awt.BorderLayout());
 
-        pnlEncabezado.setBackground(new java.awt.Color(255, 255, 255));
-        pnlEncabezado.setPreferredSize(new java.awt.Dimension(960, 130));
-        pnlEncabezado.setLayout(new java.awt.GridBagLayout());
+        pnlFormulario.setBackground(new java.awt.Color(255, 255, 255));
+        pnlFormulario.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 198, 0, 198));
+        pnlFormulario.setLayout(new java.awt.GridBagLayout());
 
-        logo.setText("LOGO");
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/logos/Logo_Tempomedic-75.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 8);
-        pnlEncabezado.add(logo, gridBagConstraints);
+        gridBagConstraints.weighty = 1.0;
+        pnlFormulario.add(logo, gridBagConstraints);
 
         lblTempomedic.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         lblTempomedic.setForeground(new java.awt.Color(59, 106, 118));
@@ -71,15 +72,10 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 0, 0);
-        pnlEncabezado.add(lblTempomedic, gridBagConstraints);
-
-        pnlContenido.add(pnlEncabezado, java.awt.BorderLayout.NORTH);
-
-        pnlFormulario.setBackground(new java.awt.Color(255, 255, 255));
-        pnlFormulario.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 198, 0, 198));
-        pnlFormulario.setLayout(new java.awt.GridBagLayout());
+        pnlFormulario.add(lblTempomedic, gridBagConstraints);
 
         lblDescripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblDescripcion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -87,7 +83,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         lblDescripcion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.weightx = 1.0;
         pnlFormulario.add(lblDescripcion, gridBagConstraints);
@@ -97,7 +93,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         lblCorreo.setText("Correo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 4, 0);
@@ -111,7 +107,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         txtCorreo.addActionListener(this::txtCorreoActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipadx = 666;
         gridBagConstraints.ipady = 13;
@@ -123,7 +119,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         lblContrasena.setText("Contraseña");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridy = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(12, 0, 4, 0);
@@ -136,7 +132,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         pwdContrasena.setPreferredSize(new java.awt.Dimension(563, 41));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipadx = 666;
         gridBagConstraints.ipady = 20;
@@ -151,7 +147,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         btnCrearCuenta.setFocusPainted(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridy = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipadx = 609;
         gridBagConstraints.ipady = 14;
@@ -165,7 +161,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         lblOlvidaContrasena.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridy = 8;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
         pnlFormulario.add(lblOlvidaContrasena, gridBagConstraints);
@@ -176,12 +172,17 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         lblCrearCuenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridy = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
         pnlFormulario.add(lblCrearCuenta, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        pnlFormulario.add(filler1, gridBagConstraints);
 
         pnlContenido.add(pnlFormulario, java.awt.BorderLayout.CENTER);
 
@@ -223,6 +224,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
     private javax.swing.JButton btnCrearCuenta;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel lblContrasena;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblCrearCuenta;
@@ -231,7 +233,6 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
     private javax.swing.JLabel lblTempomedic;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlContenido;
-    private javax.swing.JPanel pnlEncabezado;
     private javax.swing.JPanel pnlFormulario;
     private javax.swing.JPasswordField pwdContrasena;
     private javax.swing.JTextField txtCorreo;

@@ -58,7 +58,7 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         pnlPIN.setForeground(new java.awt.Color(255, 255, 255));
         pnlPIN.setLayout(new java.awt.GridBagLayout());
 
-        logo.setText("LOGO");
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/logos/Logo_Tempomedic-75.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;

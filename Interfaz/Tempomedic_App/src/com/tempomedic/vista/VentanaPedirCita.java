@@ -64,7 +64,7 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         pnlEncabezado.setPreferredSize(new java.awt.Dimension(960, 130));
         pnlEncabezado.setLayout(new java.awt.GridBagLayout());
 
-        logo.setText("LOGO");
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/logos/Logo_Tempomedic-50.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
