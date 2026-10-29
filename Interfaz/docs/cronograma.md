@@ -1,1 +1,1 @@
-![Diagrama de Gantt Sprint 2](<imagen/Diagrama de Gantt Sprint 2.png>)
+![Diagrama de Gantt Sprint 2](imagen/diagrama-gantt-sprint-2.png)
