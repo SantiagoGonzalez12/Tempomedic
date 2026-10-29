@@ -20,7 +20,7 @@
 | X | 2.4. Pruebas de usabilidad con usuarios | [#72](https://github.com/SantiagoGonzalez12/Tempomedic/issues/72) | 27/10/2026 | María Dolores Barba |
 | X | 3. Seguimiento, modificación y documentación de wireframes y mockups | [#59](https://github.com/SantiagoGonzalez12/Tempomedic/issues/59) | 22/10/2026 | Santiago González, Alba Durán |
 | X | 3.1. Actualizar wireframes y mockups | [#60](https://github.com/SantiagoGonzalez12/Tempomedic/issues/60) | 22/10/2026 | Santiago González |
-| X | 4. Pautas de diseño estructural: menús, ventanas, diálogos y atajos | [#132](https://github.com/SantiagoGonzalez12/Tempomedic/issues/132) | 28/10/2026| Jorge Espejo |
+| X | 4. Pautas de diseño estructural: menús, ventanas, diálogos y atajos | [#132](https://github.com/SantiagoGonzalez12/Tempomedic/issues/132) | 28/10/2026 | Jorge Espejo |
 | X | 4.1. Documentar pautas estructurales: menús, ventanas, diálogos y atajos | [#74](https://github.com/SantiagoGonzalez12/Tempomedic/issues/74) | 28/10/2026 | Jorge Espejo |
 | X | 4.2. Navegación, atajos y orden de tabulación | [#67](https://github.com/SantiagoGonzalez12/Tempomedic/issues/67) | 28/10/2026 | Jorge Espejo |
 | X | 5. Pautas de aspecto: colores, fuentes, iconos y distribución | [#63](https://github.com/SantiagoGonzalez12/Tempomedic/issues/63) | 29/10/2026 | Jorge Espejo |

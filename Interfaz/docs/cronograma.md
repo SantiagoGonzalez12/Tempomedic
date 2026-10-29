@@ -1,3 +1,5 @@
+# Cronograma de ejecución
+
 ## 1. Planificación General del Sprint 2
 
 El Sprint 2 del proyecto TempoMedic abarca el ciclo completo de diseño UI/UX, maquetación de la interfaz de escritorio a resolución 1280x720 en Java Swing, evaluación de accesibilidad, pruebas de usabilidad con usuarios y documentación técnica.
@@ -24,9 +26,9 @@ Para cumplir con la planificación y el reparto de responsabilidades del equipo 
 | | [#71](https://github.com/SantiagoGonzalez12/Tempomedic/issues/71) / [#72](https://github.com/SantiagoGonzalez12/Tempomedic/issues/72) | Revisión de mensajes/errores y pruebas de usabilidad con 3 usuarios calculando el score SUS (86.6/100). | María Dolores Barba | 25/10 - 28/10/2026 | **Completado** |
 | **5. Validación** | [#132](https://github.com/SantiagoGonzalez12/Tempomedic/issues/132) / [#74](https://github.com/SantiagoGonzalez12/Tempomedic/issues/74) / [#67](https://github.com/SantiagoGonzalez12/Tempomedic/issues/67) | Documentar pautas estructurales, atajos de teclado (`Ctrl+1..4`), mnemónicos y orden de tabulación. | Jorge Espejo | 24/10 - 28/10/2026 | **Completado** |
 | | [#133](https://github.com/SantiagoGonzalez12/Tempomedic/issues/133) / [#62](https://github.com/SantiagoGonzalez12/Tempomedic/issues/62) | Diagrama del mapa de navegación y flujo de control en Mermaid en `docs/estructura-y-flujo.md`. | María Dolores Barba | 26/10 - 28/10/2026 | **Completado** |
-| **6. Ajustes / Cierre**| [#55](https://github.com/SantiagoGonzalez12/Tempomedic/issues/55) / [#56](https://github.com/SantiagoGonzalez12/Tempomedic/issues/56) | Elaboración del cronograma de ejecución (Gantt en Mermaid) y publicación del informe final. | Santiago G., Jorge E., Alba D., María Dolores B. | 28/10 - 29/10/2026 | **Completado** |
+| **6. Ajustes / Cierre** | [#55](https://github.com/SantiagoGonzalez12/Tempomedic/issues/55) / [#56](https://github.com/SantiagoGonzalez12/Tempomedic/issues/56) | Elaboración del cronograma de ejecución (Gantt en Mermaid) y publicación del informe final. | Santiago G., Jorge E., Alba D., María Dolores B. | 28/10 - 29/10/2026 | **Completado** |
 | | [#134](https://github.com/SantiagoGonzalez12/Tempomedic/issues/134) / [#75](https://github.com/SantiagoGonzalez12/Tempomedic/issues/75) / [#76](https://github.com/SantiagoGonzalez12/Tempomedic/issues/76) | Redacción de entregables, actualización de `README.md` y preparación de la presentación final. | Santiago G., Jorge E., Alba D., María Dolores B. | 28/10 - 29/10/2026 | **Completado** |
 
-# Cronograma Diagrama de Gantt 
+## Cronograma Diagrama de Gantt
 
 ![Diagrama de Gantt Sprint 2](img/Diagrama%20de%20Gantt%20Sprint%202.png)

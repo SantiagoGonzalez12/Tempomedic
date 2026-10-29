@@ -33,16 +33,17 @@
 7. **Aspecto**
 
 #### Paleta de Colores y Contrastes
+
 Se ha definido una paleta basada en tonos azules y verdes que transmiten confianza y calma, adecuada para el sector salud. Todos los pares texto/fondo han sido comprobados siguiendo las pautas WCAG 2.1 (Nivel AA) para garantizar un ratio mínimo de contraste de 4.5:1 en texto normal y 3:1 en texto grande.
 
-* **Azul oscuro:** `#3B6A76` (Fondos de botones principales, títulos, barra lateral).
-* **Azul claro:** `#BAD1D9` (Fondos de tarjetas, campos de texto, bordes).
-* **Blanco:** `#FFFFFF` (Fondo general de la aplicación).
-* **Negro:** `#000000` (Texto principal).
-* **Azul:** `#0075DA` (Texto con enlace u opcionalidad a otro medio)
-* **Verde:** `#25853D` (Indicador de estado y confirmaciones).
-* **Naranja:** `#BC5800` (Indicador de estado).
-* **Rojo:** `#EA0004` (Indicador de accion importante sin retorno).
+- **Azul oscuro:** `#3B6A76` (Fondos de botones principales, títulos, barra lateral).
+- **Azul claro:** `#BAD1D9` (Fondos de tarjetas, campos de texto, bordes).
+- **Blanco:** `#FFFFFF` (Fondo general de la aplicación).
+- **Negro:** `#000000` (Texto principal).
+- **Azul:** `#0075DA` (Texto con enlace u opcionalidad a otro medio)
+- **Verde:** `#25853D` (Indicador de estado y confirmaciones).
+- **Naranja:** `#BC5800` (Indicador de estado).
+- **Rojo:** `#EA0004` (Indicador de accion importante sin retorno).
 
 #### Tabla de Contrastes Comprobados (Texto/Fondo)
 
@@ -62,28 +63,32 @@ Se ha definido una paleta basada en tonos azules y verdes que transmiten confian
 
 Leyenda: 🟩Sí 🟥No
 
-Nota técnica: 
-* El **Negro sobre Blanco** y **Negro sobre Azul claro** son las combinaciones más seguras y se usarán para todo el texto de lectura principal (párrafos, datos de medicamentos).
-* El **Azul oscuro** es el color de marca por excelencia. Funciona perfectamente sobre blanco (5.8:1) y sobre azul claro si se usa en tamaños grandes o para iconos (3.5:1).
-* **Colores de estado (Verde y Rojo):** Ambos han sido ajustados y **ahora cumplen perfectamente el nivel AA sobre fondo blanco** (4.69:1 y 4.53:1 respectivamente). ¡Buen trabajo con la elección de estos tonos!
-* **El caso del Azul Claro (`#BAD1D9`):** Este color tiene una luminosidad muy alta. **Nunca se debe usar como color de texto sobre blanco** (falla con 1.6:1). Se usará exclusivamente como fondo de tarjetas o campos de texto. 
-* **El caso del Verde sobre Azul Claro:** Si queréis poner una etiqueta verde de "Tomada" dentro de una tarjeta (que es azul claro), el verde falla el contraste (2.89:1). **Solución:** En las tarjetas, el estado "Tomada" debe ir con texto **Negro** o con una etiqueta que tenga fondo verde y texto blanco.
-* **Enlaces (`#0075DA`):** El azul de los enlaces cumple justo el mínimo (4.52:1). Es correcto, pero si queréis más seguridad, se puede oscurecer un poco más
+Nota técnica:
 
-Se puede calcular las pautas WCAG 2.1 (Nivel AA) en (https://coddy.tech/tools/es/contrast-checker).
+- El **Negro sobre Blanco** y **Negro sobre Azul claro** son las combinaciones más seguras y se usarán para todo el texto de lectura principal (párrafos, datos de medicamentos).
+- El **Azul oscuro** es el color de marca por excelencia. Funciona perfectamente sobre blanco (5.8:1) y sobre azul claro si se usa en tamaños grandes o para iconos (3.5:1).
+- **Colores de estado (Verde y Rojo):** Ambos han sido ajustados y **ahora cumplen perfectamente el nivel AA sobre fondo blanco** (4.69:1 y 4.53:1 respectivamente). ¡Buen trabajo con la elección de estos tonos!
+- **El caso del Azul Claro (`#BAD1D9`):** Este color tiene una luminosidad muy alta. **Nunca se debe usar como color de texto sobre blanco** (falla con 1.6:1). Se usará exclusivamente como fondo de tarjetas o campos de texto.
+- **El caso del Verde sobre Azul Claro:** Si queréis poner una etiqueta verde de "Tomada" dentro de una tarjeta (que es azul claro), el verde falla el contraste (2.89:1). **Solución:** En las tarjetas, el estado "Tomada" debe ir con texto **Negro** o con una etiqueta que tenga fondo verde y texto blanco.
+- **Enlaces (`#0075DA`):** El azul de los enlaces cumple justo el mínimo (4.52:1). Es correcto, pero si queréis más seguridad, se puede oscurecer un poco más
+
+Se puede calcular las pautas WCAG 2.1 (Nivel AA) en (<https://coddy.tech/tools/es/contrast-checker>).
 
 #### Paleta de colores del tema oscuro
-Aunque no se tiene del todo claro si poner un tema oscuro, dependiendo de lo que nos digan los usuarios lo implementaremos o seguirá estando planteado. 
+
+Aunque no se tiene del todo claro si poner un tema oscuro, dependiendo de lo que nos digan los usuarios lo implementaremos o seguirá estando planteado.
 La paleta de colores para el tema oscuro planteada sería:
-* `#1E292C` (Fondos de botones principales, títulos, barra lateral).
-* `#BAD1D9` (Fondos de tarjetas, campos de texto, bordes).
-* `#12181A` (Fondo general de la aplicación).
-* `#F0F4F5` (Texto principal).
-* `#39C85D` (Indicador de estado y confirmaciones).
-* `#FF8D28` (Indicador de estado).
-* `#FF4C4F` (Indicador de accion importante sin retorno).
+
+- `#1E292C` (Fondos de botones principales, títulos, barra lateral).
+- `#BAD1D9` (Fondos de tarjetas, campos de texto, bordes).
+- `#12181A` (Fondo general de la aplicación).
+- `#F0F4F5` (Texto principal).
+- `#39C85D` (Indicador de estado y confirmaciones).
+- `#FF8D28` (Indicador de estado).
+- `#FF4C4F` (Indicador de accion importante sin retorno).
 
 #### Tipografía y Tamaños (Escalado)
+
 Se utiliza una tipografía **Sans-Serif** (como Arial, Helvetica o Segoe UI) por su alta legibilidad en pantalla. Se han definido tres escalas de tamaño para adaptarse a las necesidades visuales de los usuarios (especialmente edad avanzada):
 
 | Escala | Botones | Texto General | Encabezados / Títulos |
@@ -93,10 +98,11 @@ Se utiliza una tipografía **Sans-Serif** (como Arial, Helvetica o Segoe UI) por
 | **Muy grande** | 22 pt | 26 pt | 36 pt |
 
 #### Rejilla, Márgenes y Tamaño de Componentes
-* **Resolución objetivo:** 1920 x 1080 px (mínimo soportado: 1280 x 720 px).
-* **Rejilla base:** sistema de 12 columnas con un margen exterior de 24 px y un *gutter* (espacio entre columnas) de 16 px.
-* **Área táctil mínima (Target Size):** todos los botones e iconos interactivos tienen un tamaño mínimo de **48x48 px** (o dp), cumpliendo con las recomendaciones para personas con movilidad reducida o temblores.
-* **Iconos:** siempre acompañados de texto para evitar ambigüedades, cumpliendo con el criterio de "Comprensible" de WCAG.
+
+- **Resolución objetivo:** 1920 x 1080 px (mínimo soportado: 1280 x 720 px).
+- **Rejilla base:** sistema de 12 columnas con un margen exterior de 24 px y un *gutter* (espacio entre columnas) de 16 px.
+- **Área táctil mínima (Target Size):** todos los botones e iconos interactivos tienen un tamaño mínimo de **48x48 px** (o dp), cumpliendo con las recomendaciones para personas con movilidad reducida o temblores.
+- **Iconos:** siempre acompañados de texto para evitar ambigüedades, cumpliendo con el criterio de "Comprensible" de WCAG.
 
 8. **Estudio de FlatLaf y alternativas**
 
@@ -111,18 +117,22 @@ Escalado de Texto (HiDPI) | Excelente (Soporte automático para pantallas 4K y p
 Integración con Maven | Muy simple (Una sola dependencia activa en Maven Central) | Ya incluido en el JDK (No requiere dependencias) | Ya incluido en el JDK (No requiere dependencias) | Complejo (Repositorios antiguos o dependencias rotas)
 
 ### DESARROLLO E IMPLEMENTACIÓN
+
 #### Tecnologías, lenguajes y frameworks utilizados
 
 Además de Java, Swing, NetBeans Matisse y Maven, la interfaz utiliza **FlatLaf** como *Look and Feel*: una librería que sustituye el aspecto por defecto de Swing por uno plano y moderno, y que permite alternar entre tema claro y oscuro en tiempo real. Se eligió porque responde directamente al ajuste "Tema: Claro / Oscuro" que pedía el diseño de la interfaz y porque la encuesta mostró que la legibilidad es una prioridad para el 70% de los encuestados con 46 años o más.
 
 #### Implementación de la interfaz de usuario
+
 **Utilizar FlatLaf con Java Ant**
+
 1. [Descargar el archivo .jar](https://repo1.maven.org/maven2/com/formdev/flatlaf/3.7.2/flatlaf-3.7.2.jar) desde el [Repositorio Central de Maven](https://central.sonatype.com/artifact/com.formdev/flatlaf).
 2. En NetBeans, ir a la pestaña `Projects` (Proyectos).
 3. Clic derecho en `Libraries (Bibliotecas) > Add JAR/Folder`.
 4. Seleccionar el archivo .jar descargado.
 
 **Para inicializar FlatLaf al arrancar la app**
+
 ``` java
 public static void main(String args[]) {
     try {
@@ -143,6 +153,7 @@ public static void main(String args[]) {
 
 **Cambio de Tema Claro / Oscuro con botones**
 Ejemplo botón activar Modo Oscuro
+
 ``` java
 private void btnModoOscuroActionPerformed(java.awt.event.ActionEvent evt) {                                              
     try {
@@ -158,6 +169,7 @@ private void btnModoOscuroActionPerformed(java.awt.event.ActionEvent evt) {
 ```
 
 Ejemplo botón activar Modo Claro
+
 ``` java
 private void btnModoClaroActionPerformed(java.awt.event.ActionEvent evt) {                                             
     try {
@@ -173,4 +185,5 @@ private void btnModoClaroActionPerformed(java.awt.event.ActionEvent evt) {
 ```
 
 #### Vista previa en el diseñador de NetBeans
+
 `Menú superior de NetBeans > Tools (Herramientas) > Options (Opciones) > Java > pestaña GUI Builder > Preview Look and Feel > FlatLaf` (si aparece) o configurar el Look and Feel del sistema para que se asemeje más

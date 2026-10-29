@@ -2,137 +2,294 @@
 
 <img src="docs/img/logo/Logo_Tempomedic.svg" alt="Logo" width="100%" height="100">
 
-Interfaz de la Aplicación de salud en Java (Swing/MVC) para gestionar medicación y citas médicas: recordatorios por notificación o alarma, e historial de tomas. Proyecto Intermodular DAM.
+> Aplicación de escritorio en Java (Swing, patrón MVC) para gestionar medicación y citas médicas: recordatorios por notificación o alarma y registro de tomas. Proyecto Intermodular DAM, módulo Desarrollo de Interfaces (DII).
+
+![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-yellow)
+![Sprint](https://img.shields.io/badge/Sprint-2%3A%20Interfaces%20(DII)-blue)
 
 Repositorio principal: <https://github.com/SantiagoGonzalez12/Tempomedic>
 
 ## Índice
 
-1. [El problema](#1-el-problema)
-2. [Identificación del público objetivo](#2-identificación-del-público-objetivo)
-3. [Las decisiones técnicas](#3-las-decisiones-técnicas)
-4. [Objetivos Principales de la Interfaz (UI/UX)](#4-objetivos-principales-de-la-interfaz-uiux)
-5. [El proceso de trabajo](#5-el-proceso-de-trabajo)
-6. [Las pruebas](#6-las-pruebas)
-7. [El resultado obtenido](#7-el-resultado-obtenido)
+1. [Descripción del proyecto](#1-descripción-del-proyecto)
+2. [Público objetivo](#2-público-objetivo)
+3. [Capturas](#3-capturas)
+4. [Estructura de carpetas](#4-estructura-de-carpetas)
+5. [Decisiones técnicas](#5-decisiones-técnicas)
+6. [Objetivos de la interfaz (UI/UX)](#6-objetivos-de-la-interfaz-uiux)
+7. [Documentación](#7-documentación)
+8. [Backlog y cronograma](#8-backlog-y-cronograma)
+9. [Proceso de trabajo](#9-proceso-de-trabajo)
+10. [Pruebas](#10-pruebas)
+11. [Resultado obtenido](#11-resultado-obtenido)
+12. [Equipo](#12-equipo)
 
 ---
 
-## 1. El problema
+## 1. Descripción del proyecto
 
-Siempre se ha tenido el problema de "¿A que hora me toca la medicación?" y se nos olvida tomarla. Esto puede desencadenar severos problemas y afectar gravemente a la salud. No todo queda ahí, además, el proceso de poder coger cita médica es apps públicas o mismamente presencial provoca "desesperación" a las personas. Por lo cuál se ha decidido desarrollar una app que cubra estas necesidades y que ayude positivamente a la toma de los medicamentos. 
+Olvidar una toma de medicación o perder de vista una cita médica es fácil cuando se combinan varios tratamientos y poco tiempo, y puede afectar gravemente a la salud. Además, pedir cita en aplicaciones públicas o de forma presencial resulta lento y frustrante para muchas personas.
 
-## 2. Identificación del Público Objetivo
+**Tempomedic** centraliza medicación y citas en un solo sitio, con avisos que el usuario elige: una notificación discreta, una alarma con sonido o ambas.
 
-La aplicación está diseñada para responder a las necesidades de gestión de salud de diferentes perfiles de usuarios. Tras el análisis de la encuesta y las necesidades del sector, se han identificado tres grupos principales de público objetivo:
+**Qué incluye la interfaz (Sprint 2):**
 
-### 2.1. Pacientes con Tratamientos Temporales u Ocasionales
+- 10 ventanas Swing maquetadas con NetBeans Matisse a partir del diseño de Figma: Iniciar sesión, Crear cuenta, Recuperar contraseña, Bloqueo por PIN, Hoy, Medicamentos, Añadir medicamento, Citas, Pedir cita y Ajustes.
+- Navegación mediante menú lateral (sidebar) con icono y texto.
+- Componente visual reutilizable `TarjetaToma` para las tomas del día (estados Pendiente, Tomada y Omitida).
+- Estudio de **FlatLaf** como Look and Feel (tema claro/oscuro). Su integración se pospone al siguiente sprint, así que en el Sprint 2 se mantiene el aspecto nativo de Swing (ver incidencia AUD-01 en [Pruebas](#10-pruebas)).
+- Escalas de texto Normal, Grande y Muy grande, pensadas para usuarios de edad avanzada.
 
-* **Perfil:** Personas jóvenes o adultas que toman medicamentos durante un periodo concreto (antibióticos, analgésicos o tratamientos de 7 a 15 días).
-* **Necesidad principal:** Necesitan un sistema de alertas preciso que no dependa de acordarse manualmente del horario entre tomas, cada ocho horas por ejemplo.
-* **Solución que les ofrece la app:** Programación rápida de avisos con fecha de inicio y fin evitando olvidos por distracciones en su rutina
+**Alcance previsto del producto (próximos sprints):** alta, edición y eliminación de medicamentos; recordatorios por notificación o alarma; registro e historial de tomas; petición, consulta y cancelación de citas.
 
-### 2.2. Pacientes Crónicos o con numero elevado de pastillas
+**Fuera de alcance** (proyecto académico): conexión con sistemas sanitarios reales, receta electrónica y cualquier función de diagnóstico. No sustituye el criterio de un profesional sanitario.
 
-* **Perfil:** Personas adultas o de avanzada edad que deben tomar varios medicamentos al día de forma continuada y acudir a revisiones médicas periódicas.
-* **Necesidad principal:** Evitar confusiones con las dosis, los horarios y no perder las citas de seguimiento con sus médicos.  
+## 2. Público objetivo
 
-## 3. Las decisiones técnicas
+Según la encuesta realizada a los usuarios, se identifican dos grupos principales:
 
-### 3.1. Análisis comparativo(benchmarking)
+### 2.1. Pacientes con tratamientos temporales u ocasionales
 
-#### Aplicaciones similares en el mercado
+- **Perfil:** personas jóvenes o adultas que toman medicamentos durante un periodo concreto (antibióticos, analgésicos, tratamientos de 7 a 15 días).
+- **Necesidad:** alertas precisas que no dependan de recordar el horario entre tomas (por ejemplo, cada ocho horas).
+- **Solución:** programación rápida de avisos con fecha de inicio y fin.
 
-* **MedControl**: funciona como un asistente de salud personal y pastillero virtual. Permite crear alarmas personalizadas para medicamentos, llevar un control de inventario y organizar recordatorios para citas médicas. Además, incluye un diario de tensión arterial y seguimiento de síntomas.  
-* **Recordatorio de Medicamentos 2**: se centra en la adherencia al tratamiento. Ofrece recordatorios altamente configurables (cada X horas, días específicos, etc.), alertas cuando quedan pocas pastillas y la posibilidad de enviar reportes por correo al médico. Además permite agendar recordatorios de citas médicas.  
-* **CareClinic**: va más allá de la medicación. Permite a los usuarios registrar síntomas, mediciones, estado de ánimo y nutrición. Sus recordatorios son personalizables para medicamentos y citas, también admite la gestión de múltiples perfiles, como hijos o personas mayores.  
-* **Biva**: está diseñada para pacientes y cuidadores. Permite registrar condiciones médicas y tratamientos, estableciendo recordatorios para cada uno. Integra servicios como la recarga de medicamentos y la reserva de citas médicas, con un enfoque en la relación paciente-cuidador.  
-* **DayMedy**: es una aplicación de telemedicina que integra consultas en línea, gestión de prescripciones digitales y programación de citas. Tras una consulta, el usuario recibe la receta en la app y puede configurar recordatorios para la medicación. También permite gestionar los registros de salud de la familia.  
-* **Medical Reminder**: se enfoca en la simplicidad y la privacidad, funcionando sin conexión a internet. Ofrece recordatorios fiables para medicamentos y citas médicas, con un diseño de texto grande ideal para adultos mayores y cuidadores. Permite generar informes de salud en PDF para compartir con los médicos.  
-* **Otras aplicaciones**: también existen ejemplos como **IMQ** (de una aseguradora de salud), **MyCarePlan**, **PineApp** y **MedGemak**, que ofrecen funcionalidades parciales o totales, como gestión de citas, historial clínico, videoconsulta y alarmas de medicación.
+### 2.2. Pacientes crónicos o con muchos medicamentos
 
-#### Noticias y tendencias recientes
+- **Perfil:** personas adultas o de edad avanzada que toman varios medicamentos al día y acuden a revisiones periódicas.
+- **Necesidad:** evitar confusiones con dosis y horarios, y no perder las citas de seguimiento.
+- **Solución:** vista diaria unificada ("Hoy") con tomas y próximas citas, y texto escalable.
 
-* **Éxito de las tarjetas sanitarias virtuales**: en la Comunidad de Madrid, la Tarjeta Sanitaria Virtual (TSV) ha registrado cerca de 57 millones de accesos en 2025, un 43,5% más que el año anterior. Los servicios más utilizados son la gestión de citas médicas, la consulta de medicación y el acceso a informes. La aplicación ha incorporado herramientas como recordatorios de citas de atención primaria, que han enviado más de 5 millones de notificaciones, y alertas sobre la dispensación de medicamentos en farmacias.  
-* **Integración de IA en portales de pacientes**: Oracle Health ha lanzado un portal de pacientes con inteligencia artificial que ofrece resúmenes de salud, recordatorios automáticos de visitas y la posibilidad de programar citas de seguimiento. Esta IA ayuda a los pacientes a entender sus planes de cuidado y medicamentos en un lenguaje sencillo, buscando mejorar la adherencia al tratamiento.  
-* **Nuevos modelos de negocio y funcionalidades**: Startups como **Assort Health** han levantado capital significativo para plataformas que utilizan IA para conectar la programación de citas, la gestión de medicamentos y los pagos en un solo sistema. Por otro lado, **Amazon** ha lanzado un agente de IA para la salud que puede reservar citas y gestionar recetas médicas.  
-* **Investigación en universidades**: investigadores de la Universidad Miguel Hernández (UMH) de Elche han desarrollado una aplicación para que personas con inmunodeficiencias puedan autogestionar su enfermedad, incluyendo el control de citas y tratamientos con recordatorios personalizados.
+## 3. Capturas
 
-#### Estudios académicos sobre eficacia
+| Crear cuenta | Iniciar sesión |
+| --- | --- |
+| ![Crear cuenta](docs/img/ventanas/VentanaCrearCuenta.png) | ![Iniciar sesión](docs/img/ventanas/VentanaInicioSesion.png) |
 
-La literatura científica respalda la eficacia de las aplicaciones móviles para mejorar la adherencia a los tratamientos, especialmente en enfermedades crónicas.
+| Recuperar contraseña | Bloqueo por PIN |
+| --- | --- |
+| ![Recuperar contraseña](docs/img/ventanas/VentanaRecuperarContrasena.png) | ![Bloqueo por PIN](docs/img/ventanas/VentanaBloqueoPIN.png) |
 
-* **Mejora de la adherencia en diabetes**: un metaanálisis de 2025 concluyó que las intervenciones mediante aplicaciones móviles tienen un efecto positivo en la adherencia a la medicación y en el control de la diabetes mellitus tipo 2\.  
-* **Eficacia general de las intervenciones mHealth**: una revisión sistemática y metaanálisis de 2025, publicada en el Journal of Medical Systems, encontró que las intervenciones de salud móvil son efectivas para mejorar la adherencia a la medicación en pacientes con enfermedades crónicas.  
-* **Adherencia en enfermedad renal crónica**: revisión sistemática de 2025 se centró en pacientes con enfermedad renal crónica y concluyó que las aplicaciones móviles mejoran la adherencia, aunque la evidencia es limitada y se necesitan estudios de mayor duración.  
-* **Impacto en pacientes oncológicos**: investigaciones recientes indican que las intervenciones digitales, como las aplicaciones móviles y los sistemas de recordatorio, pueden ayudar a los pacientes con cáncer a adherirse mejor a su medicación.
-### 3.2. Desarrollo y mejora del producto(Product Backlog)
-**Módulo de Medicación y Recordatorios** 
+| Hoy | Medicamentos |
+| --- | --- |
+| ![Hoy](docs/img/ventanas/VentanaHoy.png) | ![Medicamentos](docs/img/ventanas/VentanaMedicamentos.png) |
 
-En este primer bloque funcional, el desarrollo arranca con la posibilidad de que el usuario registre un tratamiento especificando el nombre del fármaco, la dosis adecuada y las horas exactas de toma. La prioridad técnica reside en garantizar que la aplicación programe notificaciones locales en el sistema operativo del teléfono, asegurando que los avisos se emitan puntualmente de manera autónoma, incluso si el dispositivo carece de conexión a internet o la aplicación se encuentra cerrada.
-Una vez emitida la alerta, la experiencia se complementa permitiendo que el usuario interactúe directamente con la notificación o la pantalla principal para marcar la dosis como «Tomada» u «Omitida». Esta acción simple actualiza instantáneamente un registro diario de cumplimiento. Con este flujo cerrado de creación, notificación y confirmación de tomas, el usuario obtiene una solución funcional y directa para la adherencia a su medicación, cubriendo la necesidad principal con el mínimo esfuerzo de desarrollo técnico y sin requerir infraestructura en la nube. 
+| Añadir medicamento | Citas |
+| --- | --- |
+| ![Añadir medicamento](docs/img/ventanas/VentanaNuevoMedicamento.png) | ![Citas](docs/img/ventanas/VentanaCitas.png) |
 
-**Módulo de Agenda de Citas Médicas**
+| Pedir cita | Ajustes |
+| --- | --- |
+| ![Pedir cita](docs/img/ventanas/VentanaPedirCita.png) | ![Ajustes](docs/img/ventanas/VentanaAjustes.png) |
 
-El segundo componente esencial aborda la organización de las consultas de salud a través de una agenda sencilla pero efectiva. La funcionalidad permite al usuario completar un formulario básico donde indica la especialidad o el nombre del profesional, la fecha, la hora y el lugar de la consulta, guardando la información en la memoria local del dispositivo. Al momento del registro, el sistema programa automáticamente dos recordatorios preventivos, uno emitido veinticuatro horas antes y otro dos horas antes de la cita, para evitar olvidos o desplazamientos apresurados.
-Para maximizar la utilidad del módulo sin elevar la complejidad de la aplicación, el sistema ofrece la opción de exportar la cita creada al calendario nativo del teléfono (como Google Calendar o Apple Calendar). Mediante este enlace con las herramientas que el usuario ya utiliza en su día a día, la aplicación logra integrar la gestión médica en su rutina diaria de manera transparente, completando así la propuesta de valor inicial del proyecto.
+Los bocetos y mockups están en `docs/img/BocetosVistas` y `docs/img/mockups`, y en la [previsualización de Figma](https://www.figma.com/proto/ubk5OfKsRbFFkuf4rPfQUt/Tempomedic-%E2%80%93-Bocetos-Sprint-1?node-id=2-2&p=f&t=ziVSvWBFrGusDbKS-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2&show-proto-sidebar=1).
 
-**Criterios de Aceptación y Preparación para Siguientes Fases**
+## 4. Estructura de carpetas
 
-Todas las historias de usuario comparten una restricción clave: la persistencia de datos debe ser estrictamente local y cifrada dentro del dispositivo del usuario. Un requisito de aceptación imprescindible para dar por finalizada esta primera versión es la verificación de las alarmas en diferentes escenarios de ahorro de batería de Android e iOS, garantizando que el sistema no cancele las notificaciones en segundo plano.
-Las funcionalidades orientadas a la gestión de inventario de pastillas, el control de perfiles familiares, la carga de documentos adjuntos o las integraciones con bases de datos farmacológicas quedan explícitamente pospuestas para las iteraciones posteriores al lanzamiento. De este modo, la primera entrega concentrará todo el esfuerzo técnico en la fiabilidad de los recordatorios y la simplicidad de la agenda.
+```
+Interfaz/
+├─ docs/
+│  ├─ backlogs/                 Backlogs de los sprints (backlogSprint2.md)
+│  ├─ img/
+│  │  ├─ Auditoria/             Evidencias de la auditoría
+│  │  ├─ BocetosVistas/         Bocetos del Sprint 1
+│  │  ├─ icons/                 Iconos
+│  │  ├─ logo/                  Logotipo
+│  │  ├─ mockups/               Mockups de Figma
+│  │  ├─ ventanas/              Capturas de las ventanas
+│  │  ├─ DF TempoMedic.png      Diagrama de flujo
+│  │  └─ Diagrama de Gantt Sprint 2.png
+│  ├─ auditoria.md              Medidas, auditoría, mensajes y pruebas SUS
+│  ├─ componentes.md            Fichas de los componentes usados
+│  ├─ cronograma.md             Cronograma de ejecución (Gantt)
+│  ├─ diseno.md                 Cambios de diseño, paleta, tipografía y FlatLaf
+│  ├─ estructura-y-flujo.md     Menús, ventanas, diálogos, atajos y mapa de navegación
+│  └─ usabilidad-accesibilidad.md  Estándares y matriz de aplicación
+├─ Tempomedic_App/              Proyecto NetBeans (Ant)
+│  ├─ librerias/                Librerías externas (FlatLaf)
+│  ├─ nbproject/
+│  ├─ src/com/tempomedic/
+│  │  ├─ icons/                 Iconos PNG de la interfaz
+│  │  ├─ logos/                 Logotipos
+│  │  └─ vista/                 Ventanas Swing (Ventana*.java y .form)
+│  ├─ build.xml
+│  └─ manifest.mf
+├─ .gitignore
+└─ README.md
+```
 
-### 3.3. Registro del sprint(Sprint Backlog)
-El desarrollo del Sprint 1 se ha enfocado en consolidar las bases, el diseño visual de las interfaces y la arquitectura del proyecto **TempoMedic**. 
-* **Fechas de ejecución:** 12/10 – 23/10
-* **Objetivo principal:** Diseñar la maquetación visual de las pantallas, procesar los datos de investigación mediante encuestas, recolección de los datos, documentación de información
-*| **S1-01** | Procesamiento y análisis de las encuestas de recolección de usuarios / Completado |
+Las ventanas del paquete `vista` son: `VentanaInicioSesion`, `VentanaCrearCuenta`, `VentanaRecuperarContrasena`, `VentanaBloqueoPIN`, `VentanaHoy`, `VentanaMedicamentos`, `VentanaNuevoMedicamento`, `VentanaCitas`, `VentanaPedirCita` y `VentanaAjustes`.
 
-*| **S1-02** | Redacción de Historias de Usuario (HU01-HU05) y Criterios de Aceptación / Completado |
+## 5. Decisiones técnicas
 
-*| **S1-03** | Diseño de la arquitectura gráfica/ Completado |
+### 5.1. Tecnologías
 
-*| **S1-04** | Diseñar el modelo de datos local (`Cita`, `Medicamento`, `Toma`) / Completado |
+| | |
+| --- | --- |
+| Lenguaje | Java |
+| Interfaz gráfica | Swing, con el editor visual NetBeans Matisse |
+| Look and Feel | Swing nativo en el Sprint 2. FlatLaf 3.7.2 previsto para el siguiente sprint |
+| Arquitectura | MVC (Modelo–Vista–Controlador) |
+| Proyecto | NetBeans (Ant), librerías en `librerias/` |
+| Persistencia | En memoria en esta fase |
+| Control de versiones | Git / GitHub, con Issues y Projects para Scrum |
 
-*| **S1-05** | Maquetación visual e interfaz accesible / Completado |
+### 5.2. Diseño de escritorio implementado en Swing
 
-*| **S1-06** | Redacción del plan de seguridad, privacidad / Completado |
+El diseño inicial era de móvil (vertical, con barra de navegación inferior). En el Sprint 2 se rediseñó para **escritorio**, porque Swing es una tecnología de aplicaciones de escritorio:
 
-*| **S1-07** | Lógica y diseño del sistema de recordatorios (alarmas/notificaciones sonoras y silenciosas) / Completado |
+- Lienzo horizontal 16:9. Las ventanas se maquetan sobre una base de **960 x 540 px** de contenido y se adaptan al maximizar.
+- La barra inferior se sustituye por un **menú lateral** de ancho fijo (120 px) con icono y texto: *Hoy*, *Medicamentos*, *Citas* y *Ajustes*. La sección actual se marca con fondo `#BAD1D9` y texto e icono negros.
+- Los formularios (Añadir medicamento, Pedir cita) se reorganizan en columnas para aprovechar el ancho.
+- Se elimina el desbloqueo por **biometría**, que no es viable en una aplicación de escritorio Swing.
 
-*| **S1-08** | Plan de seguimiento, plantilla de pruebas y gestión de incidencias en GitHub / Completado |
+La maquetación se hizo **solo con propiedades y layouts desde el diseñador de NetBeans**: GridBagLayout en tarjetas y formularios, BorderLayout para la estructura general, GridLayout para filas de botones, y `JScrollPane` en listas. No se usa AbsoluteLayout, porque no se adapta al redimensionar. El detalle de cada componente está en [`docs/componentes.md`](docs/componentes.md).
 
-*| **S1-09** | Sesión de Cierre / Completado |
-* 
-## 4.  Objetivos Principales de la Interfaz (UI/UX)
+### 5.3. Patrón MVC
 
-Puedes encontrar los bocetos de la interfaz en `docs\img\BocetosVistas` o en la [previsualización de Figma](https://www.figma.com/proto/ubk5OfKsRbFFkuf4rPfQUt/Tempomedic-%E2%80%93-Bocetos-Sprint-1?node-id=2-2&p=f&t=ziVSvWBFrGusDbKS-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2&show-proto-sidebar=1).
+- **Modelo:** clases de datos (`Cita`, `Medicamento`, `Toma`).
+- **Vista:** ventanas Swing del paquete `com.tempomedic.vista`, sin lógica.
+- **Controlador:** gestiona los eventos de la vista y actualiza el modelo (pendiente de implementar en los próximos sprints).
 
-El diseño de la interfaz de **Tempomedic** se ha estructurado para ofrecer una experiencia sencilla, accesible y adaptada a las necesidades obtenidas en la encuesta. Los objetivos  del diseño son:
+### 5.4. Componente reutilizable: `TarjetaToma`
 
-### Centralización en un Dashboard Diario ("Hoy")
+Tarjeta de toma de medicación con medicamento, dosis, hora, estado y botones *Tomada*, *Posponer* y *Omitida*. El estado se indica con **texto y símbolo, no solo con color** (Pendiente, Tomada, Omitida). Se usa en `VentanaHoy`. Su ficha está en [`docs/componentes.md`](docs/componentes.md).
 
-* **Vista unificada:** La pantalla principal consolida en un único vistazo las tomas de medicación pendientes/completadas y las próximas citas médicas programadas
-* **Gestión de estados rápida:** Permite cambiar el estado de las tomas con botones directos de *"Tomada"*, *"Posponer"* u *"Omitida"* sin tener que navegar por varios menús
+### 5.5. Estilo visual
 
-### Navegación Sencilla e Intuitiva
+- **Paleta:** azul oscuro `#3B6A76` (marca, botones, sidebar), azul claro `#BAD1D9` (tarjetas y campos), blanco, negro, y colores de estado: azul `#0075DA` (enlaces), verde `#25853D`, naranja `#BC5800` y rojo `#EA0004`. Contrastes comprobados según WCAG en [`docs/diseno.md`](docs/diseno.md).
+- **Tipografía:** Sans-Serif con tres escalas.
 
-* **Navegación inferior fija :** La aplicación utiliza una barra principal con 4 secciones  definidas (*Hoy*, *Medicamentos*, *Citas*, *Ajustes*) para permitir un acceso rápido a cualquier función en 1 solo clic
-* **Formularios estructurados:** Las pantallas para añadir o editar medicamentos y citas emplean un diseño limpio mediante campos de selección y menús desplegables para agilizar la introducción de datos
+| Escala | Botones | Texto | Títulos |
+| --- | --- | --- | --- |
+| Normal | 14 pt | 18 pt | 24 pt |
+| Grande | 18 pt | 22 pt | 30 pt |
+| Muy grande | 22 pt | 26 pt | 36 pt |
 
-### Personalización y Accesibilidad Universal
+- **Iconos:** PNG importados al tamaño final y siempre acompañados de texto.
+- **FlatLaf:** elegido frente a Metal, Nimbus y librerías antiguas por su aspecto moderno, tema claro/oscuro, buen soporte HiDPI y facilidad de integración. Comparativa en [`docs/diseno.md`](docs/diseno.md). Al importar su paleta en NetBeans Matisse no se mostraban los iconos y algunos componentes no se podían arrastrar, por lo que se decidió maquetar con Swing nativo y aplicar FlatLaf por código en el siguiente sprint.
 
-* **Ajuste de visibilidad y temas:** Desde la sección de ajustes, el usuario puede adaptar el tamaño del texto (*Normal*, *Grande*, *Muy grande*) y alternar entre tema *Claro* u *Oscuro* para facilitar la lectura a personas con visión reducida
-* **Notificaciones a medida:** Permite configurar de forma global o individual el tipo de aviso (*Notificación*, *Alarma* o *Ambos*), respondiendo a la diversidad de preferencias detectada en los usuarios
+### 5.6. Estudio de mercado (resumen)
 
-### Seguridad, Privacidad y Feedback Claro
+Se analizaron aplicaciones similares (MedControl, Recordatorio de Medicamentos 2, CareClinic, Biva, DayMedy, Medical Reminder), junto con noticias recientes (tarjetas sanitarias virtuales, IA en portales de pacientes) y estudios que respaldan la eficacia de las apps móviles para mejorar la adherencia al tratamiento.
 
-* **Protección mediante PIN de acceso:** Implementación de una pantalla de desbloqueo rápido por PIN como capa extra de seguridad para los datos médicos del usuario
-* **Feedback:** La interfaz confirma las acciones del usuario de forma transparente
+### 5.7. Product backlog (resumen)
 
-## 5. El proceso de trabajo
-Para comenzar, se ha analizado el perfil de los usuarios a través de una encuesta recopilando sus necesidades, las ventajas, desventajas y sus preferencias. Posteriormente, tras los resultados, se ha puesto en común las ideas surgidas y la toma de decisiones para poder comenzar a trabajar y meter mano en la aplicación. 
-Con diversos problemas surgidos para la elección del nombre, al final se ha decidido por TempoMedic. Una vez que la app va cogiendo personalidad propia, se comienza a buscar los colores identificativos para la interfaz, mostrada anteriormente, con colores tenues y sencillo que sea agradable a la vista de los usuarios. 
-## 6. Las pruebas
+- **Módulo de medicación y recordatorios:** registrar tratamiento (fármaco, dosis, horas), avisar por notificación o alarma y marcar cada toma como *Tomada* u *Omitida*, con registro diario de cumplimiento.
+- **Módulo de agenda de citas:** formulario con especialidad, fecha, hora y lugar, con recordatorios previos a la cita.
+- **Criterio común:** datos guardados de forma local. La gestión de inventario, perfiles familiares, documentos adjuntos e integraciones queda para iteraciones posteriores.
 
-## 7. El resultado obtenido
+## 6. Objetivos de la interfaz (UI/UX)
+
+- **Dashboard diario ("Hoy"):** tomas pendientes o completadas y próximas citas en una sola vista, con botones directos *Tomada*, *Posponer* y *Omitida*.
+- **Navegación sencilla:** menú lateral siempre visible con las 4 secciones, cualquiera accesible en un clic.
+- **Formularios claros:** campos de texto, desplegables y listas de sugerencias.
+- **Personalización y accesibilidad:** tamaño de texto (*Normal*, *Grande*, *Muy grande*), tema *Claro* u *Oscuro* y tipo de aviso (*Notificación*, *Alarma* o *Ambos*).
+- **Seguridad y privacidad:** bloqueo opcional por PIN de 4 dígitos.
+- **Feedback:** la interfaz confirma las acciones del usuario.
+
+## 7. Documentación
+
+| Documento | Contenido |
+| --- | --- |
+| [`docs/diseno.md`](docs/diseno.md) | Cambios de diseño (v2.0 escritorio), paleta, contrastes, tipografía, FlatLaf |
+| [`docs/usabilidad-accesibilidad.md`](docs/usabilidad-accesibilidad.md) | WCAG 2.2, heurísticas de Nielsen, ISO 9241 y su aplicación en Tempomedic |
+| [`docs/auditoria.md`](docs/auditoria.md) | Medidas y herramientas de auditoría, revisión de mensajes, informe de auditoría (AUD-01) y pruebas de usabilidad (SUS) |
+| [`docs/estructura-y-flujo.md`](docs/estructura-y-flujo.md) | Pautas estructurales, atajos de teclado, orden de tabulación y mapa de navegación |
+| [`docs/componentes.md`](docs/componentes.md) | Ficha de cada componente usado: qué es, características, dónde se usa y por qué |
+| [`docs/cronograma.md`](docs/cronograma.md) | Cronograma de ejecución |
+| [`docs/backlogs/backlogSprint2.md`](docs/backlogs/backlogSprint2.md) | Backlog del Sprint 2 |
+
+## 8. Backlog y cronograma
+
+### Backlog del Sprint 2 (DII)
+
+| Bloque | Estado | Responsables |
+| --- | --- | --- |
+| 0. Maquetación de las interfaces ([#140](https://github.com/SantiagoGonzalez12/Tempomedic/issues/140)) | Completado | Santiago González, Alba Durán |
+| 1. Usabilidad y accesibilidad ([#131](https://github.com/SantiagoGonzalez12/Tempomedic/issues/131)) | Completado | María Dolores Barba |
+| 2. Medidas y auditoría ([#70](https://github.com/SantiagoGonzalez12/Tempomedic/issues/70)) | Completado | María Dolores Barba |
+| 3. Wireframes y mockups ([#59](https://github.com/SantiagoGonzalez12/Tempomedic/issues/59)) | Completado | Santiago González, Alba Durán |
+| 4. Pautas estructurales: menús, ventanas, diálogos y atajos ([#132](https://github.com/SantiagoGonzalez12/Tempomedic/issues/132)) | Completado | Jorge Espejo |
+| 5. Pautas de aspecto: colores, fuentes, iconos ([#63](https://github.com/SantiagoGonzalez12/Tempomedic/issues/63)) | Guía de estilo y estudio de FlatLaf completados. Integración de FlatLaf pospuesta (AUD-01) y clase `Tema` ([#65](https://github.com/SantiagoGonzalez12/Tempomedic/issues/65)) pendiente | Jorge Espejo, Alba Durán |
+| 6. Componentes visuales: `TarjetaToma` y fichas ([#73](https://github.com/SantiagoGonzalez12/Tempomedic/issues/73)) | Completado | Jorge Espejo, Alba Durán, Santiago González |
+| 7. Secuencia de control ([#133](https://github.com/SantiagoGonzalez12/Tempomedic/issues/133)) | Completado | María Dolores Barba |
+| 8. Cronograma ([#55](https://github.com/SantiagoGonzalez12/Tempomedic/issues/55)) | Completado | Todo el equipo |
+| 9. Entrega y evidencias ([#134](https://github.com/SantiagoGonzalez12/Tempomedic/issues/134)) | Completado | Todo el equipo |
+
+Tablero: <https://github.com/users/SantiagoGonzalez12/projects/6>. Detalle por tarea en [`docs/backlogs/backlogSprint2.md`](docs/backlogs/backlogSprint2.md).
+
+### Cronograma
+
+El Sprint 2 se organizó en 6 fases. El detalle de tareas, responsables y fechas está en [`docs/cronograma.md`](docs/cronograma.md).
+
+| Fase | Contenido | Responsables | Fechas |
+| --- | --- | --- | --- |
+| 1. Análisis | Encuestas y estándares de usabilidad y accesibilidad | María Dolores Barba | 14/10 - 28/10 |
+| 2. Diseño e implementación | Wireframes y mockups para escritorio; maquetación de las 10 ventanas | Santiago González, Alba Durán | 17/10 - 28/10 |
+| 3. Aspecto y componentes | Estudio de Look and Feel, guía de estilo, `TarjetaToma` y fichas | Jorge Espejo, Alba Durán, Santiago González | 22/10 - 28/10 |
+| 4. Pruebas y auditoría | Medidas de auditoría, revisión de mensajes y pruebas SUS | María Dolores Barba | 22/10 - 28/10 |
+| 5. Validación y estructura | Pautas estructurales, atajos y mapa de flujo | Jorge Espejo, María Dolores Barba | 24/10 - 28/10 |
+| 6. Ajustes y cierre | Cronograma, README y presentación | Todo el equipo | 28/10 - 29/10 |
+
+![Diagrama de Gantt Sprint 2](docs/img/Diagrama%20de%20Gantt%20Sprint%202.png)
+
+### Sprint 1 (referencia)
+
+Consolidó las bases: análisis de encuestas, historias de usuario (HU01–HU05), arquitectura gráfica, modelo de datos local (`Cita`, `Medicamento`, `Toma`), maquetación visual accesible, plan de seguridad y privacidad, diseño del sistema de recordatorios y plan de pruebas. Todas sus tareas se completaron.
+
+## 9. Proceso de trabajo
+
+Se analizó el perfil de los usuarios con una encuesta y, con sus resultados, el equipo puso en común las ideas y decisiones. Tras elegir el nombre **Tempomedic** y la identidad visual (colores tenues y sencillos), se diseñaron los mockups en Figma. En el Sprint 2 se adaptó el diseño a escritorio y se maquetaron las ventanas en NetBeans, repartiendo las pantallas entre el equipo y revisándolas entre sí. El trabajo se organiza con Scrum, sprints de 2 semanas, Issues y un tablero de GitHub Projects.
+
+## 10. Pruebas
+
+Detalle completo en [`docs/auditoria.md`](docs/auditoria.md).
+
+### Auditoría de accesibilidad y consistencia
+
+- Se definieron 5 métricas (contraste, tiempo por tarea, errores, clics y satisfacción), una lista de comprobación y un registro de incidencias.
+- Se revisaron los mensajes de la aplicación (10 textos reescritos, por ejemplo `Error 401: Credenciales inválidas.` pasa a `El correo o la contraseña no son correctos. Por favor, revisa los datos e inténtalo de nuevo.`).
+
+| ID | Descripción | Prioridad | Estado |
+| --- | --- | --- | --- |
+| AUD-01 | La paleta de FlatLaf en NetBeans Matisse no muestra iconos y algunos componentes no se pueden arrastrar | P2 | Pospuesto: se mantiene Swing nativo y FlatLaf se aplicará por código en el siguiente sprint |
+
+### Pruebas de usabilidad con usuarios
+
+Se probó el mockup de Figma con 3 usuarios de 59, 61 y 63 años, que realizaron 3 tareas (añadir un medicamento, marcar una toma como "Tomada" y pedir una cita de Cardiología) y completaron el cuestionario SUS.
+
+| Usuario | SUS (0-100) |
+| --- | --- |
+| U1 (59 años) | 87,5 |
+| U2 (61 años) | 80,0 |
+| U3 (63 años) | 92,5 |
+| **Media** | **86,6** |
+
+- **Tiempos medios:** añadir medicamento 45 s, marcar toma 13,3 s y pedir cita 28,3 s.
+- **Tareas sin errores:** 77,7 %.
+- **Puntos fuertes:** claridad visual, buen contraste y facilidad para marcar tomas.
+- **Mejora detectada:** simplificar las opciones del desplegable de frecuencia al añadir un medicamento.
+
+Las pruebas se hicieron sobre el prototipo de Figma, no sobre la aplicación Swing.
+
+## 11. Resultado obtenido
+
+Las 10 ventanas están maquetadas con Swing nativo y se adaptan al redimensionar. La interfaz obtuvo una puntuación media de 86,6/100 en la escala SUS (sobre el prototipo). Quedan para los siguientes sprints la integración de FlatLaf por código y la clase `Tema`, la lógica de los controladores, el cambio de estado de las tarjetas, los selectores de fecha y hora, y la aplicación efectiva del tamaño de texto y del tema oscuro.
+
+## 12. Equipo
+
+| Nombre | Rol en el equipo | Aportación en el Sprint 2 (DII) |
+| --- | --- | --- |
+| María Dolores Barba | QA Tester & Release Manager | Usabilidad y accesibilidad, auditoría, pruebas con usuarios y mapa de navegación |
+| Alba Durán | Especialista UI/UX (Frontend) | Maquetación de interfaces, integración de FlatLaf y componentes |
+| Santiago González | Scrum Master, Especialista UI/UX (Frontend) | Maquetación de interfaces, wireframes y mockups, componentes |
+| Jorge Espejo | Desarrollador de Lógica y Datos (Backend) | Pautas estructurales y de aspecto, FlatLaf, clase `Tema` |
+
+Tutor del módulo: Willman Acosta Lugo.
+
+## Licencia
+
+MIT License
+
+Proyecto académico desarrollado como Proyecto Intermodular del ciclo de Grado Superior DAM.
