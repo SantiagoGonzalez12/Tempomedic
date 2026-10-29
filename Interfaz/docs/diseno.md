@@ -39,31 +39,36 @@ Se ha definido una paleta basada en tonos azules y verdes que transmiten confian
 * **Azul claro:** `#BAD1D9` (Fondos de tarjetas, campos de texto, bordes).
 * **Blanco:** `#FFFFFF` (Fondo general de la aplicación).
 * **Negro:** `#000000` (Texto principal).
-* **Verde:** `#39C85D` (Indicador de estado y confirmaciones).
-* **Naranja:** `#FF8D28` (Indicador de estado).
-* **Rojo:** `#FF3D40` (Indicador de accion importante sin retorno).
+* **Azul:** `#0075DA` (Texto con enlace u opcionalidad a otro medio)
+* **Verde:** `#25853D` (Indicador de estado y confirmaciones).
+* **Naranja:** `#BC5800` (Indicador de estado).
+* **Rojo:** `#EA0004` (Indicador de accion importante sin retorno).
 
 #### Tabla de Contrastes Comprobados (Texto/Fondo)
 
-| Par de Colores | Uso | Ratio de Contraste | Cumple 4.5:1 (Normal) | Cumple 3:1 (Grande) |
-| :--- | :--- | :---: | :---: | :---: |
-| **`#3B6A76`** (Azul oscuro) sobre **`#FFFFFF`** (Blanco) | Texto principal, títulos, texto de botones en barra lateral | **5.8 : 1** | 🟩 | 🟩 |
-| **`#FFFFFF`** (Blanco) sobre **`#3B6A76`** (Azul oscuro) | Texto en botones primarios (ej. "Iniciar sesión") | **5.8 : 1** | 🟩 | 🟩 |
-| **`#000000`** (Negro) sobre **`#FFFFFF`** (Blanco) | Texto general en el fondo de la app | **21.0 : 1** | 🟩 | 🟩 |
-| **`#000000`** (Negro) sobre **`#BAD1D9`** (Azul claro) | Texto en campos de texto, tarjetas o tablas | **13.2 : 1** | 🟩 | 🟩 |
-| **`#3B6A76`** (Azul oscuro) sobre **`#BAD1D9`** (Azul claro) | Iconos o textos secundarios en las tarjetas | **4.8 : 1** | 🟩 | 🟩 |
-| **`#000000`** (Negro) sobre **`#39C85D`** (Verde) | Texto del estado "Tomada" o confirmación (fondo verde) | **7.4 : 1** | 🟩 | 🟩 |
-| **`#39C85D`** (Verde) sobre **`#FFFFFF`** (Blanco) | Texto o icono verde sobre fondo blanco | **2.2 : 1** | 🟥 | 🟥 |
-| **`#000000`** (Negro) sobre **`#FF8D28`** (Naranja) | Texto del estado "Pendiente" o "Posponer" (fondo naranja) | **8.8 : 1** | 🟩 | 🟩 |
-| **`#FF8D28`** (Naranja) sobre **`#FFFFFF`** (Blanco) | Texto o icono naranja sobre fondo blanco | **1.9 : 1** | 🟥 | 🟥 |
-| **`#FFFFFF`** (Blanco) sobre **`#FF3D40`** (Rojo) | Texto en botón de acción destructiva (fondo rojo) | **3.7 : 1** | 🟥 (Falla para texto normal) | 🟩 (Válido solo si es texto grande o negrita de 14pt+) |
-| **`#FF3D40`** (Rojo) sobre **`#FFFFFF`** (Blanco) | Texto de error o botón "Eliminar cuenta" sin fondo | **3.7 : 1** | 🟥 | 🟩 |
+| Combinación (Texto/Fondo) | Ratio | ¿Cumple 4.5:1? (Texto Normal) | ¿Cumple 3:1? (Texto Grande / UI) | Uso recomendado |
+| :--- | :---: | :---: | :---: | :--- |
+| **Azul oscuro** (`#3B6A76`) sobre **Blanco** (`#FFFFFF`) | **5.84 : 1** | 🟩 | 🟩 | Texto principal, títulos, botones. |
+| **Blanco** (`#FFFFFF`) sobre **Azul oscuro** (`#3B6A76`) | **5.84 : 1** | 🟩 | 🟩 | Botones primarios (texto blanco). |
+| **Azul claro** (`#BAD1D9`) sobre **Blanco** (`#FFFFFF`) | **1.62 : 1** | 🟥 | 🟥 | **Solo** como fondo o borde (nunca como texto). |
+| **Negro** (`#000000`) sobre **Blanco** (`#FFFFFF`) | **21.00 : 1** | 🟩 | 🟩 | Texto principal, máxima legibilidad. |
+| **Negro** (`#000000`) sobre **Azul claro** (`#BAD1D9`) | **12.94 : 1** | 🟩 | 🟩 | Texto sobre campos de texto y tarjetas. |
+| **Verde** (`#25853D`) sobre **Blanco** (`#FFFFFF`) | **4.69 : 1** | 🟩 | 🟩 | Texto de estado "Tomada" o confirmaciones. |
+| **Rojo** (`#EA0004`) sobre **Blanco** (`#FFFFFF`) | **4.53 : 1** | 🟩 | 🟩 | Texto de error o botón "Eliminar" (sin fondo). |
+| **Azul oscuro** (`#3B6A76`) sobre **Azul claro** (`#BAD1D9`) | **3.59 : 1** | 🟥 | 🟩 | Iconos, bordes o textos grandes (18pt+). |
+| **Naranja** (`#BC5800`) sobre **Azul claro** (`#BAD1D9`) | **3.15 : 1** | 🟥 | 🟩 | Iconos o textos grandes en tarjetas. |
+| **Verde** (`#25853D`) sobre **Azul claro** (`#BAD1D9`) | **2.89 : 1** | 🟥 | 🟥 | **Evitar**. Usar verde sobre blanco o negro. |
+| **Azul** (`#0075DA`) sobre **Blanco** (`#FFFFFF`) | **4.52 : 1** | 🟩 | 🟩 | Enlaces y textos opcionales. |
 
 Leyenda: 🟩Sí 🟥No
 
 Nota técnica: 
-* El **Verde (`#39C85D`)** y el **Naranja (`#FF8D28`)** no deben usarse como color de texto sobre fondos blancos o azules claros, ya que no superan el ratio de 4.5:1. Para los estados de "Tomada" o "Pendiente", se usarán otro método todavía no acordado.
-* El **Rojo (`#FF3D40`)** sobre fondo blanco (ratio 3.7:1) no cumple el mínimo de 4.5:1 para texto normal. Por lo tanto, si se usa para el botón "Eliminar cuenta", el texto deberá ser de **tamaño grande (18pt+) o ir en negrita (14pt+)** para cumplir la excepción de la norma (que exige 3:1). Como alternativa más segura, se puede usar el rojo como **color de fondo del botón con texto blanco en negrita**.
+* El **Negro sobre Blanco** y **Negro sobre Azul claro** son las combinaciones más seguras y se usarán para todo el texto de lectura principal (párrafos, datos de medicamentos).
+* El **Azul oscuro** es el color de marca por excelencia. Funciona perfectamente sobre blanco (5.8:1) y sobre azul claro si se usa en tamaños grandes o para iconos (3.5:1).
+* **Colores de estado (Verde y Rojo):** Ambos han sido ajustados y **ahora cumplen perfectamente el nivel AA sobre fondo blanco** (4.69:1 y 4.53:1 respectivamente). ¡Buen trabajo con la elección de estos tonos!
+* **El caso del Azul Claro (`#BAD1D9`):** Este color tiene una luminosidad muy alta. **Nunca se debe usar como color de texto sobre blanco** (falla con 1.6:1). Se usará exclusivamente como fondo de tarjetas o campos de texto. 
+* **El caso del Verde sobre Azul Claro:** Si queréis poner una etiqueta verde de "Tomada" dentro de una tarjeta (que es azul claro), el verde falla el contraste (2.89:1). **Solución:** En las tarjetas, el estado "Tomada" debe ir con texto **Negro** o con una etiqueta que tenga fondo verde y texto blanco.
+* **Enlaces (`#0075DA`):** El azul de los enlaces cumple justo el mínimo (4.52:1). Es correcto, pero si queréis más seguridad, se puede oscurecer un poco más
 
 Se puede calcular las pautas WCAG 2.1 (Nivel AA) en (https://coddy.tech/tools/es/contrast-checker).
 
