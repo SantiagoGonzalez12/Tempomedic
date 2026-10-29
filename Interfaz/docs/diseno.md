@@ -86,3 +86,80 @@ Se utiliza una tipografía **Sans-Serif** (como Arial, Helvetica o Segoe UI) por
 * **Rejilla base:** sistema de 12 columnas con un margen exterior de 24 px y un *gutter* (espacio entre columnas) de 16 px.
 * **Área táctil mínima (Target Size):** todos los botones e iconos interactivos tienen un tamaño mínimo de **48x48 px** (o dp), cumpliendo con las recomendaciones para personas con movilidad reducida o temblores.
 * **Iconos:** siempre acompañados de texto para evitar ambigüedades, cumpliendo con el criterio de "Comprensible" de WCAG.
+
+8. **Estudio de FlatLaf y alternativas**
+
+Se ha estado buscando información de FlatLaf, Metal / System (por defecto), Nimbus y otras más antiguas como Substance, Logansquare y JGoodies.
+
+Criterio | FlatLaf | Metal / System (Por defecto) | Nimbus | Otras (Substance / Logansquare / JGoodies)
+-- | -- | -- | -- | --
+Diseño y Estética | Moderno y limpio (Flat Design / Material) | Muy anticuado y tosco | Moderno para el estándar de 2010 | Varía (de futurista a corporativo clásico)
+Soporte Claro / Oscuro | Excelente (Nativo, dinámico y con múltiples variantes) | Deficiente o inexistente de forma nativa | Parcial (requiere cambiar paletas manualmente) | Bueno (pero la librería suele estar descontinuada)
+Contraste y Accesibilidad | Alto (Diseño optimizado y paletas de alto contraste disponibles) | Medio-Bajo (Gradientes antiguos y bordes difusos) | Medio (Mucho degradado que reduce legibilidad) | Variable según el tema elegido
+Escalado de Texto (HiDPI) | Excelente (Soporte automático para pantallas 4K y pantallas Retina) | Pobre (Suele verse borroso o pixelado en altas resoluciones) | Deficiente (Problemas crónicos con fuentes en HiDPI) | Regular (Soporte inconsistente según la versión)
+Integración con Maven | Muy simple (Una sola dependencia activa en Maven Central) | Ya incluido en el JDK (No requiere dependencias) | Ya incluido en el JDK (No requiere dependencias) | Complejo (Repositorios antiguos o dependencias rotas)
+
+### DESARROLLO E IMPLEMENTACIÓN
+#### Tecnologías, lenguajes y frameworks utilizados
+
+Además de Java, Swing, NetBeans Matisse y Maven, la interfaz utiliza **FlatLaf** como *Look and Feel*: una librería que sustituye el aspecto por defecto de Swing por uno plano y moderno, y que permite alternar entre tema claro y oscuro en tiempo real. Se eligió porque responde directamente al ajuste "Tema: Claro / Oscuro" que pedía el diseño de la interfaz y porque la encuesta mostró que la legibilidad es una prioridad para el 70% de los encuestados con 46 años o más.
+
+#### Implementación de la interfaz de usuario
+**Utilizar FlatLaf con Java Ant**
+1. [Descargar el archivo .jar](https://repo1.maven.org/maven2/com/formdev/flatlaf/3.7.2/flatlaf-3.7.2.jar) desde el [Repositorio Central de Maven](https://central.sonatype.com/artifact/com.formdev/flatlaf).
+2. En NetBeans, ir a la pestaña `Projects` (Proyectos).
+3. Clic derecho en `Libraries (Bibliotecas) > Add JAR/Folder`.
+4. Seleccionar el archivo .jar descargado.
+
+**Para inicializar FlatLaf al arrancar la app**
+``` java
+public static void main(String args[]) {
+    try {
+        // Activa el tema claro de FlatLaf
+        FlatLightLaf.setup();
+    } catch( Exception e ) {
+        System.err.println( "Error al inicializar FlatLaf: " + e.getMessage() );
+    }
+
+
+    // Arrancar la ventana (código por defecto de NetBeans)
+    java.awt.EventQueue.invokeLater(new Runnable() {
+        public void run() {
+            new TuVentanaPrincipal().setVisible(true);
+        }
+    });
+```
+
+**Cambio de Tema Claro / Oscuro con botones**
+Ejemplo botón activar Modo Oscuro
+``` java
+private void btnModoOscuroActionPerformed(java.awt.event.ActionEvent evt) {                                              
+    try {
+        // 1. Cambiar al tema oscuro
+        FlatDarkLaf.setup();
+        
+        // 2. Actualizar todas las ventanas abiertas para aplicar el cambio visual
+        SwingUtilities.updateComponentTreeUI(this); 
+    } catch (Exception e) {
+        ex.printStackTrace();
+    }
+}
+```
+
+Ejemplo botón activar Modo Claro
+``` java
+private void btnModoClaroActionPerformed(java.awt.event.ActionEvent evt) {                                             
+    try {
+        // 1. Cambiar al tema claro
+        FlatLightLaf.setup();
+        
+        // 2. Actualizar todas las ventanas abiertas para aplicar el cambio visual
+        SwingUtilities.updateComponentTreeUI(this);
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+}
+```
+
+#### Vista previa en el diseñador de NetBeans
+`Menú superior de NetBeans > Tools (Herramientas) > Options (Opciones) > Java > pestaña GUI Builder > Preview Look and Feel > FlatLaf` (si aparece) o configurar el Look and Feel del sistema para que se asemeje más
