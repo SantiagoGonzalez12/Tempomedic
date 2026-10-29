@@ -83,6 +83,7 @@ public class VentanaHoy extends javax.swing.JFrame {
 
         btnHoy1.setBackground(new java.awt.Color(186, 209, 217));
         btnHoy1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnHoy1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-home-6-48.png"))); // NOI18N
         btnHoy1.setText("Hoy");
         btnHoy1.setAlignmentX(0.5F);
         btnHoy1.setBorderPainted(false);
@@ -98,6 +99,7 @@ public class VentanaHoy extends javax.swing.JFrame {
         btnMedicamentos1.setBackground(new java.awt.Color(186, 209, 217));
         btnMedicamentos1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnMedicamentos1.setForeground(new java.awt.Color(255, 255, 255));
+        btnMedicamentos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-heart-lined-48.png"))); // NOI18N
         btnMedicamentos1.setText("Medicamentos");
         btnMedicamentos1.setAlignmentX(0.5F);
         btnMedicamentos1.setBorderPainted(false);
@@ -113,6 +115,7 @@ public class VentanaHoy extends javax.swing.JFrame {
 
         btnCitas1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnCitas1.setForeground(new java.awt.Color(255, 255, 255));
+        btnCitas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-calendar-4-48-white.png"))); // NOI18N
         btnCitas1.setText("Citas");
         btnCitas1.setAlignmentX(0.5F);
         btnCitas1.setBorderPainted(false);
@@ -128,6 +131,7 @@ public class VentanaHoy extends javax.swing.JFrame {
 
         btnAjustes1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnAjustes1.setForeground(new java.awt.Color(255, 255, 255));
+        btnAjustes1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-gear-2-48.png"))); // NOI18N
         btnAjustes1.setText("Ajustes");
         btnAjustes1.setAlignmentX(0.5F);
         btnAjustes1.setBorderPainted(false);

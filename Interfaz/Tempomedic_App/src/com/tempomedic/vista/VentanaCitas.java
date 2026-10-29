@@ -78,6 +78,7 @@ public class VentanaCitas extends javax.swing.JFrame {
 
         btnHoy.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnHoy.setForeground(new java.awt.Color(255, 255, 255));
+        btnHoy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-home-7-48.png"))); // NOI18N
         btnHoy.setText("Hoy");
         btnHoy.setAlignmentX(0.5F);
         btnHoy.setBorderPainted(false);
@@ -94,6 +95,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         btnMedicamentos.setBackground(new java.awt.Color(186, 209, 217));
         btnMedicamentos.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnMedicamentos.setForeground(new java.awt.Color(255, 255, 255));
+        btnMedicamentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-heart-lined-48.png"))); // NOI18N
         btnMedicamentos.setText("Medicamentos");
         btnMedicamentos.setAlignmentX(0.5F);
         btnMedicamentos.setBorderPainted(false);
@@ -109,6 +111,7 @@ public class VentanaCitas extends javax.swing.JFrame {
 
         btnCitas.setBackground(new java.awt.Color(186, 209, 217));
         btnCitas.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnCitas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-calendar-4-48.png"))); // NOI18N
         btnCitas.setText("Citas");
         btnCitas.setAlignmentX(0.5F);
         btnCitas.setBorderPainted(false);
@@ -123,6 +126,7 @@ public class VentanaCitas extends javax.swing.JFrame {
 
         btnAjustes.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnAjustes.setForeground(new java.awt.Color(255, 255, 255));
+        btnAjustes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-gear-2-48.png"))); // NOI18N
         btnAjustes.setText("Ajustes");
         btnAjustes.setAlignmentX(0.5F);
         btnAjustes.setBorderPainted(false);

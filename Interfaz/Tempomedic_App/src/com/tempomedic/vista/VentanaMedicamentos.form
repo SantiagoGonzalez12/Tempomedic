@@ -77,6 +77,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/com/tempomedic/icons/iconmonstr-home-7-48.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Hoy"/>
             <Property name="alignmentX" type="float" value="0.5"/>
             <Property name="borderPainted" type="boolean" value="false"/>
@@ -113,6 +116,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="SansSerif" size="12" style="1"/>
             </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/com/tempomedic/icons/iconmonstr-heart-filled-48.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Medicamentos"/>
             <Property name="alignmentX" type="float" value="0.5"/>
             <Property name="borderPainted" type="boolean" value="false"/>
@@ -147,6 +153,9 @@
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/com/tempomedic/icons/iconmonstr-calendar-4-48-white.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Citas"/>
             <Property name="alignmentX" type="float" value="0.5"/>
@@ -183,6 +192,9 @@
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/com/tempomedic/icons/iconmonstr-gear-2-48.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Ajustes"/>
             <Property name="alignmentX" type="float" value="0.5"/>
