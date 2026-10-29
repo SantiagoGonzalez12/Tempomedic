@@ -56,7 +56,7 @@ public class VentanaNuevoMedicamento extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("VentanaNuevoMedicamentos");
+        setTitle("VentanaNuevoMedicamento");
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(960, 540));
 
