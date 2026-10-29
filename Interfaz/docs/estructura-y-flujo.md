@@ -11,6 +11,7 @@ Para garantizar una experiencia de usuario consistente, predecible y accesible (
 *   **Cuadros de diálogo:** las acciones críticas o destructivas, como confirmar la eliminación de una cuenta o registrar una toma como "Omitida", se resolverán mediante diálogos modales. Estos bloquean el resto de la interfaz para obligar al usuario a prestar atención y **prevenir errores** [1].
 
 **Comportamiento de teclas en los diálogos y fujos**
+
 Para asegurar la accesibilidad y agilizar el uso, especialmente para usuarios expertos o con dificultades motoras, se estandariza el comportamiento del teclado [2]:
 *   **Tecla Enter:** ejecutará siempre la acción principal o por defecto de la ventana (*Iniciar sesión*, *Guardar*, *Confirmar*, *Desbloquear*).
 *   **Tecla Esc (Escape):** actuará como el botón "Cancelar" o "Volver", cerrando el diálogo o formulario(fujo) actual sin guardar cambios y devolviendo al usuario a la pantalla anterior.
