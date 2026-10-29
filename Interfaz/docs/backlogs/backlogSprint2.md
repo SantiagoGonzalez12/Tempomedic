@@ -32,8 +32,8 @@
 | | 6.1. Componente reutilizable: TarjetaToma | [#22](https://github.com/SantiagoGonzalez12/Tempomedic/issues/22) | 28/10/2026 | Santiago González, Alba Durán |
 | | 6.1.1. Crear la clase TarjetaToma con propiedades y dibujo propio | [#30](https://github.com/SantiagoGonzalez12/Tempomedic/issues/30) | 28/10/2026 | Santiago González, Alba Durán |
 | | 6.2. Documentar los componentes usados: características y campo de aplicación | [#18](https://github.com/SantiagoGonzalez12/Tempomedic/issues/18) | 28/10/2026 | Santiago González, Alba Durán |
-| | 7. Pautas de la secuencia de control de la aplicación | [#133](https://github.com/SantiagoGonzalez12/Tempomedic/issues/133) | | Jorge Espejo, María Dolores Barba |
-| | 7.1. Mapa de navegación y flujo de control | [#62](https://github.com/SantiagoGonzalez12/Tempomedic/issues/62) | 28/10/2026 | Jorge Espejo, María Dolores Barba |
+| X | 7. Pautas de la secuencia de control de la aplicación | [#133](https://github.com/SantiagoGonzalez12/Tempomedic/issues/133) | | María Dolores Barba |
+| X | 7.1. Mapa de navegación y flujo de control | [#62](https://github.com/SantiagoGonzalez12/Tempomedic/issues/62) | 28/10/2026 | María Dolores Barba |
 | | 8. Cronograma de ejecución | [#55](https://github.com/SantiagoGonzalez12/Tempomedic/issues/55) | |Santiago González, Jorge Espejo, Alba Durán, María Dolores Barba |
 | | 8.1. Crear el cronograma (Gantt) | [#56](https://github.com/SantiagoGonzalez12/Tempomedic/issues/56) | | Santiago González, Jorge Espejo, Alba Durán, María Dolores Barba |
 | | 9. Entrega y evidencias Sprint 2 | [#134](https://github.com/SantiagoGonzalez12/Tempomedic/issues/134) | | Santiago González, Jorge Espejo, Alba Durán, María Dolores Barba |
