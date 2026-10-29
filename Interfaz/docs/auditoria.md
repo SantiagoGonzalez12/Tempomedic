@@ -5,18 +5,23 @@
 Para evaluar la usabilidad y accesibilidad de TempoMedic de forma cuantitativa y cualitativa, se han seleccionado 5 métricas clave adaptadas a nuestro público objetivo (especialmente adultos mayores y pacientes crónicos).
 
 ### 1.1. Ratio de Contraste de Color (Accesibilidad Visual)
+
 Medición numérica de la diferencia de luminancia entre el texto/icono y su fondo. Es un requisito crítico de la norma WCAG 2.1 (Nivel AA). Muchos de nuestros usuarios son personas de edad avanzada con agudeza visual reducida. Garantizar un contraste mínimo evita la fatiga visual y los errores de lectura en el Dashboard o al revisar posologías.
 
-### 1.2. Tiempo por Tarea 
+### 1.2. Tiempo por Tarea
+
 Tiempo total (en segundos) que tarda el usuario desde que inicia una tarea hasta que la completa exitosamente. Permite evaluar la eficiencia de la interfaz y la fricción cognitiva. Un tiempo elevado al marcar una toma ("Tomada") o pedir una cita indica que la jerarquía visual o los botones no son intuitivos.
 
 ### 1.3. Tasa y Tipo de Errores
+
 Número de acciones incorrectas, clics erróneos o confusiones cometidas por el usuario antes de completar una tarea. Nos ayuda a identificar puntos de confusión en los formularios, por ejemplo, al seleccionar la frecuencia de un medicamento, y evaluar la claridad de los textos e iconos.
 
-### 1.4. Número de Clics 
+### 1.4. Número de Clics
+
 Cantidad total de interacciones pulsar en la pantalla realizadas para completar un flujo. Evalúa la simplicidad y la navegación plana. Nuestro objetivo UI/UX es que las tareas cotidianas se realicen en el menor número de toques posible (idealmente 1 o 2 clics desde la barra de navegación inferior).
 
-### 1.5. Satisfacción del Usuario 
+### 1.5. Satisfacción del Usuario
+
 Percepción subjetiva del usuario sobre la facilidad de uso, claridad y utilidad de la app (medida mediante escala System Usability Scale o valoración de 1 a 5). Mide la confianza y comodidad del usuario con la interfaz, aspecto crucial para la adherencia al tratamiento y la aceptación por parte de adultos mayores.
 
 ## 2. Herramientas de Evaluación
@@ -35,10 +40,12 @@ Para la auditoría y la recolección de datos se emplearán las siguientes herra
 ## 3. Guion de Prueba con Usuarios (Para Tarea 2.4)
 
 ### Perfil del Participante
+
 * **Muestra:** 3 a 5 personas.
 * **Criterio clave:** usuarios de 46 años o más o pacientes con tratamientos temporales/crónicos.
 
 ### Instrucciones para el Facilitador
+
 1. Explicar brevemente el propósito de la prueba, se evalúa la aplicación, no al usuario.
 2. Pedir al usuario que piense en voz alta mientras realiza las tareas.
 3. Registrar tiempos, clics, errores y comentarios sin intervenir a menos que el usuario se bloquee por completo.
@@ -52,7 +59,6 @@ Para la auditoría y la recolección de datos se emplearán las siguientes herra
 * **Tarea 3: pedir / programar una cita médica**
   * *Ejemplo:* "Tienes una revisión con tu médico de cabecera el próximo martes a las 10:00 AM en el Centro de Salud. Añade esta cita a la agenda de la app."
 
-
 ## 4. Lista de Comprobación de Auditoría Interna (Para Tarea 2.3)
 
 | Criterio | Descripción / Verificación | Cumple (S/N) | Notas / Observaciones |
@@ -64,12 +70,12 @@ Para la auditoría y la recolección de datos se emplearán las siguientes herra
 | **Coherencia Textual** | Botones y mensajes usan un lenguaje claro, conciso y sin modismos confusos. | | |
 | **Retroalimentación** | Confirmación clara al completar acciones (ej. cambio visual tras "Tomada"). | | |
 
-
 ## 5. Plantilla de Registro de Problemas (Issue Log)
 
 Utilizar la siguiente tabla para registrar los hallazgos encontrados durante la auditoría (#41) y las pruebas con usuarios (#72):
 
 ### Escala de Prioridad
+
 * **Alta (P1):** impide completar la tarea o vulnera gravemente la accesibilidad (debe corregirse de inmediato).
 * **Media (P2):** provoca confusión, demora en la tarea o genera errores leves.
 * **Baja (P3):** detalle estético, sugerencia de mejora o pequeña inconsistencia visual.
@@ -81,16 +87,15 @@ Utilizar la siguiente tabla para registrar los hallazgos encontrados durante la 
 | *ERR-01* | *#41* | *Hoy (Dashboard)* | *El botón "Omitir" tiene un contraste de 2.8:1 sobre el fondo claro.* | *Contraste WCAG* | *P1* | *Pendiente* | *Aumentar la saturación del color del texto/fondo.* |
 | *ERR-02* | *#72* | *Formulario Cita* | *El usuario de 52 años dudó al elegir el tipo de especialista por texto pequeño.* | *Tiempo / Errores* | *P2* | *Pendiente* | *Aumentar tamaño de fuente y padding del dropdown.* |
 
-
 ## 6. Documentación de Mejoras (Evidencia)
 
 Para cada problema **P1** o **P2** corregido, se adjuntará la evidencia gráfica correspondiente:
 
 ### Registro de Cambio: [ID del Problema]
+
 * **Descripción del ajuste:** Explicación técnica/visual del cambio.
 * **Captura Antes:** `![Antes](ruta/a/captura_antes.png)`
 * **Captura Después:** `![Después](ruta/a/captura_despues.png)`
-
 
 ## 7. Revisar mensajes y textos
 
@@ -98,12 +103,13 @@ En cumplimiento de las pautas WCAG 2.1 y con el objetivo de garantizar una comun
 
 Esas pautas hacen referencia a las 4 principios fundamentales:
 
-- Perceptible: la información y los componentes de la interfaz deben presentarse de manera que los usuarios puedan percibirlos.
-- Operable: los componentes de la interfaz y la navegación deben poder ser utilizados mediante el teclado y otros dispositivos de apoyo.
-- Comprensible: la información y el funcionamiento de la interfaz deben ser claros, legibles y con un comportamiento predecible.
-- Robusto: el contenido debe ser lo suficientemente fiable para ser interpretado por una gran variedad de agentes de usuario, incluidas las tecnologías de asistencia.
+* Perceptible: la información y los componentes de la interfaz deben presentarse de manera que los usuarios puedan percibirlos.
+* Operable: los componentes de la interfaz y la navegación deben poder ser utilizados mediante el teclado y otros dispositivos de apoyo.
+* Comprensible: la información y el funcionamiento de la interfaz deben ser claros, legibles y con un comportamiento predecible.
+* Robusto: el contenido debe ser lo suficientemente fiable para ser interpretado por una gran variedad de agentes de usuario, incluidas las tecnologías de asistencia.
 
 ### Criterios de Redacción Aplicados
+
 * **Claridad y Empatía:** explicar el problema sin usar tecnicismos ni códigos de error.
 * **Orientación a la Acción:** indicar siempre el paso siguiente para solucionar la situación.
 * **Brevedad:** textos concisos y directos para evitar la sobrecarga cognitiva.
@@ -123,10 +129,9 @@ Esas pautas hacen referencia a las 4 principios fundamentales:
 | **MSG-09** | Error de Acceso | Desbloqueo por PIN | `PIN erróneo.` | `El PIN introducido no es correcto. Te quedan 2 intentos.` | Informa del fallo y del margen de intentos restantes. |
 | **MSG-10** | Estado Vacío | Módulo Citas | `No hay registros.` | `No tienes citas programadas. Pulsa en "+ Pedir cita" para añadir la primera.` | Convierte una pantalla vacía en una llamada a la acción (CTA). |
 
+## 8. Informe de Auditoría de Accesibilidad y Consistencia
 
-## 8. Informe de Auditoría de Accesibilidad y Consistencia 
-
-Revisión técnica y soluciones de los errores dados. 
+Revisión técnica y soluciones de los errores dados.
 
 ### 8.1. Registro de Incidencias Detectadas (Issue Log)
 
@@ -134,27 +139,26 @@ Revisión técnica y soluciones de los errores dados.
 | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
 | **AUD-01** | General (Swing / FlatLaf) | Integración de Librería | Al importar la paleta de componentes de FlatLaf en el editor visual de NetBeans (Matisse), no se muestran los iconos y algunos elementos no se dejan arrastrar o aplicar correctamente desde la interfaz gráfica. | **P2** | **Pospuesto (próximos Sprint)** | Se decide mantener la maquetación y estructura nativa en Swing durante el Sprint 2 y posponer la implementación completa de FlatLaf por código Java para próximos Sprint. |
 
-
 ### 8.2. Informe de Estado y Decisiones Técnicas
 
 * **Incidencia principal:** problemas de renderizado y arrastre de la paleta de componentes de FlatLaf dentro de NetBeans Matisse.
 * **Decisión adoptada:** para no retrasar las entregas ni el flujo de trabajo del Sprint 2, se mantiene la interfaz maquetada con los componentes base de Swing y se deja la integración del Look & Feel de FlatLaf mediante código fuente para el siguiente sprint.
 * **Captura del error:**
 
-  
 ![Fallo de iconos y arrastre en paleta FlatLaf](img/Auditoria/aud-01-error-flatlaf.png)
 
 ![Error al arrastrar componente FlatLaf](img/Auditoria/aud-01.1-error-flatlaf.png)
 
-
 ---
 
-## 9. Pruebas de Usabilidad con Usuarios 
+## 9. Pruebas de Usabilidad con Usuarios
 
 Con el objetivo de evaluar la efectividad y facilidad de uso del prototipo interactivo en Figma, se realizaron las siguientes pruebas al enviarles a distintos usuarios el mockup:
 
 ### 9.1. Metodología y Tareas Asignadas
+
 Las pruebas se realizaron de forma individual sobre el mockup de Figma proponiendo 3 tareas clave:
+
 1. **Tarea 1 (T1):** añadir un nuevo medicamento ("Ibuprofeno 400 mg", toma diaria a las 08:00).
 2. **Tarea 2 (T2):** registrar una toma pendiente como "Tomada" desde la vista de "Hoy".
 3. **Tarea 3 (T3):** pedir una nueva cita médica en la especialidad de Cardiología.
@@ -166,6 +170,7 @@ Al finalizar las tareas, cada participante completó el cuestionario estandariza
 ### 9.2. Cuestionario SUS y Fórmula de Cálculo
 
 #### Preguntas Evaluadas (Escala Likert 1: totalmente en desacuerdo a 5: Totalmente de acuerdo)
+
 1. Creo que me gustaría usar TempoMedic con frecuencia.
 2. Encuentro que la aplicación es innecesariamente compleja.
 3. Pensé que TempoMedic era fácil de usar.
@@ -178,6 +183,7 @@ Al finalizar las tareas, cada participante completó el cuestionario estandariza
 10. Necesité aprender muchas cosas antes de poder empezar a usar la aplicación.
 
 #### Regla de Transformación a Escala 0-100
+
 * **Preguntas Ímpares (1, 3, 5, 7, 9):** Puntos = Puntuación - 1
 * **Preguntas Pares (2, 4, 6, 8, 10):** Puntos = 5 - Puntuación
 * **Puntuación total:** (Suma de puntos transformados) x 2.5
@@ -187,6 +193,7 @@ Al finalizar las tareas, cada participante completó el cuestionario estandariza
 ### 9.3. Desglose Detallado de Respuestas por Usuario
 
 #### Usuario 1 (U1): Mujer, 59 años (Madre de integrante del equipo)
+
 * **Perfil:** uso moderado del móvil y ordenador.
 
 | Ítem | Pregunta SUS | Resp. (1-5) | Regla | Puntos |
@@ -201,10 +208,11 @@ Al finalizar las tareas, cada participante completó el cuestionario estandariza
 | **P8** | Incómoda / engorrosa | 1 | 5 - P | 4 |
 | **P9** | Confiado/a al usarla | 5 | P - 1 | 4 |
 | **P10** | Necesité aprender muchas cosas antes | 1 | 5 - P | 4 |
-| **TOTAL**| **Suma de puntos transformados** | | | **35** |
-| **SCORE**| **Final (35 x 2.5)** | | | **87.5 / 100** |
+| **TOTAL** | **Suma de puntos transformados** | | | **35** |
+| **SCORE** | **Final (35 x 2.5)** | | | **87.5 / 100** |
 
 #### Usuario 2 (U2): Hombre, 61 años
+
 * **Perfil:** usuario básico de herramientas digitales.
 
 | Ítem | Pregunta SUS | Resp. (1-5) | Regla | Puntos |
@@ -219,10 +227,11 @@ Al finalizar las tareas, cada participante completó el cuestionario estandariza
 | **P8** | Incómoda / engorrosa | 1 | 5 - P | 4 |
 | **P9** | Confiado/a al usarla | 4 | P - 1 | 3 |
 | **P10** | Necesité aprender muchas cosas antes | 2 | 5 - P | 3 |
-| **TOTAL**| **Suma de puntos transformados** | | | **32** |
-| **SCORE**| **Final (32 x 2.5)** | | | **80.0 / 100** |
+| **TOTAL** | **Suma de puntos transformados** | | | **32** |
+| **SCORE** | **Final (32 x 2.5)** | | | **80.0 / 100** |
 
 #### Usuario 3 (U3): Mujer, 63 años
+
 * **Perfil:** familiar de miembro del equipo, uso cotidiano de tecnología.
 
 | Ítem | Pregunta SUS | Resp. (1-5) | Regla | Puntos |
@@ -237,8 +246,8 @@ Al finalizar las tareas, cada participante completó el cuestionario estandariza
 | **P8** | Incómoda / engorrosa | 1 | 5 - P | 4 |
 | **P9** | Confiado/a al usarla | 4 | P - 1 | 3 |
 | **P10** | Necesité aprender muchas cosas antes | 2 | 5 - P | 2 |
-| **TOTAL**| **Suma de puntos transformados** | | | **37** |
-| **SCORE**| **Final (37 x 2.5)** | | | **92.5 / 100** |
+| **TOTAL** | **Suma de puntos transformados** | | | **37** |
+| **SCORE** | **Final (37 x 2.5)** | | | **92.5 / 100** |
 
 ---
 
@@ -257,6 +266,7 @@ Al finalizar las tareas, cada participante completó el cuestionario estandariza
 | | T3: Pedir Cita | 22s | 0 | *"Está muy limpio todo el proceso."* | |
 
 #### Resumen Promedio Global
+
 * **Tiempo Promedio:** T1 (45s), T2 (13.3s), T3 (28.3s).
 * **Tasa de Éxito Sin Errores:** 77.7%.
 * **Puntuación Media SUS:** 86.6 / 100.
@@ -264,10 +274,12 @@ Al finalizar las tareas, cada participante completó el cuestionario estandariza
 ---
 
 ### 9.5. Conclusiones
+
 1. **Puntos Fuertes:** Alto nivel de satisfacción con la claridad visual, contraste adecuado y facilidad para marcar tomas directas desde el menú principal.
 2. **Oportunidades de Mejora:** Simplificar las opciones del desplegable de frecuencias en el alta de medicamentos para evitar dudas iniciales en usuarios de mayor edad.
 
 ## Referencias
+
 [1] “Principios y pautas de WCAG 2.1”, Universidad de Alicante. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://accesibilidadweb.dlsi.ua.es/?menu=principios-2.1>
 
 [2] “WCAG 2.1: qué son y cómo respetarlas”, torresburriel. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://torresburriel.com/weblog/wcag-2-1-que-son-y-como-respetarlas/>
