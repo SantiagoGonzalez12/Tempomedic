@@ -72,6 +72,17 @@ Nota técnica:
 
 Se puede calcular las pautas WCAG 2.1 (Nivel AA) en (https://coddy.tech/tools/es/contrast-checker).
 
+#### Paleta de colores del tema oscuro
+Aunque no se tiene del todo claro si poner un tema oscuro, dependiendo de lo que nos digan los usuarios lo implementaremos o seguirá estando planteado. 
+La paleta de colores para el tema oscuro planteada sería:
+* `#1E292C` (Fondos de botones principales, títulos, barra lateral).
+* `#BAD1D9` (Fondos de tarjetas, campos de texto, bordes).
+* `#12181A` (Fondo general de la aplicación).
+* `#F0F4F5` (Texto principal).
+* `#39C85D` (Indicador de estado y confirmaciones).
+* `#FF8D28` (Indicador de estado).
+* `#FF4C4F` (Indicador de accion importante sin retorno).
+
 #### Tipografía y Tamaños (Escalado)
 Se utiliza una tipografía **Sans-Serif** (como Arial, Helvetica o Segoe UI) por su alta legibilidad en pantalla. Se han definido tres escalas de tamaño para adaptarse a las necesidades visuales de los usuarios (especialmente edad avanzada):
 
