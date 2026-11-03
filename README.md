@@ -7,7 +7,7 @@
 Proyecto Intermodular | Grado Superior de Desarrollo de Aplicaciones Multiplataforma (DAM) | FP Campus Camara
 
 ![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-yellow)
-![Sprint](https://img.shields.io/badge/Sprint-1%3A%20Ideación%20y%20Prototipado-blue)
+![Sprint](https://img.shields.io/badge/Sprint-2%3A%20Análisis%20del%20contexto%20y%20viabilidad-blue)
 
 ## Índice
 
