@@ -768,6 +768,31 @@ El desarrollo de las interfaces gráficas sigue los cuatro principios rectores d
 
 ### 6.6. Implementación de la interfaz de usuario
 
+## 8. Analisis de riesgos inicial
+### 8.2.1. Identificación de riesgos
+
+Durante la fase inicial de planificación de **Tempomedic**, se han identificado varios riesgos potenciales que podrían afectar al desarrollo del software o al cumplimiento del calendario de entregas. Anticiparnos a estos problemas nos permite establecer medidas preventivas desde el primer momento:
+
+#### 1. Curva de aprendizaje en la librería de diseño (*FlatLaf*)
+* **Descripción:** Al ser la primera vez que trabajamos con la librería *FlatLaf* para personalizar la interfaz en Java Swing, es posible que dedicamos más tiempo del previsto a maquetar las pantallas o solucionar pequeños desajustes visuales.
+* **Impacto:** Medio (podría retrasar ligeramente la entrega de los prototipos de la interfaz).
+* **Solución:** Priorizar el uso de componentes estándar de la librería, no recargar las pantallas con diseños innecesariamente complejos y realizar pruebas de interfaz desde las primeras iteraciones.
+
+#### 2. Rendimiento en equipos de prestaciones reducidas
+* **Descripción:** Dado que la aplicación requiere gestionar eventos e hilos en segundo plano para el sistema de avisos y notificaciones offline, el programa podría consumir más recursos de los deseados en ordenadores antiguos.
+* **Impacto:** Medio.
+* **Solución:** Optimizar el código evitando procesos en bucle innecesarios, liberar correctamente los recursos de memoria y probar el programa en equipos menos potentes para garantizar su fluidez.
+
+#### 3. Incidencias en la compilación y empaquetado multiplataforma (`.jar`)
+* **Descripción:** Al empaquetar el proyecto para generar el ejecutable final, suelen surgir fallos con las rutas relativas de las imágenes, los archivos de persistencia local o las dependencias de las librerías al probarlo fuera del entorno de desarrollo (NetBeans).
+* **Impacto:** Alto (dificultaría la ejecución del programa en otros ordenadores).
+* **Solución:** Utilizar siempre métodos estándar de Java para la carga de recursos (`getResource`), gestionar las dependencias de forma limpia y verificar el funcionamiento del archivo ejecutable en diferentes sistemas operativos antes de las entregas.
+
+#### 4. Desviación del alcance inicial del proyecto (*Scope Creep*)
+* **Descripción:** Durante el desarrollo pueden surgir ideas de nuevas funcionalidades (como la sincronización en la nube o bases de datos externas) que nos tienten a abarcarlas, poniendo en riesgo el tiempo necesario para completar las partes obligatorias del Sprint.
+* **Impacto:** Alto (riesgo de no cumplir los plazos acordados en la planificación).
+* **Solución:** Mantener el foco en el Producto Mínimo Viable (MVP) con persistencia local y registrar las nuevas propuestas en el *Backlog* como posibles mejoras para versiones futuras.
+
 ## REFERENCIAS
 
 [1] Centro FP Superior Campus Cámara Comercio Sevilla, *Guía Didáctica AEE Sprint Review 02: Análisis del Contexto y Viabilidad (Capítulo II)*, Módulo 0492 Proyecto Intermodular, Sevilla, España, 2026.
