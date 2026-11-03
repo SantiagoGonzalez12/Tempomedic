@@ -349,6 +349,54 @@ Con estas 4 propuesta se quiere conseguir:
 
 ![Diagrama de Flujo](img/DF%20TempoMedic_%20PI.png)
 
+**Listado justificado de necesidades funcionales y operativas**
+
+##### Necesidades funionales
+
+* **NF-01: Gestión parametrizable de pautas medicamentosas**
+  * El software debe permitir la alta, edición, consulta y baja (CRUD) de esquemas de medicación complejos, soportando múltiples unidades de dosis (mg, ml, comprimidos), frecuencias dinámicas (cada X horas, días alternos, pautas puntuales) y rangos de duración determinados o crónicos.
+    
+  * Cada tratamiento médico posee características únicas. Un registro parametrizable previene la confusión de dosis o frecuencias, mitigando directamente el margen de error del 20% al 60% en la administración de fármacos reportado por organizaciones sanitarias. Una encuesta realizada por NPR-Truven Health Analytics confirma que al menos un tercio de las personas ha dejado de tomar alguna vez un medicamento recetado.
+
+* **NF-02: Sistema de alertas sonoras y notificaciones programadas**
+  * El módulo central de avisos debe calcular e instanciar eventos de alerta con alta precisión temporal en el dispositivo, enviando notificaciones emergentes o alarmas sonoras al cumplirse la hora programada de la toma.
+    
+  * La encuesta reveló que el 73% de los usuarios sufre olvidos en su medicación. Automatizar el disparo de las alertas ataca la causa principal del incumplimiento terapéutico detectado en el estudio de mercado, dicho en la página 28 de la "Dispensación, adherencia y uso adecuado del tratamiento".
+
+* **NF-03: Dashboard centralizado de control diario ("Vista Hoy")**
+  * ELl sistema debe consolidar en una única interfaz gráfica de entrada las tomas de medicación planificadas para las 24 horas en curso junto a las citas médicas programadas para la misma jornada.
+  * Responde a la necesidad de no dispersar la información en múltiples aplicaciones o soportes de papel. Reduce el esfuerzo cognitivo del usuario al presentar el estado de su salud diaria en un solo vistazo al iniciar la app.
+
+* **NF-04: Agenda y seguimiento de citas con personal sanitario**
+  * El software debe proveer un módulo de calendario para el registro explícito de consultas médicas, indexando datos clave como especialista, centro de salud o de atención primaria, fecha, hora y notas adicionales.
+  * Evita la inasistencia a revisiones de seguimiento y la pérdida de citas médicas, resolviendo la falta de organización de historiales de consulta detectada en el diagnóstico inicial.
+
+* **NF-05: Registro de estados de adherencia (Auditoría de tomas)**
+  * El usuario debe poder interactuar de forma inmediata con cada alerta activa para marcar la toma bajo tres estados posibles: *Tomada*, *Posponer* (reprogramación automática) u *Omitida*.
+  * Permite llevar una trazabilidad exacta del tratamiento. Este registro histórico es clave para que el paciente pueda demostrar su nivel real de cumplimiento ante el médico especialista.
+
+##### Necesidades operativas
+
+* **NO-01: Autonomía de ejecución en cliente sin dependencia de red (*Offline-First*)**
+  * La aplicación y su motor de programación de alarmas deben ser 100% funcionales localmente, garantizando la ejecución de avisos sin requerir conectividad activa a Internet ni servidores externos.
+    
+  * Garantiza que las alertas de salud vitales se activen con puntualidad sin importar si el usuario se encuentra en zonas sin cobertura, en transporte subterráneo o con el terminal en modo avión.
+
+* **NO-02: Privacidad desde el diseño (*Privacy by Design*) y almacenamiento local**
+  * La información médica del usuario debe persistirse exclusivamente dentro del almacenamiento local del dispositivo. Opcionalmente, el acceso a la aplicación debe protegerse mediante una capa de autenticación por PIN de 4 dígitos.
+    
+  * El 95% de los encuestados exige privacidad estricta sobre sus datos de salud. Al no transmitir datos personales a servidores de terceros, el software garantiza el cumplimiento estricto del RGPD en la gestión de datos sensibles de categoría especial.
+
+* **NO-03: Arquitectura modular desacoplada (Patrón MVC)**
+  * El diseño del software debe estructurarse mediante el patrón Modelo-Vista-Controlador (MVC), separando de forma estricta la representación visual (Java Swing/Matisse), la lógica de negocio (gestión de tomas y tiempos) y la capa de persistencia.
+    
+  * Mantiene un consumo mínimo de recursos de CPU y memoria RAM en el dispositivo, garantizando mantenibilidad del código, escalabilidad a futuras fases del proyecto y pruebas unitarias aisladas.
+
+* **NO-04: Adaptabilidad visual e inclusión accesibles (UI/UX Inclusiva)**
+  * La interfaz de usuario debe ofrecer opciones de personalización de escala tipográfica (Normal, Grande, Muy Grande), contrastes cromáticos legibles y la presencia obligatoria de texto explicativo junto a todo icono o acción gráfica.
+    
+  * En la encuesta propia, el 70% de los usuarios supera los 46 años y un 29% manifiesta dificultad para interpretar aplicaciones con simbología abstracta sin texto. Asegura el acceso universal sin brecha digital.
+
 ### 2.3. Estudio de soluciones existentes
 
 #### 2.3.1. ¿En qué consiste?
@@ -771,3 +819,7 @@ El desarrollo de las interfaces gráficas sigue los cuatro principios rectores d
 [24] "Los problemas de suministro de medicamentos, un desafío creciente que pude generar desconfianza hacia los profesionales". elglobal. Consultado: el 21 de octubre de 2026. [En línea]. Disponible en: <https://elglobalfarma.com/farmacia/los-problemas-de-suministro-de-medicamentos-un-desafio-creciente-que-puede-generar-desconfianza-hacia-los-profesionales/>
 
 [25] "Prevenir los errores en la toma de medicamentos". quironsalud. Consultado: el 26 de octubre de 2026. [En línea]. Disponible en: <https://www.tucanaldesalud.com/es/tusaludaldia/articulos/prevenir-errores-toma-medicamentos>
+
+[26] "DISPENSACIÓN, ADHERENCIA Y USO ADECUADO DEL TRATAMIENTO". ADHe+. Consultado: el 3 de noviembre de 2026. [En línea]. Disponible en: <https://www.sefac.org/sites/default/files/2017-11/Adherencia_0.pdf>
+
+[27] "¿Cómo realizar un registro diario de medicamentos?". Aprende Intitute. Consultado: el 3 de noviembre de 2026. [En línea]. Disponible en: <https://aprende.com/blog/bienestar/cuidado-del-adulto-mayor/como-realizar-un-registro-diario-de-medicamentos/>
