@@ -347,7 +347,7 @@ Con estas 4 propuesta se quiere conseguir:
 
 **Diagrama de conceptual de flujo**
 
-![Diagrama de Flujo](imagen/DF%20TempoMedic_PI.png)
+![Diagrama de Flujo](img/DF%20TempoMedic_%20PI.png)
 
 ### 2.3. Estudio de soluciones existentes
 
