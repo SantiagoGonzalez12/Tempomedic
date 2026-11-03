@@ -49,7 +49,7 @@ Este proyecto está validando el problema y el público objetivo con una encuest
 | --- | --- |
 | Sprint actual | Sprint 1: Ideación y Prototipado Base (24/09 → 02/10/2026) |
 | Tablero | <https://github.com/users/SantiagoGonzalez12/projects/6> |
-| Memoria | [`docs/memoria.md`](docs/memoria.md) |
+| Memoria | [`Proyecto/docs/memoria.md`](Proyecto/docs/memoria.md) |
 | Metodología | Scrum, sprints de 2 semanas |
 
 ## Equipo
@@ -78,22 +78,23 @@ Tutor del módulo: Willman Acosta Lugo.
 
 ```
 Tempomedic/
-├─ docs/
-│  ├─ diagramas/        Arquitectura, modelo de datos, navegación
-│  ├─ img/              Capturas y bocetos
-│  ├─ requisitos/       Público objetivo, benchmarking, requisitos
-│  ├─ sprints/          Planning, Review y Retrospective de cada sprint
-│  └─ memoria.md        Memoria del proyecto 
-└─ src/
-   ├─ main/
-   └─ test/
+└─Proyecto/
+   ├─ docs/
+   │  ├─ diagramas/        Arquitectura, modelo de datos, navegación
+   │  ├─ img/              Capturas y bocetos
+   │  ├─ requisitos/       Público objetivo, benchmarking, requisitos
+   │  ├─ sprints/          Planning, Review y Retrospective de cada sprint
+   │  └─ memoria.md        Memoria del proyecto 
+   └─ src/
+      ├─ main/
+      └─ test/
 ```
 
 ## Documentación
 
-- Memoria completa del proyecto: [`docs/memoria.md`](docs/memoria.md)
-- Encuesta al público objetivo: [`docs/requisitos/ResultadosEncuesta.xml`](docs/requisitos/ResultadosEncuesta.xml)
-- Aplicaciones similares, noticias, estudios y resumen de la encuesta: [`docs/requisitos/recopilaInfo.md`](docs/requisitos/recopilaInfo.md)
+- Memoria completa del proyecto: [`Proyecto/docs/memoria.md`](Proyecto/docs/memoria.md)
+- Encuesta al público objetivo: [`Proyecto/docs/requisitos/ResultadosEncuesta.xml`](Proyecto/docs/requisitos/ResultadosEncuesta.xml)
+- Aplicaciones similares, noticias, estudios y resumen de la encuesta: [`Proyecto/docs/requisitos/recopilaInfo.md`](Proyecto/docs/requisitos/recopilaInfo.md)
 
 ### Encuesta
 #### Formatos incluidos
