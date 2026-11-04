@@ -603,6 +603,97 @@ Antes conviene decidir que debe demostrar el siguiente desembolso: problema exis
 
 En primer lugar se utilizaría la autofinanciación. Permite decidir con rapidez y conservar el control ya que es adecuada para entrevistas, definición de producto, prototipo o prueba técnica acotada. El error que tiene es que aparece cuando se usa el ahorro personal para construir durante meses sin una condición clara de continuidad. 
 
+Una ayuda puede financiar innovación sin diluir la participación de los fundadores, pero no tidas las aplicaciones son proyectos subvencionables. 
+
+Esta fase contempla el coste del personal técnico de los 4 integrantes durante el periodo de desarrollo de la aplicación. Contamos desde mediados de septiembre hasta mediados de febrero:
+
+| Concepto | Detalle / Horas | Coste Unitario (€/h) | Coste Total (€) |
+| :--- | :--- | :--- | :--- |
+| **Personal Técnico** | 4 personas × 192 h/persona = 768 horas totales | 15,00 €/h | 11.520,00 € |
+| **Equipos e Infraestructura de Hardware** | Amortización de 4 portátiles/PCs durante los 6 meses de proyecto | 100,00 €/equipo | 400,00 € |
+| **Licencias y Herramientas Software** | NetBeans, Java JDK, GitHub (Plan Free), Figma | 0,00 € (Free) | 0,00 € |
+| **Diseño UI/UX y Encuesta de Mercado** | Creación de prototipos y análisis de datos (75 encuestados) | Incluido en horas de personal | 0,00 € |
+| **Total Costes de Desarrollo** | | | **11.920,00 €** |
+
+Dado que Tempomedic adopta una arquitectura Offline-First con almacenamiento 100% local en el dispositivo del usuario, la aplicación no requiere servidores backend dedicados ni bases de datos en la nube para funcionar en esta primera versión. Esto reduce los costes fijos de mantenimiento a una cifra prácticamente nula:
+
+| Concepto | Periodicidad | Coste Anual (€) |
+| :--- | :--- | :--- |
+| **Servidores Backend / Base de Datos** | N/A (Persistencia local en el dispositivo) | 0,00 € |
+| **Dominio y Hosting Web Informativo** | Anual (Página web básica de soporte/privacidad) | 36,00 € |
+| **Mantenimiento y Corrección de Bugs** | 20 horas/año de soporte técnico - 45€/h | 900,00 € |
+| **Total Costes Mantenimiento Anual** | | **936,00 €/año** |
+
+1. Baja barrera financiera. Gracias al aprovechamiento de tecnologías Open Source (Java Swing, NetBeans Matisse) y a la ausencia de infraestructura Cloud debido a la arquitectura Privacy by Design (almacenamiento local), los costes fijos de operación son extremadamente bajos (menos de 36 €/mes).
+2. Sostenibilidad del Proyecto. Al desarrollarse como proyecto intermodular de 2º de DAM entre septiembre y febrero, el coste de desarrollo no supone un desembolso líquido real, sino la valoración económica de la dedicación del equipo. De cara a una futura producción, la baja estructura de costes permite mantener la aplicación de forma completamente sostenible.
+
+La partida principal del presupuesto corresponde al coste del equipo técnico, integrado por los 4 desarrolladores del proyecto. El cálculo se proyecta a lo largo del periodo lectivo completo del proyecto (de septiembre a febrero, equivalente a 24 semanas lectivas), estimando un promedio de 8 horas semanales por integrante dedicadas al diseño, programación, pruebas y documentación:
+
+**Estimación de costes de desarrollo**
+
+* **Tarifa de coste horario de referencia:** 15,00 €/hora (perfil desarrollador júnior DAM).
+* **Horas totales por desarrollador:** 24h\ 8h\Semana = 192 horas.
+* **Cómputo global del equipo:** 192h \4 integrantes = 768 horas.
+  
+| Perfil / Rol | Integrante(s) | Horas Totales | Coste Hora (€) | Coste Total (€) |
+| :--- | :--- | :---: | :---: | :---: |
+| **Scrum Master & Backend Dev** | Santiago González y Jorge Espejo | 192 h | 15,00 € | 2.880,00 € |
+| **Diseño UI/UX & Frontend Dev** | Santiago González y Alba Durán | 192 h | 15,00 € | 2.880,00 € |
+| **Frontend & QA Tester** | Alba Durán, María Dolores Barba | 192 h | 15,00 € | 2.880,00 € |
+| **Persistencia & Documentación** | Los 4 | 192 h | 15,00 € | 2.880,00 € |
+| **Subtotal Costes de Desarrollo** | **4 integrantes** | **768 h** | — | **11.520,00 €** |
+
+**Estimación de costes de infraestructura y licencias**
+
+Para el desarrollo del proyecto durante los 6 meses de duración (septiembre a febrero), el equipo emplea sus propios equipos informáticos. Se aplica la fórmula lineal de amortización contable recomendada para equipamiento informático (vida útil de 4 años / 48 meses):
+
+Amortización mensual por equipo = Valor medio del equipo (800 €)/48 meses = 16,67€/mes.
+
+* **Cómputo por equipo:** 16,67€/mes durante 6 meses = 100,02€ por equipo.
+
+| Equipamiento | Cantidad | Valor Estimado | Periodo de Uso | Amortización Total |
+| :--- | :---: | :---: | :---: | :---: |
+| Ordenadores portátiles / de sobremesa | 4 | 800,00 € / unidad | 6 meses | **400,08 €** |
+
+##### Suscripciones a Servicios Cloud
+Siguiendo los principios de Privacy by Design e inclusión local, la versión actual de Tempomedic almacena los datos de salud de forma 100% local en el dispositivo del usuario. 
+
+* **Servidores backend (BBDD / API Cloud):** **0,00 €** (No requiere infraestructura de pago en la nube en esta fase).
+* **Hosting y Dominio Web Informativo (Soporte RGPD):** Registro de dominio `.es` y servidor estático básico para publicar la política de privacidad obligatoria y dar soporte técnico **36,00 €/año**.
+
+##### Certificados Digitales y Firma de Código
+Para garantizar la autenticidad e integridad del ejecutable distribuido y evitar alertas del sistema operativo durante la instalación:
+
+* **Cuenta de Desarrollador Google Play Store:** tasa única exigida por Google para la firma, verificación de identidad del desarrollador y despliegue del paquete `.apk` oficial **23,00 €**.
+
+**Herramientas de Desarrollo y Entornos de Trabajo**
+Se estima el gasto energético derivado del uso continuo de los 4 equipos de cómputo durante las 24 semanas lectivas del proyecto (septiembre a febrero):
+
+* **Potencia media por equipo:** 200W por hora (ordenador portátil en trabajo de desarrollo).
+  
+* **Consumo total de horas:** 768 horas totales de desarrollo.
+  
+* **Consumo energético acumulado:** 768h \0,36€ = 276,48€.
+  
+* **Precio medio de la energía:** 0,36€ hora.
+
+##### Conectividad y Red
+Durante la etapa de desarrollo y pruebas, el equipo requiere conexión a Internet para el control de versiones en GitHub, la descarga de librerías en NetBeans y la comunicación:
+
+* **Infraestructura de red:** conexión de fibra óptica residencial/académica existente (coste prorrateado atribuible al proyecto) **10,00 €/mes**.
+  
+* **Cómputo total (6 meses):** 10,00€/mes \6 meses = 60,00€.
+
+##### Previsión de Soporte Técnico Post-Despliegue
+Tras la entrega del software en febrero y su implantación inicial, se establece un plan de mantenimiento y soporte técnico para garantizar la estabilidad operativa de la aplicación:
+
+* **Mantenimiento correctivo y parches (1.er año):** estimación de 20 horas/año dedicadas a la resolución de incidencias, actualización a nuevas versiones de Android/Java y corrección de pequeños errores reportados por usuarios.
+  
+* **Tarifa de soporte:** 72,00€ por cada 100 líneas de código.
+  
+* **Presupuesto anual de soporte:** 72€ la hora x 20 horas = 1440€.
+
+  
 ### 2.7. Estudio de viabilidad legal y normativa
 
 #### 2.7.1. Protección de datos personales
@@ -904,3 +995,21 @@ Para dar respuesta a los riesgos evaluados en el proyecto **Tempomedic**, se est
 [30] "Matriz de riesgos: qué es, ejemplos y cómo crearla fácil". Pirani. [En línea]. Disponible en: [https://www.piranirisk.com/es/blog/matriz-de-riesgos-que-es-ejemplos-y-como-crearla-facil](https://www.piranirisk.com/es/blog/matriz-de-riesgos-que-es-ejemplos-y-como-crearla-facil)
 
 [31] "Cómo financiar el desarrollo de una app: 7 vías realistas". Appfyl. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://blog.appfyl.com/es/blog/how-to-fund-mobile-app-development/>
+
+[32] "Precio/hora progamador ¿cuánto cobra un desarrollador de software?". Yeeply. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://yeeply.com/blog/partners/precio-hora-programador-cuanto-cobra-desarrollador-de-software/>
+
+[33] "Calculadora de consumo: PC Gaming". Calculatuluz. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <[https://yeeply.com/blog/partners/precio-hora-programador-cuanto-cobra-desarrollador-de-software/](https://calculatuluz.es/calculadora-consumo-pc-gaming/)>
+
+[34] "Cuánto cuesta de verdad: rangos del mercado IT en España 2026". Redenet IPM. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://redenet.es/blog/cuanto-cuesta-mantenimiento-informatico-empresas/>
+
+[35] "Hosting y dominio por solo 1€". arsys. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://www.arsys.es/hosting/promo?itc=3KPDD554-1J1XUL-F00AA1H&gclsrc=aw.ds&&acp=315441843&avl=19220919363|hosting||&utm_campaign=SGE-ES-CLA-CLAX------Arsys&utm_source=google&utm_medium=cpc&gad_source=1&gad_campaignid=315441843&gbraid=0AAAAAD_tijxKK1oO0eDRSAUJPIA-e8t53&gclid=CjwKCAiAzKvXBhBAEiwABLl9Au-pVv8WKqdWnQ3Hv-hZYsdvEPRcB3XHUltY2txLf3Y4gRNZC4jwoRoCBzoQAvD_BwE>
+
+[36] "¿Cuánto cuesta subir una app al Google Play?". dribba. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://dribba.com/blog/cuanto-cuesta-subir-una-app-al-google-play>
+
+[37] "Recetas con microondas para ahorrar energía". Naturgy. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://www.naturgy.es/hogar/blog/cuanto_consume_un_ordenador#como-calcular-el-consumo-mensual-de-un-ordenador>
+
+[38] "Cómo calcular consumo eléctrico de un aparato". Tecnocultivo. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://tecnocultivo.es/blog/como-calcular-consumo-electrico-de-un-aparato/>
+
+[39] "Tafiras fibras ópticas". Digi. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://www.digimobil.es/fibra-optica/>
+
+[40] "Mantenimiento de Código Personalizado". reddit. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://www.reddit.com/r/Odoo/comments/1i5p4qd/custom_code_maintenance/?tl=es-419>
