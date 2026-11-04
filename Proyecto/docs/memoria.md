@@ -693,7 +693,57 @@ Tras la entrega del software en febrero y su implantación inicial, se establece
   
 * **Presupuesto anual de soporte:** 72€ la hora x 20 horas = 1440€.
 
+
+**Presupuesto desglosado**
+
+Se presenta la tabla detallada y consolidada de partidas presupuestarias para el desarrollo, implantación y mantenimiento inicial de Tempomedic. Se agrupan los costes de Personal, Hardware, Software/Servicios, Suministros y una reserva obligatoria de Contingencias:
+
+| Categoría / Partida | Descripción / Criterio de Cálculo | Importe (€) | % s/ Subtotal |
+| :--- | :--- | :---: | :---: |
+| **1. PERSONAL (Recursos Humanos)** | **768 horas totales** (4 desarrolladores × 192 h a 15,00 €/h durante 6 meses) | **11.520,00 €** | **94,94 %** |
+| • Santiago González, Jorge Espejo | Scrum Master & Backend Dev (192 h) | 2.880,00 € | — |
+| • Alba Durán, Santiago González | UI/UX & Frontend Dev (192 h) | 2.880,00 € | — |
+| • Alba Durán, María Dolores Barba | Frontend & QA Tester (192 h) | 2.880,00 € | — |
+| • Los 4 miembros del equipo | Persistencia & Documentación (192 h) | 2.880,00 € | — |
+| **2. HARDWARE** | **Amortización contable a 6 meses** | **400,08 €** | **3,30 %** |
+| • Equipos de cómputo | Amortización de 4 ordenadores (800 €/unidad, vida útil 4 años) | 400,08 € | — |
+| **3. SOFTWARE Y SERVICIOS** | **Licencias, despliegue e infraestructura** | **53,00 €** | **0,44 %** |
+| • Herramientas y SDK | NetBeans IDE, GitHub Free, Figma (Free) | 0,00 € | — |
+| • Cuenta de Desarrollador | Registro en Google Play Console (Pago único) | 23,00 € | — |
+| • Hosting y Dominio Web | Dominio `.es` y alojamiento para soporte técnico y política RGPD| 30,00 € | — |
+| **4. SUMINISTROS Y RED** | **Consumos indirectos de la fase de desarrollo** | **113,04 €** | **0,93 %** |
+| • Electricidad | Consumo de 200 kWh (4 equipos × 768 h a 0,36 €/kWh) | 276,48€ | — |
+| • Conectividad | Conexión a red / fibra óptica durante los 6 meses de proyecto | 60,00 € | — |
+| **SUBTOTAL PRESUPUESTO BASE** | **Suma de partidas directas e indirectas** | **12.086,12 €** | **100,00 %** |
+| **5. CONTINGENCIAS (5%)** | **Reserva para riesgos no previstos e imprevistos técnicos** | **604,31 €** | **5,00 %** |
+| **PRESUPUESTO TOTAL PROYECTO** | **Inversión Inicial Total de Desarrollo (Sep - Feb)** | **24.777,27 €** | — |
+
+**Análisis breve del retorno de la inversión (ROI)**
+
+* **Escenario inicial:** las ausencias sin cancelar a citas de atención primaria o especializada representan una pérdida de tiempo médico y una sobrecarga administrativa de reprogramación manual.
+* **Impacto con Tempomedic:** la centralización del módulo de citas y sus recordatorios locales disminuyen las faltas de asistencia no planificadas en una tasa estimada del **25%**.
+* **Estimación de ahorro:** considerando un coste medio de 40,00€ por consulta médica perdida en el sistema de salud, por cada 100 usuarios activos que eviten una falta anual, se genera un ahorro directo para la entidad usuaria.
+
+##### Reducción de recaídas y complicaciones por falta de adherencia al tratamiento
+
+* **Escenario inicial:** según la OMS y Quirónsalud citados en la investigación, entre el 20% y el 60% de los errores y faltas de adicciones en medicación originan daños a la salud que requieren atención de urgencias o visitas médicas extraordinarias.
   
+* **Impacto con Tempomedic:** la automatización de avisos locales en el 73% de usuarios que sufren olvidos reduce las complicaciones derivadas del incumplimiento terapéutico.
+  
+* **Estimación de ahorro:** evitar 5 visitas a urgencias al año en un colectivo de pacientes polimedicados (coste promedio de urgencia médica: 180,00 €) supone un ahorro operativo para la entidad sanitaria de:
+
+Ahorro asistencial por urgencias = 5 urgencias evitadas al año / 180,00€ = 900,00€
+
+##### Ahorro de tiempo en la labor del cuidador o personal de supervisión
+
+* **Escenario inicial:** los cuidadores o personal de apoyo dedican de media 15 minutos diarios a la revisión manual de pastilleros y confirmación telefónica de tomas.
+  
+* **Impacto con Tempomedic:** el seguimiento mediante el panel "Hoy" e histórico de adherencia ahorra hasta un 60% del tiempo de verificación manual.
+  
+* **Estimación de ahorro de gestión:** reducción de 9 minutos diarios por paciente.
+
+A una tarifa de personal asistencial de 12,00 €/h, representa un ahorro de 657,00 €/año por paciente supervisado.
+
 ### 2.7. Estudio de viabilidad legal y normativa
 
 #### 2.7.1. Protección de datos personales
@@ -1013,3 +1063,7 @@ Para dar respuesta a los riesgos evaluados en el proyecto **Tempomedic**, se est
 [39] "Tafiras fibras ópticas". Digi. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://www.digimobil.es/fibra-optica/>
 
 [40] "Mantenimiento de Código Personalizado". reddit. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://www.reddit.com/r/Odoo/comments/1i5p4qd/custom_code_maintenance/?tl=es-419>
+
+[41] "¿Cuánto cuesta la ayuda a domicilio en Sevilla en 2026?". Salutte. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://salutteayudadomicilio.com/cuanto-cuesta-la-ayuda-a-domicilio-en-sevilla-en-2026/>
+
+[42] "Lo que Cuesta Enfermarse". meskeia. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://meskeia.com/visualizador-coste-sanidad/>
