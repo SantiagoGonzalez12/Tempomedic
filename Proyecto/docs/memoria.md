@@ -894,3 +894,5 @@ Para dar respuesta a los riesgos evaluados en el proyecto **Tempomedic**, se est
 [28] "Mitigación de riesgos". IBM. [En línea]. Disponible en: [https://www.ibm.com/es-es/think/topics/risk-mitigation](https://www.ibm.com/es-es/think/topics/risk-mitigation)
 
 [29] "Plan de contingencia". Ciberseguridad.com. [En línea]. Disponible en: [https://ciberseguridad.com/normativa/espana/medidas/plan-contingencia/](https://ciberseguridad.com/normativa/espana/medidas/plan-contingencia/)
+
+[30] "Matriz de riesgos: qué es, ejemplos y cómo crearla fácil". Pirani. [En línea]. Disponible en: [https://www.piranirisk.com/es/blog/matriz-de-riesgos-que-es-ejemplos-y-como-crearla-facil](https://www.piranirisk.com/es/blog/matriz-de-riesgos-que-es-ejemplos-y-como-crearla-facil)
