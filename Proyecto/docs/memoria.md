@@ -824,6 +824,16 @@ Para dar respuesta a los riesgos evaluados en el proyecto **Tempomedic**, se est
 * **Acción preventiva:** Fijar de manera estricta los requisitos funcionales obligatorios del MVP y congelar los cambios estructurales mayores durante el desarrollo del Sprint.
 * **Plan de contingencia:** Si surgen nuevas ideas complejas o propuestas de ampliación (como bases de datos en la nube o sincronizaciones externas), estas serán automáticamente descartadas del desarrollo actual y trasladadas al *Backlog* como posibles mejoras para versiones futuras de la aplicación.
 
+* ### 8.2.4.1. Matriz de Gestión de Riesgos
+
+| ID del Riesgo | Descripción del Riesgo | Probabilidad | Impacto | Severidad / Criticidad | Medida de Prevención | Plan de Contingencia |
+| :---: | :--- | :---: | :---: | :---: | :--- | :--- |
+| **R01** | Curva de aprendizaje y adaptación a la librería gráfica *FlatLaf* | Media | Medio | **Medio** | Acotar el diseño visual a componentes estándar y realizar pruebas tempranas en las primeras iteraciones. | Si la integración se demora, prescindir de elementos avanzados y usar el estilo por defecto de Java Swing. |
+| **R02** | Rendimiento y consumo de recursos en equipos cliente antiguos | Baja | Medio | **Bajo** | Optimizar el código fuente evitando escuchas innecesarias (*listeners*) y gestionando eficientemente los hilos en segundo plano. | Programar revisiones de rendimiento para desvocar procesos redundantes si se detectan ralentizaciones. |
+| **R03** | Incidencias en la compilación y empaquetado multiplataforma (`.jar`) | Media | Alto | **Alto** | Estandarizar estrictamente el uso de rutas relativas con métodos nativos de Java (`getResource`). | Reestructurar el empaquetado mediante herramientas estables como Maven y generar una guía interna de ejecución. |
+| **R04** | Desviación del alcance inicial del proyecto  | Alta | Alto | **Crítico** | Fijar estrictamente los requisitos obligatorios del MVP y congelar cambios estructurales mayores durante el Sprint. | Descartar nuevas ideas complejas y trasladarlas al *Backlog* como mejoras para versiones futuras. |
+
+
 
 ## REFERENCIAS
 
