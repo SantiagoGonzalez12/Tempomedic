@@ -804,6 +804,27 @@ Una vez identificados los riesgos iniciales del proyecto, se procede a su evalua
 | **R03** | Incidencias en la compilación y empaquetado multiplataforma .jar| Media | Alto | **Alto** | Alta |
 | **R04** | Desviación del alcance inicial del proyecto | Alta | Alto | **Crítico** | Muy Alta |
 
+### 8.2.3. Plan de mitigación y contingencia de riesgos
+
+Para dar respuesta a los riesgos evaluados en el proyecto **Tempomedic**, se establece un plan dual por cada incidencia detectada: una **acción preventiva** (orientada a reducir la probabilidad de que el problema ocurra) y un **plan de contingencia** (medida de reacción rápida si el riesgo llega a materializarse).
+
+#### 1. Riesgo R01: Curva de aprendizaje y adaptación a la librería gráfica *FlatLaf*
+* **Acción preventiva:** Acotar el diseño visual de la interfaz a componentes estándar soportados por *FlatLaf*, evitando personalizaciones excesivamente complejas y realizando pruebas de maquetación tempranas en las primeras iteraciones.
+* **Plan de contingencia:** Si la integración de la librería se demora o genera fallos críticos de estilo, se prescindirá de los elementos visuales avanzados y se recurrirá al diseño visual clásico por defecto de Java Swing para garantizar la entrega a tiempo de las vistas.
+
+#### 2. Riesgo R02: Rendimiento y consumo de recursos en equipos cliente antiguos
+* **Acción preventiva:** Optimizar el código fuente evitando bucles o escuchas innecesarias (*isteners) y gestionando de forma eficiente los hilos en segundo plano destinados a los recordatorios y alarmas.
+* **Plan de contingencia:** Si se detectan ralentizaciones en equipos de gama baja, se programarán revisiones específicas de rendimiento y se limitarán las actualizaciones gráficas automáticas de la pantalla principal.
+
+#### 3. Riesgo R03: Incidencias en la compilación y empaquetado multiplataforma (`.jar`)
+* **Acción preventiva:** Estandarizar estrictamente el uso de rutas relativas mediante los métodos nativos de Java para la carga de recursos, imágenes y ficheros de persistencia local.
+* **Plan de contingencia:** Si el archivo ejecutable final (`.jar`) presenta fallos de rutas o dependencias al probarlo fuera de NetBeans, se reestructurará el empaquetado utilizando herramientas de compilación estables (como Maven) y se generará una guía interna de ejecución para asegurar su portabilidad.
+
+#### 4. Riesgo R04: Desviación del alcance inicial del proyecto 
+* **Acción preventiva:** Fijar de manera estricta los requisitos funcionales obligatorios del MVP y congelar los cambios estructurales mayores durante el desarrollo del Sprint.
+* **Plan de contingencia:** Si surgen nuevas ideas complejas o propuestas de ampliación (como bases de datos en la nube o sincronizaciones externas), estas serán automáticamente descartadas del desarrollo actual y trasladadas al *Backlog* como posibles mejoras para versiones futuras de la aplicación.
+
+
 ## REFERENCIAS
 
 [1] Centro FP Superior Campus Cámara Comercio Sevilla, *Guía Didáctica AEE Sprint Review 02: Análisis del Contexto y Viabilidad (Capítulo II)*, Módulo 0492 Proyecto Intermodular, Sevilla, España, 2026.
