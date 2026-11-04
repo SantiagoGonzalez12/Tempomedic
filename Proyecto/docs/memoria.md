@@ -880,3 +880,7 @@ Para dar respuesta a los riesgos evaluados en el proyecto **Tempomedic**, se est
 [26] "DISPENSACIÓN, ADHERENCIA Y USO ADECUADO DEL TRATAMIENTO". ADHe+. Consultado: el 3 de noviembre de 2026. [En línea]. Disponible en: <https://www.sefac.org/sites/default/files/2017-11/Adherencia_0.pdf>
 
 [27] "¿Cómo realizar un registro diario de medicamentos?". Aprende Intitute. Consultado: el 3 de noviembre de 2026. [En línea]. Disponible en: <https://aprende.com/blog/bienestar/cuidado-del-adulto-mayor/como-realizar-un-registro-diario-de-medicamentos/>
+
+[28] "Mitigación de riesgos". IBM. [En línea]. Disponible en: [https://www.ibm.com/es-es/think/topics/risk-mitigation](https://www.ibm.com/es-es/think/topics/risk-mitigation)
+
+[29] "Plan de contingencia". Ciberseguridad.com. [En línea]. Disponible en: [https://ciberseguridad.com/normativa/espana/medidas/plan-contingencia/](https://ciberseguridad.com/normativa/espana/medidas/plan-contingencia/)
