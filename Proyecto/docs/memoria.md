@@ -597,6 +597,12 @@ El desarrollo de Tempomedic es **técnicamente viable**. El uso de Java, Swing y
 
 ### 2.6. Estudio de viabilidad económica
 
+**¿En qué consiste?**
+
+Antes conviene decidir que debe demostrar el siguiente desembolso: problema existente, solución, integración viable, que un cliente pagará o que el servicio pueda crecer sin desbordar la operación. Cuando estás preguntas ya están resuelta, se pasa a una propuesta verificable. 
+
+En primer lugar se utilizaría la autofinanciación. Permite decidir con rapidez y conservar el control ya que es adecuada para entrevistas, definición de producto, prototipo o prueba técnica acotada. El error que tiene es que aparece cuando se usa el ahorro personal para construir durante meses sin una condición clara de continuidad. 
+
 ### 2.7. Estudio de viabilidad legal y normativa
 
 #### 2.7.1. Protección de datos personales
@@ -896,3 +902,5 @@ Para dar respuesta a los riesgos evaluados en el proyecto **Tempomedic**, se est
 [29] "Plan de contingencia". Ciberseguridad.com. [En línea]. Disponible en: [https://ciberseguridad.com/normativa/espana/medidas/plan-contingencia/](https://ciberseguridad.com/normativa/espana/medidas/plan-contingencia/)
 
 [30] "Matriz de riesgos: qué es, ejemplos y cómo crearla fácil". Pirani. [En línea]. Disponible en: [https://www.piranirisk.com/es/blog/matriz-de-riesgos-que-es-ejemplos-y-como-crearla-facil](https://www.piranirisk.com/es/blog/matriz-de-riesgos-que-es-ejemplos-y-como-crearla-facil)
+
+[31] "Cómo financiar el desarrollo de una app: 7 vías realistas". Appfyl. Consultado: el 4 de noviembre de 2026. [En línea]. Disponible en: <https://blog.appfyl.com/es/blog/how-to-fund-mobile-app-development/>
