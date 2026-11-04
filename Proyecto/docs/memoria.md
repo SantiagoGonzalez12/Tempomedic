@@ -793,6 +793,17 @@ Durante la fase inicial de planificación de **Tempomedic**, se han identificado
 * **Impacto:** Alto (riesgo de no cumplir los plazos acordados en la planificación).
 * **Solución:** Mantener el foco en el Producto Mínimo Viable (MVP) con persistencia local y registrar las nuevas propuestas en el *Backlog* como posibles mejoras para versiones futuras.
 
+### 8.2.2. Evaluación de riesgos
+
+Una vez identificados los riesgos iniciales del proyecto, se procede a su evaluación cualitativa analizando dos variables principales: **Probabilidad de ocurrencia** (Baja, Media, Alta) e **Impacto en el proyecto** (Bajo, Medio, Alto). Esta valoración permite determinar el nivel de riesgo global y priorizar los planes de mitigación correspondientes.
+
+| ID | Riesgo Identificado | Probabilidad | Impacto | Nivel de Riesgo Global | Prioridad de Atención |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| **R01** | Curva de aprendizaje y adaptación a la librería gráfica *FlatLaf* | Media | Medio | **Medio** | Media |
+| **R02** | Rendimiento y consumo de recursos en equipos cliente antiguos | Baja | Medio | **Bajo** | Baja |
+| **R03** | Incidencias en la compilación y empaquetado multiplataforma .jar| Media | Alto | **Alto** | Alta |
+| **R04** | Desviación del alcance inicial del proyecto | Alta | Alto | **Crítico** | Muy Alta |
+
 ## REFERENCIAS
 
 [1] Centro FP Superior Campus Cámara Comercio Sevilla, *Guía Didáctica AEE Sprint Review 02: Análisis del Contexto y Viabilidad (Capítulo II)*, Módulo 0492 Proyecto Intermodular, Sevilla, España, 2026.
