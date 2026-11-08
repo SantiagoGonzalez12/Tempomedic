@@ -1,4 +1,4 @@
-# Memoria del Sprint 1: Ideación y Prototipado Base
+# Memoria del Proyecto
 
 | | |
 | --- | --- |
@@ -6,7 +6,7 @@
 | **Grupo** | Grupo 2 |
 | **Integrantes** | María Dolores Barba <br> Alba Durán <br> Santiago González <br> Jorge Espejo |
 | **Módulo / profesor** | PI/DII - Willman Acosta Lugo |
-| **Sprint** | Sprint 1 (24/09/2026 – 02/10/2026) <br> Sprint 2 (03/10/2026 - 30/10/2026)|
+| **Sprint** | Sprint 1 (24/09/2026 – 02/10/2026) <br> Sprint 2 (03/10/2026 - 9/11/2026)|
 | **Repositorios** | <https://github.com/SantiagoGonzalez12/Tempomedic> <br> <https://github.com/SantiagoGonzalez12/Tempomedic-Interfaz> |
 | **Tablero** | <https://github.com/users/SantiagoGonzalez12/projects/6> |
 
