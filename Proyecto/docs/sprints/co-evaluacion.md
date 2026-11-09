@@ -17,5 +17,5 @@ Notas que creemos que nos merecemos según el trabajo ejercido en cada Sprint en
 | --- | --- |
 | Alba Durán | 100 |
 | Jorge Espejo | 100 |
-| María Dolores Barba | 100 |
+| María Dolores Barba | 90 |
 | Santiago González | 100 |
