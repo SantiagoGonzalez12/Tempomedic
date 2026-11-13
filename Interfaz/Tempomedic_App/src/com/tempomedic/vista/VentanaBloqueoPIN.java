@@ -100,7 +100,37 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         pwdPin1.setMinimumSize(new java.awt.Dimension(64, 72));
         pwdPin1.setOpaque(true);
         pwdPin1.setPreferredSize(new java.awt.Dimension(64, 72));
+        pwdPin1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                pwdPin1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                pwdPin1FocusLost(evt);
+            }
+        });
+        pwdPin1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pwdPin1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pwdPin1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pwdPin1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pwdPin1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pwdPin1MouseReleased(evt);
+            }
+        });
         pwdPin1.addActionListener(this::pwdPin1ActionPerformed);
+        pwdPin1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                pwdPin1KeyPressed(evt);
+            }
+        });
         pnlCasillasPIN.add(pwdPin1);
 
         pwdPin2.setBackground(new java.awt.Color(186, 209, 217));
@@ -112,7 +142,37 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         pwdPin2.setMinimumSize(new java.awt.Dimension(64, 72));
         pwdPin2.setOpaque(true);
         pwdPin2.setPreferredSize(new java.awt.Dimension(64, 72));
+        pwdPin2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                pwdPin2FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                pwdPin2FocusLost(evt);
+            }
+        });
+        pwdPin2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pwdPin2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pwdPin2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pwdPin2MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pwdPin2MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pwdPin2MouseReleased(evt);
+            }
+        });
         pwdPin2.addActionListener(this::pwdPin2ActionPerformed);
+        pwdPin2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                pwdPin2KeyPressed(evt);
+            }
+        });
         pnlCasillasPIN.add(pwdPin2);
 
         pwdPin3.setBackground(new java.awt.Color(186, 209, 217));
@@ -124,7 +184,37 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         pwdPin3.setMinimumSize(new java.awt.Dimension(64, 72));
         pwdPin3.setOpaque(true);
         pwdPin3.setPreferredSize(new java.awt.Dimension(64, 72));
+        pwdPin3.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                pwdPin3FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                pwdPin3FocusLost(evt);
+            }
+        });
+        pwdPin3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pwdPin3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pwdPin3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pwdPin3MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pwdPin3MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pwdPin3MouseReleased(evt);
+            }
+        });
         pwdPin3.addActionListener(this::pwdPin3ActionPerformed);
+        pwdPin3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                pwdPin3KeyPressed(evt);
+            }
+        });
         pnlCasillasPIN.add(pwdPin3);
 
         pwdPin4.setBackground(new java.awt.Color(186, 209, 217));
@@ -136,7 +226,37 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         pwdPin4.setMinimumSize(new java.awt.Dimension(64, 72));
         pwdPin4.setOpaque(true);
         pwdPin4.setPreferredSize(new java.awt.Dimension(64, 72));
+        pwdPin4.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                pwdPin4FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                pwdPin4FocusLost(evt);
+            }
+        });
+        pwdPin4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pwdPin4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pwdPin4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pwdPin4MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pwdPin4MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                pwdPin4MouseReleased(evt);
+            }
+        });
         pwdPin4.addActionListener(this::pwdPin4ActionPerformed);
+        pwdPin4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                pwdPin4KeyPressed(evt);
+            }
+        });
         pnlCasillasPIN.add(pwdPin4);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -155,7 +275,37 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         btnDesbloquear.setMaximumSize(new java.awt.Dimension(150, 45));
         btnDesbloquear.setMinimumSize(new java.awt.Dimension(150, 45));
         btnDesbloquear.setPreferredSize(new java.awt.Dimension(150, 45));
+        btnDesbloquear.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                btnDesbloquearFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                btnDesbloquearFocusLost(evt);
+            }
+        });
+        btnDesbloquear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnDesbloquearMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDesbloquearMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDesbloquearMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnDesbloquearMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnDesbloquearMouseReleased(evt);
+            }
+        });
         btnDesbloquear.addActionListener(this::btnDesbloquearActionPerformed);
+        btnDesbloquear.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnDesbloquearKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -168,6 +318,36 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         lblOlvidoPIN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblOlvidoPIN.setText("¿Olvidaste el PIN? Inicia sesión con tu contraseña");
         lblOlvidoPIN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblOlvidoPIN.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                lblOlvidoPINFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                lblOlvidoPINFocusLost(evt);
+            }
+        });
+        lblOlvidoPIN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblOlvidoPINMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblOlvidoPINMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblOlvidoPINMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblOlvidoPINMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lblOlvidoPINMouseReleased(evt);
+            }
+        });
+        lblOlvidoPIN.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lblOlvidoPINKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
@@ -209,6 +389,198 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
     private void pwdPin4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdPin4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pwdPin4ActionPerformed
+
+    private void pwdPin1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin1MouseEntered
+
+    private void pwdPin1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin1MouseExited
+
+    private void pwdPin1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin1MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin1MousePressed
+
+    private void pwdPin1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin1MouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin1MouseReleased
+
+    private void pwdPin1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin1MouseClicked
+
+    private void pwdPin1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin1FocusGained
+
+    private void pwdPin1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin1FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin1FocusLost
+
+    private void pwdPin1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdPin1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin1KeyPressed
+
+    private void pwdPin2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin2MouseEntered
+
+    private void pwdPin2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin2MouseExited
+
+    private void pwdPin2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin2MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin2MousePressed
+
+    private void pwdPin2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin2MouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin2MouseReleased
+
+    private void pwdPin2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin2MouseClicked
+
+    private void pwdPin2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin2FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin2FocusGained
+
+    private void pwdPin2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin2FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin2FocusLost
+
+    private void pwdPin2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdPin2KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin2KeyPressed
+
+    private void pwdPin3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin3MouseEntered
+
+    private void pwdPin3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin3MouseExited
+
+    private void pwdPin3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin3MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin3MousePressed
+
+    private void pwdPin3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin3MouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin3MouseReleased
+
+    private void pwdPin3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin3MouseClicked
+
+    private void pwdPin3FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin3FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin3FocusGained
+
+    private void pwdPin3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin3FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin3FocusLost
+
+    private void pwdPin3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdPin3KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin3KeyPressed
+
+    private void pwdPin4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin4MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin4MouseEntered
+
+    private void pwdPin4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin4MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin4MouseExited
+
+    private void pwdPin4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin4MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin4MousePressed
+
+    private void pwdPin4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin4MouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin4MouseReleased
+
+    private void pwdPin4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPin4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin4MouseClicked
+
+    private void pwdPin4FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin4FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin4FocusGained
+
+    private void pwdPin4FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin4FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin4FocusLost
+
+    private void pwdPin4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdPin4KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdPin4KeyPressed
+
+    private void btnDesbloquearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDesbloquearMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDesbloquearMouseEntered
+
+    private void btnDesbloquearMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDesbloquearMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDesbloquearMouseExited
+
+    private void btnDesbloquearMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDesbloquearMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDesbloquearMousePressed
+
+    private void btnDesbloquearMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDesbloquearMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDesbloquearMouseReleased
+
+    private void btnDesbloquearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDesbloquearMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDesbloquearMouseClicked
+
+    private void btnDesbloquearFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnDesbloquearFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDesbloquearFocusGained
+
+    private void btnDesbloquearFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnDesbloquearFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDesbloquearFocusLost
+
+    private void btnDesbloquearKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnDesbloquearKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDesbloquearKeyPressed
+
+    private void lblOlvidoPINMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidoPINMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblOlvidoPINMouseEntered
+
+    private void lblOlvidoPINMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidoPINMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblOlvidoPINMouseExited
+
+    private void lblOlvidoPINMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidoPINMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblOlvidoPINMousePressed
+
+    private void lblOlvidoPINMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidoPINMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblOlvidoPINMouseReleased
+
+    private void lblOlvidoPINMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidoPINMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblOlvidoPINMouseClicked
+
+    private void lblOlvidoPINFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblOlvidoPINFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblOlvidoPINFocusGained
+
+    private void lblOlvidoPINFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblOlvidoPINFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblOlvidoPINFocusLost
+
+    private void lblOlvidoPINKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblOlvidoPINKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblOlvidoPINKeyPressed
 
     /**
      * @param args the command line arguments
