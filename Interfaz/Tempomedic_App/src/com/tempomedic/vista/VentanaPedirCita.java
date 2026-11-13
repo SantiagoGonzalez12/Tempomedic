@@ -95,6 +95,36 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         btnVolver.setContentAreaFilled(false);
         btnVolver.setFocusPainted(false);
         btnVolver.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        btnVolver.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                btnVolverFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                btnVolverFocusLost(evt);
+            }
+        });
+        btnVolver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnVolverMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnVolverMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnVolverMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnVolverMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnVolverMouseReleased(evt);
+            }
+        });
+        btnVolver.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnVolverKeyPressed(evt);
+            }
+        });
         pnlTitulo.add(btnVolver);
 
         lblPedirCita.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
@@ -135,6 +165,36 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         cmbEspecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cardiología", "Dermatología", "Medicina general", "Traumatología" }));
         cmbEspecialidad.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(5, 12, 5, 12)));
         cmbEspecialidad.setPreferredSize(new java.awt.Dimension(343, 41));
+        cmbEspecialidad.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                cmbEspecialidadFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                cmbEspecialidadFocusLost(evt);
+            }
+        });
+        cmbEspecialidad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cmbEspecialidadMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cmbEspecialidadMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cmbEspecialidadMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                cmbEspecialidadMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                cmbEspecialidadMouseReleased(evt);
+            }
+        });
+        cmbEspecialidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                cmbEspecialidadKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -159,6 +219,36 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         txtCentro.setText("Hosp");
         txtCentro.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(5, 12, 5, 12)));
         txtCentro.setPreferredSize(new java.awt.Dimension(343, 41));
+        txtCentro.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtCentroFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtCentroFocusLost(evt);
+            }
+        });
+        txtCentro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtCentroMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtCentroMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtCentroMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtCentroMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                txtCentroMouseReleased(evt);
+            }
+        });
+        txtCentro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtCentroKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -181,6 +271,36 @@ public class VentanaPedirCita extends javax.swing.JFrame {
             public String getElementAt(int i) { return strings[i]; }
         });
         lstSugerencias.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        lstSugerencias.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                lstSugerenciasFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                lstSugerenciasFocusLost(evt);
+            }
+        });
+        lstSugerencias.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lstSugerenciasMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lstSugerenciasMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lstSugerenciasMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lstSugerenciasMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lstSugerenciasMouseReleased(evt);
+            }
+        });
+        lstSugerencias.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lstSugerenciasKeyPressed(evt);
+            }
+        });
         sclSugerencias.setViewportView(lstSugerencias);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -207,6 +327,36 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         txtFecha.setText("dd/mm/aaaa");
         txtFecha.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(5, 12, 5, 12)));
         txtFecha.setPreferredSize(new java.awt.Dimension(343, 41));
+        txtFecha.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtFechaFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtFechaFocusLost(evt);
+            }
+        });
+        txtFecha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtFechaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtFechaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtFechaMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtFechaMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                txtFechaMouseReleased(evt);
+            }
+        });
+        txtFecha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtFechaKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
@@ -230,7 +380,37 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         txtHora.setText("--:--");
         txtHora.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(5, 12, 5, 12)));
         txtHora.setPreferredSize(new java.awt.Dimension(343, 41));
+        txtHora.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtHoraFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtHoraFocusLost(evt);
+            }
+        });
+        txtHora.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtHoraMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtHoraMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtHoraMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtHoraMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                txtHoraMouseReleased(evt);
+            }
+        });
         txtHora.addActionListener(this::txtHoraActionPerformed);
+        txtHora.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtHoraKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
@@ -252,6 +432,36 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         btnConfirmar.setText("Confirmar");
         btnConfirmar.setBorderPainted(false);
         btnConfirmar.setFocusPainted(false);
+        btnConfirmar.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                btnConfirmarFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                btnConfirmarFocusLost(evt);
+            }
+        });
+        btnConfirmar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnConfirmarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnConfirmarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnConfirmarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnConfirmarMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnConfirmarMouseReleased(evt);
+            }
+        });
+        btnConfirmar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnConfirmarKeyPressed(evt);
+            }
+        });
         pnlAcciones.add(btnConfirmar);
 
         pnlContenido.add(pnlAcciones, java.awt.BorderLayout.SOUTH);
@@ -265,6 +475,230 @@ public class VentanaPedirCita extends javax.swing.JFrame {
     private void txtHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHoraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHoraActionPerformed
+
+    private void btnVolverMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverMouseEntered
+
+    private void btnVolverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverMouseExited
+
+    private void btnVolverMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverMousePressed
+
+    private void btnVolverMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverMouseReleased
+
+    private void btnVolverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverMouseClicked
+
+    private void btnVolverFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnVolverFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverFocusGained
+
+    private void btnVolverFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnVolverFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverFocusLost
+
+    private void btnVolverKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnVolverKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVolverKeyPressed
+
+    private void cmbEspecialidadMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmbEspecialidadMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbEspecialidadMouseEntered
+
+    private void cmbEspecialidadMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmbEspecialidadMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbEspecialidadMouseExited
+
+    private void cmbEspecialidadMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmbEspecialidadMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbEspecialidadMousePressed
+
+    private void cmbEspecialidadMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmbEspecialidadMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbEspecialidadMouseReleased
+
+    private void cmbEspecialidadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cmbEspecialidadMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbEspecialidadMouseClicked
+
+    private void cmbEspecialidadFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cmbEspecialidadFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbEspecialidadFocusGained
+
+    private void cmbEspecialidadFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_cmbEspecialidadFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbEspecialidadFocusLost
+
+    private void cmbEspecialidadKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbEspecialidadKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbEspecialidadKeyPressed
+
+    private void txtCentroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCentroMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCentroMouseEntered
+
+    private void txtCentroMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCentroMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCentroMouseExited
+
+    private void txtCentroMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCentroMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCentroMousePressed
+
+    private void txtCentroMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCentroMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCentroMouseReleased
+
+    private void txtCentroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCentroMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCentroMouseClicked
+
+    private void txtCentroFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCentroFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCentroFocusGained
+
+    private void txtCentroFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCentroFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCentroFocusLost
+
+    private void txtCentroKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCentroKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCentroKeyPressed
+
+    private void lstSugerenciasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstSugerenciasMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lstSugerenciasMouseEntered
+
+    private void lstSugerenciasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstSugerenciasMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lstSugerenciasMouseExited
+
+    private void lstSugerenciasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstSugerenciasMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lstSugerenciasMousePressed
+
+    private void lstSugerenciasMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstSugerenciasMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lstSugerenciasMouseReleased
+
+    private void lstSugerenciasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstSugerenciasMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lstSugerenciasMouseClicked
+
+    private void lstSugerenciasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lstSugerenciasFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lstSugerenciasFocusGained
+
+    private void lstSugerenciasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lstSugerenciasFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lstSugerenciasFocusLost
+
+    private void lstSugerenciasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lstSugerenciasKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lstSugerenciasKeyPressed
+
+    private void txtFechaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFechaMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaMouseEntered
+
+    private void txtFechaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFechaMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaMouseExited
+
+    private void txtFechaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFechaMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaMousePressed
+
+    private void txtFechaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFechaMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaMouseReleased
+
+    private void txtFechaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFechaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaMouseClicked
+
+    private void txtFechaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFechaFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaFocusGained
+
+    private void txtFechaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFechaFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaFocusLost
+
+    private void txtFechaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFechaKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaKeyPressed
+
+    private void txtHoraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtHoraMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHoraMouseEntered
+
+    private void txtHoraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtHoraMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHoraMouseExited
+
+    private void txtHoraMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtHoraMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHoraMousePressed
+
+    private void txtHoraMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtHoraMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHoraMouseReleased
+
+    private void txtHoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtHoraMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHoraMouseClicked
+
+    private void txtHoraFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtHoraFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHoraFocusGained
+
+    private void txtHoraFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtHoraFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHoraFocusLost
+
+    private void txtHoraKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtHoraKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHoraKeyPressed
+
+    private void btnConfirmarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfirmarMouseEntered
+
+    private void btnConfirmarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfirmarMouseExited
+
+    private void btnConfirmarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmarMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfirmarMousePressed
+
+    private void btnConfirmarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmarMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfirmarMouseReleased
+
+    private void btnConfirmarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfirmarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfirmarMouseClicked
+
+    private void btnConfirmarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnConfirmarFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfirmarFocusGained
+
+    private void btnConfirmarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnConfirmarFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfirmarFocusLost
+
+    private void btnConfirmarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnConfirmarKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfirmarKeyPressed
 
     /**
      * @param args the command line arguments
