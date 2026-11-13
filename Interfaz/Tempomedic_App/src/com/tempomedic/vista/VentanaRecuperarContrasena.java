@@ -102,7 +102,37 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         txtCorreo.setToolTipText("");
         txtCorreo.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
         txtCorreo.setPreferredSize(new java.awt.Dimension(563, 41));
+        txtCorreo.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtCorreoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtCorreoFocusLost(evt);
+            }
+        });
+        txtCorreo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtCorreoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtCorreoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtCorreoMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtCorreoMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                txtCorreoMouseReleased(evt);
+            }
+        });
         txtCorreo.addActionListener(this::txtCorreoActionPerformed);
+        txtCorreo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtCorreoKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -117,6 +147,36 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         btnEnviar.setBorderPainted(false);
         btnEnviar.setFocusPainted(false);
         btnEnviar.setPreferredSize(new java.awt.Dimension(563, 45));
+        btnEnviar.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                btnEnviarFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                btnEnviarFocusLost(evt);
+            }
+        });
+        btnEnviar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEnviarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnEnviarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnEnviarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnEnviarMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnEnviarMouseReleased(evt);
+            }
+        });
+        btnEnviar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnEnviarKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
@@ -144,6 +204,36 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         lblVolverInicioSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblVolverInicioSesion.setText("Volver a iniciar sesión");
         lblVolverInicioSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblVolverInicioSesion.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                lblVolverInicioSesionFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                lblVolverInicioSesionFocusLost(evt);
+            }
+        });
+        lblVolverInicioSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblVolverInicioSesionMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblVolverInicioSesionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblVolverInicioSesionMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblVolverInicioSesionMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lblVolverInicioSesionMouseReleased(evt);
+            }
+        });
+        lblVolverInicioSesion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lblVolverInicioSesionKeyPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -168,6 +258,102 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
     private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCorreoActionPerformed
+
+    private void txtCorreoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCorreoMouseEntered
+
+    private void txtCorreoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCorreoMouseExited
+
+    private void txtCorreoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCorreoMousePressed
+
+    private void txtCorreoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCorreoMouseReleased
+
+    private void txtCorreoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCorreoMouseClicked
+
+    private void txtCorreoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCorreoFocusGained
+
+    private void txtCorreoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCorreoFocusLost
+
+    private void txtCorreoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCorreoKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCorreoKeyPressed
+
+    private void btnEnviarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEnviarMouseEntered
+
+    private void btnEnviarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEnviarMouseExited
+
+    private void btnEnviarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEnviarMousePressed
+
+    private void btnEnviarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEnviarMouseReleased
+
+    private void btnEnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEnviarMouseClicked
+
+    private void btnEnviarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEnviarFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEnviarFocusGained
+
+    private void btnEnviarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEnviarFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEnviarFocusLost
+
+    private void btnEnviarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnEnviarKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEnviarKeyPressed
+
+    private void lblVolverInicioSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblVolverInicioSesionMouseEntered
+
+    private void lblVolverInicioSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblVolverInicioSesionMouseExited
+
+    private void lblVolverInicioSesionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblVolverInicioSesionMousePressed
+
+    private void lblVolverInicioSesionMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblVolverInicioSesionMouseReleased
+
+    private void lblVolverInicioSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblVolverInicioSesionMouseClicked
+
+    private void lblVolverInicioSesionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblVolverInicioSesionFocusGained
+
+    private void lblVolverInicioSesionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblVolverInicioSesionFocusLost
+
+    private void lblVolverInicioSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblVolverInicioSesionKeyPressed
 
     /**
      * @param args the command line arguments
