@@ -32,13 +32,13 @@ public class VentanaHoy extends javax.swing.JFrame {
         AVISOS = new javax.swing.ButtonGroup();
         pnlSidebar = new javax.swing.JPanel();
         filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
-        btnHoy1 = new javax.swing.JButton();
+        btnHoy = new javax.swing.JButton();
         filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
-        btnMedicamentos1 = new javax.swing.JButton();
+        btnMedicamentos = new javax.swing.JButton();
         filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
-        btnCitas1 = new javax.swing.JButton();
+        btnCitas = new javax.swing.JButton();
         filler9 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
-        btnAjustes1 = new javax.swing.JButton();
+        btnAjustes = new javax.swing.JButton();
         filler10 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         pnlContenido = new javax.swing.JPanel();
         pnlEncabezado = new javax.swing.JPanel();
@@ -81,68 +81,188 @@ public class VentanaHoy extends javax.swing.JFrame {
         pnlSidebar.setLayout(new javax.swing.BoxLayout(pnlSidebar, javax.swing.BoxLayout.Y_AXIS));
         pnlSidebar.add(filler3);
 
-        btnHoy1.setBackground(new java.awt.Color(186, 209, 217));
-        btnHoy1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btnHoy1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-home-6-48.png"))); // NOI18N
-        btnHoy1.setText("Hoy");
-        btnHoy1.setAlignmentX(0.5F);
-        btnHoy1.setBorderPainted(false);
-        btnHoy1.setFocusPainted(false);
-        btnHoy1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnHoy1.setMargin(new java.awt.Insets(2, 2, 2, 2));
-        btnHoy1.setMaximumSize(new java.awt.Dimension(104, 84));
-        btnHoy1.setPreferredSize(new java.awt.Dimension(104, 84));
-        btnHoy1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        pnlSidebar.add(btnHoy1);
+        btnHoy.setBackground(new java.awt.Color(186, 209, 217));
+        btnHoy.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnHoy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-home-6-48.png"))); // NOI18N
+        btnHoy.setText("Hoy");
+        btnHoy.setAlignmentX(0.5F);
+        btnHoy.setBorderPainted(false);
+        btnHoy.setFocusPainted(false);
+        btnHoy.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnHoy.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnHoy.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnHoy.setPreferredSize(new java.awt.Dimension(104, 84));
+        btnHoy.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnHoy.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                btnHoyFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                btnHoyFocusLost(evt);
+            }
+        });
+        btnHoy.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnHoyMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnHoyMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnHoyMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnHoyMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnHoyMouseReleased(evt);
+            }
+        });
+        btnHoy.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnHoyKeyPressed(evt);
+            }
+        });
+        pnlSidebar.add(btnHoy);
         pnlSidebar.add(filler4);
 
-        btnMedicamentos1.setBackground(new java.awt.Color(186, 209, 217));
-        btnMedicamentos1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btnMedicamentos1.setForeground(new java.awt.Color(255, 255, 255));
-        btnMedicamentos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-heart-lined-48.png"))); // NOI18N
-        btnMedicamentos1.setText("Medicamentos");
-        btnMedicamentos1.setAlignmentX(0.5F);
-        btnMedicamentos1.setBorderPainted(false);
-        btnMedicamentos1.setContentAreaFilled(false);
-        btnMedicamentos1.setFocusPainted(false);
-        btnMedicamentos1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnMedicamentos1.setMargin(new java.awt.Insets(2, 2, 2, 2));
-        btnMedicamentos1.setMaximumSize(new java.awt.Dimension(104, 84));
-        btnMedicamentos1.setPreferredSize(new java.awt.Dimension(104, 84));
-        btnMedicamentos1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        pnlSidebar.add(btnMedicamentos1);
+        btnMedicamentos.setBackground(new java.awt.Color(186, 209, 217));
+        btnMedicamentos.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnMedicamentos.setForeground(new java.awt.Color(255, 255, 255));
+        btnMedicamentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-heart-lined-48.png"))); // NOI18N
+        btnMedicamentos.setText("Medicamentos");
+        btnMedicamentos.setAlignmentX(0.5F);
+        btnMedicamentos.setBorderPainted(false);
+        btnMedicamentos.setContentAreaFilled(false);
+        btnMedicamentos.setFocusPainted(false);
+        btnMedicamentos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnMedicamentos.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnMedicamentos.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnMedicamentos.setPreferredSize(new java.awt.Dimension(104, 84));
+        btnMedicamentos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnMedicamentos.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                btnMedicamentosFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                btnMedicamentosFocusLost(evt);
+            }
+        });
+        btnMedicamentos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMedicamentosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnMedicamentosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnMedicamentosMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnMedicamentosMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnMedicamentosMouseReleased(evt);
+            }
+        });
+        btnMedicamentos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnMedicamentosKeyPressed(evt);
+            }
+        });
+        pnlSidebar.add(btnMedicamentos);
         pnlSidebar.add(filler8);
 
-        btnCitas1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btnCitas1.setForeground(new java.awt.Color(255, 255, 255));
-        btnCitas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-calendar-4-48-white.png"))); // NOI18N
-        btnCitas1.setText("Citas");
-        btnCitas1.setAlignmentX(0.5F);
-        btnCitas1.setBorderPainted(false);
-        btnCitas1.setContentAreaFilled(false);
-        btnCitas1.setFocusPainted(false);
-        btnCitas1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCitas1.setMargin(new java.awt.Insets(2, 2, 2, 2));
-        btnCitas1.setMaximumSize(new java.awt.Dimension(104, 84));
-        btnCitas1.setPreferredSize(new java.awt.Dimension(104, 84));
-        btnCitas1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        pnlSidebar.add(btnCitas1);
+        btnCitas.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnCitas.setForeground(new java.awt.Color(255, 255, 255));
+        btnCitas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-calendar-4-48-white.png"))); // NOI18N
+        btnCitas.setText("Citas");
+        btnCitas.setAlignmentX(0.5F);
+        btnCitas.setBorderPainted(false);
+        btnCitas.setContentAreaFilled(false);
+        btnCitas.setFocusPainted(false);
+        btnCitas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCitas.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnCitas.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnCitas.setPreferredSize(new java.awt.Dimension(104, 84));
+        btnCitas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCitas.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                btnCitasFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                btnCitasFocusLost(evt);
+            }
+        });
+        btnCitas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCitasMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnCitasMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnCitasMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnCitasMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnCitasMouseReleased(evt);
+            }
+        });
+        btnCitas.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnCitasKeyPressed(evt);
+            }
+        });
+        pnlSidebar.add(btnCitas);
         pnlSidebar.add(filler9);
 
-        btnAjustes1.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        btnAjustes1.setForeground(new java.awt.Color(255, 255, 255));
-        btnAjustes1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-gear-2-48.png"))); // NOI18N
-        btnAjustes1.setText("Ajustes");
-        btnAjustes1.setAlignmentX(0.5F);
-        btnAjustes1.setBorderPainted(false);
-        btnAjustes1.setContentAreaFilled(false);
-        btnAjustes1.setFocusPainted(false);
-        btnAjustes1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAjustes1.setMargin(new java.awt.Insets(2, 2, 2, 2));
-        btnAjustes1.setMaximumSize(new java.awt.Dimension(104, 84));
-        btnAjustes1.setPreferredSize(new java.awt.Dimension(104, 84));
-        btnAjustes1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        pnlSidebar.add(btnAjustes1);
+        btnAjustes.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        btnAjustes.setForeground(new java.awt.Color(255, 255, 255));
+        btnAjustes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/tempomedic/icons/iconmonstr-gear-2-48.png"))); // NOI18N
+        btnAjustes.setText("Ajustes");
+        btnAjustes.setAlignmentX(0.5F);
+        btnAjustes.setBorderPainted(false);
+        btnAjustes.setContentAreaFilled(false);
+        btnAjustes.setFocusPainted(false);
+        btnAjustes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAjustes.setMargin(new java.awt.Insets(2, 2, 2, 2));
+        btnAjustes.setMaximumSize(new java.awt.Dimension(104, 84));
+        btnAjustes.setPreferredSize(new java.awt.Dimension(104, 84));
+        btnAjustes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnAjustes.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                btnAjustesFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                btnAjustesFocusLost(evt);
+            }
+        });
+        btnAjustes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAjustesMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAjustesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAjustesMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnAjustesMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnAjustesMouseReleased(evt);
+            }
+        });
+        btnAjustes.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnAjustesKeyPressed(evt);
+            }
+        });
+        pnlSidebar.add(btnAjustes);
         pnlSidebar.add(filler10);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -463,6 +583,134 @@ public class VentanaHoy extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnOmitida1ActionPerformed
 
+    private void btnHoyMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHoyMouseEntered
+
+    private void btnHoyMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHoyMouseExited
+
+    private void btnHoyMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHoyMousePressed
+
+    private void btnHoyMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHoyMouseReleased
+
+    private void btnHoyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHoyMouseClicked
+
+    private void btnHoyFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnHoyFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHoyFocusGained
+
+    private void btnHoyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnHoyFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHoyFocusLost
+
+    private void btnHoyKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnHoyKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHoyKeyPressed
+
+    private void btnMedicamentosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMedicamentosMouseEntered
+
+    private void btnMedicamentosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMedicamentosMouseExited
+
+    private void btnMedicamentosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMedicamentosMousePressed
+
+    private void btnMedicamentosMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMedicamentosMouseReleased
+
+    private void btnMedicamentosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMedicamentosMouseClicked
+
+    private void btnMedicamentosFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnMedicamentosFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMedicamentosFocusGained
+
+    private void btnMedicamentosFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnMedicamentosFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMedicamentosFocusLost
+
+    private void btnMedicamentosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnMedicamentosKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMedicamentosKeyPressed
+
+    private void btnCitasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCitasMouseEntered
+
+    private void btnCitasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCitasMouseExited
+
+    private void btnCitasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCitasMousePressed
+
+    private void btnCitasMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCitasMouseReleased
+
+    private void btnCitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCitasMouseClicked
+
+    private void btnCitasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCitasFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCitasFocusGained
+
+    private void btnCitasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCitasFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCitasFocusLost
+
+    private void btnCitasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnCitasKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCitasKeyPressed
+
+    private void btnAjustesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAjustesMouseEntered
+
+    private void btnAjustesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAjustesMouseExited
+
+    private void btnAjustesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAjustesMousePressed
+
+    private void btnAjustesMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAjustesMouseReleased
+
+    private void btnAjustesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAjustesMouseClicked
+
+    private void btnAjustesFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnAjustesFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAjustesFocusGained
+
+    private void btnAjustesFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnAjustesFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAjustesFocusLost
+
+    private void btnAjustesKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnAjustesKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAjustesKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -490,10 +738,10 @@ public class VentanaHoy extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
-    private javax.swing.JButton btnAjustes1;
-    private javax.swing.JButton btnCitas1;
-    private javax.swing.JButton btnHoy1;
-    private javax.swing.JButton btnMedicamentos1;
+    private javax.swing.JButton btnAjustes;
+    private javax.swing.JButton btnCitas;
+    private javax.swing.JButton btnHoy;
+    private javax.swing.JButton btnMedicamentos;
     private javax.swing.JButton btnOmitida1;
     private javax.swing.JButton btnPosponer1;
     private javax.swing.JButton btnTomada1;
