@@ -6,11 +6,29 @@ import java.beans.PropertyDescriptor;
 import java.beans.SimpleBeanInfo;
 
 /**
+ * Clase descriptora (BeanInfo) para el componente TarjetaMedicamento.
+ * <p>
+ * Esta clase permite definir explícitamente qué propiedades se mostrarán en la 
+ * ventana de Propiedades de NetBeans Matisse, ocultando las propiedades heredadas 
+ * de JPanel que no son relevantes para el desarrollador.
  *
- * @author Jorge Espejo Martinez
+ * @author Jorge Espejo Martínez
+ * @version 1.0
  */
 public class TarjetaMedicamentoBeanInfo extends SimpleBeanInfo {
 
+    /**
+     * Constructor por defecto de la clase BeanInfo.
+     */
+    public TarjetaMedicamentoBeanInfo() {
+        // Constructor vacío requerido por la especificación JavaBeans
+    }
+    
+    /**
+     * Define los metadatos generales del Bean (nombre e información descriptiva).
+     * 
+     * @return el descriptor del Bean.
+     */
     @Override
     public BeanDescriptor getBeanDescriptor() {
         BeanDescriptor descriptor = new BeanDescriptor(TarjetaMedicamento.class);
@@ -19,13 +37,18 @@ public class TarjetaMedicamentoBeanInfo extends SimpleBeanInfo {
         return descriptor;
     }
 
+    /**
+     * Define y expone las propiedades personalizadas del componente.
+     * 
+     * @return un array con los descriptores de las propiedades expuestas.
+     */
     @Override
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {
             PropertyDescriptor propNombre = new PropertyDescriptor(
-                    "nombreMedicamento", TarjetaMedicamento.class, "getNombreMedicamento", "setNombreMedicamento");
+                    "nomMedicamento", TarjetaMedicamento.class, "getNomMedicamento", "setNomMedicamento");
             propNombre.setDisplayName("Nombre del Fármaco");
-            propNombre.setPreferred(true); // Hace que salga arriba en Matisse
+            propNombre.setPreferred(true); 
 
             PropertyDescriptor propPauta = new PropertyDescriptor(
                     "pauta", TarjetaMedicamento.class, "getPauta", "setPauta");
@@ -33,7 +56,7 @@ public class TarjetaMedicamentoBeanInfo extends SimpleBeanInfo {
             propPauta.setPreferred(true);
 
             PropertyDescriptor propProxima = new PropertyDescriptor(
-                    "proximaToma", TarjetaMedicamento.class, "getProximaToma", "setProximaToma");
+                    "proximaToma", TarjetaMedicamento.class, "getProxToma", "setProxToma");
             propProxima.setDisplayName("Próxima Toma");
             propProxima.setPreferred(true);
 
