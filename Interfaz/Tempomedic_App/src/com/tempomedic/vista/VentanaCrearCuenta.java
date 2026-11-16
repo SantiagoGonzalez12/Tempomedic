@@ -17,8 +17,11 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
      */
     public VentanaCrearCuenta() {
         initComponents();
+        btnCrearCuenta.addActionListener(e -> {
+            System.out.println("El botón de Crear cuenta se ha pulsado");
+        });
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -390,7 +393,7 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCrearCuentaMouseReleased
 
     private void btnCrearCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseClicked
-        // TODO add your handling code here:
+        System.out.println("El botón de Crear cuenta se ha pulsado");
     }//GEN-LAST:event_btnCrearCuentaMouseClicked
 
     private void btnCrearCuentaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCrearCuentaFocusGained
