@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
 
-Name: com/tempomedic/componentes/TarjetaMedicamento.class
+Name: com/tempomedic/componentes/Hora.class
 Java-Bean: True
