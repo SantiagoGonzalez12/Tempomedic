@@ -11,3 +11,6 @@ Java-Bean: True
 
 Name: com/tempomedic/componentes/Password.class
 Java-Bean: True
+
+Name: com/tempomedic/componentes/VerificarPassword.class
+Java-Bean: True
