@@ -8,3 +8,6 @@ Java-Bean: True
 
 Name: com/tempomedic/componentes/Fecha.class
 Java-Bean: True
+
+Name: com/tempomedic/componentes/Password.class
+Java-Bean: True
