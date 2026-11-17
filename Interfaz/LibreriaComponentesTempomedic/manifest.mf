@@ -17,3 +17,6 @@ Java-Bean: True
 
 Name: com/tempomedic/componentes/Correo.class
 Java-Bean: True
+
+Name: com/tempomedic/componentes/Pin.class
+Java-Bean: True
