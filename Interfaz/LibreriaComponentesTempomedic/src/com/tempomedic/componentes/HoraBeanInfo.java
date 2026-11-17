@@ -43,7 +43,7 @@ public class HoraBeanInfo extends SimpleBeanInfo {
     @Override
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {
-            // Se expone la propiedad 'hora' y se dice qué getter y setter usar
+            //Se expone la propiedad 'hora' y se dice qué getter y setter usar
             PropertyDescriptor propHora = new PropertyDescriptor(
                     "hora", Hora.class, "getHora", "setHora");
             

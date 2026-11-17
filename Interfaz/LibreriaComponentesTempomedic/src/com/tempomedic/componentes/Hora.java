@@ -64,7 +64,7 @@ public class Hora extends JTextField implements Serializable {
         this.setForeground(Color.BLACK);
         this.setHorizontalAlignment(JTextField.LEFT);
 
-        // Se pone el foco, si es el texto por defecto, se borra
+        //Se pone el foco, si es el texto por defecto, se borra
         this.addFocusListener(new FocusListener() {
             /**
              * Al ganar el foco, borra el texto por defecto y cambia el fondo a
@@ -100,7 +100,7 @@ public class Hora extends JTextField implements Serializable {
             }
         });
 
-        // Restricción: solo números y el carácter ':'
+        //Restricción: solo números y el carácter ':'
         this.addKeyListener(new KeyAdapter() {
             /**
              * Restringe la entrada de caracteres, permitiendo solo números, ':'
@@ -111,7 +111,7 @@ public class Hora extends JTextField implements Serializable {
             @Override
             public void keyTyped(KeyEvent e) {
                 char c = e.getKeyChar();
-                // Si no es número ni ':' ni tecla de borrar, se ignora
+                //Si no es número ni ':' ni tecla de borrar, se ignora
                 if (!Character.isDigit(c) && c != ':' && c != KeyEvent.VK_BACK_SPACE) {
                     e.consume();
                 }
@@ -125,7 +125,7 @@ public class Hora extends JTextField implements Serializable {
              */
             @Override
             public void keyReleased(KeyEvent e) {
-                // Autoformatear: si el usuario ha escrito 2 números, se pone ':'
+                //Autoformatear: si el usuario ha escrito 2 números, se pone ':'
                 String texto = getText();
                 if (texto.length() == 2 && !texto.contains(":")) {
                     setText(texto + ":");
@@ -142,12 +142,12 @@ public class Hora extends JTextField implements Serializable {
     private void validarYFormatear() {
         String textoActual = getText().trim();
 
-        // Si se escribe 1230, se convierte a 12:30
+        //Si se escribe 1230, se convierte a 12:30
         if (textoActual.matches("^[0-9]{4}$")) {
             textoActual = textoActual.substring(0, 2) + ":" + textoActual.substring(2);
         }
 
-        // Validación estricta con Regex
+        //Validación estricta con Regex
         Pattern patron = Pattern.compile(REGEX_HORA);
         Matcher matcher = patron.matcher(textoActual);
 
@@ -155,17 +155,17 @@ public class Hora extends JTextField implements Serializable {
             String horaAnterior = this.hora;
             this.hora = textoActual;
             setText(textoActual);
-            // Si es válido, el fondo es el azul claro
+            //Si es válido, el fondo es el azul claro
             setBackground(new Color(186, 209, 217));
 
-            // Notificar cambio para Matisse
+            //Notificar cambio para Matisse
             this.firePropertyChange(PROP_HORA, horaAnterior, this.hora);
         } else {
-            // Si está mal, se marca el fondo en rojo claro
+            //Si está mal, se marca el fondo en rojo claro
             setBackground(new Color(255, 204, 204)); // Color rojo suave (error)
             this.hora = "";
 
-            // Notificar cambio a vacío para que la app sepa que no hay hora válida
+            //Notificar cambio a vacío para que la app sepa que no hay hora válida
             this.firePropertyChange(PROP_HORA, this.hora, "");
         }
     }

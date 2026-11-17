@@ -2,3 +2,9 @@ Manifest-Version: 1.0
 
 Name: com/tempomedic/componentes/Hora.class
 Java-Bean: True
+
+Name: com/tempomedic/componentes/BuscadorCentro.class
+Java-Bean: True
+
+Name: com/tempomedic/componentes/Fecha.class
+Java-Bean: True
