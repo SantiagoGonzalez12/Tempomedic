@@ -4,6 +4,10 @@
  */
 package com.tempomedic.vista;
 
+import com.tempomedic.vista.eventos.InteraccionListener;
+import com.tempomedic.vista.eventos.NotificadorInteracciones;
+import com.tempomedic.vista.eventos.TipoInteraccion;
+
 /**
  *
  * @author Santiago González
@@ -117,6 +121,9 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
             }
         });
         txtCorreo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtCorreoMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 txtCorreoMouseEntered(evt);
             }
@@ -130,7 +137,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
                 txtCorreoMouseReleased(evt);
             }
         });
-        txtCorreo.addActionListener(this::txtCorreoActionPerformed);
         txtCorreo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtCorreoKeyPressed(evt);
@@ -203,8 +209,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         lblRepetirContrasena.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblRepetirContrasena.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblRepetirContrasena.setText("Repetir contraseña");
-        lblRepetirContrasena.setMaximumSize(null);
-        lblRepetirContrasena.setPreferredSize(null);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -347,7 +351,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         lblDatosSalud.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         lblDatosSalud.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDatosSalud.setText("Tus datos de salud son privados. Después podrás activar un PIN en Ajustes.");
-        lblDatosSalud.setPreferredSize(null);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 11;
@@ -371,166 +374,186 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCorreoActionPerformed
-
+    
+    private final NotificadorInteracciones notificador = new NotificadorInteracciones();
+    
+    /**
+     * Registra un observador de interacciones de esta vista
+     *
+     * @param l observador a registrar
+     */
+    public void addInteraccionListener(InteraccionListener l) {
+        notificador.addInteraccionListener(l);
+    }
+    
+    /**
+     * Elimina un observador de interacciones de esta vista
+     *
+     * @param l observador a eliminar
+     */
+    public void removeInteraccionListener(InteraccionListener l) {
+        notificador.removeInteraccionListener(l);
+    }
+    
     private void btnCrearCuentaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaMouseEntered
 
     private void btnCrearCuentaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaMouseExited
 
     private void btnCrearCuentaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMousePressed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaMousePressed
 
     private void btnCrearCuentaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseReleased
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaMouseReleased
 
     private void btnCrearCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseClicked
-        System.out.println("El botón de Crear cuenta se ha pulsado");
+        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaMouseClicked
 
     private void btnCrearCuentaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCrearCuentaFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaFocusGained
 
     private void btnCrearCuentaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCrearCuentaFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaFocusLost
 
     private void btnCrearCuentaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnCrearCuentaKeyPressed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaKeyPressed
 
     private void lblIniciaSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciaSesionMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "lblIniciaSesion");
     }//GEN-LAST:event_lblIniciaSesionMouseEntered
 
     private void lblIniciaSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciaSesionMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "lblIniciaSesion");
     }//GEN-LAST:event_lblIniciaSesionMouseExited
 
     private void lblIniciaSesionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciaSesionMousePressed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "lblIniciaSesion");
     }//GEN-LAST:event_lblIniciaSesionMousePressed
 
     private void lblIniciaSesionMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciaSesionMouseReleased
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "lblIniciaSesion");
     }//GEN-LAST:event_lblIniciaSesionMouseReleased
 
     private void lblIniciaSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciaSesionMouseClicked
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "lblIniciaSesion");
     }//GEN-LAST:event_lblIniciaSesionMouseClicked
 
     private void lblIniciaSesionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblIniciaSesionFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "lblIniciaSesion");
     }//GEN-LAST:event_lblIniciaSesionFocusGained
 
     private void lblIniciaSesionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblIniciaSesionFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "lblIniciaSesion");
     }//GEN-LAST:event_lblIniciaSesionFocusLost
 
     private void lblIniciaSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblIniciaSesionKeyPressed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "lblIniciaSesion");
     }//GEN-LAST:event_lblIniciaSesionKeyPressed
 
     private void txtCorreoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "txtCorreo");
     }//GEN-LAST:event_txtCorreoMouseEntered
 
     private void txtCorreoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "txtCorreo");
     }//GEN-LAST:event_txtCorreoMouseExited
 
     private void txtCorreoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMousePressed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "txtCorreo");
     }//GEN-LAST:event_txtCorreoMousePressed
 
     private void txtCorreoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseReleased
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "txtCorreo");
     }//GEN-LAST:event_txtCorreoMouseReleased
 
     private void txtCorreoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "txtCorreo");
     }//GEN-LAST:event_txtCorreoFocusGained
 
     private void txtCorreoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "txtCorreo");
     }//GEN-LAST:event_txtCorreoFocusLost
 
     private void txtCorreoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCorreoKeyPressed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "txtCorreo");
     }//GEN-LAST:event_txtCorreoKeyPressed
 
     private void pwdContrasenaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdContrasenaMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "pwdContrasena");
     }//GEN-LAST:event_pwdContrasenaMouseEntered
 
     private void pwdContrasenaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdContrasenaMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "pwdContrasena");
     }//GEN-LAST:event_pwdContrasenaMouseExited
 
     private void pwdContrasenaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdContrasenaMousePressed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "pwdContrasena");
     }//GEN-LAST:event_pwdContrasenaMousePressed
 
     private void pwdContrasenaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdContrasenaMouseReleased
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "pwdContrasena");
     }//GEN-LAST:event_pwdContrasenaMouseReleased
 
     private void pwdContrasenaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdContrasenaMouseClicked
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "pwdContrasena");
     }//GEN-LAST:event_pwdContrasenaMouseClicked
 
     private void pwdContrasenaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdContrasenaFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "pwdContrasena");
     }//GEN-LAST:event_pwdContrasenaFocusGained
 
     private void pwdContrasenaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdContrasenaFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "pwdContrasena");
     }//GEN-LAST:event_pwdContrasenaFocusLost
 
     private void pwdContrasenaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdContrasenaKeyPressed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "pwdContrasena");
     }//GEN-LAST:event_pwdContrasenaKeyPressed
 
     private void pwdRepetirContrasenaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "pwdRepetirContrasena");
     }//GEN-LAST:event_pwdRepetirContrasenaMouseEntered
 
     private void pwdRepetirContrasenaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "pwdRepetirContrasena");
     }//GEN-LAST:event_pwdRepetirContrasenaMouseExited
 
     private void pwdRepetirContrasenaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaMousePressed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "pwdRepetirContrasena");
     }//GEN-LAST:event_pwdRepetirContrasenaMousePressed
 
     private void pwdRepetirContrasenaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaMouseReleased
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "pwdRepetirContrasena");
     }//GEN-LAST:event_pwdRepetirContrasenaMouseReleased
 
     private void pwdRepetirContrasenaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaMouseClicked
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "pwdRepetirContrasena");
     }//GEN-LAST:event_pwdRepetirContrasenaMouseClicked
 
     private void pwdRepetirContrasenaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "pwdRepetirContrasena");
     }//GEN-LAST:event_pwdRepetirContrasenaFocusGained
 
     private void pwdRepetirContrasenaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "pwdRepetirContrasena");
     }//GEN-LAST:event_pwdRepetirContrasenaFocusLost
 
     private void pwdRepetirContrasenaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaKeyPressed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "pwdRepetirContrasena");
     }//GEN-LAST:event_pwdRepetirContrasenaKeyPressed
+
+    private void txtCorreoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseClicked
+        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "txtCorreo");
+    }//GEN-LAST:event_txtCorreoMouseClicked
 
     /**
      * @param args the command line arguments

@@ -15,7 +15,7 @@ public class NotificadorInteracciones {
     /**
      * Registra un observador
      *
-     * @param l observador a registrar; si es {@code null} se ignora.
+     * @param l observador a registrar
      */
     public void addInteraccionListener(InteraccionListener l) {
         if (l != null) {
@@ -26,7 +26,7 @@ public class NotificadorInteracciones {
     /**
      * Elimina un observador registrado
      *
-     * @param l observador a eliminar.
+     * @param l observador a eliminar
      */
     public void removeInteraccionListener(InteraccionListener l) {
         listeners.remove(InteraccionListener.class, l);
@@ -36,8 +36,8 @@ public class NotificadorInteracciones {
      * Notifica una interacción a todos los observadores registrados
      *
      * @param origen        objeto que genera el evento
-     * @param tipo          tipo de interacción.
-     * @param nombreControl nombre del control afectado.
+     * @param tipo          tipo de interacción
+     * @param nombreControl nombre del control afectado
      */
     public void notificar(Object origen, TipoInteraccion tipo, String nombreControl) {
         EventoInteraccion evt = new EventoInteraccion(origen, tipo, nombreControl);
