@@ -126,14 +126,7 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 txtCorreoMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                txtCorreoMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                txtCorreoMouseReleased(evt);
-            }
         });
-        txtCorreo.addActionListener(this::txtCorreoActionPerformed);
         txtCorreo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtCorreoKeyPressed(evt);
@@ -162,27 +155,14 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
             }
         });
         btnEnviar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEnviarMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnEnviarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnEnviarMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnEnviarMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnEnviarMouseReleased(evt);
-            }
         });
-        btnEnviar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnEnviarKeyPressed(evt);
-            }
-        });
+        btnEnviar.addActionListener(this::btnEnviarActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
@@ -220,27 +200,14 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
             }
         });
         btnVolverInicioSesion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnVolverInicioSesionMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnVolverInicioSesionMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnVolverInicioSesionMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnVolverInicioSesionMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnVolverInicioSesionMouseReleased(evt);
-            }
         });
-        btnVolverInicioSesion.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnVolverInicioSesionKeyPressed(evt);
-            }
-        });
+        btnVolverInicioSesion.addActionListener(this::btnVolverInicioSesionActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -282,73 +249,45 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         notificador.removeInteraccionListener(l);
     }
     
-    private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCorreoActionPerformed
-
     private void txtCorreoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "txtCorreo");
     }//GEN-LAST:event_txtCorreoMouseEntered
 
     private void txtCorreoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "txtCorreo");
     }//GEN-LAST:event_txtCorreoMouseExited
 
-    private void txtCorreoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCorreoMousePressed
-
-    private void txtCorreoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCorreoMouseReleased
-
     private void txtCorreoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseClicked
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "txtCorreo");
     }//GEN-LAST:event_txtCorreoMouseClicked
 
     private void txtCorreoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "txtCorreo");
     }//GEN-LAST:event_txtCorreoFocusGained
 
     private void txtCorreoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "txtCorreo");
     }//GEN-LAST:event_txtCorreoFocusLost
 
     private void txtCorreoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCorreoKeyPressed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "txtCorreo");
     }//GEN-LAST:event_txtCorreoKeyPressed
 
     private void btnEnviarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnEnviar");
     }//GEN-LAST:event_btnEnviarMouseEntered
 
     private void btnEnviarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnEnviar");
     }//GEN-LAST:event_btnEnviarMouseExited
 
-    private void btnEnviarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEnviarMousePressed
-
-    private void btnEnviarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEnviarMouseReleased
-
-    private void btnEnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEnviarMouseClicked
-
     private void btnEnviarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEnviarFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnEnviar");
     }//GEN-LAST:event_btnEnviarFocusGained
 
     private void btnEnviarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEnviarFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnEnviar");
     }//GEN-LAST:event_btnEnviarFocusLost
-
-    private void btnEnviarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnEnviarKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEnviarKeyPressed
 
     private void btnVolverInicioSesionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnVolverInicioSesion");
@@ -358,10 +297,6 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnVolverInicioSesion");
     }//GEN-LAST:event_btnVolverInicioSesionFocusLost
 
-    private void btnVolverInicioSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionMouseClicked
-        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "btnVolverInicioSesion");
-    }//GEN-LAST:event_btnVolverInicioSesionMouseClicked
-
     private void btnVolverInicioSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnVolverInicioSesion");
     }//GEN-LAST:event_btnVolverInicioSesionMouseEntered
@@ -370,17 +305,13 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnVolverInicioSesion");
     }//GEN-LAST:event_btnVolverInicioSesionMouseExited
 
-    private void btnVolverInicioSesionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionMousePressed
-        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "btnVolverInicioSesion");
-    }//GEN-LAST:event_btnVolverInicioSesionMousePressed
+    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnEnviar");
+    }//GEN-LAST:event_btnEnviarActionPerformed
 
-    private void btnVolverInicioSesionMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionMouseReleased
-        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "btnVolverInicioSesion");
-    }//GEN-LAST:event_btnVolverInicioSesionMouseReleased
-
-    private void btnVolverInicioSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionKeyPressed
-        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "btnVolverInicioSesion");
-    }//GEN-LAST:event_btnVolverInicioSesionKeyPressed
+    private void btnVolverInicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionActionPerformed
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnVolverInicioSesion");
+    }//GEN-LAST:event_btnVolverInicioSesionActionPerformed
 
     /**
      * @param args the command line arguments

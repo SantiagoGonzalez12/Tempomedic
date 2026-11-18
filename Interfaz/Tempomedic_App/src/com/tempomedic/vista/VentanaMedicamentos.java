@@ -6,6 +6,7 @@ package com.tempomedic.vista;
 
 import com.tempomedic.vista.eventos.InteraccionListener;
 import com.tempomedic.vista.eventos.NotificadorInteracciones;
+import com.tempomedic.vista.eventos.TipoInteraccion;
 
 /**
  *
@@ -113,27 +114,14 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
             }
         });
         btnHoy.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnHoyMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnHoyMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnHoyMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnHoyMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnHoyMouseReleased(evt);
-            }
         });
-        btnHoy.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnHoyKeyPressed(evt);
-            }
-        });
+        btnHoy.addActionListener(this::btnHoyActionPerformed);
         pnlSidebar.add(btnHoy);
         pnlSidebar.add(filler2);
 
@@ -158,27 +146,14 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
             }
         });
         btnMedicamentos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnMedicamentosMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnMedicamentosMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnMedicamentosMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnMedicamentosMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnMedicamentosMouseReleased(evt);
-            }
         });
-        btnMedicamentos.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnMedicamentosKeyPressed(evt);
-            }
-        });
+        btnMedicamentos.addActionListener(this::btnMedicamentosActionPerformed);
         pnlSidebar.add(btnMedicamentos);
         pnlSidebar.add(filler5);
 
@@ -204,27 +179,14 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
             }
         });
         btnCitas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnCitasMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnCitasMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnCitasMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnCitasMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnCitasMouseReleased(evt);
-            }
         });
-        btnCitas.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnCitasKeyPressed(evt);
-            }
-        });
+        btnCitas.addActionListener(this::btnCitasActionPerformed);
         pnlSidebar.add(btnCitas);
         pnlSidebar.add(filler6);
 
@@ -250,27 +212,14 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
             }
         });
         btnAjustes.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAjustesMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnAjustesMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnAjustesMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnAjustesMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnAjustesMouseReleased(evt);
-            }
         });
-        btnAjustes.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnAjustesKeyPressed(evt);
-            }
-        });
+        btnAjustes.addActionListener(this::btnAjustesActionPerformed);
         pnlSidebar.add(btnAjustes);
         pnlSidebar.add(filler7);
 
@@ -389,28 +338,14 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
             }
         });
         btnEditar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEditarMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnEditarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnEditarMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnEditarMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnEditarMouseReleased(evt);
-            }
         });
         btnEditar.addActionListener(this::btnEditarActionPerformed);
-        btnEditar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnEditarKeyPressed(evt);
-            }
-        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -436,28 +371,14 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
             }
         });
         btnEliminar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEliminarMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnEliminarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnEliminarMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnEliminarMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnEliminarMouseReleased(evt);
-            }
         });
         btnEliminar.addActionListener(this::btnEliminarActionPerformed);
-        btnEliminar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnEliminarKeyPressed(evt);
-            }
-        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -526,28 +447,14 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
             }
         });
         btnEditar1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEditar1MouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnEditar1MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnEditar1MouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnEditar1MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnEditar1MouseReleased(evt);
-            }
         });
         btnEditar1.addActionListener(this::btnEditar1ActionPerformed);
-        btnEditar1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnEditar1KeyPressed(evt);
-            }
-        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -573,28 +480,14 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
             }
         });
         btnEliminar1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEliminar1MouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnEliminar1MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnEliminar1MouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnEliminar1MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnEliminar1MouseReleased(evt);
-            }
         });
         btnEliminar1.addActionListener(this::btnEliminar1ActionPerformed);
-        btnEliminar1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnEliminar1KeyPressed(evt);
-            }
-        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -663,28 +556,14 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
             }
         });
         btnEditar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEditar2MouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnEditar2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnEditar2MouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnEditar2MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnEditar2MouseReleased(evt);
-            }
         });
         btnEditar2.addActionListener(this::btnEditar2ActionPerformed);
-        btnEditar2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnEditar2KeyPressed(evt);
-            }
-        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -710,28 +589,14 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
             }
         });
         btnEliminar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnEliminar2MouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnEliminar2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnEliminar2MouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnEliminar2MousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnEliminar2MouseReleased(evt);
-            }
         });
         btnEliminar2.addActionListener(this::btnEliminar2ActionPerformed);
-        btnEliminar2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnEliminar2KeyPressed(evt);
-            }
-        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -768,27 +633,14 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
             }
         });
         btnAnadir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAnadirMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnAnadirMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnAnadirMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnAnadirMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnAnadirMouseReleased(evt);
-            }
         });
-        btnAnadir.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnAnadirKeyPressed(evt);
-            }
-        });
+        btnAnadir.addActionListener(this::btnAnadirActionPerformed);
         pnlAcciones.add(btnAnadir, java.awt.BorderLayout.CENTER);
 
         pnlContenido.add(pnlAcciones, java.awt.BorderLayout.SOUTH);
@@ -826,380 +678,224 @@ public class VentanaMedicamentos extends javax.swing.JFrame {
     }
     
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnEditar");
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnEliminar");
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar1ActionPerformed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnEditar1");
     }//GEN-LAST:event_btnEditar1ActionPerformed
 
     private void btnEliminar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminar1ActionPerformed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnEliminar1");
     }//GEN-LAST:event_btnEliminar1ActionPerformed
 
     private void btnEditar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar2ActionPerformed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnEditar2");
     }//GEN-LAST:event_btnEditar2ActionPerformed
 
     private void btnEliminar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminar2ActionPerformed
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnEliminar2");
     }//GEN-LAST:event_btnEliminar2ActionPerformed
 
     private void btnHoyMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnHoy");
     }//GEN-LAST:event_btnHoyMouseEntered
 
     private void btnHoyMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnHoy");
     }//GEN-LAST:event_btnHoyMouseExited
 
-    private void btnHoyMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnHoyMousePressed
-
-    private void btnHoyMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnHoyMouseReleased
-
-    private void btnHoyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnHoyMouseClicked
-
     private void btnHoyFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnHoyFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnHoy");
     }//GEN-LAST:event_btnHoyFocusGained
 
     private void btnHoyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnHoyFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnHoy");
     }//GEN-LAST:event_btnHoyFocusLost
 
-    private void btnHoyKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnHoyKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnHoyKeyPressed
-
     private void btnMedicamentosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnMedicamentos");
     }//GEN-LAST:event_btnMedicamentosMouseEntered
 
     private void btnMedicamentosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnMedicamentos");
     }//GEN-LAST:event_btnMedicamentosMouseExited
 
-    private void btnMedicamentosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnMedicamentosMousePressed
-
-    private void btnMedicamentosMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnMedicamentosMouseReleased
-
-    private void btnMedicamentosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnMedicamentosMouseClicked
-
     private void btnMedicamentosFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnMedicamentosFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnMedicamentos");
     }//GEN-LAST:event_btnMedicamentosFocusGained
 
     private void btnMedicamentosFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnMedicamentosFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnMedicamentos");
     }//GEN-LAST:event_btnMedicamentosFocusLost
 
-    private void btnMedicamentosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnMedicamentosKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnMedicamentosKeyPressed
-
     private void btnCitasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnCitas");
     }//GEN-LAST:event_btnCitasMouseEntered
 
     private void btnCitasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnCitas");
     }//GEN-LAST:event_btnCitasMouseExited
 
-    private void btnCitasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCitasMousePressed
-
-    private void btnCitasMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCitasMouseReleased
-
-    private void btnCitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCitasMouseClicked
-
     private void btnCitasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCitasFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnCitas");
     }//GEN-LAST:event_btnCitasFocusGained
 
     private void btnCitasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCitasFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnCitas");
     }//GEN-LAST:event_btnCitasFocusLost
 
-    private void btnCitasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnCitasKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCitasKeyPressed
-
     private void btnAjustesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnAjustes");
     }//GEN-LAST:event_btnAjustesMouseEntered
 
     private void btnAjustesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnAjustes");
     }//GEN-LAST:event_btnAjustesMouseExited
 
-    private void btnAjustesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAjustesMousePressed
-
-    private void btnAjustesMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAjustesMouseReleased
-
-    private void btnAjustesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAjustesMouseClicked
-
     private void btnAjustesFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnAjustesFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnAjustes");
     }//GEN-LAST:event_btnAjustesFocusGained
 
     private void btnAjustesFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnAjustesFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnAjustes");
     }//GEN-LAST:event_btnAjustesFocusLost
 
-    private void btnAjustesKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnAjustesKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAjustesKeyPressed
-
     private void btnAnadirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAnadirMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnAnadir");
     }//GEN-LAST:event_btnAnadirMouseEntered
 
     private void btnAnadirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAnadirMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnAnadir");
     }//GEN-LAST:event_btnAnadirMouseExited
 
-    private void btnAnadirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAnadirMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAnadirMousePressed
-
-    private void btnAnadirMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAnadirMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAnadirMouseReleased
-
-    private void btnAnadirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAnadirMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAnadirMouseClicked
-
     private void btnAnadirFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnAnadirFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnAnadir");
     }//GEN-LAST:event_btnAnadirFocusGained
 
     private void btnAnadirFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnAnadirFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnAnadir");
     }//GEN-LAST:event_btnAnadirFocusLost
 
-    private void btnAnadirKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnAnadirKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAnadirKeyPressed
-
     private void btnEditarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnEditar");
     }//GEN-LAST:event_btnEditarMouseEntered
 
     private void btnEditarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnEditar");
     }//GEN-LAST:event_btnEditarMouseExited
 
-    private void btnEditarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditarMousePressed
-
-    private void btnEditarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditarMouseReleased
-
-    private void btnEditarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditarMouseClicked
-
     private void btnEditarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEditarFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnEditar");
     }//GEN-LAST:event_btnEditarFocusGained
 
     private void btnEditarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEditarFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnEditar");
     }//GEN-LAST:event_btnEditarFocusLost
 
-    private void btnEditarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnEditarKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditarKeyPressed
-
     private void btnEliminarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarMouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnEliminar");
     }//GEN-LAST:event_btnEliminarMouseEntered
 
     private void btnEliminarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarMouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnEliminar");
     }//GEN-LAST:event_btnEliminarMouseExited
 
-    private void btnEliminarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarMousePressed
-
-    private void btnEliminarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarMouseReleased
-
-    private void btnEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarMouseClicked
-
     private void btnEliminarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEliminarFocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnEliminar");
     }//GEN-LAST:event_btnEliminarFocusGained
 
     private void btnEliminarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEliminarFocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnEliminar");
     }//GEN-LAST:event_btnEliminarFocusLost
 
-    private void btnEliminarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnEliminarKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarKeyPressed
-
     private void btnEditar1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar1MouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnEditar1");
     }//GEN-LAST:event_btnEditar1MouseEntered
 
     private void btnEditar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar1MouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnEditar1");
     }//GEN-LAST:event_btnEditar1MouseExited
 
-    private void btnEditar1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar1MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditar1MousePressed
-
-    private void btnEditar1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar1MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditar1MouseReleased
-
-    private void btnEditar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditar1MouseClicked
-
     private void btnEditar1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEditar1FocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnEditar1");
     }//GEN-LAST:event_btnEditar1FocusGained
 
     private void btnEditar1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEditar1FocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnEditar1");
     }//GEN-LAST:event_btnEditar1FocusLost
 
-    private void btnEditar1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnEditar1KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditar1KeyPressed
-
     private void btnEliminar1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminar1MouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnEliminar1");
     }//GEN-LAST:event_btnEliminar1MouseEntered
 
     private void btnEliminar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminar1MouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnEliminar1");
     }//GEN-LAST:event_btnEliminar1MouseExited
 
-    private void btnEliminar1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminar1MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminar1MousePressed
-
-    private void btnEliminar1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminar1MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminar1MouseReleased
-
-    private void btnEliminar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminar1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminar1MouseClicked
-
     private void btnEliminar1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEliminar1FocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnEliminar1");
     }//GEN-LAST:event_btnEliminar1FocusGained
 
     private void btnEliminar1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEliminar1FocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnEliminar1");
     }//GEN-LAST:event_btnEliminar1FocusLost
 
-    private void btnEliminar1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnEliminar1KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminar1KeyPressed
-
     private void btnEditar2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar2MouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnEditar2");
     }//GEN-LAST:event_btnEditar2MouseEntered
 
     private void btnEditar2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar2MouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnEditar2");
     }//GEN-LAST:event_btnEditar2MouseExited
 
-    private void btnEditar2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar2MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditar2MousePressed
-
-    private void btnEditar2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar2MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditar2MouseReleased
-
-    private void btnEditar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditar2MouseClicked
-
     private void btnEditar2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEditar2FocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnEditar2");
     }//GEN-LAST:event_btnEditar2FocusGained
 
     private void btnEditar2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEditar2FocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnEditar2");
     }//GEN-LAST:event_btnEditar2FocusLost
 
-    private void btnEditar2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnEditar2KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditar2KeyPressed
-
     private void btnEliminar2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminar2MouseEntered
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnEliminar2");
     }//GEN-LAST:event_btnEliminar2MouseEntered
 
     private void btnEliminar2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminar2MouseExited
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnEliminar2");
     }//GEN-LAST:event_btnEliminar2MouseExited
 
-    private void btnEliminar2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminar2MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminar2MousePressed
-
-    private void btnEliminar2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminar2MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminar2MouseReleased
-
-    private void btnEliminar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminar2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminar2MouseClicked
-
     private void btnEliminar2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEliminar2FocusGained
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnEliminar2");
     }//GEN-LAST:event_btnEliminar2FocusGained
 
     private void btnEliminar2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEliminar2FocusLost
-        // TODO add your handling code here:
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnEliminar2");
     }//GEN-LAST:event_btnEliminar2FocusLost
 
-    private void btnEliminar2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnEliminar2KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminar2KeyPressed
+    private void btnHoyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHoyActionPerformed
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnHoy");
+    }//GEN-LAST:event_btnHoyActionPerformed
+
+    private void btnMedicamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicamentosActionPerformed
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnMedicamentos");
+    }//GEN-LAST:event_btnMedicamentosActionPerformed
+
+    private void btnCitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCitasActionPerformed
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnCitas");
+    }//GEN-LAST:event_btnCitasActionPerformed
+
+    private void btnAjustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAjustesActionPerformed
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnAjustes");
+    }//GEN-LAST:event_btnAjustesActionPerformed
+
+    private void btnAnadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirActionPerformed
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnAnadir");
+    }//GEN-LAST:event_btnAnadirActionPerformed
 
     /**
      * @param args the command line arguments

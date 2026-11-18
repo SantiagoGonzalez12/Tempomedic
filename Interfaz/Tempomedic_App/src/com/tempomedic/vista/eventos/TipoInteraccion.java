@@ -7,14 +7,12 @@ package com.tempomedic.vista.eventos;
  * @version 1.0
  */
 public enum TipoInteraccion {
+    // Se ha realizado la acción principal
+    ACCION,
     // El puntero entra en el control
     RATON_ENTRA,
     // El puntero sale del control
     RATON_SALE,
-    // Se pulsa un botón del ratón sobre el control
-    RATON_PULSADO,
-    // Se suelta un botón del ratón sobre el control
-    RATON_SOLTADO,
     // Clic completo sobre el control
     RATON_CLIC,
     // El control recibe el foco

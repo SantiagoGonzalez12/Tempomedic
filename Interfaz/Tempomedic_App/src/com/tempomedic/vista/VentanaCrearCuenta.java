@@ -131,12 +131,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 txtCorreoMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                txtCorreoMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                txtCorreoMouseReleased(evt);
-            }
         });
         txtCorreo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -185,12 +179,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 pwdContrasenaMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                pwdContrasenaMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                pwdContrasenaMouseReleased(evt);
             }
         });
         pwdContrasena.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -241,12 +229,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 pwdRepetirContrasenaMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                pwdRepetirContrasenaMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                pwdRepetirContrasenaMouseReleased(evt);
-            }
         });
         pwdRepetirContrasena.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -277,27 +259,14 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
             }
         });
         btnCrearCuenta.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnCrearCuentaMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnCrearCuentaMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnCrearCuentaMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnCrearCuentaMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnCrearCuentaMouseReleased(evt);
-            }
         });
-        btnCrearCuenta.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnCrearCuentaKeyPressed(evt);
-            }
-        });
+        btnCrearCuenta.addActionListener(this::btnCrearCuentaActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
@@ -323,27 +292,14 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
             }
         });
         btnIniciaSesion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnIniciaSesionMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnIniciaSesionMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnIniciaSesionMouseExited(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnIniciaSesionMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnIniciaSesionMouseReleased(evt);
-            }
         });
-        btnIniciaSesion.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnIniciaSesionKeyPressed(evt);
-            }
-        });
+        btnIniciaSesion.addActionListener(this::btnIniciaSesionActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 10;
@@ -406,18 +362,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaMouseExited
 
-    private void btnCrearCuentaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMousePressed
-        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "btnCrearCuenta");
-    }//GEN-LAST:event_btnCrearCuentaMousePressed
-
-    private void btnCrearCuentaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseReleased
-        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "btnCrearCuenta");
-    }//GEN-LAST:event_btnCrearCuentaMouseReleased
-
-    private void btnCrearCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseClicked
-        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "btnCrearCuenta");
-    }//GEN-LAST:event_btnCrearCuentaMouseClicked
-
     private void btnCrearCuentaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCrearCuentaFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaFocusGained
@@ -426,10 +370,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaFocusLost
 
-    private void btnCrearCuentaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnCrearCuentaKeyPressed
-        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "btnCrearCuenta");
-    }//GEN-LAST:event_btnCrearCuentaKeyPressed
-
     private void txtCorreoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "txtCorreo");
     }//GEN-LAST:event_txtCorreoMouseEntered
@@ -437,14 +377,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
     private void txtCorreoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "txtCorreo");
     }//GEN-LAST:event_txtCorreoMouseExited
-
-    private void txtCorreoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMousePressed
-        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "txtCorreo");
-    }//GEN-LAST:event_txtCorreoMousePressed
-
-    private void txtCorreoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseReleased
-        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "txtCorreo");
-    }//GEN-LAST:event_txtCorreoMouseReleased
 
     private void txtCorreoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "txtCorreo");
@@ -465,14 +397,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
     private void pwdContrasenaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdContrasenaMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "pwdContrasena");
     }//GEN-LAST:event_pwdContrasenaMouseExited
-
-    private void pwdContrasenaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdContrasenaMousePressed
-        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "pwdContrasena");
-    }//GEN-LAST:event_pwdContrasenaMousePressed
-
-    private void pwdContrasenaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdContrasenaMouseReleased
-        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "pwdContrasena");
-    }//GEN-LAST:event_pwdContrasenaMouseReleased
 
     private void pwdContrasenaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdContrasenaMouseClicked
         notificador.notificar(this, TipoInteraccion.RATON_CLIC, "pwdContrasena");
@@ -497,14 +421,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
     private void pwdRepetirContrasenaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "pwdRepetirContrasena");
     }//GEN-LAST:event_pwdRepetirContrasenaMouseExited
-
-    private void pwdRepetirContrasenaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaMousePressed
-        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "pwdRepetirContrasena");
-    }//GEN-LAST:event_pwdRepetirContrasenaMousePressed
-
-    private void pwdRepetirContrasenaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaMouseReleased
-        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "pwdRepetirContrasena");
-    }//GEN-LAST:event_pwdRepetirContrasenaMouseReleased
 
     private void pwdRepetirContrasenaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaMouseClicked
         notificador.notificar(this, TipoInteraccion.RATON_CLIC, "pwdRepetirContrasena");
@@ -534,18 +450,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnIniciaSesion");
     }//GEN-LAST:event_btnIniciaSesionMouseExited
 
-    private void btnIniciaSesionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciaSesionMousePressed
-        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "btnIniciaSesion");
-    }//GEN-LAST:event_btnIniciaSesionMousePressed
-
-    private void btnIniciaSesionMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciaSesionMouseReleased
-        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "btnIniciaSesion");
-    }//GEN-LAST:event_btnIniciaSesionMouseReleased
-
-    private void btnIniciaSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciaSesionMouseClicked
-        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "btnIniciaSesion");
-    }//GEN-LAST:event_btnIniciaSesionMouseClicked
-
     private void btnIniciaSesionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnIniciaSesionFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnIniciaSesion");
     }//GEN-LAST:event_btnIniciaSesionFocusGained
@@ -554,9 +458,13 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnIniciaSesion");
     }//GEN-LAST:event_btnIniciaSesionFocusLost
 
-    private void btnIniciaSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnIniciaSesionKeyPressed
-        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "btnIniciaSesion");
-    }//GEN-LAST:event_btnIniciaSesionKeyPressed
+    private void btnCrearCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearCuentaActionPerformed
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnCrearCuenta");
+    }//GEN-LAST:event_btnCrearCuentaActionPerformed
+
+    private void btnIniciaSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciaSesionActionPerformed
+        notificador.notificar(this, TipoInteraccion.ACCION, "btnIniciaSesion");
+    }//GEN-LAST:event_btnIniciaSesionActionPerformed
 
     /**
      * @param args the command line arguments
