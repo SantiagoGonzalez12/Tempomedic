@@ -27,7 +27,7 @@ public class CorreoBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         BeanDescriptor descriptor = new BeanDescriptor(Correo.class);
-        descriptor.setDisplayName("Campo de Correo");
+        descriptor.setDisplayName("Correo");
         descriptor.setShortDescription("Campo de texto con validación de formato de email.");
         return descriptor;
     }

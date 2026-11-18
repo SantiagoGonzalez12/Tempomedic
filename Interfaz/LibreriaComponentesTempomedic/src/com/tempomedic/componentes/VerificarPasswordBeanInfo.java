@@ -19,7 +19,7 @@ public class VerificarPasswordBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         BeanDescriptor descriptor = new BeanDescriptor(VerificarPassword.class);
-        descriptor.setDisplayName("Campo Verificar Contraseña");
+        descriptor.setDisplayName("Verificar Contraseña");
         descriptor.setShortDescription("Campo para confirmar que la contraseña coincide.");
         return descriptor;
     }
