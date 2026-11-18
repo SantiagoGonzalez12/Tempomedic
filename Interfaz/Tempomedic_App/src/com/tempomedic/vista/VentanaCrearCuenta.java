@@ -21,9 +21,10 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
      */
     public VentanaCrearCuenta() {
         initComponents();
-        btnCrearCuenta.addActionListener(e -> {
-            System.out.println("El botón de Crear cuenta se ha pulsado");
-        });
+        
+        // Observador de prueba (temporal)
+        addInteraccionListener(evt ->
+            System.out.println(evt.getTipo() + " en " + evt.getNombreControl()));
     }
     
     /**
@@ -49,7 +50,7 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         lblRepetirContrasena = new javax.swing.JLabel();
         pwdRepetirContrasena = new javax.swing.JPasswordField();
         btnCrearCuenta = new javax.swing.JButton();
-        lblIniciaSesion = new javax.swing.JLabel();
+        btnIniciaSesion = new javax.swing.JButton();
         lblDatosSalud = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
 
@@ -307,38 +308,40 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
         pnlFormulario.add(btnCrearCuenta, gridBagConstraints);
 
-        lblIniciaSesion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblIniciaSesion.setForeground(new java.awt.Color(0, 136, 255));
-        lblIniciaSesion.setText("¿Ya tienes cuenta? Inicia sesión");
-        lblIniciaSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblIniciaSesion.addFocusListener(new java.awt.event.FocusAdapter() {
+        btnIniciaSesion.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnIniciaSesion.setForeground(new java.awt.Color(0, 136, 255));
+        btnIniciaSesion.setText("¿Ya tienes cuenta? Inicia sesión");
+        btnIniciaSesion.setBorderPainted(false);
+        btnIniciaSesion.setContentAreaFilled(false);
+        btnIniciaSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnIniciaSesion.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                lblIniciaSesionFocusGained(evt);
+                btnIniciaSesionFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                lblIniciaSesionFocusLost(evt);
+                btnIniciaSesionFocusLost(evt);
             }
         });
-        lblIniciaSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnIniciaSesion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblIniciaSesionMouseClicked(evt);
+                btnIniciaSesionMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblIniciaSesionMouseEntered(evt);
+                btnIniciaSesionMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblIniciaSesionMouseExited(evt);
+                btnIniciaSesionMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                lblIniciaSesionMousePressed(evt);
+                btnIniciaSesionMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                lblIniciaSesionMouseReleased(evt);
+                btnIniciaSesionMouseReleased(evt);
             }
         });
-        lblIniciaSesion.addKeyListener(new java.awt.event.KeyAdapter() {
+        btnIniciaSesion.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                lblIniciaSesionKeyPressed(evt);
+                btnIniciaSesionKeyPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -346,7 +349,7 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         gridBagConstraints.gridy = 10;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
-        pnlFormulario.add(lblIniciaSesion, gridBagConstraints);
+        pnlFormulario.add(btnIniciaSesion, gridBagConstraints);
 
         lblDatosSalud.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         lblDatosSalud.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -426,38 +429,6 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
     private void btnCrearCuentaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnCrearCuentaKeyPressed
         notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "btnCrearCuenta");
     }//GEN-LAST:event_btnCrearCuentaKeyPressed
-
-    private void lblIniciaSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciaSesionMouseEntered
-        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "lblIniciaSesion");
-    }//GEN-LAST:event_lblIniciaSesionMouseEntered
-
-    private void lblIniciaSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciaSesionMouseExited
-        notificador.notificar(this, TipoInteraccion.RATON_SALE, "lblIniciaSesion");
-    }//GEN-LAST:event_lblIniciaSesionMouseExited
-
-    private void lblIniciaSesionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciaSesionMousePressed
-        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "lblIniciaSesion");
-    }//GEN-LAST:event_lblIniciaSesionMousePressed
-
-    private void lblIniciaSesionMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciaSesionMouseReleased
-        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "lblIniciaSesion");
-    }//GEN-LAST:event_lblIniciaSesionMouseReleased
-
-    private void lblIniciaSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciaSesionMouseClicked
-        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "lblIniciaSesion");
-    }//GEN-LAST:event_lblIniciaSesionMouseClicked
-
-    private void lblIniciaSesionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblIniciaSesionFocusGained
-        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "lblIniciaSesion");
-    }//GEN-LAST:event_lblIniciaSesionFocusGained
-
-    private void lblIniciaSesionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblIniciaSesionFocusLost
-        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "lblIniciaSesion");
-    }//GEN-LAST:event_lblIniciaSesionFocusLost
-
-    private void lblIniciaSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblIniciaSesionKeyPressed
-        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "lblIniciaSesion");
-    }//GEN-LAST:event_lblIniciaSesionKeyPressed
 
     private void txtCorreoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "txtCorreo");
@@ -555,6 +526,38 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
         notificador.notificar(this, TipoInteraccion.RATON_CLIC, "txtCorreo");
     }//GEN-LAST:event_txtCorreoMouseClicked
 
+    private void btnIniciaSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciaSesionMouseEntered
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnIniciaSesion");
+    }//GEN-LAST:event_btnIniciaSesionMouseEntered
+
+    private void btnIniciaSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciaSesionMouseExited
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnIniciaSesion");
+    }//GEN-LAST:event_btnIniciaSesionMouseExited
+
+    private void btnIniciaSesionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciaSesionMousePressed
+        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "btnIniciaSesion");
+    }//GEN-LAST:event_btnIniciaSesionMousePressed
+
+    private void btnIniciaSesionMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciaSesionMouseReleased
+        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "btnIniciaSesion");
+    }//GEN-LAST:event_btnIniciaSesionMouseReleased
+
+    private void btnIniciaSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciaSesionMouseClicked
+        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "btnIniciaSesion");
+    }//GEN-LAST:event_btnIniciaSesionMouseClicked
+
+    private void btnIniciaSesionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnIniciaSesionFocusGained
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnIniciaSesion");
+    }//GEN-LAST:event_btnIniciaSesionFocusGained
+
+    private void btnIniciaSesionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnIniciaSesionFocusLost
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnIniciaSesion");
+    }//GEN-LAST:event_btnIniciaSesionFocusLost
+
+    private void btnIniciaSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnIniciaSesionKeyPressed
+        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "btnIniciaSesion");
+    }//GEN-LAST:event_btnIniciaSesionKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -583,12 +586,12 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
     private javax.swing.JButton btnCrearCuenta;
+    private javax.swing.JButton btnIniciaSesion;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel lblContrasena;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblDatosSalud;
     private javax.swing.JLabel lblDescripcion;
-    private javax.swing.JLabel lblIniciaSesion;
     private javax.swing.JLabel lblRepetirContrasena;
     private javax.swing.JLabel lblTempomedic;
     private javax.swing.JLabel logo;

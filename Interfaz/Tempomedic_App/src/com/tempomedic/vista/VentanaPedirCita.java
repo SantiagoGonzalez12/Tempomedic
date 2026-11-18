@@ -4,6 +4,9 @@
  */
 package com.tempomedic.vista;
 
+import com.tempomedic.vista.eventos.InteraccionListener;
+import com.tempomedic.vista.eventos.NotificadorInteracciones;
+
 /**
  *
  * @author Santiago González
@@ -17,6 +20,10 @@ public class VentanaPedirCita extends javax.swing.JFrame {
      */
     public VentanaPedirCita() {
         initComponents();
+        
+        // Observador de prueba (temporal)
+        addInteraccionListener(evt ->
+            System.out.println(evt.getTipo() + " en " + evt.getNombreControl()));
     }
 
     /**
@@ -472,6 +479,26 @@ public class VentanaPedirCita extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private final NotificadorInteracciones notificador = new NotificadorInteracciones();
+    
+    /**
+     * Registra un observador de interacciones de esta vista
+     *
+     * @param l observador a registrar
+     */
+    public void addInteraccionListener(InteraccionListener l) {
+        notificador.addInteraccionListener(l);
+    }
+    
+    /**
+     * Elimina un observador de interacciones de esta vista
+     *
+     * @param l observador a eliminar
+     */
+    public void removeInteraccionListener(InteraccionListener l) {
+        notificador.removeInteraccionListener(l);
+    }
+    
     private void txtHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHoraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHoraActionPerformed

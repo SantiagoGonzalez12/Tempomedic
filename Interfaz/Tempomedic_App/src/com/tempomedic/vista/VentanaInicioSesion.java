@@ -4,6 +4,10 @@
  */
 package com.tempomedic.vista;
 
+import com.tempomedic.vista.eventos.InteraccionListener;
+import com.tempomedic.vista.eventos.NotificadorInteracciones;
+import com.tempomedic.vista.eventos.TipoInteraccion;
+
 /**
  *
  * @author Santiago González
@@ -17,6 +21,10 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
      */
     public VentanaInicioSesion() {
         initComponents();
+        
+        // Observador de prueba (temporal)
+        addInteraccionListener(evt ->
+            System.out.println(evt.getTipo() + " en " + evt.getNombreControl()));
     }
 
     /**
@@ -40,8 +48,8 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         lblContrasena = new javax.swing.JLabel();
         pwdContrasena = new javax.swing.JPasswordField();
         btnIniciarSesion = new javax.swing.JButton();
-        lblOlvidaContrasena = new javax.swing.JLabel();
-        lblCrearCuenta = new javax.swing.JLabel();
+        btnOlvidaContrasena = new javax.swing.JButton();
+        btnCrearCuenta = new javax.swing.JButton();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -245,38 +253,40 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
         pnlFormulario.add(btnIniciarSesion, gridBagConstraints);
 
-        lblOlvidaContrasena.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblOlvidaContrasena.setForeground(new java.awt.Color(0, 136, 255));
-        lblOlvidaContrasena.setText("¿Olvidaste tu contraseña?");
-        lblOlvidaContrasena.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblOlvidaContrasena.addFocusListener(new java.awt.event.FocusAdapter() {
+        btnOlvidaContrasena.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnOlvidaContrasena.setForeground(new java.awt.Color(0, 136, 255));
+        btnOlvidaContrasena.setText("¿Olvidaste tu contraseña?");
+        btnOlvidaContrasena.setBorderPainted(false);
+        btnOlvidaContrasena.setContentAreaFilled(false);
+        btnOlvidaContrasena.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnOlvidaContrasena.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                lblOlvidaContrasenaFocusGained(evt);
+                btnOlvidaContrasenaFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                lblOlvidaContrasenaFocusLost(evt);
+                btnOlvidaContrasenaFocusLost(evt);
             }
         });
-        lblOlvidaContrasena.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnOlvidaContrasena.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblOlvidaContrasenaMouseClicked(evt);
+                btnOlvidaContrasenaMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblOlvidaContrasenaMouseEntered(evt);
+                btnOlvidaContrasenaMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblOlvidaContrasenaMouseExited(evt);
+                btnOlvidaContrasenaMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                lblOlvidaContrasenaMousePressed(evt);
+                btnOlvidaContrasenaMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                lblOlvidaContrasenaMouseReleased(evt);
+                btnOlvidaContrasenaMouseReleased(evt);
             }
         });
-        lblOlvidaContrasena.addKeyListener(new java.awt.event.KeyAdapter() {
+        btnOlvidaContrasena.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                lblOlvidaContrasenaKeyPressed(evt);
+                btnOlvidaContrasenaKeyPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -284,49 +294,50 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         gridBagConstraints.gridy = 8;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
-        pnlFormulario.add(lblOlvidaContrasena, gridBagConstraints);
+        pnlFormulario.add(btnOlvidaContrasena, gridBagConstraints);
 
-        lblCrearCuenta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblCrearCuenta.setForeground(new java.awt.Color(0, 136, 255));
-        lblCrearCuenta.setText("Crear cuenta");
-        lblCrearCuenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblCrearCuenta.addFocusListener(new java.awt.event.FocusAdapter() {
+        btnCrearCuenta.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnCrearCuenta.setForeground(new java.awt.Color(0, 136, 255));
+        btnCrearCuenta.setText("Crear cuenta");
+        btnCrearCuenta.setBorderPainted(false);
+        btnCrearCuenta.setContentAreaFilled(false);
+        btnCrearCuenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCrearCuenta.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                lblCrearCuentaFocusGained(evt);
+                btnCrearCuentaFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                lblCrearCuentaFocusLost(evt);
+                btnCrearCuentaFocusLost(evt);
             }
         });
-        lblCrearCuenta.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCrearCuenta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblCrearCuentaMouseClicked(evt);
+                btnCrearCuentaMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblCrearCuentaMouseEntered(evt);
+                btnCrearCuentaMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblCrearCuentaMouseExited(evt);
+                btnCrearCuentaMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                lblCrearCuentaMousePressed(evt);
+                btnCrearCuentaMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                lblCrearCuentaMouseReleased(evt);
+                btnCrearCuentaMouseReleased(evt);
             }
         });
-        lblCrearCuenta.addKeyListener(new java.awt.event.KeyAdapter() {
+        btnCrearCuenta.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                lblCrearCuentaKeyPressed(evt);
+                btnCrearCuentaKeyPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
-        pnlFormulario.add(lblCrearCuenta, gridBagConstraints);
+        pnlFormulario.add(btnCrearCuenta, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 10;
@@ -342,6 +353,26 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private final NotificadorInteracciones notificador = new NotificadorInteracciones();
+    
+    /**
+     * Registra un observador de interacciones de esta vista
+     *
+     * @param l observador a registrar
+     */
+    public void addInteraccionListener(InteraccionListener l) {
+        notificador.addInteraccionListener(l);
+    }
+    
+    /**
+     * Elimina un observador de interacciones de esta vista
+     *
+     * @param l observador a eliminar
+     */
+    public void removeInteraccionListener(InteraccionListener l) {
+        notificador.removeInteraccionListener(l);
+    }
+    
     private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCorreoActionPerformed
@@ -442,69 +473,69 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnIniciarSesionKeyPressed
 
-    private void lblOlvidaContrasenaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidaContrasenaMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidaContrasenaMouseEntered
+    private void btnOlvidaContrasenaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnOlvidaContrasenaFocusGained
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnOlvidaContrasena");
+    }//GEN-LAST:event_btnOlvidaContrasenaFocusGained
 
-    private void lblOlvidaContrasenaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidaContrasenaMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidaContrasenaMouseExited
+    private void btnOlvidaContrasenaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnOlvidaContrasenaFocusLost
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnOlvidaContrasena");
+    }//GEN-LAST:event_btnOlvidaContrasenaFocusLost
 
-    private void lblOlvidaContrasenaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidaContrasenaMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidaContrasenaMousePressed
+    private void btnOlvidaContrasenaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidaContrasenaMouseClicked
+        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "btnOlvidaContrasena");
+    }//GEN-LAST:event_btnOlvidaContrasenaMouseClicked
 
-    private void lblOlvidaContrasenaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidaContrasenaMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidaContrasenaMouseReleased
+    private void btnOlvidaContrasenaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidaContrasenaMouseEntered
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnOlvidaContrasena");
+    }//GEN-LAST:event_btnOlvidaContrasenaMouseEntered
 
-    private void lblOlvidaContrasenaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidaContrasenaMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidaContrasenaMouseClicked
+    private void btnOlvidaContrasenaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidaContrasenaMouseExited
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnOlvidaContrasena");
+    }//GEN-LAST:event_btnOlvidaContrasenaMouseExited
 
-    private void lblOlvidaContrasenaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblOlvidaContrasenaFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidaContrasenaFocusGained
+    private void btnOlvidaContrasenaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidaContrasenaMousePressed
+        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "btnOlvidaContrasena");
+    }//GEN-LAST:event_btnOlvidaContrasenaMousePressed
 
-    private void lblOlvidaContrasenaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblOlvidaContrasenaFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidaContrasenaFocusLost
+    private void btnOlvidaContrasenaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidaContrasenaMouseReleased
+        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "btnOlvidaContrasena");
+    }//GEN-LAST:event_btnOlvidaContrasenaMouseReleased
 
-    private void lblOlvidaContrasenaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblOlvidaContrasenaKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidaContrasenaKeyPressed
+    private void btnOlvidaContrasenaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnOlvidaContrasenaKeyPressed
+        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "btnOlvidaContrasena");
+    }//GEN-LAST:event_btnOlvidaContrasenaKeyPressed
 
-    private void lblCrearCuentaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCrearCuentaMouseEntered
+    private void btnCrearCuentaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCrearCuentaFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblCrearCuentaMouseEntered
+    }//GEN-LAST:event_btnCrearCuentaFocusGained
 
-    private void lblCrearCuentaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCrearCuentaMouseExited
+    private void btnCrearCuentaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCrearCuentaFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblCrearCuentaMouseExited
+    }//GEN-LAST:event_btnCrearCuentaFocusLost
 
-    private void lblCrearCuentaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCrearCuentaMousePressed
+    private void btnCrearCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblCrearCuentaMousePressed
+    }//GEN-LAST:event_btnCrearCuentaMouseClicked
 
-    private void lblCrearCuentaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCrearCuentaMouseReleased
+    private void btnCrearCuentaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblCrearCuentaMouseReleased
+    }//GEN-LAST:event_btnCrearCuentaMouseEntered
 
-    private void lblCrearCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCrearCuentaMouseClicked
+    private void btnCrearCuentaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblCrearCuentaMouseClicked
+    }//GEN-LAST:event_btnCrearCuentaMouseExited
 
-    private void lblCrearCuentaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblCrearCuentaFocusGained
+    private void btnCrearCuentaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMousePressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblCrearCuentaFocusGained
+    }//GEN-LAST:event_btnCrearCuentaMousePressed
 
-    private void lblCrearCuentaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblCrearCuentaFocusLost
+    private void btnCrearCuentaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblCrearCuentaFocusLost
+    }//GEN-LAST:event_btnCrearCuentaMouseReleased
 
-    private void lblCrearCuentaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblCrearCuentaKeyPressed
+    private void btnCrearCuentaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnCrearCuentaKeyPressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblCrearCuentaKeyPressed
+    }//GEN-LAST:event_btnCrearCuentaKeyPressed
 
     /**
      * @param args the command line arguments
@@ -533,13 +564,13 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
+    private javax.swing.JButton btnCrearCuenta;
     private javax.swing.JButton btnIniciarSesion;
+    private javax.swing.JButton btnOlvidaContrasena;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel lblContrasena;
     private javax.swing.JLabel lblCorreo;
-    private javax.swing.JLabel lblCrearCuenta;
     private javax.swing.JLabel lblDescripcion;
-    private javax.swing.JLabel lblOlvidaContrasena;
     private javax.swing.JLabel lblTempomedic;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlContenido;
