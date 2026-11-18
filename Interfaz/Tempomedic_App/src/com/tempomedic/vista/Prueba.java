@@ -31,12 +31,20 @@ public class Prueba extends javax.swing.JPanel implements java.beans.Customizer 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pin1 = new com.tempomedic.componentes.Pin();
+        password1 = new com.tempomedic.componentes.Password();
         correo1 = new com.tempomedic.componentes.Correo();
+        buscadorCentro1 = new com.tempomedic.componentes.BuscadorCentro();
+        fecha1 = new com.tempomedic.componentes.Fecha();
+        hora1 = new com.tempomedic.componentes.Hora();
 
         setLayout(new java.awt.BorderLayout());
 
         correo1.addActionListener(this::correo1ActionPerformed);
         add(correo1, java.awt.BorderLayout.CENTER);
+        add(buscadorCentro1, java.awt.BorderLayout.PAGE_START);
+        add(fecha1, java.awt.BorderLayout.PAGE_END);
+        add(hora1, java.awt.BorderLayout.LINE_START);
     }// </editor-fold>//GEN-END:initComponents
 
     private void correo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correo1ActionPerformed
@@ -45,6 +53,11 @@ public class Prueba extends javax.swing.JPanel implements java.beans.Customizer 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.tempomedic.componentes.BuscadorCentro buscadorCentro1;
     private com.tempomedic.componentes.Correo correo1;
+    private com.tempomedic.componentes.Fecha fecha1;
+    private com.tempomedic.componentes.Hora hora1;
+    private com.tempomedic.componentes.Password password1;
+    private com.tempomedic.componentes.Pin pin1;
     // End of variables declaration//GEN-END:variables
 }
