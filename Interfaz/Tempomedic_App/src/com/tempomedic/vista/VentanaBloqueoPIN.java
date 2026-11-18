@@ -6,6 +6,7 @@ package com.tempomedic.vista;
 
 import com.tempomedic.vista.eventos.InteraccionListener;
 import com.tempomedic.vista.eventos.NotificadorInteracciones;
+import com.tempomedic.vista.eventos.TipoInteraccion;
 
 /**
  *
@@ -48,8 +49,8 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         pwdPin3 = new javax.swing.JPasswordField();
         pwdPin4 = new javax.swing.JPasswordField();
         btnDesbloquear = new javax.swing.JButton();
-        lblOlvidoPIN = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        btnOlvidoPIN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("VentanaBloqueoPIN");
@@ -274,7 +275,7 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         pnlPIN.add(pnlCasillasPIN, gridBagConstraints);
 
         btnDesbloquear.setBackground(new java.awt.Color(59, 106, 118));
-        btnDesbloquear.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        btnDesbloquear.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         btnDesbloquear.setForeground(new java.awt.Color(255, 255, 255));
         btnDesbloquear.setText("Desbloquear");
         btnDesbloquear.setBorderPainted(false);
@@ -319,55 +320,54 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.insets = new java.awt.Insets(14, 0, 0, 0);
         pnlPIN.add(btnDesbloquear, gridBagConstraints);
-
-        lblOlvidoPIN.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        lblOlvidoPIN.setForeground(new java.awt.Color(0, 136, 255));
-        lblOlvidoPIN.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblOlvidoPIN.setText("¿Olvidaste el PIN? Inicia sesión con tu contraseña");
-        lblOlvidoPIN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblOlvidoPIN.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                lblOlvidoPINFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                lblOlvidoPINFocusLost(evt);
-            }
-        });
-        lblOlvidoPIN.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblOlvidoPINMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblOlvidoPINMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblOlvidoPINMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                lblOlvidoPINMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                lblOlvidoPINMouseReleased(evt);
-            }
-        });
-        lblOlvidoPIN.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                lblOlvidoPINKeyPressed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.ipady = -5;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
-        gridBagConstraints.insets = new java.awt.Insets(14, 0, 0, 0);
-        pnlPIN.add(lblOlvidoPIN, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.weighty = 1.0;
         pnlPIN.add(filler1, gridBagConstraints);
+
+        btnOlvidoPIN.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnOlvidoPIN.setForeground(new java.awt.Color(0, 136, 255));
+        btnOlvidoPIN.setText("¿Olvidaste el PIN? Inicia sesión con tu contraseña");
+        btnOlvidoPIN.setBorderPainted(false);
+        btnOlvidoPIN.setContentAreaFilled(false);
+        btnOlvidoPIN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnOlvidoPIN.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                btnOlvidoPINFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                btnOlvidoPINFocusLost(evt);
+            }
+        });
+        btnOlvidoPIN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnOlvidoPINMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnOlvidoPINMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnOlvidoPINMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnOlvidoPINMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnOlvidoPINMouseReleased(evt);
+            }
+        });
+        btnOlvidoPIN.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnOlvidoPINKeyPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
+        pnlPIN.add(btnOlvidoPIN, gridBagConstraints);
 
         pnlContenido.add(pnlPIN, java.awt.BorderLayout.CENTER);
 
@@ -577,37 +577,37 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDesbloquearKeyPressed
 
-    private void lblOlvidoPINMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidoPINMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidoPINMouseEntered
+    private void btnOlvidoPINFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnOlvidoPINFocusGained
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnOlvidoPIN");
+    }//GEN-LAST:event_btnOlvidoPINFocusGained
 
-    private void lblOlvidoPINMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidoPINMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidoPINMouseExited
+    private void btnOlvidoPINFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnOlvidoPINFocusLost
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnOlvidoPIN");
+    }//GEN-LAST:event_btnOlvidoPINFocusLost
 
-    private void lblOlvidoPINMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidoPINMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidoPINMousePressed
+    private void btnOlvidoPINMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoPINMouseClicked
+        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "btnOlvidoPIN");
+    }//GEN-LAST:event_btnOlvidoPINMouseClicked
 
-    private void lblOlvidoPINMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidoPINMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidoPINMouseReleased
+    private void btnOlvidoPINMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoPINMouseEntered
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnOlvidoPIN");
+    }//GEN-LAST:event_btnOlvidoPINMouseEntered
 
-    private void lblOlvidoPINMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidoPINMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidoPINMouseClicked
+    private void btnOlvidoPINMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoPINMouseExited
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnOlvidoPIN");
+    }//GEN-LAST:event_btnOlvidoPINMouseExited
 
-    private void lblOlvidoPINFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblOlvidoPINFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidoPINFocusGained
+    private void btnOlvidoPINMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoPINMousePressed
+        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "btnOlvidoPIN");
+    }//GEN-LAST:event_btnOlvidoPINMousePressed
 
-    private void lblOlvidoPINFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblOlvidoPINFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidoPINFocusLost
+    private void btnOlvidoPINMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoPINMouseReleased
+        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "btnOlvidoPIN");
+    }//GEN-LAST:event_btnOlvidoPINMouseReleased
 
-    private void lblOlvidoPINKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblOlvidoPINKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblOlvidoPINKeyPressed
+    private void btnOlvidoPINKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnOlvidoPINKeyPressed
+        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "btnOlvidoPIN");
+    }//GEN-LAST:event_btnOlvidoPINKeyPressed
 
     /**
      * @param args the command line arguments
@@ -637,10 +637,10 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
     private javax.swing.JButton btnDesbloquear;
+    private javax.swing.JButton btnOlvidoPIN;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel lblDescripcion;
     private javax.swing.JLabel lblIntroduceTuPIN;
-    private javax.swing.JLabel lblOlvidoPIN;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlCasillasPIN;
     private javax.swing.JPanel pnlContenido;

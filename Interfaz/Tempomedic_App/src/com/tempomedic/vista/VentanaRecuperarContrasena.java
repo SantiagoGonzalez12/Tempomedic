@@ -6,6 +6,7 @@ package com.tempomedic.vista;
 
 import com.tempomedic.vista.eventos.InteraccionListener;
 import com.tempomedic.vista.eventos.NotificadorInteracciones;
+import com.tempomedic.vista.eventos.TipoInteraccion;
 
 /**
  *
@@ -46,7 +47,7 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         txtCorreo = new javax.swing.JTextField();
         btnEnviar = new javax.swing.JButton();
         lblConfirmacion = new javax.swing.JLabel();
-        lblVolverInicioSesion = new javax.swing.JLabel();
+        btnVolverInicioSesion = new javax.swing.JButton();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -93,8 +94,6 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         lblCorreo.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         lblCorreo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblCorreo.setText("Correo");
-        lblCorreo.setMaximumSize(null);
-        lblCorreo.setMinimumSize(null);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -206,47 +205,48 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
         pnlRecuperar.add(lblConfirmacion, gridBagConstraints);
 
-        lblVolverInicioSesion.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        lblVolverInicioSesion.setForeground(new java.awt.Color(0, 136, 255));
-        lblVolverInicioSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblVolverInicioSesion.setText("Volver a iniciar sesión");
-        lblVolverInicioSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblVolverInicioSesion.addFocusListener(new java.awt.event.FocusAdapter() {
+        btnVolverInicioSesion.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        btnVolverInicioSesion.setForeground(new java.awt.Color(0, 136, 255));
+        btnVolverInicioSesion.setText("Volver a iniciar sesión");
+        btnVolverInicioSesion.setBorderPainted(false);
+        btnVolverInicioSesion.setContentAreaFilled(false);
+        btnVolverInicioSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVolverInicioSesion.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                lblVolverInicioSesionFocusGained(evt);
+                btnVolverInicioSesionFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                lblVolverInicioSesionFocusLost(evt);
+                btnVolverInicioSesionFocusLost(evt);
             }
         });
-        lblVolverInicioSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnVolverInicioSesion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblVolverInicioSesionMouseClicked(evt);
+                btnVolverInicioSesionMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblVolverInicioSesionMouseEntered(evt);
+                btnVolverInicioSesionMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblVolverInicioSesionMouseExited(evt);
+                btnVolverInicioSesionMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                lblVolverInicioSesionMousePressed(evt);
+                btnVolverInicioSesionMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                lblVolverInicioSesionMouseReleased(evt);
+                btnVolverInicioSesionMouseReleased(evt);
             }
         });
-        lblVolverInicioSesion.addKeyListener(new java.awt.event.KeyAdapter() {
+        btnVolverInicioSesion.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                lblVolverInicioSesionKeyPressed(evt);
+                btnVolverInicioSesionKeyPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(14, 0, 0, 0);
-        pnlRecuperar.add(lblVolverInicioSesion, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(12, 0, 0, 0);
+        pnlRecuperar.add(btnVolverInicioSesion, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
@@ -350,37 +350,37 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEnviarKeyPressed
 
-    private void lblVolverInicioSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblVolverInicioSesionMouseEntered
+    private void btnVolverInicioSesionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionFocusGained
+        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnVolverInicioSesion");
+    }//GEN-LAST:event_btnVolverInicioSesionFocusGained
 
-    private void lblVolverInicioSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblVolverInicioSesionMouseExited
+    private void btnVolverInicioSesionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionFocusLost
+        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnVolverInicioSesion");
+    }//GEN-LAST:event_btnVolverInicioSesionFocusLost
 
-    private void lblVolverInicioSesionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblVolverInicioSesionMousePressed
+    private void btnVolverInicioSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionMouseClicked
+        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "btnVolverInicioSesion");
+    }//GEN-LAST:event_btnVolverInicioSesionMouseClicked
 
-    private void lblVolverInicioSesionMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblVolverInicioSesionMouseReleased
+    private void btnVolverInicioSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionMouseEntered
+        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnVolverInicioSesion");
+    }//GEN-LAST:event_btnVolverInicioSesionMouseEntered
 
-    private void lblVolverInicioSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblVolverInicioSesionMouseClicked
+    private void btnVolverInicioSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionMouseExited
+        notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnVolverInicioSesion");
+    }//GEN-LAST:event_btnVolverInicioSesionMouseExited
 
-    private void lblVolverInicioSesionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblVolverInicioSesionFocusGained
+    private void btnVolverInicioSesionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionMousePressed
+        notificador.notificar(this, TipoInteraccion.RATON_PULSADO, "btnVolverInicioSesion");
+    }//GEN-LAST:event_btnVolverInicioSesionMousePressed
 
-    private void lblVolverInicioSesionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblVolverInicioSesionFocusLost
+    private void btnVolverInicioSesionMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionMouseReleased
+        notificador.notificar(this, TipoInteraccion.RATON_SOLTADO, "btnVolverInicioSesion");
+    }//GEN-LAST:event_btnVolverInicioSesionMouseReleased
 
-    private void lblVolverInicioSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblVolverInicioSesionKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblVolverInicioSesionKeyPressed
+    private void btnVolverInicioSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionKeyPressed
+        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "btnVolverInicioSesion");
+    }//GEN-LAST:event_btnVolverInicioSesionKeyPressed
 
     /**
      * @param args the command line arguments
@@ -410,12 +410,12 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup AVISOS;
     private javax.swing.JButton btnEnviar;
+    private javax.swing.JButton btnVolverInicioSesion;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel lblConfirmacion;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblDescripcion;
     private javax.swing.JLabel lblRecuperarAcceso;
-    private javax.swing.JLabel lblVolverInicioSesion;
     private javax.swing.JLabel logo;
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlRecuperar;
