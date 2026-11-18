@@ -5,12 +5,11 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.io.Serializable;
 import javax.swing.JPasswordField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 /**
- * Componente visual reutilizable para verificar que una contraseña coincide 
- * con la introducida en otro campo.
- * <p>
- * Compara el texto introducido con la propiedad {@code passwordOriginal}.
+ * Componente visual reutilizable para verificar que una contraseña coincide.
  *
  * @author Jorge Espejo Martínez
  * @version 1.0
@@ -22,11 +21,18 @@ public class VerificarPassword extends JPasswordField implements Serializable {
     /** Constante para notificar el cambio de la propiedad original. */
     public static final String PROP_PASSWORD_ORIGINAL = "passwordOriginal";
 
+    /** Color de fondo por defecto. */
+    private final Color COLOR_FONDO = new Color(186, 209, 217);
+    /** Color de fondo cuando el campo tiene el foco. */
+    private final Color COLOR_FOCO = Color.WHITE;
+    /** Color de fondo cuando hay un error. */
+    private final Color COLOR_ERROR = new Color(255, 204, 204);
+
     /** Almacena la contraseña original con la que se compara. */
     private String passwordOriginal;
     /** Indica si la verificación es correcta. */
     private boolean verificacionCorrecta;
-    /** Indica si el campo está vacío (para el texto por defecto). */
+    /** Indica si el campo está vacío. */
     private boolean textoPorDefecto;
 
     /**
@@ -41,14 +47,24 @@ public class VerificarPassword extends JPasswordField implements Serializable {
     }
 
     /**
-     * Configura la interfaz y los escuchadores de eventos.
+     * Configura la interfaz y los escuchadores.
      */
     private void inicializarComponente() {
-        this.setBackground(new Color(186, 209, 217));
+        this.setBackground(COLOR_FONDO);
         this.setForeground(Color.BLACK);
         this.setEchoChar('•');
         this.setText("Repetir contraseña");
         this.setEchoChar((char) 0);
+
+        //Escuchador comprueba en tiempo real mientras se escribe
+        this.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) { checkMatch(); }
+            @Override
+            public void removeUpdate(DocumentEvent e) { checkMatch(); }
+            @Override
+            public void changedUpdate(DocumentEvent e) { checkMatch(); }
+        });
 
         this.addFocusListener(new FocusListener() {
             @Override
@@ -58,58 +74,65 @@ public class VerificarPassword extends JPasswordField implements Serializable {
                     setEchoChar('•');
                     textoPorDefecto = false;
                 }
-                setBackground(Color.WHITE);
+                setBackground(COLOR_FOCO);
             }
 
             @Override
             public void focusLost(FocusEvent e) {
                 String textoActual = new String(getPassword());
-                
                 if (textoActual.isEmpty()) {
                     setText("Repetir contraseña");
                     setEchoChar((char) 0);
                     textoPorDefecto = true;
-                    boolean anterior = verificacionCorrecta;
-                    verificacionCorrecta = false;
-                    firePropertyChange(PROP_VERIFICACION, anterior, verificacionCorrecta);
+                    updateVerificacion(false);
+                    setBackground(COLOR_FONDO);
                 } else {
-                    verificarIgualdad(textoActual);
+                    checkMatch();
                 }
-                setBackground(new Color(186, 209, 217));
             }
         });
     }
 
     /**
-     * Compara el texto actual con la contraseña original.
-     * 
-     * @param textoActual el texto escrito por el usuario.
+     * Comprueba si el texto actual coincide con la contraseña original.
      */
-    private void verificarIgualdad(String textoActual) {
-        boolean anterior = this.verificacionCorrecta;
+    private void checkMatch() {
+        if (textoPorDefecto) return;
         
+        String textoActual = new String(getPassword());
+        if (textoActual.isEmpty()) return;
+
         if (textoActual.equals(passwordOriginal) && !passwordOriginal.isEmpty()) {
-            this.verificacionCorrecta = true;
-            setBackground(new Color(186, 209, 217)); //Bien
+            updateVerificacion(true);
+            setBackground(COLOR_FONDO);
         } else {
-            this.verificacionCorrecta = false;
-            setBackground(new Color(255, 204, 204)); //Rojo error
+            updateVerificacion(false);
+            setBackground(COLOR_ERROR);
         }
-        
+    }
+
+    /**
+     * Actualiza el estado y notifica a los escuchadores.
+     * 
+     * @param estado el nuevo estado de verificación.
+     */
+    private void updateVerificacion(boolean estado) {
+        boolean anterior = this.verificacionCorrecta;
+        this.verificacionCorrecta = estado;
         this.firePropertyChange(PROP_VERIFICACION, anterior, this.verificacionCorrecta);
     }
 
     /**
      * Obtiene el estado de la verificación.
      * 
-     * @return true si las contraseñas coinciden, false en caso contrario.
+     * @return true si coinciden.
      */
     public boolean isVerificacionCorrecta() {
         return verificacionCorrecta;
     }
 
     /**
-     * Obtiene la contraseña original con la que se compara.
+     * Obtiene la contraseña original.
      * 
      * @return la contraseña original.
      */
@@ -118,10 +141,7 @@ public class VerificarPassword extends JPasswordField implements Serializable {
     }
 
     /**
-     * Establece la contraseña original con la que se debe comparar este campo.
-     * <p>
-     * Este método es el que permite enlazar este componente con el {@code CampoPassword}
-     * desde el editor visual Matisse.
+     * Establece la contraseña original (enlazable con Matisse).
      * 
      * @param passwordOriginal la contraseña original.
      */
@@ -129,11 +149,8 @@ public class VerificarPassword extends JPasswordField implements Serializable {
         String anterior = this.passwordOriginal;
         this.passwordOriginal = passwordOriginal;
         
-        //Si hay texto escrito, re-verifica inmediatamente
-        String textoActual = new String(getPassword());
-        if (!textoActual.isEmpty() && !textoPorDefecto) {
-            verificarIgualdad(textoActual);
-        }
+        //Si hay texto, re-verificar inmediatamente
+        checkMatch();
         
         this.firePropertyChange(PROP_PASSWORD_ORIGINAL, anterior, passwordOriginal);
     }

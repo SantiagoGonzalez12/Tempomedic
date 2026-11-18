@@ -30,7 +30,7 @@ public class HoraBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         BeanDescriptor descriptor = new BeanDescriptor(Hora.class);
-        descriptor.setDisplayName("Campo de Hora");
+        descriptor.setDisplayName("Hora");
         descriptor.setShortDescription("Campo de texto para introducir una hora con formato HH:mm.");
         return descriptor;
     }

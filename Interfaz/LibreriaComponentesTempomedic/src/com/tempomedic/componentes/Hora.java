@@ -3,12 +3,15 @@ package com.tempomedic.componentes;
 import java.awt.Color;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 import java.io.Serializable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JTextField;
+import javax.swing.text.AbstractDocument;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DocumentFilter;
+import javax.swing.text.SimpleAttributeSet;
 
 /**
  * Componente visual reutilizable para introducir una hora.
@@ -21,30 +24,27 @@ import javax.swing.JTextField;
  */
 public class Hora extends JTextField implements Serializable {
 
-    /**
-     * Constante para notificar cambios en la hora a los escuchadores
-     * (PropertyChange).
-     */
+    /** Constante para notificar cambios en la hora. */
     public static final String PROP_HORA = "hora";
 
-    /**
-     * Almacena la hora validada en formato HH:mm.
-     */
-    private String hora;
+    /** Color de fondo por defecto. */
+    private final Color COLOR_FONDO = new Color(186, 209, 217);
+    /** Color de fondo cuando el campo tiene el foco. */
+    private final Color COLOR_FOCO = Color.WHITE;
+    /** Color de fondo cuando hay un error. */
+    private final Color COLOR_ERROR = new Color(255, 204, 204);
+    /** Texto por defecto del campo. */
+    private static final String TEXTO_POR_DEFECTO = "--:--";
+    /** Expresión regular para validar el formato HH:mm (00:00 a 23:59). */
+    private final String REGEX_HORA = "^([01]?[0-9]|2[0-3]):[0-5][0-9]$";
 
-    /**
-     * Indica si el campo está mostrando el texto por defecto "--:--".
-     */
+    /** Almacena la hora validada en formato HH:mm. */
+    private String hora;
+    /** Indica si el campo está mostrando el texto por defecto. */
     private boolean textoPorDefecto;
 
     /**
-     * Expresión regular para validar el formato HH:mm (00:00 a 23:59).
-     */
-    private final String REGEX_HORA = "^([01]?[0-9]|2[0-3]):[0-5][0-9]$";
-
-    /**
-     * Constructor por defecto sin argumentos requerido por la especificación
-     * JavaBeans. Inicializa el componente con su valor por defecto.
+     * Constructor por defecto sin argumentos requerido por la especificación JavaBeans.
      */
     public Hora() {
         super();
@@ -54,125 +54,116 @@ public class Hora extends JTextField implements Serializable {
     }
 
     /**
-     * Configura los estilos visuales, el texto por defecto y los escuchadores
-     * de eventos (foco y teclado) necesarios para el funcionamiento del
-     * componente.
+     * Configura los estilos, el texto por defecto y los eventos.
      */
     private void inicializarComponente() {
         this.setText("--:--");
-        this.setBackground(new Color(186, 209, 217)); // Azul claro
+        this.setBackground(COLOR_FONDO);
         this.setForeground(Color.BLACK);
-        this.setHorizontalAlignment(JTextField.LEFT);
 
-        //Se pone el foco, si es el texto por defecto, se borra
-        this.addFocusListener(new FocusListener() {
+        //DocumentFilter controla la entrada de texto (en vez de KeyListener)
+        ((AbstractDocument) this.getDocument()).setDocumentFilter(new DocumentFilter() {
+            
             /**
-             * Al ganar el foco, borra el texto por defecto y cambia el fondo a
-             * blanco.
-             *
-             * @param e el evento de foco.
+             * Inserta una cadena de texto en el documento.
+             * 
+             * @param fb el bypass del filtro.
+             * @param offset la posición de inserción.
+             * @param string el texto a insertar.
+             * @param attr los atributos del texto.
              */
+            @Override
+            public void insertString(FilterBypass fb, int offset, String string, 
+                    AttributeSet attr)
+            {
+                replace(fb, offset, 0, string, attr);
+            }
+
+            /**
+             * Reemplaza un fragmento de texto en el documento validando su contenido.
+             * 
+             * @param fb el bypass del filtro.
+             * @param offset la posición de inicio.
+             * @param length la longitud del texto a borrar.
+             * @param text el texto nuevo.
+             * @param attrs los atributos del texto.
+             * @throws BadLocationException si la posición es inválida.
+             */
+            @Override
+            public void replace(FilterBypass fb, int offset, int length, String text, AttributeSet attrs) {
+                try {
+                    if (text == null) return;
+                    
+                    String currentText = fb.getDocument().getText(0, fb.getDocument().getLength());
+                    String newText = currentText.substring(0, offset) + text + 
+                            currentText.substring(offset + length);
+                    
+                    //Permite números, ':' y un máximo de 5 caracteres
+                    if (!newText.matches("[0-9:]*") || newText.length() > 5) {
+                        return;
+                    }
+                    
+                    super.replace(fb, offset, length, text, attrs);
+                    
+                    //Autoformateo: si hay 2 números, se añade los ':'
+                    currentText = fb.getDocument().getText(0, fb.getDocument().getLength());
+                    if (currentText.length() == 2 && !currentText.contains(":")) {
+                        super.insertString(fb, 2, ":", new SimpleAttributeSet());
+                    }
+                } catch (BadLocationException ex) {
+                    System.getLogger(Hora.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+                }
+            }
+        });
+
+        this.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(FocusEvent e) {
                 if (textoPorDefecto) {
                     setText("");
                     textoPorDefecto = false;
                 }
-                setBackground(Color.WHITE); // Se ilumina al escribir
+                setBackground(COLOR_FOCO);
             }
 
-            /**
-             * Al perder el foco, valida el texto o restaura el valor por
-             * defecto si está vacío.
-             *
-             * @param e el evento de foco.
-             */
             @Override
             public void focusLost(FocusEvent e) {
-                if (getText().isEmpty()) {
-                    setText("--:--");
+                if (getText().isEmpty() || getText().equals(TEXTO_POR_DEFECTO)) {
+                    setText(TEXTO_POR_DEFECTO);
                     textoPorDefecto = true;
                     setHora("");
+                    setBackground(COLOR_FONDO);
                 } else {
                     validarYFormatear();
-                }
-                setBackground(new Color(186, 209, 217));
-            }
-        });
-
-        //Restricción: solo números y el carácter ':'
-        this.addKeyListener(new KeyAdapter() {
-            /**
-             * Restringe la entrada de caracteres, permitiendo solo números, ':'
-             * y borrado.
-             *
-             * @param e el evento de tecla.
-             */
-            @Override
-            public void keyTyped(KeyEvent e) {
-                char c = e.getKeyChar();
-                //Si no es número ni ':' ni tecla de borrar, se ignora
-                if (!Character.isDigit(c) && c != ':' && c != KeyEvent.VK_BACK_SPACE) {
-                    e.consume();
-                }
-            }
-
-            /**
-             * Autoformatea el texto añadiendo los dos puntos cuando se han
-             * introducido dos dígitos.
-             *
-             * @param e el evento de tecla liberada.
-             */
-            @Override
-            public void keyReleased(KeyEvent e) {
-                //Autoformatear: si el usuario ha escrito 2 números, se pone ':'
-                String texto = getText();
-                if (texto.length() == 2 && !texto.contains(":")) {
-                    setText(texto + ":");
                 }
             }
         });
     }
 
     /**
-     * Valida si la hora cumple el formato esperado, aplica el autoformateo si
-     * el usuario ha omitido los dos puntos y notifica los cambios. Si el
-     * formato es incorrecto, marca el fondo del campo en rojo.
+     * Valida si la hora cumple el formato y notifica los cambios.
      */
     private void validarYFormatear() {
         String textoActual = getText().trim();
-
-        //Si se escribe 1230, se convierte a 12:30
-        if (textoActual.matches("^[0-9]{4}$")) {
-            textoActual = textoActual.substring(0, 2) + ":" + textoActual.substring(2);
-        }
-
-        //Validación estricta con Regex
-        Pattern patron = Pattern.compile(REGEX_HORA);
-        Matcher matcher = patron.matcher(textoActual);
+        Matcher matcher = Pattern.compile(REGEX_HORA).matcher(textoActual);
 
         if (matcher.matches()) {
             String horaAnterior = this.hora;
             this.hora = textoActual;
-            setText(textoActual);
-            //Si es válido, el fondo es el azul claro
-            setBackground(new Color(186, 209, 217));
-
-            //Notificar cambio para Matisse
+            setBackground(COLOR_FONDO);
             this.firePropertyChange(PROP_HORA, horaAnterior, this.hora);
         } else {
-            //Si está mal, se marca el fondo en rojo claro
-            setBackground(new Color(255, 204, 204)); // Color rojo suave (error)
+            setBackground(COLOR_ERROR);
             this.hora = "";
-
-            //Notificar cambio a vacío para que la app sepa que no hay hora válida
             this.firePropertyChange(PROP_HORA, this.hora, "");
         }
+        this.revalidate();
+        this.repaint();
     }
 
     /**
      * Obtiene la hora actual validada.
-     *
+     * 
      * @return la hora en formato HH:mm o cadena vacía si no es válida.
      */
     public String getHora() {
@@ -180,15 +171,15 @@ public class Hora extends JTextField implements Serializable {
     }
 
     /**
-     * Establece la hora manualmente desde código o desde el editor visual.
-     *
+     * Establece la hora manualmente.
+     * 
      * @param hora la nueva hora en formato HH:mm.
      */
     public void setHora(String hora) {
         String horaAnterior = this.hora;
         this.hora = hora;
-        setText(hora.isEmpty() ? "--:--" : hora);
-        this.textoPorDefecto = hora.isEmpty();
-        this.firePropertyChange(PROP_HORA, horaAnterior, hora);
+        setText(hora == null || hora.isEmpty() ? "--:--" : hora);
+        this.textoPorDefecto = (hora == null || hora.isEmpty());
+        this.firePropertyChange(PROP_HORA, horaAnterior, this.hora);
     }
 }

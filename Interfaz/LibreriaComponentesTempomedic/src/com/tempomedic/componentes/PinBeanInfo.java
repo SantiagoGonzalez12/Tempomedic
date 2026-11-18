@@ -27,7 +27,7 @@ public class PinBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         BeanDescriptor descriptor = new BeanDescriptor(Pin.class);
-        descriptor.setDisplayName("Campo de PIN (4 dígitos)");
+        descriptor.setDisplayName("PIN (4 dígitos)");
         descriptor.setShortDescription("Componente visual para introducir un código PIN de 4 números.");
         return descriptor;
     }

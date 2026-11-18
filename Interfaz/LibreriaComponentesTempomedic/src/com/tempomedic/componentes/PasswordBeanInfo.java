@@ -19,7 +19,7 @@ public class PasswordBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         BeanDescriptor descriptor = new BeanDescriptor(Password.class);
-        descriptor.setDisplayName("Campo de Contraseña");
+        descriptor.setDisplayName("Contraseña");
         descriptor.setShortDescription("Campo para introducir contraseñas con validación básica.");
         return descriptor;
     }

@@ -30,7 +30,7 @@ public class FechaBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         BeanDescriptor descriptor = new BeanDescriptor(Fecha.class);
-        descriptor.setDisplayName("Campo de Fecha");
+        descriptor.setDisplayName("Fecha");
         descriptor.setShortDescription("Campo de texto para introducir una fecha (dd/mm/aaaa).");
         return descriptor;
     }

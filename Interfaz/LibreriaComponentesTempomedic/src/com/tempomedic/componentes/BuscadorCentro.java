@@ -30,29 +30,19 @@ public class BuscadorCentro extends JPanel implements Serializable {
      */
     public static final String PROP_CENTRO_SELECCIONADO = "centroSeleccionado";
 
-    /**
-     * Campo de texto para escribir y filtrar.
-     */
+    /** Color de fondo de los componentes. */
+    private static final Color COLOR_FONDO = new Color(186, 209, 217);
+    
+    /** Campo de texto para escribir y filtrar. */
     private JTextField txtBusqueda;
-
-    /**
-     * Lista visual con los centros disponibles.
-     */
+    /** Lista visual con los centros disponibles. */
     private JList<String> listaCentros;
-
-    /**
-     * Modelo de datos que contiene todos los centros (filtrados o no).
-     */
+    /** Modelo de datos que contiene todos los centros. */
     private DefaultListModel<String> modeloLista;
-
-    /**
-     * Almacena el texto del centro finalmente seleccionado.
-     */
+    /** Almacena el texto del centro seleccionado. */
     private String centroSeleccionado;
 
-    /**
-     * Array con los centros por defecto (puedes ampliarlo).
-     */
+    /** Array con los centros por defecto. */
     private final String[] centrosPorDefecto = {
         "Hospital Virgen del Rocío",
         "Hospital Virgen Macarena",
@@ -82,7 +72,7 @@ public class BuscadorCentro extends JPanel implements Serializable {
         //Configuraciones
         //Campo de texto
         txtBusqueda = new JTextField();
-        txtBusqueda.setBackground(new Color(186, 209, 217));
+        txtBusqueda.setBackground(COLOR_FONDO);
         txtBusqueda.setFont(new java.awt.Font("SansSerif", 0, 14));
         txtBusqueda.setBorder(javax.swing.BorderFactory.createCompoundBorder(
                 new javax.swing.border.LineBorder(Color.BLACK, 2, true),
@@ -97,7 +87,7 @@ public class BuscadorCentro extends JPanel implements Serializable {
 
         //Lista visual
         listaCentros = new JList<>(modeloLista);
-        listaCentros.setBackground(new Color(186, 209, 217));
+        listaCentros.setBackground(COLOR_FONDO);
         listaCentros.setFont(new java.awt.Font("SansSerif", 0, 14));
         listaCentros.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         listaCentros.setVisibleRowCount(3);
