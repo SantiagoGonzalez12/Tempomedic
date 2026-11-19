@@ -19,12 +19,20 @@ public class Password extends JPasswordField implements Serializable {
     /** Constante para notificar cambios en la contraseña. */
     public static final String PROP_PASSWORD = "password";
     
+    /** Color de fondo por defecto. */
+    private static final Color COLOR_FONDO = new Color(186, 209, 217);
+    /** Color de fondo cuando el campo tiene el foco. */
+    private static final Color COLOR_FOCO = Color.WHITE;
+    /** Color de fondo cuando hay un error. */
+    private static final Color COLOR_ERROR = new Color(255, 204, 204);
+    /** Texto por defecto del campo. */
+    private static final String TEXTO_POR_DEFECTO = "Contraseña";
+
     /** Tamaño mínimo de la contraseña. */
     private final int LONGITUD_MINIMA = 6;
 
     /** Almacena el texto validado. */
     private String passwordValidada;
-    
     /** Indica si el campo está vacío (para el texto por defecto). */
     private boolean textoPorDefecto;
 
@@ -42,10 +50,10 @@ public class Password extends JPasswordField implements Serializable {
      * Configura la interfaz y los escuchadores de eventos.
      */
     private void inicializarComponente() {
-        this.setBackground(new Color(186, 209, 217));
+        this.setBackground(COLOR_FONDO);
         this.setForeground(Color.BLACK);
         this.setEchoChar('•'); //Punto para ocultar el caracter verdadero
-        this.setText("Contraseña");
+        this.setText(TEXTO_POR_DEFECTO);
         this.setEchoChar((char) 0);
 
         this.addFocusListener(new FocusListener() {
@@ -56,7 +64,7 @@ public class Password extends JPasswordField implements Serializable {
                     setEchoChar('•'); //Ocultación al empezar a escribir
                     textoPorDefecto = false;
                 }
-                setBackground(Color.WHITE);
+                setBackground(COLOR_FOCO);
             }
 
             @Override
@@ -64,14 +72,14 @@ public class Password extends JPasswordField implements Serializable {
                 String textoActual = new String(getPassword());
                 
                 if (textoActual.isEmpty()) {
-                    setText("Contraseña");
+                    setText(TEXTO_POR_DEFECTO);
                     setEchoChar((char) 0);
                     textoPorDefecto = true;
                     setPasswordValidada("");
                 } else {
                     validarPassword(textoActual);
                 }
-                setBackground(new Color(186, 209, 217));
+                setBackground(COLOR_FONDO);
             }
         });
     }
@@ -86,11 +94,11 @@ public class Password extends JPasswordField implements Serializable {
         if (textoActual.length() >= LONGITUD_MINIMA && !textoActual.contains(" ")) {
             String passwordAnterior = this.passwordValidada;
             this.passwordValidada = textoActual;
-            setBackground(new Color(186, 209, 217));
+            setBackground(COLOR_FONDO);
             this.firePropertyChange(PROP_PASSWORD, passwordAnterior, this.passwordValidada);
         } else {
             //Error: muy corta o contiene espacios
-            setBackground(new Color(255, 204, 204)); //Rojo
+            setBackground(COLOR_ERROR); //Rojo
             this.passwordValidada = "";
             this.firePropertyChange(PROP_PASSWORD, this.passwordValidada, "");
         }
@@ -115,7 +123,7 @@ public class Password extends JPasswordField implements Serializable {
         this.passwordValidada = password;
         
         if (password == null || password.isEmpty()) {
-            setText("Contraseña");
+            setText(TEXTO_POR_DEFECTO);
             setEchoChar((char) 0);
             this.textoPorDefecto = true;
         } else {
