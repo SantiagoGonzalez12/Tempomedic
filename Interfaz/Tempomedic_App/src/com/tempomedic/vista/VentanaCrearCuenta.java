@@ -4,6 +4,7 @@
  */
 package com.tempomedic.vista;
 
+import com.tempomedic.vista.eventos.EfectosVisuales;
 import com.tempomedic.vista.eventos.InteraccionListener;
 import com.tempomedic.vista.eventos.NotificadorInteracciones;
 import com.tempomedic.vista.eventos.TipoInteraccion;
@@ -356,6 +357,7 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
     
     private void btnCrearCuentaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnCrearCuenta");
+        EfectosVisuales.entrar(btnCrearCuenta);
     }//GEN-LAST:event_btnCrearCuentaMouseEntered
 
     private void btnCrearCuentaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseExited
