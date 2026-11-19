@@ -27,9 +27,13 @@ public class Pin extends JPanel implements Serializable {
     /** Constante para notificar cambios en el PIN. */
     public static final String PROP_PIN = "pin";
 
+    /** Color de fondo de las cajas. */
+    private static final Color COLOR_FONDO = new Color(186, 209, 217);
+    /** Color de fondo cuando la caja tiene el foco. */
+    private static final Color COLOR_FOCO = Color.WHITE;
+
     /** Array con las 4 cajas de texto. */
     private JTextField[] cajas;
-    
     /** Almacena el PIN completo (4 dígitos). */
     private String pin;
 
@@ -55,7 +59,7 @@ public class Pin extends JPanel implements Serializable {
             cajas[i] = new JTextField();
             cajas[i].setHorizontalAlignment(JTextField.CENTER);
             cajas[i].setFont(new Font("SansSerif", Font.BOLD, 24));
-            cajas[i].setBackground(new Color(186, 209, 217)); // Azul claro
+            cajas[i].setBackground(COLOR_FONDO);
             cajas[i].setForeground(Color.BLACK);
             cajas[i].setBorder(BorderFactory.createLineBorder(Color.BLACK, 2, true));
             cajas[i].setPreferredSize(new Dimension(64, 72)); // Tamaño cuadrado
@@ -100,12 +104,12 @@ public class Pin extends JPanel implements Serializable {
                 @Override
                 public void focusGained(FocusEvent e) {
                     cajas[index].selectAll();
-                    cajas[index].setBackground(Color.WHITE); //Se ilumina al escribir
+                    cajas[index].setBackground(COLOR_FOCO); //Se ilumina al escribir
                 }
 
                 @Override
                 public void focusLost(FocusEvent e) {
-                    cajas[index].setBackground(new Color(186, 209, 217));
+                    cajas[index].setBackground(COLOR_FONDO);
                 }
             });
 
@@ -131,14 +135,7 @@ public class Pin extends JPanel implements Serializable {
         }
 
         String pinAnterior = this.pin;
-        
-        //Solo se actualiza la propiedad si las 4 cajas están llenas
-        if (completo) {
-            this.pin = sb.toString();
-        } else {
-            this.pin = ""; 
-        }
-
+        this.pin = completo ? sb.toString() : "";
         this.firePropertyChange(PROP_PIN, pinAnterior, this.pin);
     }
 

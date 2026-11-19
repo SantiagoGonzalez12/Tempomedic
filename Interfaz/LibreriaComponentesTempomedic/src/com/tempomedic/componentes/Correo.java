@@ -21,18 +21,25 @@ public class Correo extends JTextField implements Serializable {
     /** Constante para notificar cambios en el correo. */
     public static final String PROP_CORREO = "correo";
 
+    /** Color de fondo por defecto. */
+    private static final Color COLOR_FONDO = new Color(186, 209, 217);
+    /** Color de fondo cuando el campo tiene el foco. */
+    private static final Color COLOR_FOCO = Color.WHITE;
+    /** Color de fondo cuando hay un error. */
+    private static final Color COLOR_ERROR = new Color(255, 204, 204);
+    /** Texto por defecto del campo. */
+    private static final String TEXTO_POR_DEFECTO = "nombre@correo.com";
+    /**
+     * Expresión regular para validar el correo. 
+     * Exige: Texto + @ + Texto + . + al menos 2 letras.
+     */
+    private static final String REGEX_CORREO = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+    
     /** Almacena el correo validado. */
     private String correo;
-    
     /** Indica si el campo está mostrando el texto por defecto. */
     private boolean textoPorDefecto;
     
-    /** 
-     * Expresión regular para validar el correo.
-     * Exige: Texto + @ + Texto + . + al menos 2 letras.
-     */
-    private final String REGEX_CORREO = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
-
     /**
      * Constructor por defecto requerido por JavaBeans.
      */
@@ -47,8 +54,8 @@ public class Correo extends JTextField implements Serializable {
      * Configura la interfaz gráfica y los escuchadores de eventos.
      */
     private void inicializarComponente() {
-        this.setText("nombre@correo.com");
-        this.setBackground(new Color(186, 209, 217)); //Azul claro
+        this.setText(TEXTO_POR_DEFECTO);
+        this.setBackground(COLOR_FONDO); //Azul claro
         this.setForeground(Color.BLACK);
         this.setHorizontalAlignment(JTextField.LEFT);
 
@@ -59,7 +66,7 @@ public class Correo extends JTextField implements Serializable {
                     setText("");
                     textoPorDefecto = false;
                 }
-                setBackground(Color.WHITE);
+                setBackground(COLOR_FOCO);
             }
 
             @Override
@@ -67,10 +74,10 @@ public class Correo extends JTextField implements Serializable {
                 String textoActual = getText().trim();
                 
                 if (textoActual.isEmpty()) {
-                    setText("nombre@correo.com");
+                    setText(TEXTO_POR_DEFECTO);
                     textoPorDefecto = true;
                     setCorreo("");
-                    setBackground(new Color(186, 209, 217));
+                    setBackground(COLOR_FONDO);
                 } else {
                     validarCorreo(textoActual);
                 }
@@ -84,16 +91,16 @@ public class Correo extends JTextField implements Serializable {
      * @param textoActual el correo introducido por el usuario.
      */
     private void validarCorreo(String textoActual) {
-        Pattern patron = Pattern.compile(REGEX_CORREO, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = patron.matcher(textoActual);
+        Matcher matcher = Pattern.compile(REGEX_CORREO, 
+                Pattern.CASE_INSENSITIVE).matcher(textoActual);
 
         if (matcher.matches()) {
             String correoAnterior = this.correo;
             this.correo = textoActual;
-            setBackground(new Color(186, 209, 217)); //Color normal
+            setBackground(COLOR_FONDO);
             this.firePropertyChange(PROP_CORREO, correoAnterior, this.correo);
         } else {
-            setBackground(new Color(255, 204, 204)); //Rojo
+            setBackground(COLOR_ERROR);
             this.correo = "";
             this.firePropertyChange(PROP_CORREO, this.correo, "");
         }
@@ -115,16 +122,10 @@ public class Correo extends JTextField implements Serializable {
      */
     public void setCorreo(String correo) {
         String correoAnterior = this.correo;
+        
         this.correo = correo;
-        
-        if (correo == null || correo.isEmpty()) {
-            setText("nombre@correo.com");
-            this.textoPorDefecto = true;
-        } else {
-            setText(correo);
-            this.textoPorDefecto = false;
-        }
-        
+        setText(correo == null || correo.isEmpty() ? TEXTO_POR_DEFECTO : correo);
+        this.textoPorDefecto = (correo == null || correo.isEmpty());
         this.firePropertyChange(PROP_CORREO, correoAnterior, this.correo);
     }
 }

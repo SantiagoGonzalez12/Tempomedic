@@ -27,6 +27,8 @@ public class VerificarPassword extends JPasswordField implements Serializable {
     private final Color COLOR_FOCO = Color.WHITE;
     /** Color de fondo cuando hay un error. */
     private final Color COLOR_ERROR = new Color(255, 204, 204);
+    /** Texto por defecto del campo. */
+    private static final String TEXTO_POR_DEFECTO = "Repetir contraseña";
 
     /** Almacena la contraseña original con la que se compara. */
     private String passwordOriginal;
@@ -53,7 +55,7 @@ public class VerificarPassword extends JPasswordField implements Serializable {
         this.setBackground(COLOR_FONDO);
         this.setForeground(Color.BLACK);
         this.setEchoChar('•');
-        this.setText("Repetir contraseña");
+        this.setText(TEXTO_POR_DEFECTO);
         this.setEchoChar((char) 0);
 
         //Escuchador comprueba en tiempo real mientras se escribe
@@ -81,7 +83,7 @@ public class VerificarPassword extends JPasswordField implements Serializable {
             public void focusLost(FocusEvent e) {
                 String textoActual = new String(getPassword());
                 if (textoActual.isEmpty()) {
-                    setText("Repetir contraseña");
+                    setText(TEXTO_POR_DEFECTO);
                     setEchoChar((char) 0);
                     textoPorDefecto = true;
                     updateVerificacion(false);
