@@ -7,12 +7,15 @@ import java.beans.SimpleBeanInfo;
 
 /**
  * Clase descriptora (BeanInfo) para el componente CampoVerificarPassword.
- * 
+ *
  * @author Jorge Espejo Martínez
  * @version 1.0
  */
 public class VerificarPasswordBeanInfo extends SimpleBeanInfo {
 
+    /**
+     * Constructor por defecto de la clase BeanInfo.
+     */
     public VerificarPasswordBeanInfo() {
     }
 
@@ -31,13 +34,13 @@ public class VerificarPasswordBeanInfo extends SimpleBeanInfo {
                     "passwordOriginal", VerificarPassword.class, "getPasswordOriginal", "setPasswordOriginal");
             propOriginal.setDisplayName("Contraseña Original");
             propOriginal.setShortDescription("Contraseña con la que se compara este campo.");
-            propOriginal.setPreferred(true); 
+            propOriginal.setPreferred(true);
 
             PropertyDescriptor propVerificacion = new PropertyDescriptor(
                     "verificacionCorrecta", VerificarPassword.class, "isVerificacionCorrecta", null);
             propVerificacion.setDisplayName("¿Coinciden?");
             propVerificacion.setShortDescription("Indica si las contraseñas coinciden (solo lectura).");
-            propVerificacion.setPreferred(true); 
+            propVerificacion.setPreferred(true);
 
             return new PropertyDescriptor[]{propOriginal, propVerificacion};
         } catch (IntrospectionException ie) {

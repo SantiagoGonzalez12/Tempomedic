@@ -7,7 +7,7 @@ import java.beans.SimpleBeanInfo;
 
 /**
  * Clase descriptora (BeanInfo) para el componente CampoCorreo.
- * 
+ *
  * @author Jorge Espejo Martínez
  * @version 1.0
  */
@@ -21,7 +21,7 @@ public class CorreoBeanInfo extends SimpleBeanInfo {
 
     /**
      * Define los metadatos generales del Bean.
-     * 
+     *
      * @return el descriptor del Bean.
      */
     @Override
@@ -34,7 +34,7 @@ public class CorreoBeanInfo extends SimpleBeanInfo {
 
     /**
      * Define y expone las propiedades personalizadas del componente.
-     * 
+     *
      * @return un array con los descriptores de las propiedades expuestas.
      */
     @Override
@@ -44,7 +44,7 @@ public class CorreoBeanInfo extends SimpleBeanInfo {
                     "correo", Correo.class, "getCorreo", "setCorreo");
             propCorreo.setDisplayName("Correo Electrónico");
             propCorreo.setShortDescription("Dirección de correo validada.");
-            propCorreo.setPreferred(true); 
+            propCorreo.setPreferred(true);
 
             return new PropertyDescriptor[]{propCorreo};
         } catch (IntrospectionException ie) {

@@ -7,12 +7,15 @@ import java.beans.SimpleBeanInfo;
 
 /**
  * Clase descriptora (BeanInfo) para el componente CampoPassword.
- * 
+ *
  * @author Jorge Espejo Martínez
  * @version 1.0
  */
 public class PasswordBeanInfo extends SimpleBeanInfo {
 
+    /**
+     * Constructor por defecto de la clase BeanInfo.
+     */
     public PasswordBeanInfo() {
     }
 
@@ -31,7 +34,7 @@ public class PasswordBeanInfo extends SimpleBeanInfo {
                     "password", Password.class, "getPasswordValidada", "setPasswordValidada");
             propPassword.setDisplayName("Contraseña");
             propPassword.setShortDescription("Contraseña introducida por el usuario.");
-            propPassword.setPreferred(true); 
+            propPassword.setPreferred(true);
 
             return new PropertyDescriptor[]{propPassword};
         } catch (IntrospectionException ie) {

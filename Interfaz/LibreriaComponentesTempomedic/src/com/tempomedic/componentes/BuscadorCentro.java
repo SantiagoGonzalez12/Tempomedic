@@ -30,19 +30,31 @@ public class BuscadorCentro extends JPanel implements Serializable {
      */
     public static final String PROP_CENTRO_SELECCIONADO = "centroSeleccionado";
 
-    /** Color de fondo de los componentes. */
+    /**
+     * Color de fondo de los componentes.
+     */
     private static final Color COLOR_FONDO = new Color(186, 209, 217);
-    
-    /** Campo de texto para escribir y filtrar. */
+
+    /**
+     * Campo de texto para escribir y filtrar.
+     */
     private JTextField txtBusqueda;
-    /** Lista visual con los centros disponibles. */
+    /**
+     * Lista visual con los centros disponibles.
+     */
     private JList<String> listaCentros;
-    /** Modelo de datos que contiene todos los centros. */
+    /**
+     * Modelo de datos que contiene todos los centros.
+     */
     private DefaultListModel<String> modeloLista;
-    /** Almacena el texto del centro seleccionado. */
+    /**
+     * Almacena el texto del centro seleccionado.
+     */
     private String centroSeleccionado;
 
-    /** Array con los centros por defecto. */
+    /**
+     * Array con los centros por defecto.
+     */
     private final String[] centrosPorDefecto = {
         "Hospital Virgen del Rocío",
         "Hospital Virgen Macarena",

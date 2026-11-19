@@ -24,17 +24,27 @@ import javax.swing.JTextField;
  */
 public class Pin extends JPanel implements Serializable {
 
-    /** Constante para notificar cambios en el PIN. */
+    /**
+     * Constante para notificar cambios en el PIN.
+     */
     public static final String PROP_PIN = "pin";
 
-    /** Color de fondo de las cajas. */
+    /**
+     * Color de fondo de las cajas.
+     */
     private static final Color COLOR_FONDO = new Color(186, 209, 217);
-    /** Color de fondo cuando la caja tiene el foco. */
+    /**
+     * Color de fondo cuando la caja tiene el foco.
+     */
     private static final Color COLOR_FOCO = Color.WHITE;
 
-    /** Array con las 4 cajas de texto. */
+    /**
+     * Array con las 4 cajas de texto.
+     */
     private JTextField[] cajas;
-    /** Almacena el PIN completo (4 dígitos). */
+    /**
+     * Almacena el PIN completo (4 dígitos).
+     */
     private String pin;
 
     /**
@@ -74,8 +84,7 @@ public class Pin extends JPanel implements Serializable {
                     //Se ignora todo caracter que no sea numérico
                     if (!Character.isDigit(c)) {
                         e.consume();
-                    } 
-                    //Si hay un número escrito, se reemplaza
+                    } //Si hay un número escrito, se reemplaza
                     else if (cajas[index].getText().length() >= 1) {
                         cajas[index].setText("");
                     }
@@ -88,8 +97,7 @@ public class Pin extends JPanel implements Serializable {
                         if (cajas[index].getText().isEmpty() && index > 0) {
                             cajas[index - 1].requestFocus();
                         }
-                    } 
-                    //Si se escribe un número, se salta a la siguiente caja
+                    } //Si se escribe un número, se salta a la siguiente caja
                     else if (Character.isDigit(e.getKeyChar())) {
                         if (index < 3) {
                             cajas[index + 1].requestFocus();
@@ -118,7 +126,8 @@ public class Pin extends JPanel implements Serializable {
     }
 
     /**
-     * Reconstruye el PIN a partir de las 4 cajas y notifica el cambio si es necesario.
+     * Reconstruye el PIN a partir de las 4 cajas y notifica el cambio si es
+     * necesario.
      */
     private void actualizarPIN() {
         StringBuilder sb = new StringBuilder();
@@ -141,7 +150,7 @@ public class Pin extends JPanel implements Serializable {
 
     /**
      * Obtiene el PIN completo.
-     * 
+     *
      * @return el PIN de 4 dígitos o cadena vacía si no está completo.
      */
     public String getPin() {
@@ -150,7 +159,7 @@ public class Pin extends JPanel implements Serializable {
 
     /**
      * Establece el PIN manualmente, rellenando las cajas.
-     * 
+     *
      * @param pin el PIN de 4 dígitos.
      */
     public void setPin(String pin) {

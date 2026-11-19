@@ -8,8 +8,8 @@ import java.beans.SimpleBeanInfo;
 /**
  * Clase descriptora (BeanInfo) para el componente BuscadorCentro.
  * <p>
- * Permite definir explícitamente qué propiedades se mostrarán en la 
- * ventana de Propiedades de NetBeans Matisse.
+ * Permite definir explícitamente qué propiedades se mostrarán en la ventana de
+ * Propiedades de NetBeans Matisse.
  *
  * @author Jorge Espejo Martínez
  * @version 1.0
@@ -24,7 +24,7 @@ public class BuscadorCentroBeanInfo extends SimpleBeanInfo {
 
     /**
      * Define los metadatos generales del Bean.
-     * 
+     *
      * @return el descriptor del Bean.
      */
     @Override
@@ -37,7 +37,7 @@ public class BuscadorCentroBeanInfo extends SimpleBeanInfo {
 
     /**
      * Define y expone las propiedades personalizadas del componente.
-     * 
+     *
      * @return un array con los descriptores de las propiedades expuestas.
      */
     @Override
@@ -47,7 +47,7 @@ public class BuscadorCentroBeanInfo extends SimpleBeanInfo {
                     "centroSeleccionado", BuscadorCentro.class, "getCentroSeleccionado", "setCentroSeleccionado");
             propCentro.setDisplayName("Centro Seleccionado");
             propCentro.setShortDescription("Nombre del centro médico actualmente seleccionado.");
-            propCentro.setPreferred(true); 
+            propCentro.setPreferred(true);
 
             return new PropertyDescriptor[]{propCentro};
         } catch (IntrospectionException ie) {

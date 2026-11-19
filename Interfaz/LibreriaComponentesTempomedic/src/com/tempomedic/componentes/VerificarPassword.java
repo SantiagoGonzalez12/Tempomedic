@@ -16,25 +16,43 @@ import javax.swing.event.DocumentListener;
  */
 public class VerificarPassword extends JPasswordField implements Serializable {
 
-    /** Constante para notificar cambios. */
+    /**
+     * Constante para notificar cambios.
+     */
     public static final String PROP_VERIFICACION = "verificacionCorrecta";
-    /** Constante para notificar el cambio de la propiedad original. */
+    /**
+     * Constante para notificar el cambio de la propiedad original.
+     */
     public static final String PROP_PASSWORD_ORIGINAL = "passwordOriginal";
 
-    /** Color de fondo por defecto. */
+    /**
+     * Color de fondo por defecto.
+     */
     private final Color COLOR_FONDO = new Color(186, 209, 217);
-    /** Color de fondo cuando el campo tiene el foco. */
+    /**
+     * Color de fondo cuando el campo tiene el foco.
+     */
     private final Color COLOR_FOCO = Color.WHITE;
-    /** Color de fondo cuando hay un error. */
+    /**
+     * Color de fondo cuando hay un error.
+     */
     private final Color COLOR_ERROR = new Color(255, 204, 204);
-    /** Texto por defecto del campo. */
+    /**
+     * Texto por defecto del campo.
+     */
     private static final String TEXTO_POR_DEFECTO = "Repetir contraseña";
 
-    /** Almacena la contraseña original con la que se compara. */
+    /**
+     * Almacena la contraseña original con la que se compara.
+     */
     private String passwordOriginal;
-    /** Indica si la verificación es correcta. */
+    /**
+     * Indica si la verificación es correcta.
+     */
     private boolean verificacionCorrecta;
-    /** Indica si el campo está vacío. */
+    /**
+     * Indica si el campo está vacío.
+     */
     private boolean textoPorDefecto;
 
     /**
@@ -61,11 +79,19 @@ public class VerificarPassword extends JPasswordField implements Serializable {
         //Escuchador comprueba en tiempo real mientras se escribe
         this.getDocument().addDocumentListener(new DocumentListener() {
             @Override
-            public void insertUpdate(DocumentEvent e) { checkMatch(); }
+            public void insertUpdate(DocumentEvent e) {
+                checkMatch();
+            }
+
             @Override
-            public void removeUpdate(DocumentEvent e) { checkMatch(); }
+            public void removeUpdate(DocumentEvent e) {
+                checkMatch();
+            }
+
             @Override
-            public void changedUpdate(DocumentEvent e) { checkMatch(); }
+            public void changedUpdate(DocumentEvent e) {
+                checkMatch();
+            }
         });
 
         this.addFocusListener(new FocusListener() {
@@ -99,10 +125,14 @@ public class VerificarPassword extends JPasswordField implements Serializable {
      * Comprueba si el texto actual coincide con la contraseña original.
      */
     private void checkMatch() {
-        if (textoPorDefecto) return;
-        
+        if (textoPorDefecto) {
+            return;
+        }
+
         String textoActual = new String(getPassword());
-        if (textoActual.isEmpty()) return;
+        if (textoActual.isEmpty()) {
+            return;
+        }
 
         if (textoActual.equals(passwordOriginal) && !passwordOriginal.isEmpty()) {
             updateVerificacion(true);
@@ -115,7 +145,7 @@ public class VerificarPassword extends JPasswordField implements Serializable {
 
     /**
      * Actualiza el estado y notifica a los escuchadores.
-     * 
+     *
      * @param estado el nuevo estado de verificación.
      */
     private void updateVerificacion(boolean estado) {
@@ -126,7 +156,7 @@ public class VerificarPassword extends JPasswordField implements Serializable {
 
     /**
      * Obtiene el estado de la verificación.
-     * 
+     *
      * @return true si coinciden.
      */
     public boolean isVerificacionCorrecta() {
@@ -135,7 +165,7 @@ public class VerificarPassword extends JPasswordField implements Serializable {
 
     /**
      * Obtiene la contraseña original.
-     * 
+     *
      * @return la contraseña original.
      */
     public String getPasswordOriginal() {
@@ -144,16 +174,16 @@ public class VerificarPassword extends JPasswordField implements Serializable {
 
     /**
      * Establece la contraseña original (enlazable con Matisse).
-     * 
+     *
      * @param passwordOriginal la contraseña original.
      */
     public void setPasswordOriginal(String passwordOriginal) {
         String anterior = this.passwordOriginal;
         this.passwordOriginal = passwordOriginal;
-        
+
         //Si hay texto, re-verificar inmediatamente
         checkMatch();
-        
+
         this.firePropertyChange(PROP_PASSWORD_ORIGINAL, anterior, passwordOriginal);
     }
 }

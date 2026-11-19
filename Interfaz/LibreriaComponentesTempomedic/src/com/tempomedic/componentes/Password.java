@@ -16,24 +16,40 @@ import javax.swing.JPasswordField;
  */
 public class Password extends JPasswordField implements Serializable {
 
-    /** Constante para notificar cambios en la contraseña. */
+    /**
+     * Constante para notificar cambios en la contraseña.
+     */
     public static final String PROP_PASSWORD = "password";
-    
-    /** Color de fondo por defecto. */
+
+    /**
+     * Color de fondo por defecto.
+     */
     private static final Color COLOR_FONDO = new Color(186, 209, 217);
-    /** Color de fondo cuando el campo tiene el foco. */
+    /**
+     * Color de fondo cuando el campo tiene el foco.
+     */
     private static final Color COLOR_FOCO = Color.WHITE;
-    /** Color de fondo cuando hay un error. */
+    /**
+     * Color de fondo cuando hay un error.
+     */
     private static final Color COLOR_ERROR = new Color(255, 204, 204);
-    /** Texto por defecto del campo. */
+    /**
+     * Texto por defecto del campo.
+     */
     private static final String TEXTO_POR_DEFECTO = "Contraseña";
 
-    /** Tamaño mínimo de la contraseña. */
+    /**
+     * Tamaño mínimo de la contraseña.
+     */
     private final int LONGITUD_MINIMA = 6;
 
-    /** Almacena el texto validado. */
+    /**
+     * Almacena el texto validado.
+     */
     private String passwordValidada;
-    /** Indica si el campo está vacío (para el texto por defecto). */
+    /**
+     * Indica si el campo está vacío (para el texto por defecto).
+     */
     private boolean textoPorDefecto;
 
     /**
@@ -70,7 +86,7 @@ public class Password extends JPasswordField implements Serializable {
             @Override
             public void focusLost(FocusEvent e) {
                 String textoActual = new String(getPassword());
-                
+
                 if (textoActual.isEmpty()) {
                     setText(TEXTO_POR_DEFECTO);
                     setEchoChar((char) 0);
@@ -86,7 +102,7 @@ public class Password extends JPasswordField implements Serializable {
 
     /**
      * Valida que la contraseña cumpla los requisitos mínimos.
-     * 
+     *
      * @param textoActual el texto introducido por el usuario.
      */
     private void validarPassword(String textoActual) {
@@ -106,7 +122,7 @@ public class Password extends JPasswordField implements Serializable {
 
     /**
      * Obtiene la contraseña validada.
-     * 
+     *
      * @return la contraseña o cadena vacía si no es válida.
      */
     public String getPasswordValidada() {
@@ -115,13 +131,13 @@ public class Password extends JPasswordField implements Serializable {
 
     /**
      * Establece la contraseña manualmente.
-     * 
+     *
      * @param password el nuevo texto.
      */
     public void setPasswordValidada(String password) {
         String passwordAnterior = this.passwordValidada;
         this.passwordValidada = password;
-        
+
         if (password == null || password.isEmpty()) {
             setText(TEXTO_POR_DEFECTO);
             setEchoChar((char) 0);
@@ -131,7 +147,7 @@ public class Password extends JPasswordField implements Serializable {
             setEchoChar('•');
             this.textoPorDefecto = false;
         }
-        
+
         this.firePropertyChange(PROP_PASSWORD, passwordAnterior, this.passwordValidada);
     }
 }

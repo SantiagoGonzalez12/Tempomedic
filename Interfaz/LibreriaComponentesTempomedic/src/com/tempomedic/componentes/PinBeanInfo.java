@@ -7,7 +7,7 @@ import java.beans.SimpleBeanInfo;
 
 /**
  * Clase descriptora (BeanInfo) para el componente CampoPIN.
- * 
+ *
  * @author Jorge Espejo Martínez
  * @version 1.0
  */
@@ -21,7 +21,7 @@ public class PinBeanInfo extends SimpleBeanInfo {
 
     /**
      * Define los metadatos generales del Bean.
-     * 
+     *
      * @return el descriptor del Bean.
      */
     @Override
@@ -34,7 +34,7 @@ public class PinBeanInfo extends SimpleBeanInfo {
 
     /**
      * Define y expone las propiedades personalizadas del componente.
-     * 
+     *
      * @return un array con los descriptores de las propiedades expuestas.
      */
     @Override
@@ -44,7 +44,7 @@ public class PinBeanInfo extends SimpleBeanInfo {
                     "pin", Pin.class, "getPin", "setPin");
             propPin.setDisplayName("PIN");
             propPin.setShortDescription("Código PIN de 4 dígitos validado.");
-            propPin.setPreferred(true); 
+            propPin.setPreferred(true);
 
             return new PropertyDescriptor[]{propPin};
         } catch (IntrospectionException ie) {
