@@ -4,6 +4,7 @@
  */
 package com.tempomedic.vista;
 
+import com.tempomedic.vista.eventos.EfectosVisuales;
 import com.tempomedic.vista.eventos.InteraccionListener;
 import com.tempomedic.vista.eventos.NotificadorInteracciones;
 import com.tempomedic.vista.eventos.TipoInteraccion;
@@ -360,10 +361,12 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
 
     private void pwdPin1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin1FocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "pwdPin1");
+        EfectosVisuales.ganarFoco(pwdPin1);
     }//GEN-LAST:event_pwdPin1FocusGained
 
     private void pwdPin1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin1FocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "pwdPin1");
+        EfectosVisuales.perderFoco(pwdPin1);
     }//GEN-LAST:event_pwdPin1FocusLost
 
     private void pwdPin1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdPin1KeyPressed
@@ -384,10 +387,12 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
 
     private void pwdPin2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin2FocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "pwdPin2");
+        EfectosVisuales.ganarFoco(pwdPin2);
     }//GEN-LAST:event_pwdPin2FocusGained
 
     private void pwdPin2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin2FocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "pwdPin2");
+        EfectosVisuales.perderFoco(pwdPin2);
     }//GEN-LAST:event_pwdPin2FocusLost
 
     private void pwdPin2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdPin2KeyPressed
@@ -408,10 +413,12 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
 
     private void pwdPin3FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin3FocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "pwdPin3");
+        EfectosVisuales.ganarFoco(pwdPin3);
     }//GEN-LAST:event_pwdPin3FocusGained
 
     private void pwdPin3FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin3FocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "pwdPin3");
+        EfectosVisuales.perderFoco(pwdPin3);
     }//GEN-LAST:event_pwdPin3FocusLost
 
     private void pwdPin3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdPin3KeyPressed
@@ -432,10 +439,12 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
 
     private void pwdPin4FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin4FocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "pwdPin4");
+        EfectosVisuales.ganarFoco(pwdPin4);
     }//GEN-LAST:event_pwdPin4FocusGained
 
     private void pwdPin4FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdPin4FocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "pwdPin4");
+        EfectosVisuales.perderFoco(pwdPin4);
     }//GEN-LAST:event_pwdPin4FocusLost
 
     private void pwdPin4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdPin4KeyPressed
@@ -444,34 +453,42 @@ public class VentanaBloqueoPIN extends javax.swing.JFrame {
 
     private void btnDesbloquearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDesbloquearMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnDesbloquear");
+        EfectosVisuales.entrar(btnDesbloquear);
     }//GEN-LAST:event_btnDesbloquearMouseEntered
 
     private void btnDesbloquearMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDesbloquearMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnDesbloquear");
+        EfectosVisuales.salir(btnDesbloquear);
     }//GEN-LAST:event_btnDesbloquearMouseExited
 
     private void btnDesbloquearFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnDesbloquearFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnDesbloquear");
+        EfectosVisuales.ganarFoco(btnDesbloquear);
     }//GEN-LAST:event_btnDesbloquearFocusGained
 
     private void btnDesbloquearFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnDesbloquearFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnDesbloquear");
+        EfectosVisuales.perderFoco(btnDesbloquear);
     }//GEN-LAST:event_btnDesbloquearFocusLost
 
     private void btnOlvidoPINFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnOlvidoPINFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnOlvidoPIN");
+        EfectosVisuales.ganarFoco(btnOlvidoPIN);
     }//GEN-LAST:event_btnOlvidoPINFocusGained
 
     private void btnOlvidoPINFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnOlvidoPINFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnOlvidoPIN");
+        EfectosVisuales.perderFoco(btnOlvidoPIN);
     }//GEN-LAST:event_btnOlvidoPINFocusLost
 
     private void btnOlvidoPINMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoPINMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnOlvidoPIN");
+        EfectosVisuales.entrar(btnOlvidoPIN);
     }//GEN-LAST:event_btnOlvidoPINMouseEntered
 
     private void btnOlvidoPINMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOlvidoPINMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnOlvidoPIN");
+        EfectosVisuales.salir(btnOlvidoPIN);
     }//GEN-LAST:event_btnOlvidoPINMouseExited
 
     private void btnOlvidoPINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOlvidoPINActionPerformed

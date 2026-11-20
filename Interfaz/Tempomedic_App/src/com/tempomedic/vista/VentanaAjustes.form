@@ -76,6 +76,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnHoy">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="76" green="6a" red="3b" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="SansSerif" size="12" style="1"/>
             </Property>
@@ -87,8 +90,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Hoy"/>
             <Property name="alignmentX" type="float" value="0.5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="focusPainted" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
@@ -123,7 +124,7 @@
         <Component class="javax.swing.JButton" name="btnMedicamentos">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="d9" green="d1" red="ba" type="rgb"/>
+              <Color blue="76" green="6a" red="3b" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="SansSerif" size="12" style="1"/>
@@ -136,8 +137,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Medicamentos"/>
             <Property name="alignmentX" type="float" value="0.5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="focusPainted" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
@@ -171,6 +170,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnCitas">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="76" green="6a" red="3b" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="SansSerif" size="12" style="1"/>
             </Property>
@@ -182,8 +184,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Citas"/>
             <Property name="alignmentX" type="float" value="0.5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="focusPainted" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
@@ -228,7 +228,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Ajustes"/>
             <Property name="alignmentX" type="float" value="0.5"/>
-            <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="focusPainted" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">

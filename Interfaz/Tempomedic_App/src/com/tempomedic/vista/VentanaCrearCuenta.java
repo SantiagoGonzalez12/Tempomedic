@@ -362,14 +362,17 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
 
     private void btnCrearCuentaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCuentaMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnCrearCuenta");
+        EfectosVisuales.salir(btnCrearCuenta);
     }//GEN-LAST:event_btnCrearCuentaMouseExited
 
     private void btnCrearCuentaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCrearCuentaFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnCrearCuenta");
+        EfectosVisuales.ganarFoco(btnCrearCuenta);
     }//GEN-LAST:event_btnCrearCuentaFocusGained
 
     private void btnCrearCuentaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCrearCuentaFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnCrearCuenta");
+        EfectosVisuales.perderFoco(btnCrearCuenta);
     }//GEN-LAST:event_btnCrearCuentaFocusLost
 
     private void txtCorreoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseEntered
@@ -382,10 +385,12 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
 
     private void txtCorreoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "txtCorreo");
+        EfectosVisuales.ganarFoco(txtCorreo);
     }//GEN-LAST:event_txtCorreoFocusGained
 
     private void txtCorreoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "txtCorreo");
+        EfectosVisuales.perderFoco(txtCorreo);
     }//GEN-LAST:event_txtCorreoFocusLost
 
     private void txtCorreoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCorreoKeyPressed
@@ -406,10 +411,12 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
 
     private void pwdContrasenaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdContrasenaFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "pwdContrasena");
+        EfectosVisuales.ganarFoco(pwdContrasena);
     }//GEN-LAST:event_pwdContrasenaFocusGained
 
     private void pwdContrasenaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdContrasenaFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "pwdContrasena");
+        EfectosVisuales.perderFoco(pwdContrasena);
     }//GEN-LAST:event_pwdContrasenaFocusLost
 
     private void pwdContrasenaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdContrasenaKeyPressed
@@ -430,10 +437,12 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
 
     private void pwdRepetirContrasenaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "pwdRepetirContrasena");
+        EfectosVisuales.ganarFoco(pwdRepetirContrasena);
     }//GEN-LAST:event_pwdRepetirContrasenaFocusGained
 
     private void pwdRepetirContrasenaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "pwdRepetirContrasena");
+        EfectosVisuales.perderFoco(pwdRepetirContrasena);
     }//GEN-LAST:event_pwdRepetirContrasenaFocusLost
 
     private void pwdRepetirContrasenaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwdRepetirContrasenaKeyPressed
@@ -454,10 +463,12 @@ public class VentanaCrearCuenta extends javax.swing.JFrame {
 
     private void btnIniciaSesionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnIniciaSesionFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnIniciaSesion");
+        EfectosVisuales.ganarFoco(btnIniciaSesion);
     }//GEN-LAST:event_btnIniciaSesionFocusGained
 
     private void btnIniciaSesionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnIniciaSesionFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnIniciaSesion");
+        EfectosVisuales.perderFoco(btnIniciaSesion);
     }//GEN-LAST:event_btnIniciaSesionFocusLost
 
     private void btnCrearCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearCuentaActionPerformed
