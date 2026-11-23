@@ -1,0 +1,57 @@
+
+# NetBeans
+/nbproject/private/
+/nbproject/Makefile-*
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/**/build/
+
+# Compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# Java
+hs_err_pid*
+replay_pid*
+
+# IDE
+/.idea/
+/.vscode/
+*.iml
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# Gradle
+.gradle/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local configuration
+local.properties
