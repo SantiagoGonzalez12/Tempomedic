@@ -1,0 +1,65 @@
+/build
+
+# Compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# Kotlin
+*.kotlin_module
+.kotlin/
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/**/build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Android
+local.properties
+.cxx/
+.externalNativeBuild/
+.cxx/
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Kotlin Multiplatform
+kotlin-js-store/
+node_modules/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# VS Code
+.vscode/
+
+# Build outputs
+target/
+bin/
