@@ -36,4 +36,22 @@ public class PasswordTest {
         assertTrue("Debe emitir evento al cambiar la contraseña", eventoDisparado.get());
         assertEquals("Secreta123", componente.getPasswordValidada());
     }
+    @Test
+    public void testValoresFueraDeRango() {
+        componente.setPasswordValidada(null);
+        assertEquals("", componente.getPasswordValidada());
+    }
+
+    @Test
+    public void testSimulacionInteraccion() {
+        AtomicBoolean eventoDisparado = new AtomicBoolean(false);
+        componente.addPropertyChangeListener(Password.PROP_PASSWORD, evt -> eventoDisparado.set(true));
+
+        componente.dispatchEvent(new java.awt.event.FocusEvent(componente, java.awt.event.FocusEvent.FOCUS_GAINED));
+        componente.setText("ClaveSegura1");
+        componente.dispatchEvent(new java.awt.event.FocusEvent(componente, java.awt.event.FocusEvent.FOCUS_LOST));
+
+        assertTrue("Debe emitir evento tras la interacción", eventoDisparado.get());
+        assertEquals("ClaveSegura1", componente.getPasswordValidada());
+    }
 }

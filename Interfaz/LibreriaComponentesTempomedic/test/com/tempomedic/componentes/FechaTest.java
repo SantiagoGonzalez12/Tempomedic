@@ -35,4 +35,22 @@ public class FechaTest {
         assertTrue("Debe emitir evento al cambiar la fecha", eventoDisparado.get());
         assertEquals("15/10/2024", componente.getFecha());
     }
+    @Test
+    public void testValoresFueraDeRango() {
+        componente.setFecha(null);
+        assertEquals("", componente.getFecha());
+    }
+
+    @Test
+    public void testSimulacionInteraccion() {
+        AtomicBoolean eventoDisparado = new AtomicBoolean(false);
+        componente.addPropertyChangeListener(Fecha.PROP_FECHA, evt -> eventoDisparado.set(true));
+
+        componente.dispatchEvent(new java.awt.event.FocusEvent(componente, java.awt.event.FocusEvent.FOCUS_GAINED));
+        componente.setText("25/11/2026");
+        componente.dispatchEvent(new java.awt.event.FocusEvent(componente, java.awt.event.FocusEvent.FOCUS_LOST));
+
+        assertTrue("Debe emitir evento tras la interacción", eventoDisparado.get());
+        assertEquals("25/11/2026", componente.getFecha());
+    }
 }
