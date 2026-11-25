@@ -35,4 +35,22 @@ public class HoraTest {
         assertTrue("Debe emitir evento al cambiar la hora", eventoDisparado.get());
         assertEquals("12:30", componente.getHora());
     }
+    @Test
+    public void testValoresFueraDeRango() {
+        componente.setHora(null);
+        assertEquals("", componente.getHora());
+    }
+
+    @Test
+    public void testSimulacionInteraccion() {
+        AtomicBoolean eventoDisparado = new AtomicBoolean(false);
+        componente.addPropertyChangeListener(Hora.PROP_HORA, evt -> eventoDisparado.set(true));
+
+        componente.dispatchEvent(new java.awt.event.FocusEvent(componente, java.awt.event.FocusEvent.FOCUS_GAINED));
+        componente.setText("18:45");
+        componente.dispatchEvent(new java.awt.event.FocusEvent(componente, java.awt.event.FocusEvent.FOCUS_LOST));
+
+        assertTrue("Debe emitir evento tras la interacción", eventoDisparado.get());
+        assertEquals("18:45", componente.getHora());
+    }
 }
