@@ -11,7 +11,7 @@ import org.junit.Test;
  * Asegura que el componente se inicialice correctamente, que las propiedades 
  * emitan los eventos correspondientes y que la lógica del semáforo funcione.
  *
- * @author Jorge Espejo Martínez
+ * @author Alba Duran Bernal
  * @version 1.0
  */
 public class MedicamentoTest {
