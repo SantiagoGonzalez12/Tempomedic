@@ -4,6 +4,7 @@
  */
 package com.tempomedic.vista;
 
+import com.tempomedic.vista.eventos.EfectosVisuales;
 import com.tempomedic.vista.eventos.InteraccionListener;
 import com.tempomedic.vista.eventos.NotificadorInteracciones;
 import com.tempomedic.vista.eventos.TipoInteraccion;
@@ -318,6 +319,7 @@ public class VentanaCitas extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 0);
         pnlTarjetaCita1.add(lblHospital, gridBagConstraints);
 
+        btnEditar.setBackground(new java.awt.Color(186, 209, 217));
         btnEditar.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(59, 106, 118));
         btnEditar.setText("Editar");
@@ -588,146 +590,182 @@ public class VentanaCitas extends javax.swing.JFrame {
 
     private void btnHoyMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnHoy");
+        EfectosVisuales.entrar(btnHoy);
     }//GEN-LAST:event_btnHoyMouseEntered
 
     private void btnHoyMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoyMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnHoy");
+        EfectosVisuales.salir(btnHoy);
     }//GEN-LAST:event_btnHoyMouseExited
 
     private void btnHoyFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnHoyFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnHoy");
+        EfectosVisuales.ganarFoco(btnHoy);
     }//GEN-LAST:event_btnHoyFocusGained
 
     private void btnHoyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnHoyFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnHoy");
+        EfectosVisuales.perderFoco(btnHoy);
     }//GEN-LAST:event_btnHoyFocusLost
 
     private void btnMedicamentosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnMedicamentos");
+        EfectosVisuales.entrar(btnMedicamentos);
     }//GEN-LAST:event_btnMedicamentosMouseEntered
 
     private void btnMedicamentosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMedicamentosMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnMedicamentos");
+        EfectosVisuales.salir(btnMedicamentos);
     }//GEN-LAST:event_btnMedicamentosMouseExited
 
     private void btnMedicamentosFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnMedicamentosFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnMedicamentos");
+        EfectosVisuales.ganarFoco(btnMedicamentos);
     }//GEN-LAST:event_btnMedicamentosFocusGained
 
     private void btnMedicamentosFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnMedicamentosFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnMedicamentos");
+        EfectosVisuales.perderFoco(btnMedicamentos);
     }//GEN-LAST:event_btnMedicamentosFocusLost
 
     private void btnCitasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnCitas");
+        EfectosVisuales.entrar(btnCitas);
     }//GEN-LAST:event_btnCitasMouseEntered
 
     private void btnCitasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCitasMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnCitas");
+        EfectosVisuales.salir(btnCitas);
     }//GEN-LAST:event_btnCitasMouseExited
 
     private void btnCitasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCitasFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnCitas");
+        EfectosVisuales.ganarFoco(btnCitas);
     }//GEN-LAST:event_btnCitasFocusGained
 
     private void btnCitasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCitasFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnCitas");
+        EfectosVisuales.perderFoco(btnCitas);
     }//GEN-LAST:event_btnCitasFocusLost
 
     private void btnAjustesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnAjustes");
+        EfectosVisuales.entrar(btnAjustes);
     }//GEN-LAST:event_btnAjustesMouseEntered
 
     private void btnAjustesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAjustesMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnAjustes");
+        EfectosVisuales.salir(btnAjustes);
     }//GEN-LAST:event_btnAjustesMouseExited
 
     private void btnAjustesFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnAjustesFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnAjustes");
+        EfectosVisuales.ganarFoco(btnAjustes);
     }//GEN-LAST:event_btnAjustesFocusGained
 
     private void btnAjustesFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnAjustesFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnAjustes");
+        EfectosVisuales.perderFoco(btnAjustes);
     }//GEN-LAST:event_btnAjustesFocusLost
 
     private void btnEditarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnEditar");
+        EfectosVisuales.entrar(btnEditar);
     }//GEN-LAST:event_btnEditarMouseEntered
 
     private void btnEditarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnEditar");
+        EfectosVisuales.salir(btnEditar);
     }//GEN-LAST:event_btnEditarMouseExited
 
     private void btnEditarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEditarFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnEditar");
+        EfectosVisuales.ganarFoco(btnEditar);
     }//GEN-LAST:event_btnEditarFocusGained
 
     private void btnEditarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEditarFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnEditar");
+        EfectosVisuales.perderFoco(btnEditar);
     }//GEN-LAST:event_btnEditarFocusLost
 
     private void btnCancelarCitaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarCitaMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnCancelar");
+        EfectosVisuales.entrar(btnCancelarCita);
     }//GEN-LAST:event_btnCancelarCitaMouseEntered
 
     private void btnCancelarCitaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarCitaMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnCancelar");
+        EfectosVisuales.salir(btnCancelarCita);
     }//GEN-LAST:event_btnCancelarCitaMouseExited
 
     private void btnCancelarCitaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCancelarCitaFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnCancelar");
+        EfectosVisuales.ganarFoco(btnCancelarCita);
     }//GEN-LAST:event_btnCancelarCitaFocusGained
 
     private void btnCancelarCitaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCancelarCitaFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnCancelar");
+        EfectosVisuales.perderFoco(btnCancelarCita);
     }//GEN-LAST:event_btnCancelarCitaFocusLost
 
     private void btnEditar1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar1MouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnEditar1");
+        EfectosVisuales.entrar(btnEditar1);
     }//GEN-LAST:event_btnEditar1MouseEntered
 
     private void btnEditar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditar1MouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnEditar1");
+        EfectosVisuales.salir(btnEditar1);
     }//GEN-LAST:event_btnEditar1MouseExited
 
     private void btnEditar1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEditar1FocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnEditar1");
+        EfectosVisuales.ganarFoco(btnEditar1);
     }//GEN-LAST:event_btnEditar1FocusGained
 
     private void btnEditar1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEditar1FocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnEditar1");
+        EfectosVisuales.perderFoco(btnEditar1);
     }//GEN-LAST:event_btnEditar1FocusLost
 
     private void btnCancelarCita1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarCita1MouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnCancelarCita1");
+        EfectosVisuales.entrar(btnCancelarCita1);
     }//GEN-LAST:event_btnCancelarCita1MouseEntered
 
     private void btnCancelarCita1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarCita1MouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnCancelarCita1");
+        EfectosVisuales.salir(btnCancelarCita1);
     }//GEN-LAST:event_btnCancelarCita1MouseExited
 
     private void btnCancelarCita1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCancelarCita1FocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnCancelarCita1");
+        EfectosVisuales.ganarFoco(btnCancelarCita1);
     }//GEN-LAST:event_btnCancelarCita1FocusGained
 
     private void btnCancelarCita1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnCancelarCita1FocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnCancelarCita1");
+        EfectosVisuales.perderFoco(btnCancelarCita1);
     }//GEN-LAST:event_btnCancelarCita1FocusLost
 
     private void btnPedirCitaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPedirCitaMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnPedirCita");
+        EfectosVisuales.entrar(btnPedirCita);
     }//GEN-LAST:event_btnPedirCitaMouseEntered
 
     private void btnPedirCitaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPedirCitaMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnPedirCita");
+        EfectosVisuales.salir(btnPedirCita);
     }//GEN-LAST:event_btnPedirCitaMouseExited
 
     private void btnPedirCitaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnPedirCitaFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnPedirCita");
+        EfectosVisuales.ganarFoco(btnPedirCita);
     }//GEN-LAST:event_btnPedirCitaFocusGained
 
     private void btnPedirCitaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnPedirCitaFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnPedirCita");
+        EfectosVisuales.perderFoco(btnPedirCita);
     }//GEN-LAST:event_btnPedirCitaFocusLost
 
     private void btnHoyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHoyActionPerformed

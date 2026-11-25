@@ -4,6 +4,7 @@
  */
 package com.tempomedic.vista;
 
+import com.tempomedic.vista.eventos.EfectosVisuales;
 import com.tempomedic.vista.eventos.InteraccionListener;
 import com.tempomedic.vista.eventos.NotificadorInteracciones;
 import com.tempomedic.vista.eventos.TipoInteraccion;
@@ -263,10 +264,12 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
 
     private void txtCorreoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "txtCorreo");
+        EfectosVisuales.ganarFoco(txtCorreo);
     }//GEN-LAST:event_txtCorreoFocusGained
 
     private void txtCorreoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "txtCorreo");
+        EfectosVisuales.perderFoco(txtCorreo);
     }//GEN-LAST:event_txtCorreoFocusLost
 
     private void txtCorreoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCorreoKeyPressed
@@ -275,34 +278,42 @@ public class VentanaRecuperarContrasena extends javax.swing.JFrame {
 
     private void btnEnviarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnEnviar");
+        EfectosVisuales.entrar(btnEnviar);
     }//GEN-LAST:event_btnEnviarMouseEntered
 
     private void btnEnviarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEnviarMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnEnviar");
+        EfectosVisuales.salir(btnEnviar);
     }//GEN-LAST:event_btnEnviarMouseExited
 
     private void btnEnviarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEnviarFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnEnviar");
+        EfectosVisuales.ganarFoco(btnEnviar);
     }//GEN-LAST:event_btnEnviarFocusGained
 
     private void btnEnviarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnEnviarFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnEnviar");
+        EfectosVisuales.perderFoco(btnEnviar);
     }//GEN-LAST:event_btnEnviarFocusLost
 
     private void btnVolverInicioSesionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionFocusGained
         notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "btnVolverInicioSesion");
+        EfectosVisuales.ganarFoco(btnVolverInicioSesion);
     }//GEN-LAST:event_btnVolverInicioSesionFocusGained
 
     private void btnVolverInicioSesionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionFocusLost
         notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "btnVolverInicioSesion");
+        EfectosVisuales.perderFoco(btnVolverInicioSesion);
     }//GEN-LAST:event_btnVolverInicioSesionFocusLost
 
     private void btnVolverInicioSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "btnVolverInicioSesion");
+        EfectosVisuales.entrar(btnVolverInicioSesion);
     }//GEN-LAST:event_btnVolverInicioSesionMouseEntered
 
     private void btnVolverInicioSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVolverInicioSesionMouseExited
         notificador.notificar(this, TipoInteraccion.RATON_SALE, "btnVolverInicioSesion");
+        EfectosVisuales.salir(btnVolverInicioSesion);
     }//GEN-LAST:event_btnVolverInicioSesionMouseExited
 
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
