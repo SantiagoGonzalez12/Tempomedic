@@ -101,4 +101,16 @@ class Correo : JTextField(), Serializable {
      * @param textoActual el correo introducido por el usuario.
      */
     private fun validarCorreo(textoActual: String) {
-        if (REGEX_CORREO.matches(texto
+        if (REGEX_CORREO.matches(textoActual)) {
+            val correoAnterior = this.correo
+            // Asignación directa o mediante propiedad según el comportamiento original
+            this.correo = textoActual
+            background = COLOR_FONDO
+        } else {
+            val correoAnterior = this.correo
+            background = COLOR_ERROR
+            this.correo = ""
+            firePropertyChange(PROP_CORREO, correoAnterior, "")
+        }
+    }
+}
