@@ -8,7 +8,7 @@ import org.junit.Test;
 /**
  * Pruebas unitarias para el componente VerificarPassword.
  * 
- * @author Jorge Espejo Martínez
+ * @author Alba Durán Bernal
  * @version 1.0
  */
 public class VerificarPasswordTest {
