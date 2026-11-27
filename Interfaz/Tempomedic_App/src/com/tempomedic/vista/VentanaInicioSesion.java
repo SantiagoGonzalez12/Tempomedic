@@ -45,7 +45,7 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         lblTempomedic = new javax.swing.JLabel();
         lblDescripcion = new javax.swing.JLabel();
         lblCorreo = new javax.swing.JLabel();
-        txtCorreo = new javax.swing.JTextField();
+        txtCorreo = new com.tempomedic.componentes.Correo();
         lblContrasena = new javax.swing.JLabel();
         pwdContrasena = new javax.swing.JPasswordField();
         btnIniciarSesion = new javax.swing.JButton();
@@ -107,42 +107,12 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 4, 0);
         pnlFormulario.add(lblCorreo, gridBagConstraints);
-
-        txtCorreo.setBackground(new java.awt.Color(186, 209, 217));
-        txtCorreo.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        txtCorreo.setText("nombre@correo.com");
-        txtCorreo.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(59, 106, 118), 2, true), javax.swing.BorderFactory.createEmptyBorder(0, 12, 0, 12)));
-        txtCorreo.setPreferredSize(new java.awt.Dimension(563, 41));
-        txtCorreo.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                txtCorreoFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                txtCorreoFocusLost(evt);
-            }
-        });
-        txtCorreo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtCorreoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                txtCorreoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                txtCorreoMouseExited(evt);
-            }
-        });
-        txtCorreo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtCorreoKeyPressed(evt);
-            }
-        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipadx = 666;
-        gridBagConstraints.ipady = 13;
+        gridBagConstraints.ipady = 20;
         gridBagConstraints.weightx = 1.0;
         pnlFormulario.add(txtCorreo, gridBagConstraints);
 
@@ -322,32 +292,6 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
         notificador.removeInteraccionListener(l);
     }
     
-    private void txtCorreoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseEntered
-        notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "txtCorreo");
-    }//GEN-LAST:event_txtCorreoMouseEntered
-
-    private void txtCorreoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseExited
-        notificador.notificar(this, TipoInteraccion.RATON_SALE, "txtCorreo");
-    }//GEN-LAST:event_txtCorreoMouseExited
-
-    private void txtCorreoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseClicked
-        notificador.notificar(this, TipoInteraccion.RATON_CLIC, "txtCorreo");
-    }//GEN-LAST:event_txtCorreoMouseClicked
-
-    private void txtCorreoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusGained
-        notificador.notificar(this, TipoInteraccion.FOCO_GANADO, "txtCorreo");
-        EfectosVisuales.ganarFoco(txtCorreo);
-    }//GEN-LAST:event_txtCorreoFocusGained
-
-    private void txtCorreoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCorreoFocusLost
-        notificador.notificar(this, TipoInteraccion.FOCO_PERDIDO, "txtCorreo");
-        EfectosVisuales.perderFoco(txtCorreo);
-    }//GEN-LAST:event_txtCorreoFocusLost
-
-    private void txtCorreoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCorreoKeyPressed
-        notificador.notificar(this, TipoInteraccion.TECLA_PULSADA, "txtCorreo");
-    }//GEN-LAST:event_txtCorreoKeyPressed
-
     private void pwdContrasenaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdContrasenaMouseEntered
         notificador.notificar(this, TipoInteraccion.RATON_ENTRA, "pwdContrasena");
     }//GEN-LAST:event_pwdContrasenaMouseEntered
@@ -485,6 +429,6 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
     private javax.swing.JPanel pnlContenido;
     private javax.swing.JPanel pnlFormulario;
     private javax.swing.JPasswordField pwdContrasena;
-    private javax.swing.JTextField txtCorreo;
+    private com.tempomedic.componentes.Correo txtCorreo;
     // End of variables declaration//GEN-END:variables
 }
